@@ -1,0 +1,145 @@
+{
+  "id" : "C0030029_Aprovisionamiento_Dynatech__primary_holder_count",
+  "metainfo" : {
+    "label" : "C0030029_Aprovisionamiento_Dynatech__primary_holder_count",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"dev_ref_control\"",
+        "schema" : "\"prophecy_tmp\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "primary_holder_count_Z2xbcxFYLS_vWbxJJs6CO$$UyrNHoYkr3LekGBb9ZKQq" : {
+      "id" : "primary_holder_count_Z2xbcxFYLS_vWbxJJs6CO$$UyrNHoYkr3LekGBb9ZKQq",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "primary_holder_count"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM primary_holder_count\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_9",
+          "slug" : "input_port_9"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_9",
+          "slug" : "output_port_9"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "17q29p574QSjsAUwIYAvg$$ABD7NNUhANEh1Rz-AUHnH" : {
+      "id" : "17q29p574QSjsAUwIYAvg$$ABD7NNUhANEh1Rz-AUHnH",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "primary_holder_count",
+        "x" : -580,
+        "y" : -2880,
+        "phase" : 0
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "es_primer_titular"
+          },
+          "alias" : "es_primer_titular",
+          "_row_id" : "896297873"
+        }, {
+          "expression" : {
+            "expression" : "count(es_primer_titular)"
+          },
+          "alias" : "count",
+          "_row_id" : "0nVdI57Ynt"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "p6dqTAvSODiJU7VZf6oVq$$jTjnnqCKck7rnB5iz6AyU##es_primer_titular" ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "es_primer_titular"
+          },
+          "alias" : "",
+          "_row_id" : "1feSL3HDdA"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "p6dqTAvSODiJU7VZf6oVq$$jTjnnqCKck7rnB5iz6AyU",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Z2xbcxFYLS_vWbxJJs6CO$$UyrNHoYkr3LekGBb9ZKQq",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR" : {
+      "id" : "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "AlteryxSelect_65"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_5",
+          "id" : "output_port_5",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ ref('C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_5",
+          "slug" : "input_port_5"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_5",
+          "slug" : "output_port_5"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_17q29p574QSjsAUwIYAvg$$ABD7NNUhANEh1Rz-AUHnH_Z2xbcxFYLS_vWbxJJs6CO$$UyrNHoYkr3LekGBb9ZKQq_primary_holder_count_Z2xbcxFYLS_vWbxJJs6CO$$UyrNHoYkr3LekGBb9ZKQq",
+    "source" : "17q29p574QSjsAUwIYAvg$$ABD7NNUhANEh1Rz-AUHnH",
+    "sourcePort" : "Z2xbcxFYLS_vWbxJJs6CO$$UyrNHoYkr3LekGBb9ZKQq",
+    "target" : "primary_holder_count_Z2xbcxFYLS_vWbxJJs6CO$$UyrNHoYkr3LekGBb9ZKQq",
+    "targetPort" : "input_port_9",
+    "isWireless" : false
+  }, {
+    "id" : "_cnjK6jwRFDUuMdWa6Kai",
+    "source" : "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR",
+    "sourcePort" : "output_port_5",
+    "target" : "17q29p574QSjsAUwIYAvg$$ABD7NNUhANEh1Rz-AUHnH",
+    "targetPort" : "p6dqTAvSODiJU7VZf6oVq$$jTjnnqCKck7rnB5iz6AyU",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

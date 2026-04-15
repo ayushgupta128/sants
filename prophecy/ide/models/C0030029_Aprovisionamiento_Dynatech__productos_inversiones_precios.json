@@ -1,0 +1,375 @@
+{
+  "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios",
+  "metainfo" : {
+    "label" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"productos_inversiones_precios\"",
+        "materialized" : "incremental",
+        "database" : "\"dev_business\"",
+        "unique_key" : [ "\"fecha_dato\"", "\"codigo_valor\"" ],
+        "schema" : "\"productos\"",
+        "incremental_strategy" : "\"delete+insert\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "L5KAV-ZEMVKgpBkv-wHSI$$KWz6jTgeJh1pCK-wivUmo" : {
+      "id" : "L5KAV-ZEMVKgpBkv-wHSI$$KWz6jTgeJh1pCK-wivUmo",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_105",
+        "x" : 320,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "phDNvTeaoxGBlrnOF_S5x$$IjbVjc93_zBh-9F4klyOa##DynPreFec", "phDNvTeaoxGBlrnOF_S5x$$IjbVjc93_zBh-9F4klyOa##DynPreVlrId", "phDNvTeaoxGBlrnOF_S5x$$IjbVjc93_zBh-9F4klyOa##DynPrePrecio", "phDNvTeaoxGBlrnOF_S5x$$IjbVjc93_zBh-9F4klyOa##DynPreMonSmb", "phDNvTeaoxGBlrnOF_S5x$$IjbVjc93_zBh-9F4klyOa##DynPreFecPrecio" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST(DynPreFec AS TIMESTAMP)"
+          },
+          "alias" : "fecha_dato",
+          "_row_id" : "1059799485"
+        }, {
+          "expression" : {
+            "expression" : "DynPreVlrId"
+          },
+          "alias" : "codigo_valor",
+          "_row_id" : "2068824906"
+        }, {
+          "expression" : {
+            "expression" : "DynPrePrecio"
+          },
+          "alias" : "precio_valor",
+          "_row_id" : "1563754378"
+        }, {
+          "expression" : {
+            "expression" : "DynPreMonSmb"
+          },
+          "alias" : "moneda_precio",
+          "_row_id" : "1611697716"
+        }, {
+          "expression" : {
+            "expression" : "CAST(DynPreFecPrecio AS TIMESTAMP)"
+          },
+          "alias" : "fecha_precio",
+          "_row_id" : "VjrJQwDL5h"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "phDNvTeaoxGBlrnOF_S5x$$IjbVjc93_zBh-9F4klyOa",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "NEqPp8yTmdyL64hop5Sqb$$0xWFshA5ttAx-F-DUZbPU",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "3UBLg6Cr_bH4VVeLYCONU$$o9tXnS8nDnI8hfeUoaJhT" : {
+      "id" : "3UBLg6Cr_bH4VVeLYCONU$$o9tXnS8nDnI8hfeUoaJhT",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Formula_106_0",
+        "x" : 460,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "-NxKpc_1s-ngYYH-SCX15$$8DDVGI2CcCVb7o07U-Zv6##moneda_precio" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST((CASE WHEN CAST((moneda_precio = 'EURO') AS BOOLEAN) THEN 'EUR' ELSE moneda_precio END) AS string)"
+          },
+          "alias" : "moneda_precio",
+          "_row_id" : "620169254"
+        }, {
+          "expression" : {
+            "expression" : "* EXCEPT(`moneda_precio`)"
+          },
+          "_row_id" : "415003809"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-NxKpc_1s-ngYYH-SCX15$$8DDVGI2CcCVb7o07U-Zv6",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "iQ0_XEQiSKXSZV7RBX5Gw$$qNjASnJFLHkv6ha2q5JTN",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "MY1ehqjX9bBxOi-_qhfMf$$QvMBTn8EllzA2cAC5S9LP" : {
+      "id" : "MY1ehqjX9bBxOi-_qhfMf$$QvMBTn8EllzA2cAC5S9LP",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "dbo_dynprecios",
+        "x" : 40,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "dbo_dynprecios",
+          "sourceType" : "Table",
+          "sourceName" : "dev_curated_uyasdbtest_dynvaldwsantander",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "9V6fJVApWW-HIToQaSJuv$$6bFf2zfS5MpHOcRFUECex",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "PcOzWOxx3r5UrhVETwrfc$$G3DfdwmXxb_so5loOCcoX" : {
+      "id" : "PcOzWOxx3r5UrhVETwrfc$$G3DfdwmXxb_so5loOCcoX",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_DynPreFrePrecio",
+        "x" : 180,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "yW3-qj_YYDaYmbTWaLbrW$$uyC88noUe-pvSaRDZ5kQX##data_date_part" ],
+        "condition" : {
+          "expression" : "data_date_part == {{ var('ref_data_date_part') }}"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "yW3-qj_YYDaYmbTWaLbrW$$uyC88noUe-pvSaRDZ5kQX",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Rk4tcDlZaEyaH1-NDQevW$$8tiq0gG65ZkxRiwRY3wZH",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "j4cr0ezMcnkXw8l3fDFZL$$r2Xkxwvuz-u0p5BdRFnFb" : {
+      "id" : "j4cr0ezMcnkXw8l3fDFZL$$r2Xkxwvuz-u0p5BdRFnFb",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_368",
+        "x" : 600,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "39um99rEZvHrAGF7lf4iy$$arkEsKDVqsGN5YHCfpZ0j##fecha_dato", "39um99rEZvHrAGF7lf4iy$$arkEsKDVqsGN5YHCfpZ0j##codigo_valor", "39um99rEZvHrAGF7lf4iy$$arkEsKDVqsGN5YHCfpZ0j##fecha_precio", "39um99rEZvHrAGF7lf4iy$$arkEsKDVqsGN5YHCfpZ0j##precio_valor", "39um99rEZvHrAGF7lf4iy$$arkEsKDVqsGN5YHCfpZ0j##moneda_precio" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST(fecha_dato AS DATE)"
+          },
+          "alias" : "fecha_dato",
+          "_row_id" : "1933895005"
+        }, {
+          "expression" : {
+            "expression" : "codigo_valor"
+          },
+          "alias" : "codigo_valor",
+          "_row_id" : "175676138"
+        }, {
+          "expression" : {
+            "expression" : "CAST(fecha_precio AS DATE)"
+          },
+          "alias" : "fecha_precio",
+          "_row_id" : "495326197"
+        }, {
+          "expression" : {
+            "expression" : "precio_valor"
+          },
+          "alias" : "precio_valor",
+          "_row_id" : "629906384"
+        }, {
+          "expression" : {
+            "expression" : "CAST(moneda_precio AS string)"
+          },
+          "alias" : "moneda_precio",
+          "_row_id" : "1030695171"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "39um99rEZvHrAGF7lf4iy$$arkEsKDVqsGN5YHCfpZ0j",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "NPAl6i4bsYsnYXrqCboPR$$5jfzAT2kxCWIXPCyqsApC",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "jF4v3JO3H8ZZDVKSaXfzF$$vFk5u-ylmLYEWCa7IYIWX" : {
+      "id" : "jF4v3JO3H8ZZDVKSaXfzF$$vFk5u-ylmLYEWCa7IYIWX",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cast_productos_inversiones_precios",
+        "x" : 740,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "ap7ynMOz2QA8ajoLa834q$$vZ9tU5b1jFOj2BGK1mX9Z##fecha_dato", "ap7ynMOz2QA8ajoLa834q$$vZ9tU5b1jFOj2BGK1mX9Z##codigo_valor", "ap7ynMOz2QA8ajoLa834q$$vZ9tU5b1jFOj2BGK1mX9Z##fecha_precio", "ap7ynMOz2QA8ajoLa834q$$vZ9tU5b1jFOj2BGK1mX9Z##precio_valor", "ap7ynMOz2QA8ajoLa834q$$vZ9tU5b1jFOj2BGK1mX9Z##moneda_precio" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "{{ var('ref_data_date_part') }}"
+          },
+          "alias" : "ref_data_date_part",
+          "_row_id" : "dt8iJ_isTp"
+        }, {
+          "expression" : {
+            "expression" : "current_timestamp()"
+          },
+          "alias" : "ref_timestamp_procesamiento",
+          "_row_id" : "KoZPCPBQHE"
+        }, {
+          "expression" : {
+            "expression" : "fecha_dato"
+          },
+          "alias" : "fecha_dato",
+          "_row_id" : "1347872299"
+        }, {
+          "expression" : {
+            "expression" : "codigo_valor"
+          },
+          "alias" : "codigo_valor",
+          "_row_id" : "1301468504"
+        }, {
+          "expression" : {
+            "expression" : "fecha_precio"
+          },
+          "alias" : "fecha_precio",
+          "_row_id" : "1244201248"
+        }, {
+          "expression" : {
+            "expression" : "CAST(precio_valor AS DECIMAL(19,5))"
+          },
+          "alias" : "precio_valor",
+          "_row_id" : "1725991244"
+        }, {
+          "expression" : {
+            "expression" : "moneda_precio"
+          },
+          "alias" : "moneda_precio",
+          "_row_id" : "1565063584"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ap7ynMOz2QA8ajoLa834q$$vZ9tU5b1jFOj2BGK1mX9Z",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "TVjPV5ofQrIGR44C5FiV6$$E7e04L_qhsFxwVMGSydRr",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "wlKBPh9Z6efCntGVUa6QJ$$l8OSDNqKKa3Axyk09gOij" : {
+      "id" : "wlKBPh9Z6efCntGVUa6QJ$$l8OSDNqKKa3Axyk09gOij",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "productos_inversiones_precios",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM cast_productos_inversiones_precios\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "w8EeSZqizzg44zoy5l6NV$$tqMJUZc2VSo5VEcp1myrH",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "KtHhBRY4Sbo-WY2IGJytx$$mvVRQEb3oB_cpSGc9BEoz",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "g7U22DxultTFsLK7xEqPE",
+    "source" : "jF4v3JO3H8ZZDVKSaXfzF$$vFk5u-ylmLYEWCa7IYIWX",
+    "sourcePort" : "TVjPV5ofQrIGR44C5FiV6$$E7e04L_qhsFxwVMGSydRr",
+    "target" : "wlKBPh9Z6efCntGVUa6QJ$$l8OSDNqKKa3Axyk09gOij",
+    "targetPort" : "w8EeSZqizzg44zoy5l6NV$$tqMJUZc2VSo5VEcp1myrH",
+    "isWireless" : false
+  }, {
+    "id" : "LP_IRCEmqyZgaiToaXPoi",
+    "source" : "j4cr0ezMcnkXw8l3fDFZL$$r2Xkxwvuz-u0p5BdRFnFb",
+    "sourcePort" : "NPAl6i4bsYsnYXrqCboPR$$5jfzAT2kxCWIXPCyqsApC",
+    "target" : "jF4v3JO3H8ZZDVKSaXfzF$$vFk5u-ylmLYEWCa7IYIWX",
+    "targetPort" : "ap7ynMOz2QA8ajoLa834q$$vZ9tU5b1jFOj2BGK1mX9Z",
+    "isWireless" : false
+  }, {
+    "id" : "-AMtE5-n3ugoOWngx13Vo",
+    "source" : "3UBLg6Cr_bH4VVeLYCONU$$o9tXnS8nDnI8hfeUoaJhT",
+    "sourcePort" : "iQ0_XEQiSKXSZV7RBX5Gw$$qNjASnJFLHkv6ha2q5JTN",
+    "target" : "j4cr0ezMcnkXw8l3fDFZL$$r2Xkxwvuz-u0p5BdRFnFb",
+    "targetPort" : "39um99rEZvHrAGF7lf4iy$$arkEsKDVqsGN5YHCfpZ0j",
+    "isWireless" : false
+  }, {
+    "id" : "-RAj1CWVz3QKlsHOImqif",
+    "source" : "L5KAV-ZEMVKgpBkv-wHSI$$KWz6jTgeJh1pCK-wivUmo",
+    "sourcePort" : "NEqPp8yTmdyL64hop5Sqb$$0xWFshA5ttAx-F-DUZbPU",
+    "target" : "3UBLg6Cr_bH4VVeLYCONU$$o9tXnS8nDnI8hfeUoaJhT",
+    "targetPort" : "-NxKpc_1s-ngYYH-SCX15$$8DDVGI2CcCVb7o07U-Zv6",
+    "isWireless" : false
+  }, {
+    "id" : "Uz4wCkl7_wIfC9U_43Onh",
+    "source" : "PcOzWOxx3r5UrhVETwrfc$$G3DfdwmXxb_so5loOCcoX",
+    "sourcePort" : "Rk4tcDlZaEyaH1-NDQevW$$8tiq0gG65ZkxRiwRY3wZH",
+    "target" : "L5KAV-ZEMVKgpBkv-wHSI$$KWz6jTgeJh1pCK-wivUmo",
+    "targetPort" : "phDNvTeaoxGBlrnOF_S5x$$IjbVjc93_zBh-9F4klyOa",
+    "isWireless" : false
+  }, {
+    "id" : "JuODBYPIciH0yGM7-iSYP",
+    "source" : "MY1ehqjX9bBxOi-_qhfMf$$QvMBTn8EllzA2cAC5S9LP",
+    "sourcePort" : "9V6fJVApWW-HIToQaSJuv$$6bFf2zfS5MpHOcRFUECex",
+    "target" : "PcOzWOxx3r5UrhVETwrfc$$G3DfdwmXxb_so5loOCcoX",
+    "targetPort" : "yW3-qj_YYDaYmbTWaLbrW$$uyC88noUe-pvSaRDZ5kQX",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

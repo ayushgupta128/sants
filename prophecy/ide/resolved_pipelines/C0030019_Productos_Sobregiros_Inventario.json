@@ -1,0 +1,103 @@
+{
+  "id" : "C0030019_Productos_Sobregiros_Inventario",
+  "metainfo" : {
+    "label" : "C0030019_Productos_Sobregiros_Inventario",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "ref_data_date_part",
+          "kind" : {
+            "type" : "int",
+            "value" : "20250101"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "alteryx",
+    "processesVsModelFiles" : {
+      "8" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "4" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "30_left" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "YDvgU9v7IAllEl1-kumJk$$FQ6vJQmhLaUGsxj1KZSQN" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "I1fSpMNQClshgYzCnE-y1$$NNywjE3eFLJZqurSIBjCX" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "YmyGoRiGMIIX4DVILogx0$$hYAhpP2142Km_lsJs8YMt" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "37" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "31B8MiwXZw2dYcE4pseI4$$2N4Ij7DA16rUcIKl1Lu0o" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "13" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "35" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "16" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "5" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "mL1AQmVHPO2Ztp13FtAnj" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "u3fgkuTZfD1RFp9_SfQNw$$leXLXUQgEHU_WBGkRQhu_" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "QIcMJGvEqjOEV8swo9k6w$$LG9yKmE1p0WGPEOwfOWSU" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "36_inner" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "YfuSmLZzPNZdt1yIGDjzS$$RnYyLSO3bTHd0voWyFwpW" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "6" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "1" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "30_right" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "31" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "PjV027Hwoi-kN9lDi6Kkh" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "sy_pCICATPAUp0SYse1PC$$_45nWII9bs_mqDogw6eAr" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "42" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "ki8S81eIm165-SvescFQb" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "RioQCHhQWBr72NS81c5oX" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "g9c3HuwNFCztIed1f0djK$$2AsnyBb1xNiepCWGT8LK_" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "exIhtQwm-GCtGzaEC3rL4$$GH8VTpv8_KisruaULd2z5" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "2" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "38" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "30_inner" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "7" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "41" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "3" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql",
+      "jBGhP0hJqJ5pljR7dfaMu$$Dmc6KH0921nABWyImnIcX" : "models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql"
+    }
+  },
+  "processes" : {
+    "exIhtQwm-GCtGzaEC3rL4$$GH8VTpv8_KisruaULd2z5" : {
+      "id" : "exIhtQwm-GCtGzaEC3rL4$$GH8VTpv8_KisruaULd2z5",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "exIhtQwm-GCtGzaEC3rL4$$GH8VTpv8_KisruaULd2z5", "42", "41", "38", "PjV027Hwoi-kN9lDi6Kkh", "37", "30_left", "30_inner", "ki8S81eIm165-SvescFQb", "36_inner", "16", "RioQCHhQWBr72NS81c5oX", "mL1AQmVHPO2Ztp13FtAnj", "35", "30_right", "31", "sy_pCICATPAUp0SYse1PC$$_45nWII9bs_mqDogw6eAr", "13", "YmyGoRiGMIIX4DVILogx0$$hYAhpP2142Km_lsJs8YMt", "g9c3HuwNFCztIed1f0djK$$2AsnyBb1xNiepCWGT8LK_", "I1fSpMNQClshgYzCnE-y1$$NNywjE3eFLJZqurSIBjCX", "8", "u3fgkuTZfD1RFp9_SfQNw$$leXLXUQgEHU_WBGkRQhu_", "YDvgU9v7IAllEl1-kumJk$$FQ6vJQmhLaUGsxj1KZSQN", "YfuSmLZzPNZdt1yIGDjzS$$RnYyLSO3bTHd0voWyFwpW", "7", "31B8MiwXZw2dYcE4pseI4$$2N4Ij7DA16rUcIKl1Lu0o", "2", "4", "6", "jBGhP0hJqJ5pljR7dfaMu$$Dmc6KH0921nABWyImnIcX", "QIcMJGvEqjOEV8swo9k6w$$LG9yKmE1p0WGPEOwfOWSU", "1", "3", "5" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario_in_4",
+          "slug" : "in_4"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}

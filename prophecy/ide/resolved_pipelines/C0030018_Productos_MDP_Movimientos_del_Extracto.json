@@ -1,0 +1,88 @@
+{
+  "id" : "C0030018_Productos_MDP_Movimientos_del_Extracto",
+  "metainfo" : {
+    "label" : "C0030018_Productos_MDP_Movimientos_del_Extracto",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "ref_data_date_part",
+          "kind" : {
+            "type" : "int",
+            "value" : "20250101"
+          }
+        } ]
+      }
+    },
+    "schedules" : [ {
+      "name" : "Schedule 1",
+      "scheduleType" : "cron",
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false,
+      "triggers" : { }
+    } ],
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "-tpADFnqd_2eKew5AK01n$$uPqA68V8yvnlIi6sF8VFH" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "ktr22woZMJw_GVmAvwFEp$$FwRWs3XlUkKeLtx0jIBro" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "IEaNdPUNT2XRW6k_5gNMM$$BuBw2wvAjjP1JXKqts84i" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "vRAVRKP1bgKnl9riTiykT$$Og6UXmL0V6cEVJHpL3FEE" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "eM6cn0ozbHBZ_P6vmzRAn$$p6hDv3MQ9BjXj_6XZlFVB" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "Omm_hpG1YwgmGhbse2-nN$$q0zta1kp_djlUi_gdj0h5" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "QyNVszSjOPPjswvAR1Ekg$$VSWPNy57dP9ZZgbYjeOui" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "tBvufIeXBvB9zKi0DBs1Q$$re8aCg6C3P4x-l_p3DNuJ" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "gDNLnLiiaoNvaQSsgdX1z$$bhbb_Ds2mM2vr6VxPjYWg" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "9wCGKkwYdaXSz5m7hWRMd$$Fg3SmbAALR6by6q6B1R_c" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "j7--CSlasLR-YcXwSZnpd$$5DJAHStD-1UiwRFu2BEXd" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "7ijLhreZ6wkOcAjuYqke7$$m8WcizEqCTZZUhjGaQN3Y" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "XhlFDw4clSk6Suk0vFNxo$$hEXMg20SKOWCA-ZJzH2K3" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "ouRY8HX_cuSTjPweX1Qco$$9OW3EpT591ECm0MxD9Q8a" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql",
+      "0jMUd7OxTVQ9vUcMz7sJU$$Zgbh3FQD5SjmY_qzyMex5" : "models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql"
+    }
+  },
+  "processes" : {
+    "IEaNdPUNT2XRW6k_5gNMM$$BuBw2wvAjjP1JXKqts84i" : {
+      "id" : "IEaNdPUNT2XRW6k_5gNMM$$BuBw2wvAjjP1JXKqts84i",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "IEaNdPUNT2XRW6k_5gNMM$$BuBw2wvAjjP1JXKqts84i", "j7--CSlasLR-YcXwSZnpd$$5DJAHStD-1UiwRFu2BEXd", "XhlFDw4clSk6Suk0vFNxo$$hEXMg20SKOWCA-ZJzH2K3", "ktr22woZMJw_GVmAvwFEp$$FwRWs3XlUkKeLtx0jIBro", "ouRY8HX_cuSTjPweX1Qco$$9OW3EpT591ECm0MxD9Q8a", "vRAVRKP1bgKnl9riTiykT$$Og6UXmL0V6cEVJHpL3FEE", "9wCGKkwYdaXSz5m7hWRMd$$Fg3SmbAALR6by6q6B1R_c", "Omm_hpG1YwgmGhbse2-nN$$q0zta1kp_djlUi_gdj0h5", "eM6cn0ozbHBZ_P6vmzRAn$$p6hDv3MQ9BjXj_6XZlFVB", "gDNLnLiiaoNvaQSsgdX1z$$bhbb_Ds2mM2vr6VxPjYWg", "7ijLhreZ6wkOcAjuYqke7$$m8WcizEqCTZZUhjGaQN3Y", "0jMUd7OxTVQ9vUcMz7sJU$$Zgbh3FQD5SjmY_qzyMex5", "-tpADFnqd_2eKew5AK01n$$uPqA68V8yvnlIi6sF8VFH", "tBvufIeXBvB9zKi0DBs1Q$$re8aCg6C3P4x-l_p3DNuJ", "QyNVszSjOPPjswvAR1Ekg$$VSWPNy57dP9ZZgbYjeOui" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta_in_2",
+          "slug" : "in_2"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}

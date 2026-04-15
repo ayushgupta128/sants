@@ -1,0 +1,351 @@
+{
+  "id" : "C0030024_BOCM_Aprovisionamiento",
+  "metainfo" : {
+    "label" : "C0030024_BOCM_Aprovisionamiento",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "ref_data_date_part",
+          "kind" : {
+            "type" : "int",
+            "value" : "20250101"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "alteryx",
+    "processesVsModelFiles" : {
+      "pKiYXGFGNvsecjQuiwS7C$$L2o-vB8dalosg3uazkf0e" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "511_inner" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "528_inner" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_528_inner.sql",
+      "444" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "OWXF7DYUU8T_B4P4lypTg" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "436" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "Join_421_inner_p0I5ZB-3F2Z6nnlRTK6WU" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "nvbtpbsBFajDj-STXS-Mk$$o8-AhHlK-nOrJI3ubG9bE" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Reformat_5.sql",
+      "447" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "dev6zoZNx6NQQ3y8DVyvi$$7xcmVWPfTmY6Zlzlju-0E" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "Olqf8Rw-n6ZAj4IZ3lDUe" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "XOYYTDjWpXh5Fy6mZHuAe" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "523" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "450" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "418" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "mDiX5rpVrHGsxDx8OVbvp" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "431_inner" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "8m2VL9wNr2mg03633jLxm" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "-bHbnJ-2vOsknRYXi2qZP" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_528_inner.sql",
+      "512" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "FjUq0zxdzVad6IzS23irL$$ObHEvv-gLSdFvf9eZTbX7" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "429" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "516" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "HpaSvCK0iKPrwOS5yx9df$$xXJViSxh8hdc4LiydqSx5" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "437" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_records.sql",
+      "441" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_records.sql",
+      "_ra-tp6oMaZACWzCtapo0" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "xSvmt3ba5bFENs0zjf-yu$$xxU1x-_Eu27D9dBHOkyTr" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Reformat_5.sql",
+      "1OXi7itiJcM4UKQu2hCQ8$$3kO8FfUzIPgPv3CWC7P9o" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "gxTzGS0ux5bsoJsOTPtH6" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "x5qCFp1IjQKdAO_HHSPOI$$nCdG2MpNZHxWrx6pALisp" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "pbggo00Vx80nlXrW50_8f" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "Rh1FW8yVwDdlTflMnhCa6" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_528_inner.sql",
+      "zMRpaC_wczi-PZ4R3Ynko" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "dV1bY3awtFrRmi3KmyBMt$$tuGd_Q5gwB-J5qQUxGr4x" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "445" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "NV9vuwUl403h9Sn3tvFaB" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "Formula_427_0_WY05qZQMXUqLpDgeNE7J4" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_records.sql",
+      "hdpTd9uC2KdZZFnHnNhq_$$w7-5KZZkoeAmBDclZFLbk" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "v9k-aqylQ4aEnhoVUHjrg" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "dL-406jHhDTgmGOsbRCPm" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_528_inner.sql",
+      "426_inner" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "Wkxi5fEKCX-3trla_aInR$$yqROooFyyA6ETVzadKrfD" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "DwzcRDdr4d11Pw8RnUD28" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_528_inner.sql",
+      "449_left" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "IaK9BPYkR__dRuTRJlvgb$$nqb2KV-Duz9icvMyPNp19" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "425_inner" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "68jWyYVZuWq2ojRkpWHUM$$pykwW98aOoIJTS4lokBgZ" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "442" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "Reformat_5_C2VcTFAdfn26Jp1ZngGy7$$XewPncM5rqhtPDRPQkTrB" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Reformat_5.sql",
+      "Ysz4tILjWspLUVU7RAtow$$PYO_8G3fGvfNFxSdHXRFU" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "rBdSHGd8l26TL5t56d9Yk" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_528_inner.sql",
+      "439" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "dwK2WyMyw6ebsJb0Gknwu$$7IRzLQU9jeuUWVre_bEKC" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "OWKtp34wfDS05Fq7Q0nQx$$KtKWCxNGpViwftXB5Ybls" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "529_inner" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "513_inner" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "3Byb8PrfzQmMIUoJYq8W5$$Se1lv3ScPZXrlYn6k9_12" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "430" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_records.sql",
+      "423" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "52yNRUqZi5wU07ugfK9-E" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "g-wRpSnjpB8DETSgp1In-$$S-fWZSrqngHlWe5DZGimu" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_records.sql",
+      "446" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "524" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "ESpLy-TlRyil-KtAEZ1rZ" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_528_inner.sql",
+      "420" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "518" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "F0bZIDbtaoojQ3EWkWHcH$$OGlYKMtDhaX_2BeX5TKHg" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Reformat_5.sql",
+      "451" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "440" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "MKZ24kAyPnKHMseNA9Wim" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "424" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "421_inner" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql",
+      "530_inner" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "Join_528_inner_uKn2vVWAb3hjJPtcF0BQT" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "511_left" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql",
+      "RQCV8zr4GMrjblSw1VnHh" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "1UBvhkT0fNdOiML7MdVuW" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql",
+      "515_inner" : "models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql"
+    }
+  },
+  "processes" : {
+    "528_inner" : {
+      "id" : "528_inner",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030024_BOCM_Aprovisionamiento__Join_528_inner",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030024_BOCM_Aprovisionamiento__Join_528_inner"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Join_528_inner_uKn2vVWAb3hjJPtcF0BQT", "528_inner", "DwzcRDdr4d11Pw8RnUD28", "-bHbnJ-2vOsknRYXi2qZP", "ESpLy-TlRyil-KtAEZ1rZ", "rBdSHGd8l26TL5t56d9Yk", "Rh1FW8yVwDdlTflMnhCa6", "Reformat_5_C2VcTFAdfn26Jp1ZngGy7$$XewPncM5rqhtPDRPQkTrB", "dL-406jHhDTgmGOsbRCPm", "Join_421_inner_p0I5ZB-3F2Z6nnlRTK6WU" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Join_528_inner_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Join_528_inner_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Join_528_inner_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "HpaSvCK0iKPrwOS5yx9df$$xXJViSxh8hdc4LiydqSx5" : {
+      "id" : "HpaSvCK0iKPrwOS5yx9df$$xXJViSxh8hdc4LiydqSx5",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030024_BOCM_Aprovisionamiento__transaction_details",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030024_BOCM_Aprovisionamiento__transaction_details"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "HpaSvCK0iKPrwOS5yx9df$$xXJViSxh8hdc4LiydqSx5", "440", "450", "MKZ24kAyPnKHMseNA9Wim", "8m2VL9wNr2mg03633jLxm", "429", "451", "436", "449_left", "513_inner", "Formula_427_0_WY05qZQMXUqLpDgeNE7J4", "447", "XOYYTDjWpXh5Fy6mZHuAe", "NV9vuwUl403h9Sn3tvFaB", "pbggo00Vx80nlXrW50_8f", "446", "gxTzGS0ux5bsoJsOTPtH6", "439", "516", "529_inner", "Reformat_5_C2VcTFAdfn26Jp1ZngGy7$$XewPncM5rqhtPDRPQkTrB", "Join_528_inner_uKn2vVWAb3hjJPtcF0BQT", "511_inner", "515_inner", "dwK2WyMyw6ebsJb0Gknwu$$7IRzLQU9jeuUWVre_bEKC", "dev6zoZNx6NQQ3y8DVyvi$$7xcmVWPfTmY6Zlzlju-0E", "523", "524", "512", "511_left", "518", "Formula_427_0_WY05qZQMXUqLpDgeNE7J4" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__transaction_details_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030024_BOCM_Aprovisionamiento__transaction_details_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030024_BOCM_Aprovisionamiento__transaction_details_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "C0030024_BOCM_Aprovisionamiento__transaction_details_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "C0030024_BOCM_Aprovisionamiento__transaction_details_in_4",
+          "slug" : "in_4"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__transaction_details_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "xSvmt3ba5bFENs0zjf-yu$$xxU1x-_Eu27D9dBHOkyTr" : {
+      "id" : "xSvmt3ba5bFENs0zjf-yu$$xxU1x-_Eu27D9dBHOkyTr",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030024_BOCM_Aprovisionamiento__Reformat_5",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030024_BOCM_Aprovisionamiento__Reformat_5"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Reformat_5_C2VcTFAdfn26Jp1ZngGy7$$XewPncM5rqhtPDRPQkTrB", "xSvmt3ba5bFENs0zjf-yu$$xxU1x-_Eu27D9dBHOkyTr", "F0bZIDbtaoojQ3EWkWHcH$$OGlYKMtDhaX_2BeX5TKHg", "nvbtpbsBFajDj-STXS-Mk$$o8-AhHlK-nOrJI3ubG9bE" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Reformat_5_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Reformat_5_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "v9k-aqylQ4aEnhoVUHjrg" : {
+      "id" : "v9k-aqylQ4aEnhoVUHjrg",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Formula_427_0_WY05qZQMXUqLpDgeNE7J4", "v9k-aqylQ4aEnhoVUHjrg", "426_inner", "445", "431_inner", "444", "425_inner", "52yNRUqZi5wU07ugfK9-E", "IaK9BPYkR__dRuTRJlvgb$$nqb2KV-Duz9icvMyPNp19", "530_inner", "Join_421_inner_p0I5ZB-3F2Z6nnlRTK6WU", "Join_528_inner_uKn2vVWAb3hjJPtcF0BQT", "1UBvhkT0fNdOiML7MdVuW", "hdpTd9uC2KdZZFnHnNhq_$$w7-5KZZkoeAmBDclZFLbk", "FjUq0zxdzVad6IzS23irL$$ObHEvv-gLSdFvf9eZTbX7", "RQCV8zr4GMrjblSw1VnHh", "442", "1OXi7itiJcM4UKQu2hCQ8$$3kO8FfUzIPgPv3CWC7P9o", "Ysz4tILjWspLUVU7RAtow$$PYO_8G3fGvfNFxSdHXRFU", "3Byb8PrfzQmMIUoJYq8W5$$Se1lv3ScPZXrlYn6k9_12" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0_in_3",
+          "slug" : "in_3"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "g-wRpSnjpB8DETSgp1In-$$S-fWZSrqngHlWe5DZGimu" : {
+      "id" : "g-wRpSnjpB8DETSgp1In-$$S-fWZSrqngHlWe5DZGimu",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030024_BOCM_Aprovisionamiento__transaction_records",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030024_BOCM_Aprovisionamiento__transaction_records"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "g-wRpSnjpB8DETSgp1In-$$S-fWZSrqngHlWe5DZGimu", "441", "430", "437", "Formula_427_0_WY05qZQMXUqLpDgeNE7J4" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__transaction_records_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__transaction_records_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "421_inner" : {
+      "id" : "421_inner",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030024_BOCM_Aprovisionamiento__Join_421_inner",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030024_BOCM_Aprovisionamiento__Join_421_inner"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Join_421_inner_p0I5ZB-3F2Z6nnlRTK6WU", "421_inner", "420", "423", "Olqf8Rw-n6ZAj4IZ3lDUe", "OWXF7DYUU8T_B4P4lypTg", "424", "_ra-tp6oMaZACWzCtapo0", "dV1bY3awtFrRmi3KmyBMt$$tuGd_Q5gwB-J5qQUxGr4x", "zMRpaC_wczi-PZ4R3Ynko", "68jWyYVZuWq2ojRkpWHUM$$pykwW98aOoIJTS4lokBgZ", "Wkxi5fEKCX-3trla_aInR$$yqROooFyyA6ETVzadKrfD", "x5qCFp1IjQKdAO_HHSPOI$$nCdG2MpNZHxWrx6pALisp", "OWKtp34wfDS05Fq7Q0nQx$$KtKWCxNGpViwftXB5Ybls", "mDiX5rpVrHGsxDx8OVbvp", "418", "pKiYXGFGNvsecjQuiwS7C$$L2o-vB8dalosg3uazkf0e" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Join_421_inner_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Join_421_inner_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030024_BOCM_Aprovisionamiento__Join_421_inner_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_528_inner_C0030024_BOCM_Aprovisionamiento__transaction_details_in_2",
+    "source" : "528_inner",
+    "sourcePort" : "C0030024_BOCM_Aprovisionamiento__Join_528_inner_out_0",
+    "target" : "HpaSvCK0iKPrwOS5yx9df$$xXJViSxh8hdc4LiydqSx5",
+    "targetPort" : "C0030024_BOCM_Aprovisionamiento__transaction_details_in_2"
+  }, {
+    "id" : "conn_528_inner_C0030024_BOCM_Aprovisionamiento__Formula_427_0_in_3",
+    "source" : "528_inner",
+    "sourcePort" : "C0030024_BOCM_Aprovisionamiento__Join_528_inner_out_0",
+    "target" : "v9k-aqylQ4aEnhoVUHjrg",
+    "targetPort" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0_in_3"
+  }, {
+    "id" : "conn_xSvmt3ba5bFENs0zjf-yu$$xxU1x-_Eu27D9dBHOkyTr_C0030024_BOCM_Aprovisionamiento__transaction_details_in_1",
+    "source" : "xSvmt3ba5bFENs0zjf-yu$$xxU1x-_Eu27D9dBHOkyTr",
+    "sourcePort" : "C0030024_BOCM_Aprovisionamiento__Reformat_5_out_0",
+    "target" : "HpaSvCK0iKPrwOS5yx9df$$xXJViSxh8hdc4LiydqSx5",
+    "targetPort" : "C0030024_BOCM_Aprovisionamiento__transaction_details_in_1"
+  }, {
+    "id" : "conn_xSvmt3ba5bFENs0zjf-yu$$xxU1x-_Eu27D9dBHOkyTr_C0030024_BOCM_Aprovisionamiento__Join_528_inner_in_0",
+    "source" : "xSvmt3ba5bFENs0zjf-yu$$xxU1x-_Eu27D9dBHOkyTr",
+    "sourcePort" : "C0030024_BOCM_Aprovisionamiento__Reformat_5_out_0",
+    "target" : "528_inner",
+    "targetPort" : "C0030024_BOCM_Aprovisionamiento__Join_528_inner_in_0"
+  }, {
+    "id" : "conn_v9k-aqylQ4aEnhoVUHjrg_C0030024_BOCM_Aprovisionamiento__transaction_records_in_0",
+    "source" : "v9k-aqylQ4aEnhoVUHjrg",
+    "sourcePort" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0_out_0",
+    "target" : "g-wRpSnjpB8DETSgp1In-$$S-fWZSrqngHlWe5DZGimu",
+    "targetPort" : "C0030024_BOCM_Aprovisionamiento__transaction_records_in_0"
+  }, {
+    "id" : "conn_v9k-aqylQ4aEnhoVUHjrg_C0030024_BOCM_Aprovisionamiento__transaction_details_in_3",
+    "source" : "v9k-aqylQ4aEnhoVUHjrg",
+    "sourcePort" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0_out_0",
+    "target" : "HpaSvCK0iKPrwOS5yx9df$$xXJViSxh8hdc4LiydqSx5",
+    "targetPort" : "C0030024_BOCM_Aprovisionamiento__transaction_details_in_3"
+  }, {
+    "id" : "conn_v9k-aqylQ4aEnhoVUHjrg_C0030024_BOCM_Aprovisionamiento__transaction_details_in_4",
+    "source" : "v9k-aqylQ4aEnhoVUHjrg",
+    "sourcePort" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0_out_0",
+    "target" : "HpaSvCK0iKPrwOS5yx9df$$xXJViSxh8hdc4LiydqSx5",
+    "targetPort" : "C0030024_BOCM_Aprovisionamiento__transaction_details_in_4"
+  }, {
+    "id" : "conn_421_inner_C0030024_BOCM_Aprovisionamiento__Formula_427_0_in_2",
+    "source" : "421_inner",
+    "sourcePort" : "C0030024_BOCM_Aprovisionamiento__Join_421_inner_out_0",
+    "target" : "v9k-aqylQ4aEnhoVUHjrg",
+    "targetPort" : "C0030024_BOCM_Aprovisionamiento__Formula_427_0_in_2"
+  }, {
+    "id" : "conn_421_inner_C0030024_BOCM_Aprovisionamiento__Join_528_inner_in_1",
+    "source" : "421_inner",
+    "sourcePort" : "C0030024_BOCM_Aprovisionamiento__Join_421_inner_out_0",
+    "target" : "528_inner",
+    "targetPort" : "C0030024_BOCM_Aprovisionamiento__Join_528_inner_in_1"
+  } ],
+  "component" : "Pipeline"
+}
