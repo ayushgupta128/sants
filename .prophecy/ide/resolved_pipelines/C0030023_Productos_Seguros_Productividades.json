@@ -1,0 +1,391 @@
+{
+  "id" : "C0030023_Productos_Seguros_Productividades",
+  "metainfo" : {
+    "label" : "C0030023_Productos_Seguros_Productividades",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "ref_data_date_part",
+          "kind" : {
+            "type" : "int",
+            "value" : "20250101"
+          }
+        } ]
+      }
+    },
+    "schedules" : [ {
+      "name" : "Schedule 1",
+      "scheduleType" : "cron",
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false,
+      "triggers" : { }
+    } ],
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "3uJmSuvwGeO5c5ZIHF9gg$$2Q_qxJs8ZNBUmUs5vnFou" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "jok8cfaspnMSKCVIIyIQJ$$6GTXPOFr41kVSQVtuGCEs" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "WxJzigIRFVIssXh-wE3R_$$jx2fIvjfwLnpRigO__FKn" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "_Putn9waeYt54QDa22hBn$$eNjZvBTmJnuqvlKaU7p4I" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "BfTVux5wJHVDqQjA0GE2q$$ub4lSCwBEmeAuGOZFiNO9" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "rAQaCNf4BGVJaXfIwr6kk$$brjb8Zxy2wwVwD3f0m4nQ" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "_U99ONQrJcyanI9y0A9O1$$LIEw68XnJYMbomEF4dAFN" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "-V6j4a1Muh7tErssIl5-p$$12j9DVbbLRte-hDqd7KIk" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__send_notification_requests.sql",
+      "9BsX8JkUnSJIxMeY06sPv$$EBtL3l-H5EUVirGWaA039" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__send_notification_requests.sql",
+      "lIWuB6ahpEYHuV1m_4OwL$$7qNs2Q8NROA2zXta1-4HK" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "pVhCCovZZF8rJflEEmI-x$$EHPi5MEAWSQR_amuAvsF-" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_pendientes_revision.sql",
+      "Gaoi9SXq_0wm9Fwlb9qNC$$UPV3rIQDZQ_mmHlvPzeB6" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "K3TiCgE34l6AYUU3XP4vS$$WffCCxfQSs6r19_R-zk4S" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "gBo64Eas5ppKqUkUWXm05$$3jexdR_TibH2tc6K4dN1H" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "RagM7qBM7tH6TQMa_Uq_h$$w9vdgZ4TBFrdeLAcPo3hA" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "IDuoRoDCWQfW4aew08FcJ$$dPGfQjGhUEjFPOd-sEelD" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "kiuK3Kq6u39CNJJGWBSTw$$_Z_IMtSoWFQxvIlKHV1h_" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__send_notification_requests.sql",
+      "anXE-WU_ssPl4l38lcJWG$$Uw0o0kueABuGhWwB2iXzf" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "zsvaITEv9VGGBynwTaDiP$$Eqp-ryH-xjGffYx6f_woL" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "Filter_292_w-wOfoZCAiRdVvVXUSrQG$$5LtX2bPEfVozzGxgNcKIJ" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_292.sql",
+      "dd0kqcvzohsMRHDdjLLOH$$raH_xj4oEGOZqJ3j4EP1U" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "nSL3hq2_eACP9MezhleKx$$qeEcxU77s2BgJvHqDHEeH" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "noitubMHzUZ8_JnUPvFyB$$k08ZUILAGAPXtYieu7R3d" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "eKHQIGJcRUHfuacZ_Tkf0$$MSwCmDje29X9gGEdRNLQT" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "nt4rYg2b7UorAbsGiHBgJ$$E0-wzfzt8lUOw6O4YizeQ" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "5TBI7iyfevh6IHeFrtNaD$$QxZsIb6oAFL8X45Z4KMBI" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "LB7MMVhUm6LAYTCmPlYtO$$qFyDyds8RG3uLXGBHvdGx" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "ZgRopKt4zJC-52ejFgAeh$$8krmHleZPv-1hYuC_CWxl" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "VCgz4gOxOcsCCrcYE3z6Q$$wdNG7kxctFF0TqirwT3Wk" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "Uy32MpwnduoCduVDQTiTX$$kXOtyql4QcPIuu17EZM9A" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "4lSxRmX_ntfUkXNuo9ESS$$o3vwPDyBwymWMRis29mRg" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "ifC8hS7uAbKNXPmdQhhMp$$CGO7V593FuwVuXh7_WmcX" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "AByM7WyDioaCm7yIt6Qoq$$JGFPGr8bArbKmMP_1o8t4" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "s8V-wQ4DESYRh9D7DenGS$$QFcdDKSmPXomLSO8L57Fx" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "3xAkrw6tnplN0aZYXZy2U$$sKuuN8RxuiU8UVsXjNKsL" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "-KO5aqphnomm-FEEllC4W$$tIP7aP66P5MtXhgUeA3wn" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "T3vD78MroVCo4tB9Zmv4c$$6aTMf4kVMLjKhg3fSaZMl" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "aQaO7oZ1w2rK4zYwQ7g2N$$Qt-PejhX0_eEoAvmt0AnL" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "TSp-NcCCCdUelB1F7SKOm$$NhmHsumTBMVDiPGbTHvLC" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "ihgufzPhHLyGBRwKPElwH$$41US_nWNArKvVLk1gcK03" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "PtppVSZAK5V7aiQ58uD0L$$9tbxjfhTQYJt_3qma3cip" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "RFl948__s_NaRZRPpw-sb$$QsIzgPvpTTNyQnaJVkrEh" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "UWfTv7WyjzhgqihLcdpby$$dzzC2Ip7nq3JWo5k_ZSQ4" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "ZYoz15o7QMUmiXF3bDJ6a$$YojV7U9TfO_AAVySY1ChY" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "Ucp97zG9VYMiCa61HeWBb$$jtMUMhV-OugFz17XN1GGz" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "ocPL2cwyrEzGRqEmM5EzQ$$rUAQrfePms4vXCjwqeys5" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "4y372v9H9xEbpHX_zKWLQ$$BAJouS5Z1q2maAZ_6i4yg" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "J7YWNp0lRkvec2kfIBiZm$$OdxdDkdfAJcxVJSTLax5_" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "ix6sbtFQE82JlPA_T8beL$$moYB-tPniyUxwFw-Ixw5C" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "deecB6d4I-cbKFUiqLdUb$$qThlKEyDfcEqBacURP6WM" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "pURvPWaiFSEHMvAiz9x6D$$Fc9iymcUMgEhb3QlPxJPr" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "uystRZF4X1lRCf2R6Rkgn$$kS6al2CCpeR_UxbZFBtr4" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "vijdesIcKTtH4BrhYNqP6$$jj1zD3nMe5tGTqRrJzOi4" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "W6ioUJQrl4B-Wqxd24bAX$$aHPo3tQ3f_0Mes8Z48-MI" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "UnxsboSyS7iK3ZDH1iZVK$$mLQFCB8A4yJHPwRPyYFvC" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "uaFxfdRyUHr33kocWU4r3$$8IymCU2b6fbWPXSYN7IA0" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "41-l2PRIRszZ2ZAuvR5W5$$LGzD4WtVTRLtIsG2jJIzi" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "5TwqS-xkR5akOd5UevYM3$$5WrKOG-qCpFIrxuCFfC20" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "Npl5wsqjUKAus_gUQzntw$$rKDgi-MdL5PDJGE-RBdYP" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "CUFtD3EPjdCrEmFPTs-9j$$BiHo-Zue2yr-jsnroHReO" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "9SXtXUg7YlFumXCMMxrLX$$lMG28QGT7iZbdrI5UHAMH" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "kvABAr5eAbh5jPoNRUPmt$$GASbnYo4sh-8DMHJcqHqa" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "4S_jLaZbMRJ-rGJlARNKU$$Yks2VuG5Ko8CHQWGnjDgA" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "eDBxB7Rn1x6oHLQJ-Nt7G$$qdzHZr99drcCH_PvqPRw1" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "q5Da0L-8Ud9xGd4nyuwnM$$dQhgvbL-WXGzJXOazHht5" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "Xtz_JPeUtJXshxF9UFNZr$$mo4pNEifajGnlpPX_uoEZ" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "wkMJ2ZXP2F6KiBpRQcIwD$$G716N9Z-oSBaEgfwNWi9U" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "9qqECua8Q3zYaV4L5ajtb$$T-z8BBES-gwsFlWoExxMZ" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "NAFHN5HnxziSeVi2qRf9h$$-B9xiOrD7bhHe0b-p9XYC" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "ELTPtFqJFRbEb6clBMQjw$$c52N45CKQ-xB3iNGTAL48" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "aluZPIJ95fjaVmqAyaLxD$$C1AWGEkE-w_LMuNsuuYpw" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "t88iNIhmM1BNMuiSzFA9M$$I61SNhYPaw7B9zdWY8x6b" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "OACkKSwYx5aGYXvmF8Dsx$$DEXbdhgNYoWVn9HvWU6oA" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "OG3IDGvVeG9Sd5JnXoS0s$$Jf1v8wUPIeKEwj8UD5XNX" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__send_notification_requests.sql",
+      "Filter_342_aDM5PFWj6xaVrwVAjC8cr$$ZZosL96HKOGfDdxa4TjJd" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_292.sql",
+      "TRWuQ51BjbJtAudprymLJ$$pohbSMevjeiI-KwsrOvXs" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "Ln4bV_b0AtyZBVM6Z6ZZF$$h6qiKnpWDpfTSj8f8Iqaz" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "EEnzrqm4vUU8PrMmB4HYG$$A3yBZKJYdHFmF5NA_aXT-" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "ke0MHecmIXYpaCBc0L41U$$SUVmv610nnXw5wjmMozSI" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "GH_Dr1C87sKx8LDv74zWO$$WIRN1KlhPeJ3eQdr-wbJE" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__productos_seguros_ventas.sql",
+      "4qVRNrDAifLb4i-2gi9Ay$$N8u_2Vx8MqTTikkYLK4nO" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "2v_evu6pk_WVhseWhnr_Q$$TOWwAXeFvH2LYnhgkGqFk" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "3oX7LWlKVAD0KpiQVAy0_$$QfXpY8zzqigGWkzPKLurW" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "1ax4x7bg7AgXim812771O$$lvmriQRj0ClrzbDsgAAIZ" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "EosSGqEVJtESMC4haajdn$$0JhQGqoPCCwQ48eJ8ZRAJ" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "Cz8J7VO4_t5OLgNZfH9ok$$cIPB8-IK0g38fImOVLGrP" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "y92QXGD2-TUYBBg9PIKSB$$TUevVLDB7k1GIs4L-HrRf" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "8WJ-nBybCikYta4Qlakxl$$52WdeNb74yQZS04h0zfBv" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__productos_seguros_ventas.sql",
+      "BxVFie7IIVHQPoHSMM4L-$$RYrqrhDOm-oZBuORq3YfC" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "UPbu8SV9I67-ErhTU97Rn$$8aOBIXBhnN-cJCPaOeGk1" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "Z7RBbcGvd4tjbw07apVnd$$pDspYel89TJGABkcv6fDU" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_312.sql",
+      "vAsmwhDXvYotMWvmC3PY-$$qg1F3pRblbs8pqwxucUmi" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "irb65RdZ5v1osTkDMzryp$$1ET_aStTzvzt1tucm7AAJ" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "XcVXgVmz1Qqfes0JfFlPK$$k9Y_JoWUZYYROeOCYfV2s" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__send_notification_requests.sql",
+      "sF7evd5iRUJqvtQuVNRN0$$8Pbm6UngS6_AqA_F8jDcM" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "L8-FSZvRYKNLq3M6P0JvB$$sQALlhRnARs0F2YM_jdKm" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "1gbzEgQXviAcB5wulmu-s$$sAPQoAxXNapeD3TzuqnZq" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "o83CKXnOLUl_kH9qhdw4t$$AEkVgvY62wyW3LUq_fO73" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "Filter_312_HX27BDkAcViaJwByKaCrF$$3WokG1hi43ZVzEeMU5jzt" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_pendientes_revision.sql",
+      "2DnUaRoWJYOSgb57qdkqB$$1us1Fhw56jXqFHvMaus6f" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "Pb0fwAwHV1BblJ-RMCMwG$$lUP3GmrCepr7qJGbkol14" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "IEtbeqEiWPefv8Xc-CjsG$$vVQhz_bKfKrhcu-Mm-E8r" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "L9GS6XMqMn7BUso8cJQ9b$$VH7JRHLJ34swSFLA7dqaF" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "5O0BFPhx8Nhq1al6M4f83$$Iz6l7r6j7QyDjYbU2JDYn" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "BIhmvXv71GJgdUjlPtP3T$$pmgOKqrdBgMc5zMEyBP24" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "send_notification_requests_t8gE-mDaM3NkePFiBtxM9$$1RAXo_3oeVAlKlCFifMXd" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__send_notification_requests.sql",
+      "Du0_abWtd4GCQhNgI1iiM$$aZ_4fTMXqbKn2pdIv7DPf" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "hNzlao3SEiRSWVQc0ybzD$$kaCw54HYeH6VyupLAblLb" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "-G0iXC7qUltlxcXSqKtLv$$JHQuzjp3NvKb1GGgkpnfU" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_pendientes_revision.sql",
+      "BDkOTpCpmuqpMDMnUHGcQ$$t6GpSwEoA_PVH72maFtLz" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_292.sql",
+      "_8gcvhtIIdumu19En8N_b$$11czSBIgZ9fXFpQpbgsYK" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "tFJtzEm7c_NBtBsU6Gd-J$$_IDxUVIqnQjp-riiDeuhJ" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "y5-f9i5tASHVvn5fCwEHC$$D5heQAbbGyLr42VsqUzdN" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "SnlUX8PeB6pPRA1Sbx95w$$ZpmHJf0YeGLXLj_Kh_w7k" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "G4f4HOCkQ9wRuAOnA6sxu$$ZMsRXVPKFRfe_KEgINeso" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "yPX0xw8DMLo16ecmPygYh$$FkY_qTKmXlCj1lP6jXi60" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "M31lPHmWwjF4ONtXhXWHm$$loVLxbFRILXNJ6Tk9-BYs" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "Ms1vMUwVn_7dOIhAeA3mt$$Y-PKl3_BAKds6x9rMG9Y0" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "nVioGBiLtj1Ar5Jl_Antz$$MWDWrXuAk776EFC9aXB6n" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "hGJkKUsl44lINVimyTPV-$$MIAaSJtoKXv_wPj9qkLad" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "gzrxAm7ARlF7JFaD3ji0T$$47KoSn6PtPrXFCaPSo4ts" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql",
+      "mER26AW9lUOXFWmHf92oL$$lsPtYCkSqxif4W6SUcaVZ" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__productos_seguros_ventas.sql",
+      "s_VRQ1yN2h998QQH43GHM$$dnm3ZvkLhbBBbsSzwuHF8" : "models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql"
+    }
+  },
+  "processes" : {
+    "ocPL2cwyrEzGRqEmM5EzQ$$rUAQrfePms4vXCjwqeys5" : {
+      "id" : "ocPL2cwyrEzGRqEmM5EzQ$$rUAQrfePms4vXCjwqeys5",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030023_Productos_Seguros_Productividades__Filter_342",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030023_Productos_Seguros_Productividades__Filter_342"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Filter_342_aDM5PFWj6xaVrwVAjC8cr$$ZZosL96HKOGfDdxa4TjJd", "ocPL2cwyrEzGRqEmM5EzQ$$rUAQrfePms4vXCjwqeys5", "ix6sbtFQE82JlPA_T8beL$$moYB-tPniyUxwFw-Ixw5C", "NAFHN5HnxziSeVi2qRf9h$$-B9xiOrD7bhHe0b-p9XYC", "2DnUaRoWJYOSgb57qdkqB$$1us1Fhw56jXqFHvMaus6f", "vijdesIcKTtH4BrhYNqP6$$jj1zD3nMe5tGTqRrJzOi4", "rAQaCNf4BGVJaXfIwr6kk$$brjb8Zxy2wwVwD3f0m4nQ", "1ax4x7bg7AgXim812771O$$lvmriQRj0ClrzbDsgAAIZ", "Npl5wsqjUKAus_gUQzntw$$rKDgi-MdL5PDJGE-RBdYP", "ZgRopKt4zJC-52ejFgAeh$$8krmHleZPv-1hYuC_CWxl", "K3TiCgE34l6AYUU3XP4vS$$WffCCxfQSs6r19_R-zk4S", "5TBI7iyfevh6IHeFrtNaD$$QxZsIb6oAFL8X45Z4KMBI", "4lSxRmX_ntfUkXNuo9ESS$$o3vwPDyBwymWMRis29mRg", "BIhmvXv71GJgdUjlPtP3T$$pmgOKqrdBgMc5zMEyBP24", "sF7evd5iRUJqvtQuVNRN0$$8Pbm6UngS6_AqA_F8jDcM", "eDBxB7Rn1x6oHLQJ-Nt7G$$qdzHZr99drcCH_PvqPRw1", "irb65RdZ5v1osTkDMzryp$$1ET_aStTzvzt1tucm7AAJ", "q5Da0L-8Ud9xGd4nyuwnM$$dQhgvbL-WXGzJXOazHht5", "5TwqS-xkR5akOd5UevYM3$$5WrKOG-qCpFIrxuCFfC20", "ihgufzPhHLyGBRwKPElwH$$41US_nWNArKvVLk1gcK03", "M31lPHmWwjF4ONtXhXWHm$$loVLxbFRILXNJ6Tk9-BYs", "o83CKXnOLUl_kH9qhdw4t$$AEkVgvY62wyW3LUq_fO73", "IEtbeqEiWPefv8Xc-CjsG$$vVQhz_bKfKrhcu-Mm-E8r", "nSL3hq2_eACP9MezhleKx$$qeEcxU77s2BgJvHqDHEeH", "9qqECua8Q3zYaV4L5ajtb$$T-z8BBES-gwsFlWoExxMZ", "OACkKSwYx5aGYXvmF8Dsx$$DEXbdhgNYoWVn9HvWU6oA", "3uJmSuvwGeO5c5ZIHF9gg$$2Q_qxJs8ZNBUmUs5vnFou", "uaFxfdRyUHr33kocWU4r3$$8IymCU2b6fbWPXSYN7IA0", "UWfTv7WyjzhgqihLcdpby$$dzzC2Ip7nq3JWo5k_ZSQ4", "5O0BFPhx8Nhq1al6M4f83$$Iz6l7r6j7QyDjYbU2JDYn", "jok8cfaspnMSKCVIIyIQJ$$6GTXPOFr41kVSQVtuGCEs", "LB7MMVhUm6LAYTCmPlYtO$$qFyDyds8RG3uLXGBHvdGx", "EosSGqEVJtESMC4haajdn$$0JhQGqoPCCwQ48eJ8ZRAJ", "anXE-WU_ssPl4l38lcJWG$$Uw0o0kueABuGhWwB2iXzf", "BfTVux5wJHVDqQjA0GE2q$$ub4lSCwBEmeAuGOZFiNO9", "9SXtXUg7YlFumXCMMxrLX$$lMG28QGT7iZbdrI5UHAMH", "UnxsboSyS7iK3ZDH1iZVK$$mLQFCB8A4yJHPwRPyYFvC", "s_VRQ1yN2h998QQH43GHM$$dnm3ZvkLhbBBbsSzwuHF8", "W6ioUJQrl4B-Wqxd24bAX$$aHPo3tQ3f_0Mes8Z48-MI", "gzrxAm7ARlF7JFaD3ji0T$$47KoSn6PtPrXFCaPSo4ts", "aluZPIJ95fjaVmqAyaLxD$$C1AWGEkE-w_LMuNsuuYpw", "Ucp97zG9VYMiCa61HeWBb$$jtMUMhV-OugFz17XN1GGz", "zsvaITEv9VGGBynwTaDiP$$Eqp-ryH-xjGffYx6f_woL", "gBo64Eas5ppKqUkUWXm05$$3jexdR_TibH2tc6K4dN1H", "L9GS6XMqMn7BUso8cJQ9b$$VH7JRHLJ34swSFLA7dqaF", "4S_jLaZbMRJ-rGJlARNKU$$Yks2VuG5Ko8CHQWGnjDgA", "kvABAr5eAbh5jPoNRUPmt$$GASbnYo4sh-8DMHJcqHqa", "AByM7WyDioaCm7yIt6Qoq$$JGFPGr8bArbKmMP_1o8t4", "Uy32MpwnduoCduVDQTiTX$$kXOtyql4QcPIuu17EZM9A", "3xAkrw6tnplN0aZYXZy2U$$sKuuN8RxuiU8UVsXjNKsL", "s8V-wQ4DESYRh9D7DenGS$$QFcdDKSmPXomLSO8L57Fx", "pURvPWaiFSEHMvAiz9x6D$$Fc9iymcUMgEhb3QlPxJPr", "ZYoz15o7QMUmiXF3bDJ6a$$YojV7U9TfO_AAVySY1ChY", "EEnzrqm4vUU8PrMmB4HYG$$A3yBZKJYdHFmF5NA_aXT-", "RagM7qBM7tH6TQMa_Uq_h$$w9vdgZ4TBFrdeLAcPo3hA", "_Putn9waeYt54QDa22hBn$$eNjZvBTmJnuqvlKaU7p4I", "SnlUX8PeB6pPRA1Sbx95w$$ZpmHJf0YeGLXLj_Kh_w7k", "Gaoi9SXq_0wm9Fwlb9qNC$$UPV3rIQDZQ_mmHlvPzeB6", "-KO5aqphnomm-FEEllC4W$$tIP7aP66P5MtXhgUeA3wn", "eKHQIGJcRUHfuacZ_Tkf0$$MSwCmDje29X9gGEdRNLQT", "Cz8J7VO4_t5OLgNZfH9ok$$cIPB8-IK0g38fImOVLGrP", "_8gcvhtIIdumu19En8N_b$$11czSBIgZ9fXFpQpbgsYK", "_U99ONQrJcyanI9y0A9O1$$LIEw68XnJYMbomEF4dAFN", "y5-f9i5tASHVvn5fCwEHC$$D5heQAbbGyLr42VsqUzdN", "yPX0xw8DMLo16ecmPygYh$$FkY_qTKmXlCj1lP6jXi60", "G4f4HOCkQ9wRuAOnA6sxu$$ZMsRXVPKFRfe_KEgINeso", "lIWuB6ahpEYHuV1m_4OwL$$7qNs2Q8NROA2zXta1-4HK", "deecB6d4I-cbKFUiqLdUb$$qThlKEyDfcEqBacURP6WM", "aQaO7oZ1w2rK4zYwQ7g2N$$Qt-PejhX0_eEoAvmt0AnL", "Ms1vMUwVn_7dOIhAeA3mt$$Y-PKl3_BAKds6x9rMG9Y0", "BxVFie7IIVHQPoHSMM4L-$$RYrqrhDOm-oZBuORq3YfC", "L8-FSZvRYKNLq3M6P0JvB$$sQALlhRnARs0F2YM_jdKm", "TSp-NcCCCdUelB1F7SKOm$$NhmHsumTBMVDiPGbTHvLC", "T3vD78MroVCo4tB9Zmv4c$$6aTMf4kVMLjKhg3fSaZMl", "IDuoRoDCWQfW4aew08FcJ$$dPGfQjGhUEjFPOd-sEelD", "Du0_abWtd4GCQhNgI1iiM$$aZ_4fTMXqbKn2pdIv7DPf", "ke0MHecmIXYpaCBc0L41U$$SUVmv610nnXw5wjmMozSI", "ELTPtFqJFRbEb6clBMQjw$$c52N45CKQ-xB3iNGTAL48", "PtppVSZAK5V7aiQ58uD0L$$9tbxjfhTQYJt_3qma3cip", "Xtz_JPeUtJXshxF9UFNZr$$mo4pNEifajGnlpPX_uoEZ", "J7YWNp0lRkvec2kfIBiZm$$OdxdDkdfAJcxVJSTLax5_", "1gbzEgQXviAcB5wulmu-s$$sAPQoAxXNapeD3TzuqnZq", "wkMJ2ZXP2F6KiBpRQcIwD$$G716N9Z-oSBaEgfwNWi9U", "nt4rYg2b7UorAbsGiHBgJ$$E0-wzfzt8lUOw6O4YizeQ", "dd0kqcvzohsMRHDdjLLOH$$raH_xj4oEGOZqJ3j4EP1U", "CUFtD3EPjdCrEmFPTs-9j$$BiHo-Zue2yr-jsnroHReO", "hNzlao3SEiRSWVQc0ybzD$$kaCw54HYeH6VyupLAblLb", "UPbu8SV9I67-ErhTU97Rn$$8aOBIXBhnN-cJCPaOeGk1", "RFl948__s_NaRZRPpw-sb$$QsIzgPvpTTNyQnaJVkrEh", "t88iNIhmM1BNMuiSzFA9M$$I61SNhYPaw7B9zdWY8x6b", "nVioGBiLtj1Ar5Jl_Antz$$MWDWrXuAk776EFC9aXB6n", "vAsmwhDXvYotMWvmC3PY-$$qg1F3pRblbs8pqwxucUmi", "4y372v9H9xEbpHX_zKWLQ$$BAJouS5Z1q2maAZ_6i4yg", "uystRZF4X1lRCf2R6Rkgn$$kS6al2CCpeR_UxbZFBtr4", "hGJkKUsl44lINVimyTPV-$$MIAaSJtoKXv_wPj9qkLad", "VCgz4gOxOcsCCrcYE3z6Q$$wdNG7kxctFF0TqirwT3Wk", "Ln4bV_b0AtyZBVM6Z6ZZF$$h6qiKnpWDpfTSj8f8Iqaz", "tFJtzEm7c_NBtBsU6Gd-J$$_IDxUVIqnQjp-riiDeuhJ", "3oX7LWlKVAD0KpiQVAy0_$$QfXpY8zzqigGWkzPKLurW", "2v_evu6pk_WVhseWhnr_Q$$TOWwAXeFvH2LYnhgkGqFk", "41-l2PRIRszZ2ZAuvR5W5$$LGzD4WtVTRLtIsG2jJIzi", "Pb0fwAwHV1BblJ-RMCMwG$$lUP3GmrCepr7qJGbkol14", "y92QXGD2-TUYBBg9PIKSB$$TUevVLDB7k1GIs4L-HrRf", "WxJzigIRFVIssXh-wE3R_$$jx2fIvjfwLnpRigO__FKn", "4qVRNrDAifLb4i-2gi9Ay$$N8u_2Vx8MqTTikkYLK4nO", "noitubMHzUZ8_JnUPvFyB$$k08ZUILAGAPXtYieu7R3d", "TRWuQ51BjbJtAudprymLJ$$pohbSMevjeiI-KwsrOvXs", "ifC8hS7uAbKNXPmdQhhMp$$CGO7V593FuwVuXh7_WmcX" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_342_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_342_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_342_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_342_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_342_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_342_in_5",
+          "slug" : "in_5"
+        }, {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_342_in_6",
+          "slug" : "in_6"
+        }, {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_342_in_7",
+          "slug" : "in_7"
+        }, {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_342_in_8",
+          "slug" : "in_8"
+        }, {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_342_in_9",
+          "slug" : "in_9"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_342_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "OG3IDGvVeG9Sd5JnXoS0s$$Jf1v8wUPIeKEwj8UD5XNX" : {
+      "id" : "OG3IDGvVeG9Sd5JnXoS0s$$Jf1v8wUPIeKEwj8UD5XNX",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030023_Productos_Seguros_Productividades__send_notification_requests",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030023_Productos_Seguros_Productividades__send_notification_requests"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "send_notification_requests_t8gE-mDaM3NkePFiBtxM9$$1RAXo_3oeVAlKlCFifMXd", "OG3IDGvVeG9Sd5JnXoS0s$$Jf1v8wUPIeKEwj8UD5XNX", "kiuK3Kq6u39CNJJGWBSTw$$_Z_IMtSoWFQxvIlKHV1h_", "9BsX8JkUnSJIxMeY06sPv$$EBtL3l-H5EUVirGWaA039", "-V6j4a1Muh7tErssIl5-p$$12j9DVbbLRte-hDqd7KIk", "XcVXgVmz1Qqfes0JfFlPK$$k9Y_JoWUZYYROeOCYfV2s", "Filter_312_HX27BDkAcViaJwByKaCrF$$3WokG1hi43ZVzEeMU5jzt" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__send_notification_requests_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__send_notification_requests_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "8WJ-nBybCikYta4Qlakxl$$52WdeNb74yQZS04h0zfBv" : {
+      "id" : "8WJ-nBybCikYta4Qlakxl$$52WdeNb74yQZS04h0zfBv",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "8WJ-nBybCikYta4Qlakxl$$52WdeNb74yQZS04h0zfBv", "mER26AW9lUOXFWmHf92oL$$lsPtYCkSqxif4W6SUcaVZ", "GH_Dr1C87sKx8LDv74zWO$$WIRN1KlhPeJ3eQdr-wbJE", "Filter_342_aDM5PFWj6xaVrwVAjC8cr$$ZZosL96HKOGfDdxa4TjJd", "Filter_292_w-wOfoZCAiRdVvVXUSrQG$$5LtX2bPEfVozzGxgNcKIJ" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Z7RBbcGvd4tjbw07apVnd$$pDspYel89TJGABkcv6fDU" : {
+      "id" : "Z7RBbcGvd4tjbw07apVnd$$pDspYel89TJGABkcv6fDU",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030023_Productos_Seguros_Productividades__Filter_312",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030023_Productos_Seguros_Productividades__Filter_312"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Filter_312_HX27BDkAcViaJwByKaCrF$$3WokG1hi43ZVzEeMU5jzt", "Z7RBbcGvd4tjbw07apVnd$$pDspYel89TJGABkcv6fDU", "Filter_292_w-wOfoZCAiRdVvVXUSrQG$$5LtX2bPEfVozzGxgNcKIJ" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_312_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_312_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "-G0iXC7qUltlxcXSqKtLv$$JHQuzjp3NvKb1GGgkpnfU" : {
+      "id" : "-G0iXC7qUltlxcXSqKtLv$$JHQuzjp3NvKb1GGgkpnfU",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_pendientes_revision",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_pendientes_revision"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "-G0iXC7qUltlxcXSqKtLv$$JHQuzjp3NvKb1GGgkpnfU", "pVhCCovZZF8rJflEEmI-x$$EHPi5MEAWSQR_amuAvsF-", "Filter_312_HX27BDkAcViaJwByKaCrF$$3WokG1hi43ZVzEeMU5jzt" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_pendientes_revision_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_pendientes_revision_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "BDkOTpCpmuqpMDMnUHGcQ$$t6GpSwEoA_PVH72maFtLz" : {
+      "id" : "BDkOTpCpmuqpMDMnUHGcQ$$t6GpSwEoA_PVH72maFtLz",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030023_Productos_Seguros_Productividades__Filter_292",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030023_Productos_Seguros_Productividades__Filter_292"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Filter_292_w-wOfoZCAiRdVvVXUSrQG$$5LtX2bPEfVozzGxgNcKIJ", "BDkOTpCpmuqpMDMnUHGcQ$$t6GpSwEoA_PVH72maFtLz", "Filter_342_aDM5PFWj6xaVrwVAjC8cr$$ZZosL96HKOGfDdxa4TjJd" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_292_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030023_Productos_Seguros_Productividades__Filter_292_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_ocPL2cwyrEzGRqEmM5EzQ$$rUAQrfePms4vXCjwqeys5_C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_in_0",
+    "source" : "ocPL2cwyrEzGRqEmM5EzQ$$rUAQrfePms4vXCjwqeys5",
+    "sourcePort" : "C0030023_Productos_Seguros_Productividades__Filter_342_out_0",
+    "target" : "8WJ-nBybCikYta4Qlakxl$$52WdeNb74yQZS04h0zfBv",
+    "targetPort" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_in_0"
+  }, {
+    "id" : "conn_ocPL2cwyrEzGRqEmM5EzQ$$rUAQrfePms4vXCjwqeys5_C0030023_Productos_Seguros_Productividades__Filter_292_in_0",
+    "source" : "ocPL2cwyrEzGRqEmM5EzQ$$rUAQrfePms4vXCjwqeys5",
+    "sourcePort" : "C0030023_Productos_Seguros_Productividades__Filter_342_out_0",
+    "target" : "BDkOTpCpmuqpMDMnUHGcQ$$t6GpSwEoA_PVH72maFtLz",
+    "targetPort" : "C0030023_Productos_Seguros_Productividades__Filter_292_in_0"
+  }, {
+    "id" : "conn_Z7RBbcGvd4tjbw07apVnd$$pDspYel89TJGABkcv6fDU_C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_pendientes_revision_in_0",
+    "source" : "Z7RBbcGvd4tjbw07apVnd$$pDspYel89TJGABkcv6fDU",
+    "sourcePort" : "C0030023_Productos_Seguros_Productividades__Filter_312_out_0",
+    "target" : "-G0iXC7qUltlxcXSqKtLv$$JHQuzjp3NvKb1GGgkpnfU",
+    "targetPort" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_pendientes_revision_in_0"
+  }, {
+    "id" : "conn_Z7RBbcGvd4tjbw07apVnd$$pDspYel89TJGABkcv6fDU_C0030023_Productos_Seguros_Productividades__send_notification_requests_in_0",
+    "source" : "Z7RBbcGvd4tjbw07apVnd$$pDspYel89TJGABkcv6fDU",
+    "sourcePort" : "C0030023_Productos_Seguros_Productividades__Filter_312_out_0",
+    "target" : "OG3IDGvVeG9Sd5JnXoS0s$$Jf1v8wUPIeKEwj8UD5XNX",
+    "targetPort" : "C0030023_Productos_Seguros_Productividades__send_notification_requests_in_0"
+  }, {
+    "id" : "conn_BDkOTpCpmuqpMDMnUHGcQ$$t6GpSwEoA_PVH72maFtLz_C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_in_1",
+    "source" : "BDkOTpCpmuqpMDMnUHGcQ$$t6GpSwEoA_PVH72maFtLz",
+    "sourcePort" : "C0030023_Productos_Seguros_Productividades__Filter_292_out_0",
+    "target" : "8WJ-nBybCikYta4Qlakxl$$52WdeNb74yQZS04h0zfBv",
+    "targetPort" : "C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_in_1"
+  }, {
+    "id" : "conn_BDkOTpCpmuqpMDMnUHGcQ$$t6GpSwEoA_PVH72maFtLz_C0030023_Productos_Seguros_Productividades__Filter_312_in_0",
+    "source" : "BDkOTpCpmuqpMDMnUHGcQ$$t6GpSwEoA_PVH72maFtLz",
+    "sourcePort" : "C0030023_Productos_Seguros_Productividades__Filter_292_out_0",
+    "target" : "Z7RBbcGvd4tjbw07apVnd$$pDspYel89TJGABkcv6fDU",
+    "targetPort" : "C0030023_Productos_Seguros_Productividades__Filter_312_in_0"
+  } ],
+  "component" : "Pipeline"
+}

@@ -1,0 +1,1809 @@
+{
+  "id" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65",
+  "metainfo" : {
+    "label" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"dev_ref_control\"",
+        "schema" : "\"prophecy_tmp\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "n4P24OlX59ft43BhZUAdu$$FH7AMRLxTE7W_1mt0heBy" : {
+      "id" : "n4P24OlX59ft43BhZUAdu$$FH7AMRLxTE7W_1mt0heBy",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "MultiRowFormula_57_row_id_0",
+        "x" : 2440,
+        "y" : 360,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "(monotonically_increasing_id())"
+          },
+          "alias" : "prophecy_row_id",
+          "_row_id" : "1048852446"
+        }, {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "1704358584"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CCnpobKLnxgQXbDxfLADJ$$r97xdWb77doknVT59wNk3",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "eYPRoCFX-EvvZZ7Ylk5ue$$RuVvvXkIgDmVbF2xfIvGG",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Itenawil5z6NkhyKeI7eT$$tgvi0chaPsd9hpxWXK-NS" : {
+      "id" : "Itenawil5z6NkhyKeI7eT$$tgvi0chaPsd9hpxWXK-NS",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_48_inner",
+        "x" : 1420,
+        "y" : 260,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "((in0.idf_pers_ods = in1.idf_pers_ods) AND (in0.numero_contrato_inversiones = in1.numero_contrato_inversiones))"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.*"
+          },
+          "_row_id" : "604440782"
+        }, {
+          "expression" : {
+            "expression" : "in1.* EXCEPT(`numero_contrato_inversiones`, `idf_pers_ods`, `Count`)"
+          },
+          "_row_id" : "1421527563"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "GMkmyQy2w_MyQO2BOuziN$$08zUHgZ8YR9YSPloNvhFK##idf_pers_ods", "gW0P5uHc1f0rz5-aq6Rcy$$r-ZBdX_Ro7QC8HwhmBB_P##idf_pers_ods", "GMkmyQy2w_MyQO2BOuziN$$08zUHgZ8YR9YSPloNvhFK##numero_contrato_inversiones", "gW0P5uHc1f0rz5-aq6Rcy$$r-ZBdX_Ro7QC8HwhmBB_P##numero_contrato_inversiones" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "GMkmyQy2w_MyQO2BOuziN$$08zUHgZ8YR9YSPloNvhFK",
+          "slug" : "in0"
+        }, {
+          "id" : "gW0P5uHc1f0rz5-aq6Rcy$$r-ZBdX_Ro7QC8HwhmBB_P",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "hyEHJ9Tt-HylH9TeN3SNK$$ZjWXGW_SMzAGahix8R9tx",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "bdPbqFOeU0GbJ96kNkt6Y$$y7eNSGGwE6usLRf207j-o" : {
+      "id" : "bdPbqFOeU0GbJ96kNkt6Y$$y7eNSGGwE6usLRf207j-o",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "MultiRowFormula_57_1",
+        "x" : 2720,
+        "y" : 360,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "Tho28Y-_vX9-QsgE3mLYd$$pRjwrUbxzHhzlfrCwtcST##numero_contrato_inversiones", "Tho28Y-_vX9-QsgE3mLYd$$pRjwrUbxzHhzlfrCwtcST##numero_contrato_inversiones_lag1" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST((CASE WHEN CAST((numero_contrato_inversiones = numero_contrato_inversiones_lag1) AS BOOLEAN) THEN 0 ELSE 1 END) AS BOOLEAN)"
+          },
+          "alias" : "es_primer_titular",
+          "_row_id" : "1404862527"
+        }, {
+          "expression" : {
+            "expression" : "* EXCEPT(`numero_contrato_inversiones_lag1`)"
+          },
+          "_row_id" : "1347181527"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Tho28Y-_vX9-QsgE3mLYd$$pRjwrUbxzHhzlfrCwtcST",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "ySTNXZWYaSo8JCBJvmRQ-$$hjlFO5KfLsTDAfb8VpBUS",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR" : {
+      "id" : "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "AlteryxSelect_65"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM AlteryxSelect_65\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_5",
+          "slug" : "input_port_5"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_5",
+          "slug" : "output_port_5"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "-zu2Woq268tKhT0UBPHui$$QCvdvAgSGykwY07YWW491" : {
+      "id" : "-zu2Woq268tKhT0UBPHui$$QCvdvAgSGykwY07YWW491",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_54_inner",
+        "x" : 2160,
+        "y" : 360,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(in0.numero_contrato_inversiones = in1.numero_contrato_inversiones)"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.*"
+          },
+          "_row_id" : "1669380850"
+        }, {
+          "expression" : {
+            "expression" : "in1.* EXCEPT(`numero_contrato_inversiones`, `Max_es_primer_titular`)"
+          },
+          "_row_id" : "220176739"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "tfwIUiyVVjX99Jdgu5Qdu$$ulG0KQTvzBwWfCWBQ5K_K##numero_contrato_inversiones", "p7MitWp9x8ra6WaF29fJd$$O8EO63Z3GoDJNdWjHjwdJ##numero_contrato_inversiones" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "tfwIUiyVVjX99Jdgu5Qdu$$ulG0KQTvzBwWfCWBQ5K_K",
+          "slug" : "in0"
+        }, {
+          "id" : "p7MitWp9x8ra6WaF29fJd$$O8EO63Z3GoDJNdWjHjwdJ",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "D58Fg8BPo5xtRSImR17uA$$uygaKVdhhlxAMM0TvCUqI",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Dxj4wGDxbdpx6wSu2J-xT$$Il4DlNTHUJTWU6eDVbcpi" : {
+      "id" : "Dxj4wGDxbdpx6wSu2J-xT$$Il4DlNTHUJTWU6eDVbcpi",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_54_left",
+        "x" : 2160,
+        "y" : 200,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(in0.numero_contrato_inversiones = in1.numero_contrato_inversiones)"
+          },
+          "joinType" : "anti"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.*"
+          },
+          "_row_id" : "865377475"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "1gqDw5-rzlHFNVG5bU-f_$$7RQCeuxIpPQZm3XD7JiXJ##numero_contrato_inversiones", "wDY1hZUZXhPZ4PA8RKLv3$$ZW4P_h7ScgCxcfae2w3ZE##numero_contrato_inversiones" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1gqDw5-rzlHFNVG5bU-f_$$7RQCeuxIpPQZm3XD7JiXJ",
+          "slug" : "in0"
+        }, {
+          "id" : "wDY1hZUZXhPZ4PA8RKLv3$$ZW4P_h7ScgCxcfae2w3ZE",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "C_aNSoiv2hOzZErR7-RWp$$Abx29WG_6DOUTvrMF4kmI",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "uhj1-JSDDP8STcjKJfsL1$$NeRH7i4WjghrEPAZTmkot" : {
+      "id" : "uhj1-JSDDP8STcjKJfsL1$$NeRH7i4WjghrEPAZTmkot",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_44",
+        "x" : 660,
+        "y" : 140,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##idf_pers_ods", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitACtdId", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAFec", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAFecAlt", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAEstado", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAW8FchIni", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAW8FchVto", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAW8EstSis", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAF3103FchIni", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAF3103FchVto", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAF3103EstSis", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAF306FchIni", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAF306FchVto", "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV##DynCliTitAF306EstSis" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "idf_pers_ods"
+          },
+          "alias" : "idf_pers_ods",
+          "_row_id" : "763960027"
+        }, {
+          "expression" : {
+            "expression" : "CAST(DynCliTitACtdId AS string)"
+          },
+          "alias" : "numero_contrato_inversiones",
+          "_row_id" : "692595112"
+        }, {
+          "expression" : {
+            "expression" : "CAST(DynCliTitAFec AS DATE)"
+          },
+          "alias" : "fecha_dato",
+          "_row_id" : "410284848"
+        }, {
+          "expression" : {
+            "expression" : "CAST(DynCliTitAFecAlt AS DATE)"
+          },
+          "alias" : "fecha_alta_titular",
+          "_row_id" : "821383639"
+        }, {
+          "expression" : {
+            "expression" : "DynCliTitAEstado"
+          },
+          "alias" : "estado_persona",
+          "_row_id" : "1312551680"
+        }, {
+          "expression" : {
+            "expression" : "CAST(DynCliTitAW8FchIni as date)"
+          },
+          "alias" : "fecha_inicio_w8",
+          "_row_id" : "1358458568"
+        }, {
+          "expression" : {
+            "expression" : "CAST(DynCliTitAW8FchVto as date)"
+          },
+          "alias" : "fecha_vencimiento_w8",
+          "_row_id" : "561482264"
+        }, {
+          "expression" : {
+            "expression" : "DynCliTitAW8EstSis"
+          },
+          "alias" : "estado_w8",
+          "_row_id" : "1430586474"
+        }, {
+          "expression" : {
+            "expression" : "CAST(DynCliTitAF3103FchIni as date)"
+          },
+          "alias" : "fecha_inicio_3103",
+          "_row_id" : "1416256510"
+        }, {
+          "expression" : {
+            "expression" : "cast(DynCliTitAF3103FchVto as date)"
+          },
+          "alias" : "fecha_vencimiento_3103",
+          "_row_id" : "1975052679"
+        }, {
+          "expression" : {
+            "expression" : "DynCliTitAF3103EstSis"
+          },
+          "alias" : "estado_3103",
+          "_row_id" : "1614811565"
+        }, {
+          "expression" : {
+            "expression" : "cast(DynCliTitAF306FchIni as date)"
+          },
+          "alias" : "fecha_inicio_306",
+          "_row_id" : "723647576"
+        }, {
+          "expression" : {
+            "expression" : "CAST(DynCliTitAF306FchVto AS DATE)"
+          },
+          "alias" : "fecha_vencimiento_306",
+          "_row_id" : "1444026906"
+        }, {
+          "expression" : {
+            "expression" : "DynCliTitAF306EstSis"
+          },
+          "alias" : "estado_306",
+          "_row_id" : "1511234909"
+        }, {
+          "expression" : {
+            "expression" : "* EXCEPT(`DynCliTitAPNumPer`, `idf_pers_ods`, `DynCliTitACtdId`, `DynCliTitAFec`, `DynCliTitAFecAlt`, `DynCliTitAEstado`, `DynCliTitAW8FchIni`, `DynCliTitAW8FchVto`, `DynCliTitAW8EstSis`, `DynCliTitAF3103FchIni`, `DynCliTitAF3103FchVto`, `DynCliTitAF3103EstSis`, `DynCliTitAF306FchIni`, `DynCliTitAF306FchVto`, `DynCliTitAF306EstSis`)"
+          },
+          "_row_id" : "26280480"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "ZfRjxUoqHe-qqpAaudaBr$$RUBOG4e9mv0xSlwpU-aq2",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Qnga2hSneG3KrnbnrdMbD$$J9RPU6-gpl8zZTgUQPul_" : {
+      "id" : "Qnga2hSneG3KrnbnrdMbD$$J9RPU6-gpl8zZTgUQPul_",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Sample_39_filter",
+        "x" : 1040,
+        "y" : 280,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "gvfIwhnshwaG6TRei213f$$2YNXSp64r-iwIhV94MUqQ##row_number" ],
+        "condition" : {
+          "expression" : "(row_number <= 1)"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gvfIwhnshwaG6TRei213f$$2YNXSp64r-iwIhV94MUqQ",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "XbEUkqSQfaZwE3RDmrbAG$$BwXxXCIfkeEn_S3ncY8dc",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "6OlPbBviMIO-lBOVwYsgd$$DFegXiYXwh5fTKyBrJovo" : {
+      "id" : "6OlPbBviMIO-lBOVwYsgd$$DFegXiYXwh5fTKyBrJovo",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "MultiRowFormula_57_row_id_drop_0",
+        "x" : 2860,
+        "y" : 360,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "* EXCEPT(`prophecy_row_id`)"
+          },
+          "_row_id" : "2044491896"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "x0FVhO0phu4uC_rS27xZ0$$wEhovLoCyHoPksIWxBrFT",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "CnJPfFRd05zKY7oY4peIV$$6NHrHUU9mNYRfxnUZ1RWM",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB" : {
+      "id" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_65",
+        "x" : 3660,
+        "y" : 240,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##numero_contrato_inversiones", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##idf_pers_ods", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##es_primer_titular", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##fecha_dato", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##fecha_alta_titular", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##estado_persona", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##fecha_inicio_w8", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##fecha_vencimiento_w8", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##estado_w8", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##fecha_inicio_3103", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##fecha_vencimiento_3103", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##estado_3103", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##fecha_inicio_306", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##fecha_vencimiento_306", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##estado_306", "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8##AAAAMM" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "numero_contrato_inversiones"
+          },
+          "alias" : "numero_contrato_inversiones",
+          "_row_id" : "348196392"
+        }, {
+          "expression" : {
+            "expression" : "idf_pers_ods"
+          },
+          "alias" : "idf_pers_ods",
+          "_row_id" : "740936127"
+        }, {
+          "expression" : {
+            "expression" : "es_primer_titular"
+          },
+          "alias" : "es_primer_titular",
+          "_row_id" : "1680255842"
+        }, {
+          "expression" : {
+            "expression" : "fecha_dato"
+          },
+          "alias" : "fecha_dato",
+          "_row_id" : "1270121336"
+        }, {
+          "expression" : {
+            "expression" : "fecha_alta_titular"
+          },
+          "alias" : "fecha_alta_titular",
+          "_row_id" : "2035309731"
+        }, {
+          "expression" : {
+            "expression" : "CAST(estado_persona AS string)"
+          },
+          "alias" : "estado_persona",
+          "_row_id" : "1805102827"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_inicio_w8 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_inicio_w8 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_inicio_w8 AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_inicio_w8 AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(fecha_inicio_w8 AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_inicio_w8",
+          "_row_id" : "152883021"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_w8 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_w8 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_w8 AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_w8 AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_w8 AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_vencimiento_w8",
+          "_row_id" : "453061037"
+        }, {
+          "expression" : {
+            "expression" : "estado_w8"
+          },
+          "alias" : "estado_w8",
+          "_row_id" : "1977416204"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_inicio_3103 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_inicio_3103 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_inicio_3103 AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_inicio_3103 AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(fecha_inicio_3103 AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_inicio_3103",
+          "_row_id" : "1546010124"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_3103 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_3103 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_3103 AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_3103 AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_3103 AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_vencimiento_3103",
+          "_row_id" : "314041392"
+        }, {
+          "expression" : {
+            "expression" : "estado_3103"
+          },
+          "alias" : "estado_3103",
+          "_row_id" : "516966187"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_inicio_306 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_inicio_306 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_inicio_306 AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_inicio_306 AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(fecha_inicio_306 AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_inicio_306",
+          "_row_id" : "329123114"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_306 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_306 AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_306 AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_306 AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(fecha_vencimiento_306 AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_vencimiento_306",
+          "_row_id" : "718762506"
+        }, {
+          "expression" : {
+            "expression" : "estado_306"
+          },
+          "alias" : "estado_306",
+          "_row_id" : "1593677114"
+        }, {
+          "expression" : {
+            "expression" : "AAAAMM"
+          },
+          "alias" : "AAAAMM",
+          "_row_id" : "1435669150"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "5Zd3BbQJeqXrKNFoDmH26$$uQDeneJlJl7G6gCMv_1n0" : {
+      "id" : "5Zd3BbQJeqXrKNFoDmH26$$uQDeneJlJl7G6gCMv_1n0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "DynClientesTitularesAPP",
+        "x" : 100,
+        "y" : 140,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "dbo_dynclientestitularesapp",
+          "sourceType" : "Table",
+          "sourceName" : "dev_curated_uyasdbtest_dynvaldwsantander",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "3-qrLhq2MtS6NFUH9okh1$$AA30vt9Ua8acoOHQA2Ovf",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "pDXHLuchxw6E-epzZJm06$$GTC1Pdv8-N1idhioxakud" : {
+      "id" : "pDXHLuchxw6E-epzZJm06$$GTC1Pdv8-N1idhioxakud",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Sample_39",
+        "x" : 840,
+        "y" : 280,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "IUAubDnIutidonxx83mS9$$oQ4TtJVRdDFO-yRY1kJg0##numero_contrato_inversiones" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "(ROW_NUMBER() OVER (PARTITION BY numero_contrato_inversiones ORDER BY numero_contrato_inversiones NULLS FIRST))"
+          },
+          "alias" : "row_number",
+          "_row_id" : "2105748488"
+        }, {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "756295328"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "IUAubDnIutidonxx83mS9$$oQ4TtJVRdDFO-yRY1kJg0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "dcHiATDYanJF7VLB0oWNW$$9AF0dbsIjjuyWYWrkFq8N",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Qvdv-9lz8xz63ojSbkcDw$$tm2wjOZBewXZjiXOr2Kt0" : {
+      "id" : "Qvdv-9lz8xz63ojSbkcDw$$tm2wjOZBewXZjiXOr2Kt0",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "Summarize_37",
+        "x" : 480,
+        "y" : 280,
+        "phase" : 0
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "COUNT((CASE WHEN ((idf_pers_ods = NULL) OR (idf_pers_ods = '')) THEN 1 ELSE NULL END))"
+          },
+          "alias" : "Count",
+          "_row_id" : "175793885"
+        }, {
+          "expression" : {
+            "expression" : "numero_contrato_inversiones"
+          },
+          "alias" : "numero_contrato_inversiones",
+          "_row_id" : "1564733198"
+        }, {
+          "expression" : {
+            "expression" : "idf_pers_ods"
+          },
+          "alias" : "idf_pers_ods",
+          "_row_id" : "2038872424"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "m0m9_aDstrWeSA2ChWKpG$$fb5TuFSKdpeBOwGVxNby6##numero_contrato_inversiones", "m0m9_aDstrWeSA2ChWKpG$$fb5TuFSKdpeBOwGVxNby6##idf_pers_ods" ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "numero_contrato_inversiones"
+          },
+          "_row_id" : "601131386"
+        }, {
+          "expression" : {
+            "expression" : "idf_pers_ods"
+          },
+          "_row_id" : "217354807"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "m0m9_aDstrWeSA2ChWKpG$$fb5TuFSKdpeBOwGVxNby6",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "mPVBGL8ARE8Pn603ojrxO$$4_qVEdLwEd8xAV2d7Q6Go",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "SDKmRRS5VAcq5dkERSCH1$$_0sApcdpWWJU3LeCxbd4G" : {
+      "id" : "SDKmRRS5VAcq5dkERSCH1$$_0sApcdpWWJU3LeCxbd4G",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Formula_220_0",
+        "x" : 3140,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "KnZ3ltSvGFalofKyRoP3m$$kKxSdV3-sy4FpEcl5E4GZ##fecha_dato" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST(regexp_replace(regexp_replace(format_number(CAST(((year(fecha_dato) * 100) + month(fecha_dato)) AS DOUBLE), 0), ',', '__THS__'), '__THS__', '') AS STRING)"
+          },
+          "alias" : "AAAAMM",
+          "_row_id" : "2067757690"
+        }, {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "423803125"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KnZ3ltSvGFalofKyRoP3m$$kKxSdV3-sy4FpEcl5E4GZ",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "0A0imz95sFzbQOZFpr2Cg$$ZUm2JVo4NY6evWhSCPRbJ",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "HlwWAn54Ww3eUVMNyKH49$$UqM8sCuGxMpx9Vnz5UUhY" : {
+      "id" : "HlwWAn54Ww3eUVMNyKH49$$UqM8sCuGxMpx9Vnz5UUhY",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Sample_39_drop_row_number_0",
+        "x" : 1240,
+        "y" : 280,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "* EXCEPT(`id_39`, `row_number`)"
+          },
+          "_row_id" : "23888384"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "OuyW8PQchyXcCu_34Z6Hg$$Io-ZLB6_Q1Wx1ivrQtaKG",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "8JiKpmkoCzYOOfMlNMPVe$$HO04mkSvyBntVP7_zwsaP",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "h3nVCtC8iSnuhxORGPPwM$$NVtWCa-J9CgJtHCtxPajx" : {
+      "id" : "h3nVCtC8iSnuhxORGPPwM$$NVtWCa-J9CgJtHCtxPajx",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_33",
+        "x" : 100,
+        "y" : 300,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "r2jVhThWxIS2ecfGoalgA$$o671oVI7eVCk7zq37mD_f##es_titular" ],
+        "condition" : {
+          "expression" : "cast(es_titular as boolean) =  true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "r2jVhThWxIS2ecfGoalgA$$o671oVI7eVCk7zq37mD_f",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "bJY-Z-AVYYdLTuD8sk_7z$$4UMLl2KbLmBuh40oWdf_u",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "-sFZWYKPT4ZrDycbwDj7E$$kreDtFOOClmt2yBr0Px_Q" : {
+      "id" : "-sFZWYKPT4ZrDycbwDj7E$$kreDtFOOClmt2yBr0Px_Q",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_53",
+        "x" : 2000,
+        "y" : 380,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "xk7DmZxxocLRMhkPkFj67$$C8df8jytfx7tOv3CdBq_L##Max_es_primer_titular" ],
+        "condition" : {
+          "expression" : "(NOT CAST(Max_es_primer_titular AS BOOLEAN))"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xk7DmZxxocLRMhkPkFj67$$C8df8jytfx7tOv3CdBq_L",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "s-aXheM7GK5QLr5u5kmX2$$bMqnpJroIBTMb-MjNZhE0",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "WOfh0GhcquplyECjCvG0w$$tNuJj4bIAyaRjrFuRatSp" : {
+      "id" : "WOfh0GhcquplyECjCvG0w$$tNuJj4bIAyaRjrFuRatSp",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Summarize_341",
+        "x" : 3320,
+        "y" : 360,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "6lxTO5FVLJdaAJPR5EFCG$$c9Xj-jXeU95uyZqGawzeV##AAAAMM" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "MAX(AAAAMM)"
+          },
+          "alias" : "Max_AAAAMM",
+          "_row_id" : "769252864"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6lxTO5FVLJdaAJPR5EFCG$$c9Xj-jXeU95uyZqGawzeV",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "x4D7CnmFrnc8QLOooIcLs$$kkh-oj-71qo4hpusaQJrE",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "cwzOU_8avIEEcYBCd-El8$$VJ2X2alywvwkI7B3GzrgB" : {
+      "id" : "cwzOU_8avIEEcYBCd-El8$$VJ2X2alywvwkI7B3GzrgB",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_58",
+        "x" : 2300,
+        "y" : 360,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "* EXCEPT(`es_primer_titular`)"
+          },
+          "_row_id" : "2019007063"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VlRKhtSXZhXqw33-wfO4f$$HehAyisrErn-ivD-fJVpG",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "-ucNoyg_PO0aAsI_qP0u9$$AH-ja0kIschwmyGPHouc6",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "hNJbTWglqpc8byZWSGU9N$$PbqjfbowUYScVyxJcl6tK" : {
+      "id" : "hNJbTWglqpc8byZWSGU9N$$PbqjfbowUYScVyxJcl6tK",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_378",
+        "x" : -5800,
+        "y" : -2920,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "G8x7LYxqfNe_zdADwppRi$$Gp3-CqoaCr6XDVWvivjKg##codigo_sucursal_cuenta", "G8x7LYxqfNe_zdADwppRi$$Gp3-CqoaCr6XDVWvivjKg##moneda_cuenta" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "codigo_sucursal_cuenta"
+          },
+          "alias" : "codigo_sucursal_cuenta",
+          "_row_id" : "242768349"
+        }, {
+          "expression" : {
+            "expression" : "moneda_cuenta"
+          },
+          "alias" : "moneda_contrato",
+          "_row_id" : "1393312170"
+        }, {
+          "expression" : {
+            "expression" : "* EXCEPT(codigo_sucursal_cuenta, moneda_cuenta)"
+          },
+          "_row_id" : "1777850763"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "G8x7LYxqfNe_zdADwppRi$$Gp3-CqoaCr6XDVWvivjKg",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "2M_ZCbIrHjxs7BKqZ3Gma$$uqKWgO7aXce82BJ4-RPnS",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "kPemalyqus1LL0q93SoFb$$iEaIOmJEEFGEZcIvo2lpl" : {
+      "id" : "kPemalyqus1LL0q93SoFb$$iEaIOmJEEFGEZcIvo2lpl",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "active_clients",
+        "x" : 380,
+        "y" : 140,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "dzGI0hQ66sit52nCJ0j0K$$UfeSeH6Lm6KIt6G_nqY8U##DynCliTitAEstado" ],
+        "condition" : {
+          "expression" : "(NOT (DynCliTitAEstado = 'ANU'))"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "dzGI0hQ66sit52nCJ0j0K$$UfeSeH6Lm6KIt6G_nqY8U",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "_4_uZLJjjI_dwK-mJDq7S$$-JYsoYoNDG5RKnwTN3Wd2",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "L_d_rma1jYh2r2GVav1Qt$$bKmgc7CUFWPD1np4ZWwgx" : {
+      "id" : "L_d_rma1jYh2r2GVav1Qt$$bKmgc7CUFWPD1np4ZWwgx",
+      "component" : "UnionByName",
+      "metadata" : {
+        "label" : "Union_59",
+        "x" : 3000,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "relation_name" : [ "Join_54_left", "MultiRowFormula_57_row_id_drop_0" ],
+        "schemas" : [ "[{\"name\": \"es_primer_titular\", \"dataType\": \"Boolean\"}, {\"name\": \"idf_pers_ods\", \"dataType\": \"String\"}, {\"name\": \"numero_contrato_inversiones\", \"dataType\": \"String\"}, {\"name\": \"fecha_dato\", \"dataType\": \"Date\"}, {\"name\": \"fecha_alta_titular\", \"dataType\": \"Date\"}, {\"name\": \"estado_persona\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_w8\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_w8\", \"dataType\": \"Date\"}, {\"name\": \"estado_w8\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_3103\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_3103\", \"dataType\": \"Date\"}, {\"name\": \"estado_3103\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_306\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_306\", \"dataType\": \"Date\"}, {\"name\": \"estado_306\", \"dataType\": \"String\"}, {\"name\": \"data_date_part\", \"dataType\": \"Integer\"}, {\"name\": \"DynCliTitARolId\", \"dataType\": \"Decimal\"}, {\"name\": \"DynCliTitAPerTDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerPDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerNom1\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerNom2\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerApe1\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerApe2\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAFecMod\", \"dataType\": \"Timestamp\"}, {\"name\": \"DynCliTitAUsrAlt\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAUsrMod\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitALoteDW\", \"dataType\": \"Decimal\"}, {\"name\": \"DynCliTitAHash\", \"dataType\": \"String\"}, {\"name\": \"data_timestamp_part\", \"dataType\": \"Timestamp\"}]", "[{\"name\": \"es_primer_titular\", \"dataType\": \"Boolean\"}, {\"name\": \"idf_pers_ods\", \"dataType\": \"String\"}, {\"name\": \"numero_contrato_inversiones\", \"dataType\": \"String\"}, {\"name\": \"fecha_dato\", \"dataType\": \"Date\"}, {\"name\": \"fecha_alta_titular\", \"dataType\": \"Date\"}, {\"name\": \"estado_persona\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_w8\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_w8\", \"dataType\": \"Date\"}, {\"name\": \"estado_w8\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_3103\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_3103\", \"dataType\": \"Date\"}, {\"name\": \"estado_3103\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_306\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_306\", \"dataType\": \"Date\"}, {\"name\": \"estado_306\", \"dataType\": \"String\"}, {\"name\": \"data_date_part\", \"dataType\": \"Integer\"}, {\"name\": \"DynCliTitARolId\", \"dataType\": \"Decimal\"}, {\"name\": \"DynCliTitAPerTDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerPDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerNom1\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerNom2\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerApe1\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerApe2\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAFecMod\", \"dataType\": \"Timestamp\"}, {\"name\": \"DynCliTitAUsrAlt\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAUsrMod\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitALoteDW\", \"dataType\": \"Decimal\"}, {\"name\": \"DynCliTitAHash\", \"dataType\": \"String\"}, {\"name\": \"data_timestamp_part\", \"dataType\": \"Timestamp\"}]" ],
+        "missingColumnOps" : "allowMissingColumns",
+        "_oldMacroProperties" : {
+          "macroName" : "UnionByName",
+          "projectName" : "prophecy_basics",
+          "parameters" : [ {
+            "name" : "relation_name",
+            "value" : "[\"Join_54_left\", \"MultiRowFormula_57_row_id_drop_0\"]"
+          }, {
+            "name" : "schemas",
+            "value" : "[\"[{\\\"name\\\": \\\"es_primer_titular\\\", \\\"dataType\\\": \\\"Boolean\\\"}, {\\\"name\\\": \\\"idf_pers_ods\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"numero_contrato_inversiones\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_dato\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_alta_titular\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_persona\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_w8\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_w8\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_w8\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_3103\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_3103\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_3103\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_306\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_306\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_306\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"data_date_part\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"DynCliTitARolId\\\", \\\"dataType\\\": \\\"Decimal\\\"}, {\\\"name\\\": \\\"DynCliTitAPerTDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerPDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerNom1\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerNom2\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerApe1\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerApe2\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAFecMod\\\", \\\"dataType\\\": \\\"Timestamp\\\"}, {\\\"name\\\": \\\"DynCliTitAUsrAlt\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAUsrMod\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitALoteDW\\\", \\\"dataType\\\": \\\"Decimal\\\"}, {\\\"name\\\": \\\"DynCliTitAHash\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"data_timestamp_part\\\", \\\"dataType\\\": \\\"Timestamp\\\"}]\", \"[{\\\"name\\\": \\\"es_primer_titular\\\", \\\"dataType\\\": \\\"Boolean\\\"}, {\\\"name\\\": \\\"idf_pers_ods\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"numero_contrato_inversiones\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_dato\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_alta_titular\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_persona\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_w8\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_w8\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_w8\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_3103\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_3103\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_3103\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_306\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_306\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_306\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"data_date_part\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"DynCliTitARolId\\\", \\\"dataType\\\": \\\"Decimal\\\"}, {\\\"name\\\": \\\"DynCliTitAPerTDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerPDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerNom1\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerNom2\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerApe1\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerApe2\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAFecMod\\\", \\\"dataType\\\": \\\"Timestamp\\\"}, {\\\"name\\\": \\\"DynCliTitAUsrAlt\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAUsrMod\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitALoteDW\\\", \\\"dataType\\\": \\\"Decimal\\\"}, {\\\"name\\\": \\\"DynCliTitAHash\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"data_timestamp_part\\\", \\\"dataType\\\": \\\"Timestamp\\\"}]\"]"
+          }, {
+            "name" : "missingColumnOps",
+            "value" : "allowMissingColumns"
+          } ]
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RelzVehMcu3D_KY-9Y_V7$$6qpHce-BJzQYNctYx45X4",
+          "slug" : "in0"
+        }, {
+          "id" : "tf-qKnFF9BY5mPiLV8wIs$$Hx-o3uDHxeraVC6X84Fv4",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "Bpi_gpPWyRFLXGbrUJPkQ$$4a_B5hdpv0EnIFtAL3bmB",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "XDjx-6YJ-ZLch_1Z8Y9uj$$AOUTModookfOjqKifmVTc" : {
+      "id" : "XDjx-6YJ-ZLch_1Z8Y9uj$$AOUTModookfOjqKifmVTc",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "fr_rf_DynClientesTitularesAPP",
+        "x" : 240,
+        "y" : 140,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "ig3DNk4i_GhnidCuejv6V$$T-Obr9La2d25orzENO1tU##data_date_part" ],
+        "condition" : {
+          "expression" : "{{ var('ref_data_date_part') }} == data_date_part"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ig3DNk4i_GhnidCuejv6V$$T-Obr9La2d25orzENO1tU",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Aq6ks_xXI1kdrefW6S4j3$$j4xnuxiU6s8Ajv6DhvOxl",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "6uzCfTLST3qXZ3j8_cJKN$$3WChidgBmmKKXHAeTqXyh" : {
+      "id" : "6uzCfTLST3qXZ3j8_cJKN$$3WChidgBmmKKXHAeTqXyh",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_48_left",
+        "x" : 1420,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "((in0.idf_pers_ods = in1.idf_pers_ods) AND (in0.numero_contrato_inversiones = in1.numero_contrato_inversiones))"
+          },
+          "joinType" : "anti"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.*"
+          },
+          "_row_id" : "1918132634"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "mHHxMfI66XekCVv_Sb1vx$$Ys8N40cf5ObViGR0MqpZK##idf_pers_ods", "MS9gjAq7LRwoaNiVq0-7w$$eYf9lfC8W-xj6cfnnnKAc##idf_pers_ods", "mHHxMfI66XekCVv_Sb1vx$$Ys8N40cf5ObViGR0MqpZK##numero_contrato_inversiones", "MS9gjAq7LRwoaNiVq0-7w$$eYf9lfC8W-xj6cfnnnKAc##numero_contrato_inversiones" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "mHHxMfI66XekCVv_Sb1vx$$Ys8N40cf5ObViGR0MqpZK",
+          "slug" : "in0"
+        }, {
+          "id" : "MS9gjAq7LRwoaNiVq0-7w$$eYf9lfC8W-xj6cfnnnKAc",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "HbFQGvpSBZKjVQESluipW$$vG4zQ2Jr4Mw53dbU9vMkh",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "d8ofq61tYMDdk3hqDqtjK$$oYw5ZTk-2W4tmkZi7-bPP" : {
+      "id" : "d8ofq61tYMDdk3hqDqtjK$$oYw5ZTk-2W4tmkZi7-bPP",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_342_inner",
+        "x" : 3520,
+        "y" : 240,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(in0.AAAAMM = in1.Max_AAAAMM)"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.*"
+          },
+          "_row_id" : "22858453"
+        }, {
+          "expression" : {
+            "expression" : "in1.* EXCEPT(`Max_AAAAMM`)"
+          },
+          "_row_id" : "752793460"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "4uPTUGexVaQuFxbQDQ-36$$i3C4yudEQgtyRu3iJlU-l##AAAAMM", "oZOPOm5N1BIA-WYdXqv2u$$gSdHI3Kpy0vCg1t2Nl7vY##Max_AAAAMM" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4uPTUGexVaQuFxbQDQ-36$$i3C4yudEQgtyRu3iJlU-l",
+          "slug" : "in0"
+        }, {
+          "id" : "oZOPOm5N1BIA-WYdXqv2u$$gSdHI3Kpy0vCg1t2Nl7vY",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "KT3IZ8faCUyreXZu4Jujo$$-8aYNUiSmdvIITfygIdIw",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "W2j7sHAUgVil-576M3Zk2$$f060SC8IwKoxay9S3C4bU" : {
+      "id" : "W2j7sHAUgVil-576M3Zk2$$f060SC8IwKoxay9S3C4bU",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "Sample_39_recordId",
+        "x" : 640,
+        "y" : 280,
+        "phase" : 0
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "out0",
+          "id" : "out0",
+          "language" : "sql",
+          "content" : "\nSELECT\n      *,\n      row_number() OVER (ORDER BY 1) AS `id_39`\n    FROM Summarize_37\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gjNeDcxLs2e_QVlG6rL7k$$uC9BOCiECJwJF3dKjNyuX",
+          "slug" : "Summarize_37"
+        } ],
+        "outputs" : [ {
+          "id" : "kpekCY-EaxeGMXynDJ7QP$$8wLnE-6GnF5GzirEDHXAj",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "6K08tWaP91aF1tl5JLlHm$$DXDM5OcFyuTKkTOQyLWFi" : {
+      "id" : "6K08tWaP91aF1tl5JLlHm$$DXDM5OcFyuTKkTOQyLWFi",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Formula_49_0",
+        "x" : 1560,
+        "y" : 260,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST(1 AS BOOLEAN)"
+          },
+          "alias" : "es_primer_titular",
+          "_row_id" : "838858603"
+        }, {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "316282960"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NAjcJH6XPDDNeY5U0oqji$$_WKUhJRBQakc7aSx9PbrZ",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "KsZOPa0UUUo75ciyw_vMp$$HLybknu9CFE4hXO9j6jMd",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "G5TTy-i_A0yZBn7pm3gmJ$$gTXsYH7k-ZYCS-iin8CMa" : {
+      "id" : "G5TTy-i_A0yZBn7pm3gmJ$$gTXsYH7k-ZYCS-iin8CMa",
+      "component" : "UnionByName",
+      "metadata" : {
+        "label" : "Union_51",
+        "x" : 1720,
+        "y" : 180,
+        "phase" : 0
+      },
+      "properties" : {
+        "relation_name" : [ "Formula_49_0", "Formula_50_0" ],
+        "schemas" : [ "[{\"name\": \"es_primer_titular\", \"dataType\": \"Boolean\"}, {\"name\": \"idf_pers_ods\", \"dataType\": \"String\"}, {\"name\": \"numero_contrato_inversiones\", \"dataType\": \"String\"}, {\"name\": \"fecha_dato\", \"dataType\": \"Date\"}, {\"name\": \"fecha_alta_titular\", \"dataType\": \"Date\"}, {\"name\": \"estado_persona\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_w8\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_w8\", \"dataType\": \"Date\"}, {\"name\": \"estado_w8\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_3103\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_3103\", \"dataType\": \"Date\"}, {\"name\": \"estado_3103\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_306\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_306\", \"dataType\": \"Date\"}, {\"name\": \"estado_306\", \"dataType\": \"String\"}, {\"name\": \"data_date_part\", \"dataType\": \"Integer\"}, {\"name\": \"DynCliTitARolId\", \"dataType\": \"Decimal\"}, {\"name\": \"DynCliTitAPerTDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerPDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerNom1\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerNom2\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerApe1\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerApe2\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAFecMod\", \"dataType\": \"Timestamp\"}, {\"name\": \"DynCliTitAUsrAlt\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAUsrMod\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitALoteDW\", \"dataType\": \"Decimal\"}, {\"name\": \"DynCliTitAHash\", \"dataType\": \"String\"}, {\"name\": \"data_timestamp_part\", \"dataType\": \"Timestamp\"}]", "[{\"name\": \"es_primer_titular\", \"dataType\": \"Boolean\"}, {\"name\": \"idf_pers_ods\", \"dataType\": \"String\"}, {\"name\": \"numero_contrato_inversiones\", \"dataType\": \"String\"}, {\"name\": \"fecha_dato\", \"dataType\": \"Date\"}, {\"name\": \"fecha_alta_titular\", \"dataType\": \"Date\"}, {\"name\": \"estado_persona\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_w8\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_w8\", \"dataType\": \"Date\"}, {\"name\": \"estado_w8\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_3103\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_3103\", \"dataType\": \"Date\"}, {\"name\": \"estado_3103\", \"dataType\": \"String\"}, {\"name\": \"fecha_inicio_306\", \"dataType\": \"Date\"}, {\"name\": \"fecha_vencimiento_306\", \"dataType\": \"Date\"}, {\"name\": \"estado_306\", \"dataType\": \"String\"}, {\"name\": \"data_date_part\", \"dataType\": \"Integer\"}, {\"name\": \"DynCliTitARolId\", \"dataType\": \"Decimal\"}, {\"name\": \"DynCliTitAPerTDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerPDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerDoc\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerNom1\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerNom2\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerApe1\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAPerApe2\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAFecMod\", \"dataType\": \"Timestamp\"}, {\"name\": \"DynCliTitAUsrAlt\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitAUsrMod\", \"dataType\": \"String\"}, {\"name\": \"DynCliTitALoteDW\", \"dataType\": \"Decimal\"}, {\"name\": \"DynCliTitAHash\", \"dataType\": \"String\"}, {\"name\": \"data_timestamp_part\", \"dataType\": \"Timestamp\"}]" ],
+        "missingColumnOps" : "allowMissingColumns",
+        "_oldMacroProperties" : {
+          "macroName" : "UnionByName",
+          "projectName" : "prophecy_basics",
+          "parameters" : [ {
+            "name" : "relation_name",
+            "value" : "[\"Formula_49_0\", \"Formula_50_0\"]"
+          }, {
+            "name" : "schemas",
+            "value" : "[\"[{\\\"name\\\": \\\"es_primer_titular\\\", \\\"dataType\\\": \\\"Boolean\\\"}, {\\\"name\\\": \\\"idf_pers_ods\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"numero_contrato_inversiones\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_dato\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_alta_titular\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_persona\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_w8\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_w8\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_w8\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_3103\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_3103\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_3103\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_306\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_306\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_306\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"data_date_part\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"DynCliTitARolId\\\", \\\"dataType\\\": \\\"Decimal\\\"}, {\\\"name\\\": \\\"DynCliTitAPerTDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerPDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerNom1\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerNom2\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerApe1\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerApe2\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAFecMod\\\", \\\"dataType\\\": \\\"Timestamp\\\"}, {\\\"name\\\": \\\"DynCliTitAUsrAlt\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAUsrMod\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitALoteDW\\\", \\\"dataType\\\": \\\"Decimal\\\"}, {\\\"name\\\": \\\"DynCliTitAHash\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"data_timestamp_part\\\", \\\"dataType\\\": \\\"Timestamp\\\"}]\", \"[{\\\"name\\\": \\\"es_primer_titular\\\", \\\"dataType\\\": \\\"Boolean\\\"}, {\\\"name\\\": \\\"idf_pers_ods\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"numero_contrato_inversiones\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_dato\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_alta_titular\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_persona\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_w8\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_w8\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_w8\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_3103\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_3103\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_3103\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"fecha_inicio_306\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"fecha_vencimiento_306\\\", \\\"dataType\\\": \\\"Date\\\"}, {\\\"name\\\": \\\"estado_306\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"data_date_part\\\", \\\"dataType\\\": \\\"Integer\\\"}, {\\\"name\\\": \\\"DynCliTitARolId\\\", \\\"dataType\\\": \\\"Decimal\\\"}, {\\\"name\\\": \\\"DynCliTitAPerTDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerPDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerDoc\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerNom1\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerNom2\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerApe1\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAPerApe2\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAFecMod\\\", \\\"dataType\\\": \\\"Timestamp\\\"}, {\\\"name\\\": \\\"DynCliTitAUsrAlt\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitAUsrMod\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"DynCliTitALoteDW\\\", \\\"dataType\\\": \\\"Decimal\\\"}, {\\\"name\\\": \\\"DynCliTitAHash\\\", \\\"dataType\\\": \\\"String\\\"}, {\\\"name\\\": \\\"data_timestamp_part\\\", \\\"dataType\\\": \\\"Timestamp\\\"}]\"]"
+          }, {
+            "name" : "missingColumnOps",
+            "value" : "allowMissingColumns"
+          } ]
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VQ_5X-nf5m2dDnHeI_pCI$$yQhrKpU5Ky1BT3O9zrN35",
+          "slug" : "in0"
+        }, {
+          "id" : "mrx6OMCSDPSelaWkakOzD$$kQZIyN3dkgivbK1gqDzRd",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "upivnvd9YhMSxqneasBE_$$gt9IA2Nlj3YWbsUKIurUW",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "owtqAD0cYg-U4aYVtPYRY$$f_f0m7rIRJuhxMlVXZ01a" : {
+      "id" : "owtqAD0cYg-U4aYVtPYRY$$f_f0m7rIRJuhxMlVXZ01a",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "fr_ref_pci",
+        "x" : -5980,
+        "y" : -2920,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "EpcI1B-zyKbOX_Cc_YLog$$En2XgMm4JZv34LyGSAmUP##ref_data_date_part" ],
+        "condition" : {
+          "expression" : "{{ var('ref_data_date_part') }} == ref_data_date_part"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EpcI1B-zyKbOX_Cc_YLog$$En2XgMm4JZv34LyGSAmUP",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "9Kg1FXJ_nboO2ahJSFSrs$$78EdITSiJPOilihJkk3vA",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "MTcLqQw8ljyURiEgKd7g_$$9fHQjMhtwaDnydL3JEZZu" : {
+      "id" : "MTcLqQw8ljyURiEgKd7g_$$9fHQjMhtwaDnydL3JEZZu",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "Summarize_52",
+        "x" : 1860,
+        "y" : 380,
+        "phase" : 0
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "MAX(es_primer_titular)"
+          },
+          "alias" : "Max_es_primer_titular",
+          "_row_id" : "783366031"
+        }, {
+          "expression" : {
+            "expression" : "numero_contrato_inversiones"
+          },
+          "alias" : "numero_contrato_inversiones",
+          "_row_id" : "410700547"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "xByzrjEoRibrDN273Fqbz$$5Ul2b2euBSAzzdYvCXA7e##numero_contrato_inversiones", "xByzrjEoRibrDN273Fqbz$$5Ul2b2euBSAzzdYvCXA7e##es_primer_titular" ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "numero_contrato_inversiones"
+          },
+          "_row_id" : "1353430753"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xByzrjEoRibrDN273Fqbz$$5Ul2b2euBSAzzdYvCXA7e",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "XKWqgMEJmYfxvLH0ESRb_$$xLuvejePsChqt9nfHGc9G",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "bGa-G070YwJz1aqPPi8LZ$$RTOQChTNteHCigbuqoy0a" : {
+      "id" : "bGa-G070YwJz1aqPPi8LZ$$RTOQChTNteHCigbuqoy0a",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_35_inner",
+        "x" : 340,
+        "y" : 280,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(((in0.codigo_sucursal_cuenta = in1.codigo_sucursal_cuenta) AND (in0.numero_contrato = in1.numero_contrato)) AND (in0.moneda_contrato = in1.moneda_contrato))"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in1.moneda_contrato"
+          },
+          "alias" : "Right_moneda_contrato",
+          "_row_id" : "1216521073"
+        }, {
+          "expression" : {
+            "expression" : "in0.*"
+          },
+          "_row_id" : "1522110822"
+        }, {
+          "expression" : {
+            "expression" : "in1.* EXCEPT(`es_titular`, `numero_contrato`, `moneda_contrato`, `codigo_sucursal_cuenta`)"
+          },
+          "_row_id" : "973331395"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "wEM6Il6WNpQZhD4bP8guP$$uTtJhyujHi-P3riv0E5za##codigo_sucursal_cuenta", "FJwr7NhYpHWcobY8HQGUZ$$HheBkXHT5hE5nNOOuFEp8##codigo_sucursal_cuenta", "wEM6Il6WNpQZhD4bP8guP$$uTtJhyujHi-P3riv0E5za##numero_contrato", "FJwr7NhYpHWcobY8HQGUZ$$HheBkXHT5hE5nNOOuFEp8##numero_contrato", "wEM6Il6WNpQZhD4bP8guP$$uTtJhyujHi-P3riv0E5za##moneda_contrato", "FJwr7NhYpHWcobY8HQGUZ$$HheBkXHT5hE5nNOOuFEp8##moneda_contrato", "FJwr7NhYpHWcobY8HQGUZ$$HheBkXHT5hE5nNOOuFEp8##moneda_contrato" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "wEM6Il6WNpQZhD4bP8guP$$uTtJhyujHi-P3riv0E5za",
+          "slug" : "in0"
+        }, {
+          "id" : "FJwr7NhYpHWcobY8HQGUZ$$HheBkXHT5hE5nNOOuFEp8",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "9MvyQFZ_wEB3SqAmYCI0k$$gBu_oK6G3colGvqB9C66c",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Filter_30_rcfYUAgRQifv_ZMkY2uaW$$neVTP_J84k2d1sxSXcUnp" : {
+      "id" : "Filter_30_rcfYUAgRQifv_ZMkY2uaW$$neVTP_J84k2d1sxSXcUnp",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "Filter_30"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_0",
+          "id" : "output_port_0",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ ref('C0030029_Aprovisionamiento_Dynatech__Filter_30') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "IJeFuLGqpZ1GJBShh7wqm$$iUgPeYKDMPLg0czrX3uQx" : {
+      "id" : "IJeFuLGqpZ1GJBShh7wqm$$iUgPeYKDMPLg0czrX3uQx",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Formula_50_0",
+        "x" : 1560,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST(0 AS BOOLEAN)"
+          },
+          "alias" : "es_primer_titular",
+          "_row_id" : "187936108"
+        }, {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "571566095"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9Ka-aiEoRDCQclb89mR8o$$J0pOj1-KNe7P60LjfelxQ",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "8-ZjKkJ0IIrEZKUfswy5y$$Z7yzqijhDz7BVkPm5w0lk",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "J5GjRrXOzC-21xdskNLvj$$fb3oFfGdou7T-LS76mxrL" : {
+      "id" : "J5GjRrXOzC-21xdskNLvj$$fb3oFfGdou7T-LS76mxrL",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Formula_43_0",
+        "x" : 520,
+        "y" : 140,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "Etws-s3cU5wlYVH5OigVa$$vignNENhD99jrihBUy82D##DynCliTitAPNumPer" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST((CONCAT('10137', (SUBSTRING( (CONCAT('00000000', (REGEXP_REPLACE((REGEXP_REPLACE((FORMAT_NUMBER(CAST(DynCliTitAPNumPer AS DOUBLE), 0)), ',', '__THS__')), '__THS__', '')))), (((LENGTH((CONCAT('00000000', (REGEXP_REPLACE((REGEXP_REPLACE((FORMAT_NUMBER(CAST(DynCliTitAPNumPer AS DOUBLE), 0)), ',', '__THS__')), '__THS__', '')))))) - 8) + 1), 8)))) AS string)"
+          },
+          "alias" : "idf_pers_ods",
+          "_row_id" : "1215904317"
+        }, {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "1263854409"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Etws-s3cU5wlYVH5OigVa$$vignNENhD99jrihBUy82D",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "VelOLTojaYYt0Zw7AVF9i$$WDmIHpy876PvLZ5ZRyRZz",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "6kNXCzM6DrPESfjqs7Q0W$$-BdbrlHJok_5_nBI-LRJw" : {
+      "id" : "6kNXCzM6DrPESfjqs7Q0W$$-BdbrlHJok_5_nBI-LRJw",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "productos_cuentas_inventario",
+        "x" : -6160,
+        "y" : -2920,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "productos_cuentas_inventario",
+          "sourceType" : "Table",
+          "sourceName" : "dev_business.productos",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "ukYufsXHUbriNs4SIYVoV$$vbn5WVF_4sKgBQ4Atej9W",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "KPIHFjBnYxyfiP7VUnqGf$$3PYH3mGs5hpcpPKDA0MSB" : {
+      "id" : "KPIHFjBnYxyfiP7VUnqGf$$3PYH3mGs5hpcpPKDA0MSB",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "MultiRowFormula_57_0",
+        "x" : 2580,
+        "y" : 360,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "Z9Lrnf4hjPOqhARuM_13l$$79tpS3_Wr9MmCcw_PzOOx##prophecy_row_id" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "(LAG(numero_contrato_inversiones, 1) OVER (PARTITION BY 1 ORDER BY prophecy_row_id NULLS FIRST))"
+          },
+          "alias" : "numero_contrato_inversiones_lag1",
+          "_row_id" : "1613876555"
+        }, {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "1562177348"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Z9Lrnf4hjPOqhARuM_13l$$79tpS3_Wr9MmCcw_PzOOx",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "9P-mxKyWRCVoWf9Sh4Wwh$$hOFA3HrKRPKq8HL7zEIPH",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR_AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR",
+    "source" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+    "sourcePort" : "Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR",
+    "target" : "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR",
+    "targetPort" : "input_port_5",
+    "isWireless" : false
+  }, {
+    "id" : "NdsUDCAJoHVaI6y5o4zJu",
+    "source" : "d8ofq61tYMDdk3hqDqtjK$$oYw5ZTk-2W4tmkZi7-bPP",
+    "sourcePort" : "KT3IZ8faCUyreXZu4Jujo$$-8aYNUiSmdvIITfygIdIw",
+    "target" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+    "targetPort" : "uvkoF3XoGSJzlWuR57vTS$$eA9hgUwHTRk9FPF5cU7_8",
+    "isWireless" : false
+  }, {
+    "id" : "7HcnUvjrvxhGoL55fOJmC",
+    "source" : "WOfh0GhcquplyECjCvG0w$$tNuJj4bIAyaRjrFuRatSp",
+    "sourcePort" : "x4D7CnmFrnc8QLOooIcLs$$kkh-oj-71qo4hpusaQJrE",
+    "target" : "d8ofq61tYMDdk3hqDqtjK$$oYw5ZTk-2W4tmkZi7-bPP",
+    "targetPort" : "oZOPOm5N1BIA-WYdXqv2u$$gSdHI3Kpy0vCg1t2Nl7vY",
+    "isWireless" : false
+  }, {
+    "id" : "F2OcYf_YCzRANnZqo_WFg",
+    "source" : "SDKmRRS5VAcq5dkERSCH1$$_0sApcdpWWJU3LeCxbd4G",
+    "sourcePort" : "0A0imz95sFzbQOZFpr2Cg$$ZUm2JVo4NY6evWhSCPRbJ",
+    "target" : "d8ofq61tYMDdk3hqDqtjK$$oYw5ZTk-2W4tmkZi7-bPP",
+    "targetPort" : "4uPTUGexVaQuFxbQDQ-36$$i3C4yudEQgtyRu3iJlU-l",
+    "isWireless" : false
+  }, {
+    "id" : "HZRtS-Ysv3f7xWSWUDOFx",
+    "source" : "SDKmRRS5VAcq5dkERSCH1$$_0sApcdpWWJU3LeCxbd4G",
+    "sourcePort" : "0A0imz95sFzbQOZFpr2Cg$$ZUm2JVo4NY6evWhSCPRbJ",
+    "target" : "WOfh0GhcquplyECjCvG0w$$tNuJj4bIAyaRjrFuRatSp",
+    "targetPort" : "6lxTO5FVLJdaAJPR5EFCG$$c9Xj-jXeU95uyZqGawzeV",
+    "isWireless" : false
+  }, {
+    "id" : "sgn64JpMMuv8kvHHFmLDU",
+    "source" : "L_d_rma1jYh2r2GVav1Qt$$bKmgc7CUFWPD1np4ZWwgx",
+    "sourcePort" : "Bpi_gpPWyRFLXGbrUJPkQ$$4a_B5hdpv0EnIFtAL3bmB",
+    "target" : "SDKmRRS5VAcq5dkERSCH1$$_0sApcdpWWJU3LeCxbd4G",
+    "targetPort" : "KnZ3ltSvGFalofKyRoP3m$$kKxSdV3-sy4FpEcl5E4GZ",
+    "isWireless" : false
+  }, {
+    "id" : "6Gpno8e1Em8N7HKNpWiNY",
+    "source" : "Dxj4wGDxbdpx6wSu2J-xT$$Il4DlNTHUJTWU6eDVbcpi",
+    "sourcePort" : "C_aNSoiv2hOzZErR7-RWp$$Abx29WG_6DOUTvrMF4kmI",
+    "target" : "L_d_rma1jYh2r2GVav1Qt$$bKmgc7CUFWPD1np4ZWwgx",
+    "targetPort" : "RelzVehMcu3D_KY-9Y_V7$$6qpHce-BJzQYNctYx45X4",
+    "isWireless" : false
+  }, {
+    "id" : "jxGi39qJOyA_WrH56FKIq",
+    "source" : "6OlPbBviMIO-lBOVwYsgd$$DFegXiYXwh5fTKyBrJovo",
+    "sourcePort" : "CnJPfFRd05zKY7oY4peIV$$6NHrHUU9mNYRfxnUZ1RWM",
+    "target" : "L_d_rma1jYh2r2GVav1Qt$$bKmgc7CUFWPD1np4ZWwgx",
+    "targetPort" : "tf-qKnFF9BY5mPiLV8wIs$$Hx-o3uDHxeraVC6X84Fv4",
+    "isWireless" : false
+  }, {
+    "id" : "QI3wEgiBCJDCbdlTO_-LE",
+    "source" : "G5TTy-i_A0yZBn7pm3gmJ$$gTXsYH7k-ZYCS-iin8CMa",
+    "sourcePort" : "upivnvd9YhMSxqneasBE_$$gt9IA2Nlj3YWbsUKIurUW",
+    "target" : "Dxj4wGDxbdpx6wSu2J-xT$$Il4DlNTHUJTWU6eDVbcpi",
+    "targetPort" : "1gqDw5-rzlHFNVG5bU-f_$$7RQCeuxIpPQZm3XD7JiXJ",
+    "isWireless" : false
+  }, {
+    "id" : "dy0JsWrNnRYevd0nXFQ_A",
+    "source" : "-sFZWYKPT4ZrDycbwDj7E$$kreDtFOOClmt2yBr0Px_Q",
+    "sourcePort" : "s-aXheM7GK5QLr5u5kmX2$$bMqnpJroIBTMb-MjNZhE0",
+    "target" : "Dxj4wGDxbdpx6wSu2J-xT$$Il4DlNTHUJTWU6eDVbcpi",
+    "targetPort" : "wDY1hZUZXhPZ4PA8RKLv3$$ZW4P_h7ScgCxcfae2w3ZE",
+    "isWireless" : false
+  }, {
+    "id" : "yVkCST8D3agBG9_moEowF",
+    "source" : "bdPbqFOeU0GbJ96kNkt6Y$$y7eNSGGwE6usLRf207j-o",
+    "sourcePort" : "ySTNXZWYaSo8JCBJvmRQ-$$hjlFO5KfLsTDAfb8VpBUS",
+    "target" : "6OlPbBviMIO-lBOVwYsgd$$DFegXiYXwh5fTKyBrJovo",
+    "targetPort" : "x0FVhO0phu4uC_rS27xZ0$$wEhovLoCyHoPksIWxBrFT",
+    "isWireless" : false
+  }, {
+    "id" : "gSxgRxkamoomRfEleIYZt",
+    "source" : "6K08tWaP91aF1tl5JLlHm$$DXDM5OcFyuTKkTOQyLWFi",
+    "sourcePort" : "KsZOPa0UUUo75ciyw_vMp$$HLybknu9CFE4hXO9j6jMd",
+    "target" : "G5TTy-i_A0yZBn7pm3gmJ$$gTXsYH7k-ZYCS-iin8CMa",
+    "targetPort" : "VQ_5X-nf5m2dDnHeI_pCI$$yQhrKpU5Ky1BT3O9zrN35",
+    "isWireless" : false
+  }, {
+    "id" : "2AJoyDi8FFe31djH67kL8",
+    "source" : "IJeFuLGqpZ1GJBShh7wqm$$iUgPeYKDMPLg0czrX3uQx",
+    "sourcePort" : "8-ZjKkJ0IIrEZKUfswy5y$$Z7yzqijhDz7BVkPm5w0lk",
+    "target" : "G5TTy-i_A0yZBn7pm3gmJ$$gTXsYH7k-ZYCS-iin8CMa",
+    "targetPort" : "mrx6OMCSDPSelaWkakOzD$$kQZIyN3dkgivbK1gqDzRd",
+    "isWireless" : false
+  }, {
+    "id" : "9KQE046OsVlR67TYbRRNb",
+    "source" : "MTcLqQw8ljyURiEgKd7g_$$9fHQjMhtwaDnydL3JEZZu",
+    "sourcePort" : "XKWqgMEJmYfxvLH0ESRb_$$xLuvejePsChqt9nfHGc9G",
+    "target" : "-sFZWYKPT4ZrDycbwDj7E$$kreDtFOOClmt2yBr0Px_Q",
+    "targetPort" : "xk7DmZxxocLRMhkPkFj67$$C8df8jytfx7tOv3CdBq_L",
+    "isWireless" : false
+  }, {
+    "id" : "jF-UTfpDaFeGQc9Dkmuje",
+    "source" : "KPIHFjBnYxyfiP7VUnqGf$$3PYH3mGs5hpcpPKDA0MSB",
+    "sourcePort" : "9P-mxKyWRCVoWf9Sh4Wwh$$hOFA3HrKRPKq8HL7zEIPH",
+    "target" : "bdPbqFOeU0GbJ96kNkt6Y$$y7eNSGGwE6usLRf207j-o",
+    "targetPort" : "Tho28Y-_vX9-QsgE3mLYd$$pRjwrUbxzHhzlfrCwtcST",
+    "isWireless" : false
+  }, {
+    "id" : "UHjEE9WE5Ig92yTMVQ4m0",
+    "source" : "Itenawil5z6NkhyKeI7eT$$tgvi0chaPsd9hpxWXK-NS",
+    "sourcePort" : "hyEHJ9Tt-HylH9TeN3SNK$$ZjWXGW_SMzAGahix8R9tx",
+    "target" : "6K08tWaP91aF1tl5JLlHm$$DXDM5OcFyuTKkTOQyLWFi",
+    "targetPort" : "NAjcJH6XPDDNeY5U0oqji$$_WKUhJRBQakc7aSx9PbrZ",
+    "isWireless" : false
+  }, {
+    "id" : "tndCfGHEnLdPlVUsCVvL8",
+    "source" : "6uzCfTLST3qXZ3j8_cJKN$$3WChidgBmmKKXHAeTqXyh",
+    "sourcePort" : "HbFQGvpSBZKjVQESluipW$$vG4zQ2Jr4Mw53dbU9vMkh",
+    "target" : "IJeFuLGqpZ1GJBShh7wqm$$iUgPeYKDMPLg0czrX3uQx",
+    "targetPort" : "9Ka-aiEoRDCQclb89mR8o$$J0pOj1-KNe7P60LjfelxQ",
+    "isWireless" : false
+  }, {
+    "id" : "hYOjsaoX0ngAxy1LgcSVs",
+    "source" : "G5TTy-i_A0yZBn7pm3gmJ$$gTXsYH7k-ZYCS-iin8CMa",
+    "sourcePort" : "upivnvd9YhMSxqneasBE_$$gt9IA2Nlj3YWbsUKIurUW",
+    "target" : "MTcLqQw8ljyURiEgKd7g_$$9fHQjMhtwaDnydL3JEZZu",
+    "targetPort" : "xByzrjEoRibrDN273Fqbz$$5Ul2b2euBSAzzdYvCXA7e",
+    "isWireless" : false
+  }, {
+    "id" : "dcdLCsStxBK4ahsAu8Hkr",
+    "source" : "n4P24OlX59ft43BhZUAdu$$FH7AMRLxTE7W_1mt0heBy",
+    "sourcePort" : "eYPRoCFX-EvvZZ7Ylk5ue$$RuVvvXkIgDmVbF2xfIvGG",
+    "target" : "KPIHFjBnYxyfiP7VUnqGf$$3PYH3mGs5hpcpPKDA0MSB",
+    "targetPort" : "Z9Lrnf4hjPOqhARuM_13l$$79tpS3_Wr9MmCcw_PzOOx",
+    "isWireless" : false
+  }, {
+    "id" : "D3rYyW_VrgnPjcgKE4gkP",
+    "source" : "uhj1-JSDDP8STcjKJfsL1$$NeRH7i4WjghrEPAZTmkot",
+    "sourcePort" : "ZfRjxUoqHe-qqpAaudaBr$$RUBOG4e9mv0xSlwpU-aq2",
+    "target" : "Itenawil5z6NkhyKeI7eT$$tgvi0chaPsd9hpxWXK-NS",
+    "targetPort" : "GMkmyQy2w_MyQO2BOuziN$$08zUHgZ8YR9YSPloNvhFK",
+    "isWireless" : false
+  }, {
+    "id" : "eHcH3bECBJhpcizQOOQ12",
+    "source" : "HlwWAn54Ww3eUVMNyKH49$$UqM8sCuGxMpx9Vnz5UUhY",
+    "sourcePort" : "8JiKpmkoCzYOOfMlNMPVe$$HO04mkSvyBntVP7_zwsaP",
+    "target" : "Itenawil5z6NkhyKeI7eT$$tgvi0chaPsd9hpxWXK-NS",
+    "targetPort" : "gW0P5uHc1f0rz5-aq6Rcy$$r-ZBdX_Ro7QC8HwhmBB_P",
+    "isWireless" : false
+  }, {
+    "id" : "rrHP2SN8bDTNCErmyyuFN",
+    "source" : "uhj1-JSDDP8STcjKJfsL1$$NeRH7i4WjghrEPAZTmkot",
+    "sourcePort" : "ZfRjxUoqHe-qqpAaudaBr$$RUBOG4e9mv0xSlwpU-aq2",
+    "target" : "6uzCfTLST3qXZ3j8_cJKN$$3WChidgBmmKKXHAeTqXyh",
+    "targetPort" : "mHHxMfI66XekCVv_Sb1vx$$Ys8N40cf5ObViGR0MqpZK",
+    "isWireless" : false
+  }, {
+    "id" : "R-gmpZc038vvrkZ7TYuXU",
+    "source" : "HlwWAn54Ww3eUVMNyKH49$$UqM8sCuGxMpx9Vnz5UUhY",
+    "sourcePort" : "8JiKpmkoCzYOOfMlNMPVe$$HO04mkSvyBntVP7_zwsaP",
+    "target" : "6uzCfTLST3qXZ3j8_cJKN$$3WChidgBmmKKXHAeTqXyh",
+    "targetPort" : "MS9gjAq7LRwoaNiVq0-7w$$eYf9lfC8W-xj6cfnnnKAc",
+    "isWireless" : false
+  }, {
+    "id" : "ZIlcS9ZfDm_Rei6iGTGob",
+    "source" : "cwzOU_8avIEEcYBCd-El8$$VJ2X2alywvwkI7B3GzrgB",
+    "sourcePort" : "-ucNoyg_PO0aAsI_qP0u9$$AH-ja0kIschwmyGPHouc6",
+    "target" : "n4P24OlX59ft43BhZUAdu$$FH7AMRLxTE7W_1mt0heBy",
+    "targetPort" : "CCnpobKLnxgQXbDxfLADJ$$r97xdWb77doknVT59wNk3",
+    "isWireless" : false
+  }, {
+    "id" : "d2m3dcxjYCBC6UdSy3tw7",
+    "source" : "J5GjRrXOzC-21xdskNLvj$$fb3oFfGdou7T-LS76mxrL",
+    "sourcePort" : "VelOLTojaYYt0Zw7AVF9i$$WDmIHpy876PvLZ5ZRyRZz",
+    "target" : "uhj1-JSDDP8STcjKJfsL1$$NeRH7i4WjghrEPAZTmkot",
+    "targetPort" : "OAe7WnEmvUwhxxzUVHEBG$$AHVVChPewiyKkx2_B-qHV",
+    "isWireless" : false
+  }, {
+    "id" : "W4RzHdre3NU1iMiyMMx78",
+    "source" : "Qnga2hSneG3KrnbnrdMbD$$J9RPU6-gpl8zZTgUQPul_",
+    "sourcePort" : "XbEUkqSQfaZwE3RDmrbAG$$BwXxXCIfkeEn_S3ncY8dc",
+    "target" : "HlwWAn54Ww3eUVMNyKH49$$UqM8sCuGxMpx9Vnz5UUhY",
+    "targetPort" : "OuyW8PQchyXcCu_34Z6Hg$$Io-ZLB6_Q1Wx1ivrQtaKG",
+    "isWireless" : false
+  }, {
+    "id" : "qanOtJecvF99KH2MscXNR",
+    "source" : "-zu2Woq268tKhT0UBPHui$$QCvdvAgSGykwY07YWW491",
+    "sourcePort" : "D58Fg8BPo5xtRSImR17uA$$uygaKVdhhlxAMM0TvCUqI",
+    "target" : "cwzOU_8avIEEcYBCd-El8$$VJ2X2alywvwkI7B3GzrgB",
+    "targetPort" : "VlRKhtSXZhXqw33-wfO4f$$HehAyisrErn-ivD-fJVpG",
+    "isWireless" : false
+  }, {
+    "id" : "afI_jfytRr4DRxYm7FBM4",
+    "source" : "kPemalyqus1LL0q93SoFb$$iEaIOmJEEFGEZcIvo2lpl",
+    "sourcePort" : "_4_uZLJjjI_dwK-mJDq7S$$-JYsoYoNDG5RKnwTN3Wd2",
+    "target" : "J5GjRrXOzC-21xdskNLvj$$fb3oFfGdou7T-LS76mxrL",
+    "targetPort" : "Etws-s3cU5wlYVH5OigVa$$vignNENhD99jrihBUy82D",
+    "isWireless" : false
+  }, {
+    "id" : "u16j__XxBMNF0HRsQJmg9",
+    "source" : "pDXHLuchxw6E-epzZJm06$$GTC1Pdv8-N1idhioxakud",
+    "sourcePort" : "dcHiATDYanJF7VLB0oWNW$$9AF0dbsIjjuyWYWrkFq8N",
+    "target" : "Qnga2hSneG3KrnbnrdMbD$$J9RPU6-gpl8zZTgUQPul_",
+    "targetPort" : "gvfIwhnshwaG6TRei213f$$2YNXSp64r-iwIhV94MUqQ",
+    "isWireless" : false
+  }, {
+    "id" : "zW35vMhJMkd8UPQwqU6sQ",
+    "source" : "G5TTy-i_A0yZBn7pm3gmJ$$gTXsYH7k-ZYCS-iin8CMa",
+    "sourcePort" : "upivnvd9YhMSxqneasBE_$$gt9IA2Nlj3YWbsUKIurUW",
+    "target" : "-zu2Woq268tKhT0UBPHui$$QCvdvAgSGykwY07YWW491",
+    "targetPort" : "tfwIUiyVVjX99Jdgu5Qdu$$ulG0KQTvzBwWfCWBQ5K_K",
+    "isWireless" : false
+  }, {
+    "id" : "t66WN2uanEMi_MEDfeF9T",
+    "source" : "-sFZWYKPT4ZrDycbwDj7E$$kreDtFOOClmt2yBr0Px_Q",
+    "sourcePort" : "s-aXheM7GK5QLr5u5kmX2$$bMqnpJroIBTMb-MjNZhE0",
+    "target" : "-zu2Woq268tKhT0UBPHui$$QCvdvAgSGykwY07YWW491",
+    "targetPort" : "p7MitWp9x8ra6WaF29fJd$$O8EO63Z3GoDJNdWjHjwdJ",
+    "isWireless" : false
+  }, {
+    "id" : "IpdxotxJt89t7TffaixoI",
+    "source" : "XDjx-6YJ-ZLch_1Z8Y9uj$$AOUTModookfOjqKifmVTc",
+    "sourcePort" : "Aq6ks_xXI1kdrefW6S4j3$$j4xnuxiU6s8Ajv6DhvOxl",
+    "target" : "kPemalyqus1LL0q93SoFb$$iEaIOmJEEFGEZcIvo2lpl",
+    "targetPort" : "dzGI0hQ66sit52nCJ0j0K$$UfeSeH6Lm6KIt6G_nqY8U",
+    "isWireless" : false
+  }, {
+    "id" : "wNiiyraHD8eevlFJqI4bD",
+    "source" : "W2j7sHAUgVil-576M3Zk2$$f060SC8IwKoxay9S3C4bU",
+    "sourcePort" : "kpekCY-EaxeGMXynDJ7QP$$8wLnE-6GnF5GzirEDHXAj",
+    "target" : "pDXHLuchxw6E-epzZJm06$$GTC1Pdv8-N1idhioxakud",
+    "targetPort" : "IUAubDnIutidonxx83mS9$$oQ4TtJVRdDFO-yRY1kJg0",
+    "isWireless" : false
+  }, {
+    "id" : "XVqjrQKf2w2RdeZoAL67m",
+    "source" : "5Zd3BbQJeqXrKNFoDmH26$$uQDeneJlJl7G6gCMv_1n0",
+    "sourcePort" : "3-qrLhq2MtS6NFUH9okh1$$AA30vt9Ua8acoOHQA2Ovf",
+    "target" : "XDjx-6YJ-ZLch_1Z8Y9uj$$AOUTModookfOjqKifmVTc",
+    "targetPort" : "ig3DNk4i_GhnidCuejv6V$$T-Obr9La2d25orzENO1tU",
+    "isWireless" : false
+  }, {
+    "id" : "ah8Xp52KWzQOokgMt4FTA",
+    "source" : "Qvdv-9lz8xz63ojSbkcDw$$tm2wjOZBewXZjiXOr2Kt0",
+    "sourcePort" : "mPVBGL8ARE8Pn603ojrxO$$4_qVEdLwEd8xAV2d7Q6Go",
+    "target" : "W2j7sHAUgVil-576M3Zk2$$f060SC8IwKoxay9S3C4bU",
+    "targetPort" : "gjNeDcxLs2e_QVlG6rL7k$$uC9BOCiECJwJF3dKjNyuX",
+    "isWireless" : false
+  }, {
+    "id" : "ol-Dptt2Uglga7hkU9p-O",
+    "source" : "bGa-G070YwJz1aqPPi8LZ$$RTOQChTNteHCigbuqoy0a",
+    "sourcePort" : "9MvyQFZ_wEB3SqAmYCI0k$$gBu_oK6G3colGvqB9C66c",
+    "target" : "Qvdv-9lz8xz63ojSbkcDw$$tm2wjOZBewXZjiXOr2Kt0",
+    "targetPort" : "m0m9_aDstrWeSA2ChWKpG$$fb5TuFSKdpeBOwGVxNby6",
+    "isWireless" : false
+  }, {
+    "id" : "RznLkQaFTrqfQ8EQNmg0b",
+    "source" : "h3nVCtC8iSnuhxORGPPwM$$NVtWCa-J9CgJtHCtxPajx",
+    "sourcePort" : "bJY-Z-AVYYdLTuD8sk_7z$$4UMLl2KbLmBuh40oWdf_u",
+    "target" : "bGa-G070YwJz1aqPPi8LZ$$RTOQChTNteHCigbuqoy0a",
+    "targetPort" : "FJwr7NhYpHWcobY8HQGUZ$$HheBkXHT5hE5nNOOuFEp8",
+    "isWireless" : false
+  }, {
+    "id" : "biMRPSuBBd9_O_C-dT_Hp",
+    "source" : "Filter_30_rcfYUAgRQifv_ZMkY2uaW$$neVTP_J84k2d1sxSXcUnp",
+    "sourcePort" : "output_port_0",
+    "target" : "bGa-G070YwJz1aqPPi8LZ$$RTOQChTNteHCigbuqoy0a",
+    "targetPort" : "wEM6Il6WNpQZhD4bP8guP$$uTtJhyujHi-P3riv0E5za",
+    "isWireless" : false
+  }, {
+    "id" : "rMOR04vmIs3oKVRB9Q4jq",
+    "source" : "hNJbTWglqpc8byZWSGU9N$$PbqjfbowUYScVyxJcl6tK",
+    "sourcePort" : "2M_ZCbIrHjxs7BKqZ3Gma$$uqKWgO7aXce82BJ4-RPnS",
+    "target" : "h3nVCtC8iSnuhxORGPPwM$$NVtWCa-J9CgJtHCtxPajx",
+    "targetPort" : "r2jVhThWxIS2ecfGoalgA$$o671oVI7eVCk7zq37mD_f",
+    "isWireless" : false
+  }, {
+    "id" : "U6ZZ4Sh69FlImWogUEIwv$$B7-sGMObM26rlX97pyjIu",
+    "source" : "owtqAD0cYg-U4aYVtPYRY$$f_f0m7rIRJuhxMlVXZ01a",
+    "sourcePort" : "9Kg1FXJ_nboO2ahJSFSrs$$78EdITSiJPOilihJkk3vA",
+    "target" : "hNJbTWglqpc8byZWSGU9N$$PbqjfbowUYScVyxJcl6tK",
+    "targetPort" : "G8x7LYxqfNe_zdADwppRi$$Gp3-CqoaCr6XDVWvivjKg",
+    "isWireless" : false
+  }, {
+    "id" : "cSKJD2ZAzsfQYcXJO3nL1",
+    "source" : "6kNXCzM6DrPESfjqs7Q0W$$-BdbrlHJok_5_nBI-LRJw",
+    "sourcePort" : "ukYufsXHUbriNs4SIYVoV$$vbn5WVF_4sKgBQ4Atej9W",
+    "target" : "owtqAD0cYg-U4aYVtPYRY$$f_f0m7rIRJuhxMlVXZ01a",
+    "targetPort" : "EpcI1B-zyKbOX_Cc_YLog$$En2XgMm4JZv34LyGSAmUP",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

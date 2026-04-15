@@ -1,0 +1,21 @@
+{
+  "first_value" : {
+    "name" : "first_value",
+    "macroType" : "expression",
+    "definition" : "(ARRAY_AGG({{colname}})[0])",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "colname",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none",
+    "version" : 0
+  }
+}

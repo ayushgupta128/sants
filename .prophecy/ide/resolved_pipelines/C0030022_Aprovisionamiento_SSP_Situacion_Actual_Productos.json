@@ -1,0 +1,252 @@
+{
+  "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos",
+  "metainfo" : {
+    "label" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "ref_data_date_part",
+          "kind" : {
+            "type" : "int",
+            "value" : "20250101"
+          }
+        } ]
+      }
+    },
+    "schedules" : [ {
+      "name" : "Schedule 1",
+      "scheduleType" : "cron",
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false,
+      "triggers" : { }
+    } ],
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "6P0xPa9X39lJtQermhpQj$$WV0NuDKtbtsYaK_aaITI_" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "rovg2r0PZU9bOIgTSk51_$$_xf2Eehis8l5Pq0W4dKhN" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "OzJKXMnGJERRlZC5QR9sH$$cFtoHaa915-qY1w77v_7P" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "mJTkgYn28_UaqX8ib7YPy$$GPsixF8M1PRDqBdnWYWXx" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "d85Ff-ddWDJG-dvpqibj3$$BjHtkm4mUZQ0L6DvNmbLD" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "Gez3Fxj3ZfNHcf_kJoQHU$$8e3wkmGzeClNNREmj_IG7" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "z5wrlyETsnVUc4K3KI8WI$$IUu7qIc5cQpUyqCbkP7zr" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "BlJOBZ0o4LSDbja6DciDW$$towo-75zxj2PoNxiGNO67" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "apisquUSMvNVzXeBsqODs$$diDRwZremguC4yUVPOY_b" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "MKpeGqFHLYV_bgs-ea8Hm$$HF61sAFLMm76IWY-uitqS" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "zHiBffstDCMYnp8gXa0b5$$bzrkKr91iM5gLNkFOqhox" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "qjG75S_Wlzilmhsia0GIY$$3X7x8UwjRC9GNgm9jV82P" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "ELaCXtLrKrdYdQxU5s5rA$$Y38Xk_yK33TrSGu18P3d1" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "NWK568I6915d_awnXP0LB$$SGyPNCsYKZSL_NFyangOK" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "9r_YgsiWdKevKxNBez5NI$$TqIFFjz-JYzMVmhk1U9oI" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "oMJJQt-3HMINquhg-SDOK$$TLO_KmBkiXZwcRVMaaB9R" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "yzmQJkr8sB1GqxB0IDj90$$cvRmfNLYGNfg58PQZnQeB" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "5w9gmSh52-ez8_4QJU23p$$2vEL7e_oHhTCZ4SqyjLGt" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "WVkxYVQxHb61lQGzWiCES$$QKBFu-icq0w6ay_qlFyS2" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "WBbEQyK5EYJMxzYWvTuSJ$$rFopEFk2NZ3olVy75XkJL" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "OW3qA5P3vRHwLvpA2SLIF$$6xj9jeAow47MB_ngeq02w" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "NDNG5V3ZW7F-8EAvg71Ps$$EGMwgPvz09hIqfVrdV3lo" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "HfPsutdoNLkvnOX4rtuFn$$ZDP3QFrWOindM7J7Jiv9r" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "8dETgmQXc5ST-cC2MB6J4$$duuHYavB9gRGA1YkGSuS0" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "QaVH7cQJfJl7RGscSQixe$$GzRCJuoCJEEpGPjvYrvlb" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "iyUgwT-ShI3UqqnS1h3jQ$$3EZTdzFbU5ir7Dim2P03U" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "g-zzvu8SQKYtCwH2Oo6eV$$nM4H_-rCYnFK1-uS0NjFA" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "HJgjhTU4D_5dlSpiKyO7W$$BUcKyIvjkph-I3j3gTiOO" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "WLSqFwejjd3fvG5Szi84d$$pABXHB75BN8geDDI6Q5w0" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "PMWV6JYrj07Nt4Rk3K9EV$$lnQlYZSqXledoZKwh1eOI" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "5E-3TVPArGTbfJZI0iA5h$$HbvUAXjHALh4NGF6YbVQa" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "L-5bc49CETSF668gSwM4k$$tEY3sLRTyIP-9Vd-MJE8d" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "DsroOSztze8_pGhlTbEvM$$oV983ReJVsG5FN4NeDI3V" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "AlteryxSelect_143_40wMEwc1Z2wSE2pBr9u76$$Cn_DLRcsACfGoDcUG7V_9" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "_PHx8XpNbol2frXP1YDb-$$3ASVABX35L-3a0I-kvj-H" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "N07hkP92MHTyQsTQl98dp$$Cekc8-RJ_iycIdrx5eF07" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "z-3utVzHOZKFXAHlTTM5y$$t_G3UiTUyPJZRoDRSbdSB" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "jCWMLjdvlXXW8yMsriFEe$$ZW97SzSM28j-LgaLSSTh1" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "6L2SyDYJHz-PLudcQ2yOg$$j0BfhmkZRNWWWnq15REZy" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "6i-7efkZlv1saw-NW06Xl$$Zc0yz8CxzRzaVBEOXexj1" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__financial_transactions.sql",
+      "9cZlEy46zfaunTowxitLv$$BL8CGn3bTsDAs4jVF5iwJ" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "WikqSglgfhgz3tQSI6QF0$$yYQN7Oi5V_BY-wyMStytx" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "xBqaL6n0IxZi49mWtmddF$$QrmIvQkvQ7lSpiG-VRHAa" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "xOQ64XvRJbZHc277yvjKC$$6-qxTGIzGjFT8yEbvDMPN" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "Ilbs-zArhkMpbZwTMu44l$$EWSb_SfX7AWbaKPYWek_c" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "NtgMjyT8AUR8U395FI0in$$kDSnHoT12p_yMY6dHZw1j" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "FqdU_OHtSXMCcDwM2LmGA$$HCvrXm1pplbOA3dkokxtn" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "ycEfy-SMUJM5F6q25JCH7$$n8INJq6ivY_-YOvMV6Y4o" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "2G6I3YPREptC5LdaHzCYr$$XZ90MSB4HeIPa3kOxoQrf" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "7osnQ0aXdn-vF816CaIRr$$XonN6Pb2hHBVSNTqNvSwr" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "zGge-2vPbEIljgisiLEYP$$viHlkm3kJ97TVG7VylWv8" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "tUyIgpTd1U-SmyGnJ5WUM$$cP_ej-jED_TQ-6cCuqFOs" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "TcrJDj_W1tfWF5zA5uDmg$$vTzjr40R_nGfS5tmXxby1" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "4udAw_C9BevTvuhI8aVpy$$lXQNL5OWaNnz5rmgu9Vbd" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "_q2xvUSLluyVuQeT6bUSb$$esWqukqjZvLnWMF7zihTZ" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "uttiwmr8-6fOJ7wzqUmx0$$M_zBoJPsUhPSWP-cZ949H" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "j2kyWsMz8LLEG8Tu8kg82$$OCo8ZeUctzhsM_U2di8V8" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "sqnbhsvmf2RZC28aS7eIW$$7UdFSkt7xTJ3kPy0xP1jl" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "7GVViDCpltIKq1qOdI4rJ$$pJ-lz7_omNmMX8SERWjJm" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "opUtvR2vgdsxqfvJwhn4q$$Kk36KOspmphYRy0DhTDLu" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "La8SKQANzkz8uJ_FDiFkL$$jPvpaTQBmKBqbICKFO3P8" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "oNlXurwP7Ixkh17O9ACHz$$qwEPGu6GXaZm1FYMoLkgY" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "5cntOUDObQlUj-2G_IZ_l$$g39fJHX_1N62Swl1X-L_n" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "XTeFBcVAAzWdUSWRFvMKF$$WLHv10qxsGsZxYgKAzw0Q" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "bN3pRzdzXCpMkzdvwdtap$$rjTzm_Lc4Q4Cn_wH9wf0Y" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "D7aKTd5jcHlI3poHUH3uV$$dHYDBz-akya_O0krpTEfN" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "62WmDvocDyow1zDYz9f2u$$r0RBAEwun6LHaC0URuPku" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "YKMRmSCco2cBn6fp8aNmG$$hm3v2fxDXreQqaEU-YYSd" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "PolFQJyAeh36B8gjBicsF$$Ag0nygPhKSEimD8WCQVwI" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "RfJ_Gc35nVSRxafNjYydx$$-tEnohpqxOH0o3wBBLw1h" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "eN0Z0hXoR6Ktg0zmetEhL$$n0_rMTdaVkeD-Wv4AbUpf" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "CW8qEaZvu8fYMqrJWahdz$$jKvWb8GyVYdp_9HsLNbKU" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "ANRilirgTbcO8SybMEdkH$$P5wjGL0uneUhpb3kCMjwa" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "JHy3bQr3Z4FRHCwkgGA7U$$W5BVzrAaBBd-IKn3FBcdr" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "hpJMmnMMHCn3Cr7BaIKe_$$ImbWdcb6E7JU277G26zzQ" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "4lT9D73BmyFLVSm8U9Fp7$$YbSPktMk1GLosjWAlS8u1" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "VQ7bwHBSh5L4aFmbZXZsJ$$cVHfOeCXGnkIGKAVId6bc" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "SCw82VWQ9Ex7YQJxKXZzt$$THX2Zb-58GnlMqhcw3n0v" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "0CUJbwtsqDLpvR1p1_xtR$$-JswWSUVa7G5m5PZG2Hh9" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "LwRMGoIeJdkcvEnXf88Xq$$ai_1be9E3SZUrmBmbEp45" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "XCB99BhHC-qTrP-4_x227$$3ttyACCJhw4EMT7Y7DOCN" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "Koo_zKwIupj5UdKuOClAu$$LfNP3IFhLwAiQUQGNK2x7" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "WJNNomX3mH8H7x4Svray1$$1rhcuUEuEwIytjdSCO6Kj" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql",
+      "I3Xx4c-G8om1gfXkssIYL$$8eMyx-PImZog6qonVSXXd" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "TVxcZpftfDDKAupj8e5jS$$_OsFK95shkl1A1FC0TdYP" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql",
+      "M_dE3Kdh8FEA36ip4pgac$$4ABmGhFMcnDdxIkpCoePy" : "models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql"
+    }
+  },
+  "processes" : {
+    "5E-3TVPArGTbfJZI0iA5h$$HbvUAXjHALh4NGF6YbVQa" : {
+      "id" : "5E-3TVPArGTbfJZI0iA5h$$HbvUAXjHALh4NGF6YbVQa",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "5E-3TVPArGTbfJZI0iA5h$$HbvUAXjHALh4NGF6YbVQa", "rovg2r0PZU9bOIgTSk51_$$_xf2Eehis8l5Pq0W4dKhN", "xOQ64XvRJbZHc277yvjKC$$6-qxTGIzGjFT8yEbvDMPN", "7osnQ0aXdn-vF816CaIRr$$XonN6Pb2hHBVSNTqNvSwr", "6P0xPa9X39lJtQermhpQj$$WV0NuDKtbtsYaK_aaITI_", "_q2xvUSLluyVuQeT6bUSb$$esWqukqjZvLnWMF7zihTZ", "D7aKTd5jcHlI3poHUH3uV$$dHYDBz-akya_O0krpTEfN", "WJNNomX3mH8H7x4Svray1$$1rhcuUEuEwIytjdSCO6Kj", "8dETgmQXc5ST-cC2MB6J4$$duuHYavB9gRGA1YkGSuS0", "z-3utVzHOZKFXAHlTTM5y$$t_G3UiTUyPJZRoDRSbdSB", "6L2SyDYJHz-PLudcQ2yOg$$j0BfhmkZRNWWWnq15REZy", "AlteryxSelect_143_40wMEwc1Z2wSE2pBr9u76$$Cn_DLRcsACfGoDcUG7V_9", "LwRMGoIeJdkcvEnXf88Xq$$ai_1be9E3SZUrmBmbEp45", "YKMRmSCco2cBn6fp8aNmG$$hm3v2fxDXreQqaEU-YYSd" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "6i-7efkZlv1saw-NW06Xl$$Zc0yz8CxzRzaVBEOXexj1" : {
+      "id" : "6i-7efkZlv1saw-NW06Xl$$Zc0yz8CxzRzaVBEOXexj1",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__financial_transactions",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__financial_transactions"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "AlteryxSelect_143_40wMEwc1Z2wSE2pBr9u76$$Cn_DLRcsACfGoDcUG7V_9", "6i-7efkZlv1saw-NW06Xl$$Zc0yz8CxzRzaVBEOXexj1" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__financial_transactions_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__financial_transactions_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "ycEfy-SMUJM5F6q25JCH7$$n8INJq6ivY_-YOvMV6Y4o" : {
+      "id" : "ycEfy-SMUJM5F6q25JCH7$$n8INJq6ivY_-YOvMV6Y4o",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "AlteryxSelect_143_40wMEwc1Z2wSE2pBr9u76$$Cn_DLRcsACfGoDcUG7V_9", "ycEfy-SMUJM5F6q25JCH7$$n8INJq6ivY_-YOvMV6Y4o", "4lT9D73BmyFLVSm8U9Fp7$$YbSPktMk1GLosjWAlS8u1", "XTeFBcVAAzWdUSWRFvMKF$$WLHv10qxsGsZxYgKAzw0Q", "OzJKXMnGJERRlZC5QR9sH$$cFtoHaa915-qY1w77v_7P", "ANRilirgTbcO8SybMEdkH$$P5wjGL0uneUhpb3kCMjwa", "N07hkP92MHTyQsTQl98dp$$Cekc8-RJ_iycIdrx5eF07", "WikqSglgfhgz3tQSI6QF0$$yYQN7Oi5V_BY-wyMStytx", "RfJ_Gc35nVSRxafNjYydx$$-tEnohpqxOH0o3wBBLw1h", "La8SKQANzkz8uJ_FDiFkL$$jPvpaTQBmKBqbICKFO3P8", "WLSqFwejjd3fvG5Szi84d$$pABXHB75BN8geDDI6Q5w0", "oMJJQt-3HMINquhg-SDOK$$TLO_KmBkiXZwcRVMaaB9R", "z5wrlyETsnVUc4K3KI8WI$$IUu7qIc5cQpUyqCbkP7zr", "xBqaL6n0IxZi49mWtmddF$$QrmIvQkvQ7lSpiG-VRHAa", "Koo_zKwIupj5UdKuOClAu$$LfNP3IFhLwAiQUQGNK2x7", "0CUJbwtsqDLpvR1p1_xtR$$-JswWSUVa7G5m5PZG2Hh9", "apisquUSMvNVzXeBsqODs$$diDRwZremguC4yUVPOY_b", "I3Xx4c-G8om1gfXkssIYL$$8eMyx-PImZog6qonVSXXd", "VQ7bwHBSh5L4aFmbZXZsJ$$cVHfOeCXGnkIGKAVId6bc", "SCw82VWQ9Ex7YQJxKXZzt$$THX2Zb-58GnlMqhcw3n0v", "JHy3bQr3Z4FRHCwkgGA7U$$W5BVzrAaBBd-IKn3FBcdr", "tUyIgpTd1U-SmyGnJ5WUM$$cP_ej-jED_TQ-6cCuqFOs", "d85Ff-ddWDJG-dvpqibj3$$BjHtkm4mUZQ0L6DvNmbLD", "j2kyWsMz8LLEG8Tu8kg82$$OCo8ZeUctzhsM_U2di8V8", "CW8qEaZvu8fYMqrJWahdz$$jKvWb8GyVYdp_9HsLNbKU", "XCB99BhHC-qTrP-4_x227$$3ttyACCJhw4EMT7Y7DOCN", "Ilbs-zArhkMpbZwTMu44l$$EWSb_SfX7AWbaKPYWek_c", "9cZlEy46zfaunTowxitLv$$BL8CGn3bTsDAs4jVF5iwJ", "NDNG5V3ZW7F-8EAvg71Ps$$EGMwgPvz09hIqfVrdV3lo", "opUtvR2vgdsxqfvJwhn4q$$Kk36KOspmphYRy0DhTDLu", "bN3pRzdzXCpMkzdvwdtap$$rjTzm_Lc4Q4Cn_wH9wf0Y", "NtgMjyT8AUR8U395FI0in$$kDSnHoT12p_yMY6dHZw1j", "TVxcZpftfDDKAupj8e5jS$$_OsFK95shkl1A1FC0TdYP", "MKpeGqFHLYV_bgs-ea8Hm$$HF61sAFLMm76IWY-uitqS", "g-zzvu8SQKYtCwH2Oo6eV$$nM4H_-rCYnFK1-uS0NjFA", "WVkxYVQxHb61lQGzWiCES$$QKBFu-icq0w6ay_qlFyS2", "zGge-2vPbEIljgisiLEYP$$viHlkm3kJ97TVG7VylWv8", "5w9gmSh52-ez8_4QJU23p$$2vEL7e_oHhTCZ4SqyjLGt", "HfPsutdoNLkvnOX4rtuFn$$ZDP3QFrWOindM7J7Jiv9r", "yzmQJkr8sB1GqxB0IDj90$$cvRmfNLYGNfg58PQZnQeB", "_PHx8XpNbol2frXP1YDb-$$3ASVABX35L-3a0I-kvj-H", "BlJOBZ0o4LSDbja6DciDW$$towo-75zxj2PoNxiGNO67", "PMWV6JYrj07Nt4Rk3K9EV$$lnQlYZSqXledoZKwh1eOI", "iyUgwT-ShI3UqqnS1h3jQ$$3EZTdzFbU5ir7Dim2P03U", "uttiwmr8-6fOJ7wzqUmx0$$M_zBoJPsUhPSWP-cZ949H", "5cntOUDObQlUj-2G_IZ_l$$g39fJHX_1N62Swl1X-L_n", "OW3qA5P3vRHwLvpA2SLIF$$6xj9jeAow47MB_ngeq02w", "PolFQJyAeh36B8gjBicsF$$Ag0nygPhKSEimD8WCQVwI", "9r_YgsiWdKevKxNBez5NI$$TqIFFjz-JYzMVmhk1U9oI", "FqdU_OHtSXMCcDwM2LmGA$$HCvrXm1pplbOA3dkokxtn", "Gez3Fxj3ZfNHcf_kJoQHU$$8e3wkmGzeClNNREmj_IG7", "2G6I3YPREptC5LdaHzCYr$$XZ90MSB4HeIPa3kOxoQrf", "TcrJDj_W1tfWF5zA5uDmg$$vTzjr40R_nGfS5tmXxby1", "eN0Z0hXoR6Ktg0zmetEhL$$n0_rMTdaVkeD-Wv4AbUpf", "sqnbhsvmf2RZC28aS7eIW$$7UdFSkt7xTJ3kPy0xP1jl", "DsroOSztze8_pGhlTbEvM$$oV983ReJVsG5FN4NeDI3V", "ELaCXtLrKrdYdQxU5s5rA$$Y38Xk_yK33TrSGu18P3d1", "NWK568I6915d_awnXP0LB$$SGyPNCsYKZSL_NFyangOK", "QaVH7cQJfJl7RGscSQixe$$GzRCJuoCJEEpGPjvYrvlb", "zHiBffstDCMYnp8gXa0b5$$bzrkKr91iM5gLNkFOqhox", "HJgjhTU4D_5dlSpiKyO7W$$BUcKyIvjkph-I3j3gTiOO", "62WmDvocDyow1zDYz9f2u$$r0RBAEwun6LHaC0URuPku", "7GVViDCpltIKq1qOdI4rJ$$pJ-lz7_omNmMX8SERWjJm", "M_dE3Kdh8FEA36ip4pgac$$4ABmGhFMcnDdxIkpCoePy", "hpJMmnMMHCn3Cr7BaIKe_$$ImbWdcb6E7JU277G26zzQ", "WBbEQyK5EYJMxzYWvTuSJ$$rFopEFk2NZ3olVy75XkJL", "oNlXurwP7Ixkh17O9ACHz$$qwEPGu6GXaZm1FYMoLkgY", "4udAw_C9BevTvuhI8aVpy$$lXQNL5OWaNnz5rmgu9Vbd", "qjG75S_Wlzilmhsia0GIY$$3X7x8UwjRC9GNgm9jV82P", "jCWMLjdvlXXW8yMsriFEe$$ZW97SzSM28j-LgaLSSTh1", "mJTkgYn28_UaqX8ib7YPy$$GPsixF8M1PRDqBdnWYWXx", "L-5bc49CETSF668gSwM4k$$tEY3sLRTyIP-9Vd-MJE8d" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_in_5",
+          "slug" : "in_5"
+        }, {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_in_6",
+          "slug" : "in_6"
+        }, {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_in_7",
+          "slug" : "in_7"
+        }, {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_in_8",
+          "slug" : "in_8"
+        }, {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_in_9",
+          "slug" : "in_9"
+        }, {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_in_10",
+          "slug" : "in_10"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_ycEfy-SMUJM5F6q25JCH7$$n8INJq6ivY_-YOvMV6Y4o_C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1_in_1",
+    "source" : "ycEfy-SMUJM5F6q25JCH7$$n8INJq6ivY_-YOvMV6Y4o",
+    "sourcePort" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_out_0",
+    "target" : "5E-3TVPArGTbfJZI0iA5h$$HbvUAXjHALh4NGF6YbVQa",
+    "targetPort" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1_in_1"
+  }, {
+    "id" : "conn_ycEfy-SMUJM5F6q25JCH7$$n8INJq6ivY_-YOvMV6Y4o_C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__financial_transactions_in_0",
+    "source" : "ycEfy-SMUJM5F6q25JCH7$$n8INJq6ivY_-YOvMV6Y4o",
+    "sourcePort" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143_out_0",
+    "target" : "6i-7efkZlv1saw-NW06Xl$$Zc0yz8CxzRzaVBEOXexj1",
+    "targetPort" : "C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__financial_transactions_in_0"
+  } ],
+  "component" : "Pipeline"
+}

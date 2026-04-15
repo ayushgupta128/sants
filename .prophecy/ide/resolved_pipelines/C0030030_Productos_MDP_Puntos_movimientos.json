@@ -1,0 +1,289 @@
+{
+  "id" : "C0030030_Productos_MDP_Puntos_movimientos",
+  "metainfo" : {
+    "label" : "C0030030_Productos_MDP_Puntos_movimientos",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "ref_data_date_part",
+          "kind" : {
+            "type" : "int",
+            "value" : "20250101"
+          }
+        } ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : true,
+    "transpilerType" : "alteryx",
+    "processesVsModelFiles" : {
+      "177_inner" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "182" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "Union_199_199_Output" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "V5HT721HNQiI98NScQJuc$$0Caqpr6UqSXs0Z6Z2lesm" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "Vdb4UE0aev-q6makvRzN0" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "AlteryxSelect_233_233_Output" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "207_inner" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "181" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "180_inner" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "1h-9DRB3ippbtjR25JnGz$$8vM-9527GJUOCfoL9ieRN" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "207_left" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "0zXZ7JKmxnNnJr3cvinef$$qTcKgC3cGVwFxBJrWAxtO" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "G1DtsR4nAwg3wcTbAC5MF" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "198_left" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "L0eLqhrMJxMyXRg_b4nKj$$AE3c10KpCbi0A2d6trk-b" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "233" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233.sql",
+      "183_left" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "199" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "SOgs643V5cZ-tLTGtlo9n$$Lt2No3_za4vz54GKxx83f" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "YAa2UxP041jNogvoaee2g" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "OnbsQGq6gyC2KAN6nToDn$$NxVAKcu73ec7gqwOqgAeu" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "qCtu8ix5soVHJWshzs49G$$Skq74JLNKPZNXX4uF7ymf" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "MFLZpxI-oy99E9RsQCAbn$$fBdZ3Kh1U3N-DDy2r4vcZ" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_reference_info.sql",
+      "202" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "201_left" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "201_inner" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "198_inner" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "188_inner" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "VPfyEGHJohyqcPyEFZBo-$$iqBUb9QzvL-3HWs9BtDDu" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233.sql",
+      "198_right" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "177_left" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "zmqSi4Q9zklWQUW_DJE5D$$7YDOolhjb96Nd-cT-b0LR" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "ERJAlPHg-6wxwrTJMnW5i" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "191" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "190" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "184" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "183_inner" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "188_left" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "7XkQhFmxPu8vN4fLF18mV$$xdSj51XSFCz1fcYVbMGmc" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "raAwuoO1xCh2IL1S0F_N2$$WiZKzqGOjkg78ZWNT01Rx" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "189" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "203_inner" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "L4JthWcbtrO_poSkSegpu$$MG3KXZf3uiPTMvqhIH4ze" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "7RC8yVjZpTh52ipxBVGsv$$lZoaNn-hY6lR3y4zYHdSt" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "187" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "258" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "265_inner" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "I3J6BvA_8N5xygPmbZZ7R" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "179" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "Jmpm6D1_ry7VuaR0S3nwg" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "n-PTQCFWgeCrcAe9XEJlF$$2WjaoCG1snpf-enzw3suc" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql",
+      "VfcY3gDpzuL2qrRhWLB3Z$$p3PTNTWXHrQRLLgpF7Q-S" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233.sql",
+      "204" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_reference_info.sql",
+      "OcgYVlDtp42vQlwrBLVka" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "ioW5GPySm3HHFJzI-ZIEY$$uiPrhiwJ-rcxkNM9wFeS-" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql",
+      "z0kGubLeCPLPemhPAqj4F" : "models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql"
+    }
+  },
+  "processes" : {
+    "233" : {
+      "id" : "233",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "AlteryxSelect_233_233_Output", "233", "VfcY3gDpzuL2qrRhWLB3Z$$p3PTNTWXHrQRLLgpF7Q-S", "VPfyEGHJohyqcPyEFZBo-$$iqBUb9QzvL-3HWs9BtDDu" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "199" : {
+      "id" : "199",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Union_199_199_Output", "199", "198_inner", "AlteryxSelect_233_233_Output", "201_inner", "207_inner", "Jmpm6D1_ry7VuaR0S3nwg", "SOgs643V5cZ-tLTGtlo9n$$Lt2No3_za4vz54GKxx83f", "zmqSi4Q9zklWQUW_DJE5D$$7YDOolhjb96Nd-cT-b0LR", "1h-9DRB3ippbtjR25JnGz$$8vM-9527GJUOCfoL9ieRN", "ioW5GPySm3HHFJzI-ZIEY$$uiPrhiwJ-rcxkNM9wFeS-", "203_inner", "207_left", "OcgYVlDtp42vQlwrBLVka", "ERJAlPHg-6wxwrTJMnW5i", "AlteryxSelect_233_233_Output", "201_left", "202", "198_right", "AlteryxSelect_233_233_Output", "198_left", "AlteryxSelect_233_233_Output" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_5",
+          "slug" : "in_5"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_6",
+          "slug" : "in_6"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_7",
+          "slug" : "in_7"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_8",
+          "slug" : "in_8"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_9",
+          "slug" : "in_9"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "MFLZpxI-oy99E9RsQCAbn$$fBdZ3Kh1U3N-DDy2r4vcZ" : {
+      "id" : "MFLZpxI-oy99E9RsQCAbn$$fBdZ3Kh1U3N-DDy2r4vcZ",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030030_Productos_MDP_Puntos_movimientos__customer_reference_info",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030030_Productos_MDP_Puntos_movimientos__customer_reference_info"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "MFLZpxI-oy99E9RsQCAbn$$fBdZ3Kh1U3N-DDy2r4vcZ", "204", "Union_199_199_Output" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_reference_info_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_reference_info_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "raAwuoO1xCh2IL1S0F_N2$$WiZKzqGOjkg78ZWNT01Rx" : {
+      "id" : "raAwuoO1xCh2IL1S0F_N2$$WiZKzqGOjkg78ZWNT01Rx",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "raAwuoO1xCh2IL1S0F_N2$$WiZKzqGOjkg78ZWNT01Rx", "258", "191", "I3J6BvA_8N5xygPmbZZ7R", "189", "182", "177_inner", "180_inner", "183_inner", "188_inner", "183_left", "z0kGubLeCPLPemhPAqj4F", "179", "177_left", "184", "AlteryxSelect_233_233_Output", "188_left", "187", "190", "181", "Vdb4UE0aev-q6makvRzN0", "265_inner", "G1DtsR4nAwg3wcTbAC5MF", "qCtu8ix5soVHJWshzs49G$$Skq74JLNKPZNXX4uF7ymf", "7XkQhFmxPu8vN4fLF18mV$$xdSj51XSFCz1fcYVbMGmc", "zmqSi4Q9zklWQUW_DJE5D$$7YDOolhjb96Nd-cT-b0LR", "1h-9DRB3ippbtjR25JnGz$$8vM-9527GJUOCfoL9ieRN", "n-PTQCFWgeCrcAe9XEJlF$$2WjaoCG1snpf-enzw3suc", "0zXZ7JKmxnNnJr3cvinef$$qTcKgC3cGVwFxBJrWAxtO", "7RC8yVjZpTh52ipxBVGsv$$lZoaNn-hY6lR3y4zYHdSt", "OnbsQGq6gyC2KAN6nToDn$$NxVAKcu73ec7gqwOqgAeu", "L0eLqhrMJxMyXRg_b4nKj$$AE3c10KpCbi0A2d6trk-b", "YAa2UxP041jNogvoaee2g", "Union_199_199_Output", "V5HT721HNQiI98NScQJuc$$0Caqpr6UqSXs0Z6Z2lesm", "L4JthWcbtrO_poSkSegpu$$MG3KXZf3uiPTMvqhIH4ze" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_5",
+          "slug" : "in_5"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_6",
+          "slug" : "in_6"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_7",
+          "slug" : "in_7"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_8",
+          "slug" : "in_8"
+        }, {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_9",
+          "slug" : "in_9"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_233_C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_8",
+    "source" : "233",
+    "sourcePort" : "C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233_out_0",
+    "target" : "raAwuoO1xCh2IL1S0F_N2$$WiZKzqGOjkg78ZWNT01Rx",
+    "targetPort" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_8"
+  }, {
+    "id" : "conn_233_C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_6",
+    "source" : "233",
+    "sourcePort" : "C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233_out_0",
+    "target" : "199",
+    "targetPort" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_6"
+  }, {
+    "id" : "conn_233_C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_7",
+    "source" : "233",
+    "sourcePort" : "C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233_out_0",
+    "target" : "199",
+    "targetPort" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_7"
+  }, {
+    "id" : "conn_233_C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_8",
+    "source" : "233",
+    "sourcePort" : "C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233_out_0",
+    "target" : "199",
+    "targetPort" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_8"
+  }, {
+    "id" : "conn_233_C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_9",
+    "source" : "233",
+    "sourcePort" : "C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233_out_0",
+    "target" : "199",
+    "targetPort" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_in_9"
+  }, {
+    "id" : "conn_199_C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_9",
+    "source" : "199",
+    "sourcePort" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_out_0",
+    "target" : "raAwuoO1xCh2IL1S0F_N2$$WiZKzqGOjkg78ZWNT01Rx",
+    "targetPort" : "C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points_in_9"
+  }, {
+    "id" : "conn_199_C0030030_Productos_MDP_Puntos_movimientos__customer_reference_info_in_0",
+    "source" : "199",
+    "sourcePort" : "C0030030_Productos_MDP_Puntos_movimientos__Union_199_out_0",
+    "target" : "MFLZpxI-oy99E9RsQCAbn$$fBdZ3Kh1U3N-DDy2r4vcZ",
+    "targetPort" : "C0030030_Productos_MDP_Puntos_movimientos__customer_reference_info_in_0"
+  } ],
+  "component" : "Pipeline"
+}

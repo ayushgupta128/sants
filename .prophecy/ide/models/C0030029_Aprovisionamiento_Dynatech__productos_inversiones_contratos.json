@@ -1,0 +1,781 @@
+{
+  "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos",
+  "metainfo" : {
+    "label" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"productos_inversiones_contratos\"",
+        "materialized" : "incremental",
+        "database" : "\"dev_business\"",
+        "unique_key" : [ "\"ref_data_date_part\"" ],
+        "schema" : "\"productos\"",
+        "incremental_strategy" : "\"delete+insert\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "zs--XhDVz0h11S7UR3QUo$$AdYUyGWi9OnlBnH_W093P" : {
+      "id" : "zs--XhDVz0h11S7UR3QUo$$AdYUyGWi9OnlBnH_W093P",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "productos_inversiones_contratos",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM cast_productos_inversiones_contratos\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "58A0Jo3ZPfDcl9uW7QFPL$$_q-IFb_QD3zhY1XA4AusU",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "Eb-4lZHpmeRhuE1bnq9RG$$YBzxigV4KWP9V6nrpUtuz",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR" : {
+      "id" : "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "AlteryxSelect_65"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_5",
+          "id" : "output_port_5",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ ref('C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_5",
+          "slug" : "input_port_5"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_5",
+          "slug" : "output_port_5"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "91T47bM43sl10Hsn8EcJ-$$wAn7HVy_GlwJd1Rw88v65" : {
+      "id" : "91T47bM43sl10Hsn8EcJ-$$wAn7HVy_GlwJd1Rw88v65",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cast_productos_inversiones_contratos",
+        "x" : 1280,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##fecha_dato", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##idf_pers_ods", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##numero_contrato_inversiones", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##fecha_alta_contrato_inversiones", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##estado_cliente", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##numero_oficial_inversiones", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##nombre_oficial_inversiones", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##fecha_modificacion_perfil_riesgo", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##perfil_de_riesgo", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_30_dias_absoluto", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_30_dias_porcentual", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_90_dias_absoluto", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_90_dias_porcentual", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_180_dias_absoluta", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_ytd_absoluta", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_ytd_porcentual", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_ano_anterior_absoluta", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_ano_anterior_porcentual", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabiliad_anual_absoluta", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_anual_porcentual", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_2_anos_absoluta", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##rentabilidad_2_anos_porcentual", "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn##AAAAMM" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "{{ var('ref_data_date_part') }}"
+          },
+          "alias" : "ref_data_date_part",
+          "_row_id" : "4ML8F3pj90"
+        }, {
+          "expression" : {
+            "expression" : "current_timestamp()"
+          },
+          "alias" : "ref_timestamp_procesamiento",
+          "_row_id" : "Q3YprgJpV3"
+        }, {
+          "expression" : {
+            "expression" : "CAST(fecha_dato AS DATE)"
+          },
+          "alias" : "fecha_dato",
+          "_row_id" : "462609409"
+        }, {
+          "expression" : {
+            "expression" : "idf_pers_ods"
+          },
+          "alias" : "idf_pers_ods",
+          "_row_id" : "257844251"
+        }, {
+          "expression" : {
+            "expression" : "numero_contrato_inversiones"
+          },
+          "alias" : "numero_contrato_inversiones",
+          "_row_id" : "1644814591"
+        }, {
+          "expression" : {
+            "expression" : "CAST(fecha_alta_contrato_inversiones AS DATE)"
+          },
+          "alias" : "fecha_alta_contrato_inversiones",
+          "_row_id" : "908564375"
+        }, {
+          "expression" : {
+            "expression" : "estado_cliente"
+          },
+          "alias" : "estado_cliente",
+          "_row_id" : "2047280092"
+        }, {
+          "expression" : {
+            "expression" : "numero_oficial_inversiones"
+          },
+          "alias" : "numero_oficial_inversiones",
+          "_row_id" : "1822927970"
+        }, {
+          "expression" : {
+            "expression" : "nombre_oficial_inversiones"
+          },
+          "alias" : "nombre_oficial_inversiones",
+          "_row_id" : "2033009313"
+        }, {
+          "expression" : {
+            "expression" : "CAST(fecha_modificacion_perfil_riesgo AS DATE)"
+          },
+          "alias" : "fecha_modificacion_perfil_riesgo",
+          "_row_id" : "2059508743"
+        }, {
+          "expression" : {
+            "expression" : "perfil_de_riesgo"
+          },
+          "alias" : "perfil_de_riesgo",
+          "_row_id" : "736162683"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_30_dias_absoluto AS DECIMAL(19,2))"
+          },
+          "alias" : "rentabilidad_30_dias_absoluto",
+          "_row_id" : "1509214800"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_30_dias_porcentual AS DECIMAL(13,4))"
+          },
+          "alias" : "rentabilidad_30_dias_porcentual",
+          "_row_id" : "1384966303"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_90_dias_absoluto AS DECIMAL(19,2))"
+          },
+          "alias" : "rentabilidad_90_dias_absoluto",
+          "_row_id" : "1612841751"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_90_dias_porcentual AS DECIMAL(19,4))"
+          },
+          "alias" : "rentabilidad_90_dias_porcentual",
+          "_row_id" : "431052992"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_180_dias_absoluta AS DECIMAL(19,2))"
+          },
+          "alias" : "rentabilidad_180_dias_absoluta",
+          "_row_id" : "2076428704"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_180_dias_absoluta AS DECIMAL(19,4))"
+          },
+          "alias" : "rentabilidad_180_dias_porcentual",
+          "_row_id" : "1261354379"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_ytd_absoluta AS DECIMAL(19,2))"
+          },
+          "alias" : "rentabilidad_ytd_absoluta",
+          "_row_id" : "212777633"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_ytd_porcentual AS DECIMAL(13,4))"
+          },
+          "alias" : "rentabilidad_ytd_porcentual",
+          "_row_id" : "1364847778"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_ano_anterior_absoluta AS DECIMAL(19,2))"
+          },
+          "alias" : "rentabilidad_ano_anterior_absoluta",
+          "_row_id" : "1157970239"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_ano_anterior_porcentual AS DECIMAL(19,4))"
+          },
+          "alias" : "rentabilidad_ano_anterior_porcentual",
+          "_row_id" : "931512343"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabiliad_anual_absoluta AS DECIMAL(19,2))"
+          },
+          "alias" : "rentabiliad_anual_absoluta",
+          "_row_id" : "28753700"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_anual_porcentual AS DECIMAL(13,4))"
+          },
+          "alias" : "rentabilidad_anual_porcentual",
+          "_row_id" : "376207634"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_2_anos_absoluta AS DECIMAL(19,2))"
+          },
+          "alias" : "rentabilidad_2_anos_absoluta",
+          "_row_id" : "744269513"
+        }, {
+          "expression" : {
+            "expression" : "CAST(rentabilidad_2_anos_porcentual AS DECIMAL(19,4))"
+          },
+          "alias" : "rentabilidad_2_anos_porcentual",
+          "_row_id" : "2010809749"
+        }, {
+          "expression" : {
+            "expression" : "AAAAMM"
+          },
+          "alias" : "AAAAMM",
+          "_row_id" : "475775740"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "nxI8lpAGkfe9q9lgJr9A2$$gtNJSfJEOTSVGbaVw1ES7",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "t0BoisVmk7QCGATVmeOh8$$DEcXpmRUuUBQij9dOngNF" : {
+      "id" : "t0BoisVmk7QCGATVmeOh8$$DEcXpmRUuUBQij9dOngNF",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_202",
+        "x" : 360,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "1185390399"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "AK2rss-QzzKVHHtk5MAId$$lMk6k8SxZsu5DZsQWnCab",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "9eZrYZv6GgExu-GE0QSMY$$GxyJZMnYNxpLCsYdXME5D",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "_A_yLmmZ2V0TXci_6VLmF$$kh-8y5c4S-lVB6fkcAhvF" : {
+      "id" : "_A_yLmmZ2V0TXci_6VLmF$$kh-8y5c4S-lVB6fkcAhvF",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_78",
+        "x" : 820,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "3yk-Og_SGh-lVHrUkx7Gu$$x3CuIUuX5yG71OyxxQ7nt##DynCliACtdId" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST(DynCliACtdId AS string)"
+          },
+          "alias" : "DynCliACtdId",
+          "_row_id" : "2093462689"
+        }, {
+          "expression" : {
+            "expression" : "* EXCEPT(`DynCliACtdId`)"
+          },
+          "_row_id" : "1423625146"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3yk-Og_SGh-lVHrUkx7Gu$$x3CuIUuX5yG71OyxxQ7nt",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "cYDP8SH-izKaFXXcYSXzo$$Lw03PZP624YnTFf898ySu",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "qQ5Q09ZB41xuy4RLzXBCA$$Uf3uUxYjPUF7x8bSyWBMo" : {
+      "id" : "qQ5Q09ZB41xuy4RLzXBCA$$Uf3uUxYjPUF7x8bSyWBMo",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_70",
+        "x" : 1140,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliAFec", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##idf_pers_ods", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliACtdId", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliAFecApe", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliAEstSis", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliAOfiId", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliAOfiNom", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliAPerfRieFecMod", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliAPerfRieNom", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenI30D", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenP30D", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenI3M", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenP3M", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenI6M", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenP6M", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenIAAct", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenPAAct", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenIAAnt", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenPAAnt", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenI1A", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenP1A", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenI2A", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##DynCliARenP2A", "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY##AAAAMM" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(DynCliAFec AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynCliAFec AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(DynCliAFec AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynCliAFec AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(DynCliAFec AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_dato",
+          "_row_id" : "113631769"
+        }, {
+          "expression" : {
+            "expression" : "idf_pers_ods"
+          },
+          "alias" : "idf_pers_ods",
+          "_row_id" : "140679070"
+        }, {
+          "expression" : {
+            "expression" : "DynCliACtdId"
+          },
+          "alias" : "numero_contrato_inversiones",
+          "_row_id" : "2021793657"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(DynCliAFecApe AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynCliAFecApe AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(DynCliAFecApe AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynCliAFecApe AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(DynCliAFecApe AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_alta_contrato_inversiones",
+          "_row_id" : "342710329"
+        }, {
+          "expression" : {
+            "expression" : "DynCliAEstSis"
+          },
+          "alias" : "estado_cliente",
+          "_row_id" : "1946655071"
+        }, {
+          "expression" : {
+            "expression" : "DynCliAOfiId"
+          },
+          "alias" : "numero_oficial_inversiones",
+          "_row_id" : "1136833251"
+        }, {
+          "expression" : {
+            "expression" : "DynCliAOfiNom"
+          },
+          "alias" : "nombre_oficial_inversiones",
+          "_row_id" : "1117440"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(DynCliAPerfRieFecMod AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynCliAPerfRieFecMod AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(DynCliAPerfRieFecMod AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynCliAPerfRieFecMod AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(DynCliAPerfRieFecMod AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_modificacion_perfil_riesgo",
+          "_row_id" : "2049237698"
+        }, {
+          "expression" : {
+            "expression" : "DynCliAPerfRieNom"
+          },
+          "alias" : "perfil_de_riesgo",
+          "_row_id" : "961152780"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenI30D"
+          },
+          "alias" : "rentabilidad_30_dias_absoluto",
+          "_row_id" : "652139484"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenP30D"
+          },
+          "alias" : "rentabilidad_30_dias_porcentual",
+          "_row_id" : "615291697"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenI3M"
+          },
+          "alias" : "rentabilidad_90_dias_absoluto",
+          "_row_id" : "612181322"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenP3M"
+          },
+          "alias" : "rentabilidad_90_dias_porcentual",
+          "_row_id" : "371208997"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenI6M"
+          },
+          "alias" : "rentabilidad_180_dias_absoluta",
+          "_row_id" : "1308727741"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenP6M"
+          },
+          "alias" : "rentabilidad_180_dias_porcentual",
+          "_row_id" : "1323296375"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenIAAct"
+          },
+          "alias" : "rentabilidad_ytd_absoluta",
+          "_row_id" : "1086222566"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenPAAct"
+          },
+          "alias" : "rentabilidad_ytd_porcentual",
+          "_row_id" : "334532247"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenIAAnt"
+          },
+          "alias" : "rentabilidad_ano_anterior_absoluta",
+          "_row_id" : "1398074491"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenPAAnt"
+          },
+          "alias" : "rentabilidad_ano_anterior_porcentual",
+          "_row_id" : "974316128"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenI1A"
+          },
+          "alias" : "rentabiliad_anual_absoluta",
+          "_row_id" : "1593652227"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenP1A"
+          },
+          "alias" : "rentabilidad_anual_porcentual",
+          "_row_id" : "1698281054"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenI2A"
+          },
+          "alias" : "rentabilidad_2_anos_absoluta",
+          "_row_id" : "1578056315"
+        }, {
+          "expression" : {
+            "expression" : "DynCliARenP2A"
+          },
+          "alias" : "rentabilidad_2_anos_porcentual",
+          "_row_id" : "16423470"
+        }, {
+          "expression" : {
+            "expression" : "AAAAMM"
+          },
+          "alias" : "AAAAMM",
+          "_row_id" : "115714844"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "3-FmcgghNQ6Jt3kl7-bOO$$on3b0IQOTwz1v89_UfyD5",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "nZk7kI9L5SmmqYIOI2wQC$$cefIEVE9MCwGvIqTZil1D" : {
+      "id" : "nZk7kI9L5SmmqYIOI2wQC$$cefIEVE9MCwGvIqTZil1D",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "fr_rf_dcp",
+        "x" : 220,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "dRajC54q8-T3NJgbw9Ed7$$fk2rWK0cfL8DNytQ0Tqmg##data_date_part" ],
+        "condition" : {
+          "expression" : "{{ var('ref_data_date_part') }} == data_date_part"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "dRajC54q8-T3NJgbw9Ed7$$fk2rWK0cfL8DNytQ0Tqmg",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "tjl8mfI2WQLUZBlYlpaKJ$$GfFn5S_LUrUGmeLB_qYnr",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "kfeuAWKVDT2trFL5HiJv4$$CHYa1vK_MpbQLmpbx-3Js" : {
+      "id" : "kfeuAWKVDT2trFL5HiJv4$$CHYa1vK_MpbQLmpbx-3Js",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "dbo_dynclientesapp",
+        "x" : 60,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "dbo_dynclientesapp",
+          "sourceType" : "Table",
+          "sourceName" : "dev_curated_uyasdbtest_dynvaldwsantander",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "_TdoUgWkBxxk1HWLbTeIU$$CSkIpceJygCaE5Z_GarGN",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "00uWJPWhJFnH1MYdFy69R$$jc5xlqxy0bLBMo23MppJ1" : {
+      "id" : "00uWJPWhJFnH1MYdFy69R$$jc5xlqxy0bLBMo23MppJ1",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Formula_71_0",
+        "x" : 680,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST((REGEXP_REPLACE((REGEXP_REPLACE((FORMAT_NUMBER(CAST(((EXTRACT(YEAR FROM DynCliAFec) * 100) + EXTRACT(MONTH FROM DynCliAFec)) AS DOUBLE), 0)), ',', '__THS__')), '__THS__', '')) AS string)"
+          },
+          "alias" : "AAAAMM",
+          "_row_id" : "1653584318"
+        }, {
+          "expression" : {
+            "expression" : "*"
+          },
+          "_row_id" : "237080489"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "0jpSDNSj2zVBB8aRQAVrO$$5bZd0apyVH8cvbsk_D6MQ",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "jnFq5ibELsgnI6VNu218Z$$fXD647Z5zcthVglzgeQRp",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "QxI65JJKvkTb6VehAjxgI$$yiLF7W5GLZTYE9WFydMnK" : {
+      "id" : "QxI65JJKvkTb6VehAjxgI$$yiLF7W5GLZTYE9WFydMnK",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_72",
+        "x" : 520,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "OHEHKaRBvHTG9tH2-u3a9$$lmeArGi6y69_DOSQXRW-s##DynCliAEstado" ],
+        "condition" : {
+          "expression" : "(NOT (DynCliAEstado = 'ANU'))"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "OHEHKaRBvHTG9tH2-u3a9$$lmeArGi6y69_DOSQXRW-s",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "5KrvgQJxB1LYmLs2Dxfi2$$Nmrrl-BOa7q1LbOEjmEV2",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "GIE6r6tRwjBYrV02RxOzG$$1wrDOBjou7JIMtXFgFDQy" : {
+      "id" : "GIE6r6tRwjBYrV02RxOzG$$1wrDOBjou7JIMtXFgFDQy",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_76_inner",
+        "x" : 980,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(in0.DynCliACtdId = in1.numero_contrato_inversiones)"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.*"
+          },
+          "_row_id" : "138221753"
+        }, {
+          "expression" : {
+            "expression" : "in1.* EXCEPT(`es_primer_titular`, `fecha_dato`, `fecha_alta_titular`, `estado_persona`, `fecha_inicio_w8`, `fecha_vencimiento_w8`, `estado_w8`, `fecha_inicio_3103`, `fecha_vencimiento_3103`, `estado_3103`, `fecha_inicio_306`, `fecha_vencimiento_306`, `estado_306`, `AAAAMM`, `numero_contrato_inversiones`)"
+          },
+          "_row_id" : "1038631570"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "tA9kEDvpJRf35xFkyTtcp$$qWRC27K8u6tr2JYFM-_P2##DynCliACtdId", "vuCBEYq96ZwyzePD1NCoT$$O1MSDuLkmDcDpiBPhYtzu##numero_contrato_inversiones" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "tA9kEDvpJRf35xFkyTtcp$$qWRC27K8u6tr2JYFM-_P2",
+          "slug" : "in0"
+        }, {
+          "id" : "vuCBEYq96ZwyzePD1NCoT$$O1MSDuLkmDcDpiBPhYtzu",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "ITV80QrSNXUVaDmnDkmdN$$IMtHdKA-jh_i0X0MJMAzT",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "20p9wbJwELk4akLd1anSU$$Qg02ZFDNBlu7F-1M3HuwT" : {
+      "id" : "20p9wbJwELk4akLd1anSU$$Qg02ZFDNBlu7F-1M3HuwT",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_74",
+        "x" : 840,
+        "y" : 240,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "TfWgKHnx99dM2uyJ1XEx4$$gIr3vFEobfNYb5Aph7g6p##es_primer_titular" ],
+        "condition" : {
+          "expression" : "es_primer_titular = True"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TfWgKHnx99dM2uyJ1XEx4$$gIr3vFEobfNYb5Aph7g6p",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "GAkrua3pbfKgEFXVkkfn5$$YMtR03uhN_OIsj8iKxwmO",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "5fIBiMRaBSScjqyCbEhgl",
+    "source" : "91T47bM43sl10Hsn8EcJ-$$wAn7HVy_GlwJd1Rw88v65",
+    "sourcePort" : "nxI8lpAGkfe9q9lgJr9A2$$gtNJSfJEOTSVGbaVw1ES7",
+    "target" : "zs--XhDVz0h11S7UR3QUo$$AdYUyGWi9OnlBnH_W093P",
+    "targetPort" : "58A0Jo3ZPfDcl9uW7QFPL$$_q-IFb_QD3zhY1XA4AusU",
+    "isWireless" : false
+  }, {
+    "id" : "ayOLGYlAyxfYA4McF_XOg",
+    "source" : "qQ5Q09ZB41xuy4RLzXBCA$$Uf3uUxYjPUF7x8bSyWBMo",
+    "sourcePort" : "3-FmcgghNQ6Jt3kl7-bOO$$on3b0IQOTwz1v89_UfyD5",
+    "target" : "91T47bM43sl10Hsn8EcJ-$$wAn7HVy_GlwJd1Rw88v65",
+    "targetPort" : "4dLuuKwZARkNxFRfyxHtR$$Becx1UvHm-c6YvOcXDoYn",
+    "isWireless" : false
+  }, {
+    "id" : "k2y1qirx3y2A2eDmOoZhe",
+    "source" : "GIE6r6tRwjBYrV02RxOzG$$1wrDOBjou7JIMtXFgFDQy",
+    "sourcePort" : "ITV80QrSNXUVaDmnDkmdN$$IMtHdKA-jh_i0X0MJMAzT",
+    "target" : "qQ5Q09ZB41xuy4RLzXBCA$$Uf3uUxYjPUF7x8bSyWBMo",
+    "targetPort" : "2pKSIfoGV5X7i5dhU8dx4$$pPTQWqf5dgfOlH9ciQYDY",
+    "isWireless" : false
+  }, {
+    "id" : "0uOi9fpT8toGnLIhm25E-",
+    "source" : "20p9wbJwELk4akLd1anSU$$Qg02ZFDNBlu7F-1M3HuwT",
+    "sourcePort" : "GAkrua3pbfKgEFXVkkfn5$$YMtR03uhN_OIsj8iKxwmO",
+    "target" : "GIE6r6tRwjBYrV02RxOzG$$1wrDOBjou7JIMtXFgFDQy",
+    "targetPort" : "vuCBEYq96ZwyzePD1NCoT$$O1MSDuLkmDcDpiBPhYtzu",
+    "isWireless" : false
+  }, {
+    "id" : "Pu8xTeOeSd1riGZ9g64vs",
+    "source" : "_A_yLmmZ2V0TXci_6VLmF$$kh-8y5c4S-lVB6fkcAhvF",
+    "sourcePort" : "cYDP8SH-izKaFXXcYSXzo$$Lw03PZP624YnTFf898ySu",
+    "target" : "GIE6r6tRwjBYrV02RxOzG$$1wrDOBjou7JIMtXFgFDQy",
+    "targetPort" : "tA9kEDvpJRf35xFkyTtcp$$qWRC27K8u6tr2JYFM-_P2",
+    "isWireless" : false
+  }, {
+    "id" : "U6shGFaEbrJ4pgWa6xRyb",
+    "source" : "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR",
+    "sourcePort" : "output_port_5",
+    "target" : "20p9wbJwELk4akLd1anSU$$Qg02ZFDNBlu7F-1M3HuwT",
+    "targetPort" : "TfWgKHnx99dM2uyJ1XEx4$$gIr3vFEobfNYb5Aph7g6p",
+    "isWireless" : false
+  }, {
+    "id" : "lokqBAhQDIx1X8r7X4Mb6",
+    "source" : "00uWJPWhJFnH1MYdFy69R$$jc5xlqxy0bLBMo23MppJ1",
+    "sourcePort" : "jnFq5ibELsgnI6VNu218Z$$fXD647Z5zcthVglzgeQRp",
+    "target" : "_A_yLmmZ2V0TXci_6VLmF$$kh-8y5c4S-lVB6fkcAhvF",
+    "targetPort" : "3yk-Og_SGh-lVHrUkx7Gu$$x3CuIUuX5yG71OyxxQ7nt",
+    "isWireless" : false
+  }, {
+    "id" : "osoNueATMV4ZBQSU7yTey",
+    "source" : "QxI65JJKvkTb6VehAjxgI$$yiLF7W5GLZTYE9WFydMnK",
+    "sourcePort" : "5KrvgQJxB1LYmLs2Dxfi2$$Nmrrl-BOa7q1LbOEjmEV2",
+    "target" : "00uWJPWhJFnH1MYdFy69R$$jc5xlqxy0bLBMo23MppJ1",
+    "targetPort" : "0jpSDNSj2zVBB8aRQAVrO$$5bZd0apyVH8cvbsk_D6MQ",
+    "isWireless" : false
+  }, {
+    "id" : "NKZpeKyWMMzvDn_m38QHT",
+    "source" : "t0BoisVmk7QCGATVmeOh8$$DEcXpmRUuUBQij9dOngNF",
+    "sourcePort" : "9eZrYZv6GgExu-GE0QSMY$$GxyJZMnYNxpLCsYdXME5D",
+    "target" : "QxI65JJKvkTb6VehAjxgI$$yiLF7W5GLZTYE9WFydMnK",
+    "targetPort" : "OHEHKaRBvHTG9tH2-u3a9$$lmeArGi6y69_DOSQXRW-s",
+    "isWireless" : false
+  }, {
+    "id" : "-L9MLSTk-Hmv0hRP-prYS",
+    "source" : "nZk7kI9L5SmmqYIOI2wQC$$cefIEVE9MCwGvIqTZil1D",
+    "sourcePort" : "tjl8mfI2WQLUZBlYlpaKJ$$GfFn5S_LUrUGmeLB_qYnr",
+    "target" : "t0BoisVmk7QCGATVmeOh8$$DEcXpmRUuUBQij9dOngNF",
+    "targetPort" : "AK2rss-QzzKVHHtk5MAId$$lMk6k8SxZsu5DZsQWnCab",
+    "isWireless" : false
+  }, {
+    "id" : "EtnvlREDp6SdO-Anr8Aps$$qmK3O2HF0DXGpqGQdKg3W",
+    "source" : "kfeuAWKVDT2trFL5HiJv4$$CHYa1vK_MpbQLmpbx-3Js",
+    "sourcePort" : "_TdoUgWkBxxk1HWLbTeIU$$CSkIpceJygCaE5Z_GarGN",
+    "target" : "nZk7kI9L5SmmqYIOI2wQC$$cefIEVE9MCwGvIqTZil1D",
+    "targetPort" : "dRajC54q8-T3NJgbw9Ed7$$fk2rWK0cfL8DNytQ0Tqmg",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

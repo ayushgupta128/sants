@@ -1,0 +1,1098 @@
+{
+  "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores",
+  "metainfo" : {
+    "label" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"productos_inversiones_valores\"",
+        "materialized" : "table",
+        "database" : "\"dev_business\"",
+        "schema" : "\"productos\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "OzHByZ81TsltGW4Lg2ikP$$8QtpS2DBWNKiIu9TpXNH6" : {
+      "id" : "OzHByZ81TsltGW4Lg2ikP$$8QtpS2DBWNKiIu9TpXNH6",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_Data_Date_Part",
+        "x" : 160,
+        "y" : 200,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "_QPk_DhjXgYY5rzqqQA8Y$$lDybkgJbC8wSQ_NV-LNQk##data_date_part" ],
+        "condition" : {
+          "expression" : "data_date_part == {{ var('ref_data_date_part') }}"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_QPk_DhjXgYY5rzqqQA8Y$$lDybkgJbC8wSQ_NV-LNQk",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Satj63R_fGG96YICmawX_$$a_b5fHpgbHzuychRWOaif",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "VUSbZBPV3iEauw6P2mK9B$$xXz4lHf9dsHpMLVAS0HSN" : {
+      "id" : "VUSbZBPV3iEauw6P2mK9B$$xXz4lHf9dsHpMLVAS0HSN",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "productos_inversiones_valores",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM cast_productos_inversiones_valores\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "uQ3laoVmXu-q0yinh73Oj$$QkewGIpNDPkyq0XERLTLW",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "6HBd6eMXfMFhGjc4OaEUw$$Mk4QWkyKkm2gxbaFHbsu1",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "d9FEfpf4_3zNoaMsk8kyo$$ia3c5QipfZQ6onJq57Z4Q" : {
+      "id" : "d9FEfpf4_3zNoaMsk8kyo$$ia3c5QipfZQ6onJq57Z4Q",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_99",
+        "x" : 600,
+        "y" : 180,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAVlrId", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##Max_DynValAFec", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAVlrNom", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAEstValor", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAEspId", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAEspNom", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValATipoInsId", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValATipoInsNom", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAEmiNom", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAEmiPai", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAVlrSector", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAISIN", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValATicker", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValACodBlm", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValACUSIP", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAEmiDes", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValACusNom", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValACusCalif", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAMonEmiSmb", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAMonAjuSmb", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAMonEfeSmb", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAMonCupSmb", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAFecVto", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAUnidMinNeg", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAIncremento", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValATipoPrecio", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValATipoCupon", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAFrecCupon", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAPrxCupon", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValABase", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAPrxAmort", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValACalifSP", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAFecDesdeSP", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAFecEmision", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAMontoEmitido", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValATipoColateral", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAFecAlt", "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG##DynValAEstado" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "DynValAVlrId"
+          },
+          "alias" : "codigo_valor",
+          "_row_id" : "1643182890"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(Max_DynValAFec AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(Max_DynValAFec AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(Max_DynValAFec AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(Max_DynValAFec AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(Max_DynValAFec AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_dato",
+          "_row_id" : "1322774590"
+        }, {
+          "expression" : {
+            "expression" : "DynValAVlrNom"
+          },
+          "alias" : "nombre_valor",
+          "_row_id" : "1175505964"
+        }, {
+          "expression" : {
+            "expression" : "DynValAEstValor"
+          },
+          "alias" : "estado_valor",
+          "_row_id" : "2055917062"
+        }, {
+          "expression" : {
+            "expression" : "DynValAEspId"
+          },
+          "alias" : "codigo_especie_valor",
+          "_row_id" : "996976519"
+        }, {
+          "expression" : {
+            "expression" : "DynValAEspNom"
+          },
+          "alias" : "descripcion_especie_valor",
+          "_row_id" : "1740762222"
+        }, {
+          "expression" : {
+            "expression" : "DynValATipoInsId"
+          },
+          "alias" : "codigo_tipo_valor",
+          "_row_id" : "1132826044"
+        }, {
+          "expression" : {
+            "expression" : "DynValATipoInsNom"
+          },
+          "alias" : "descripcion_tipo_valor",
+          "_row_id" : "125391249"
+        }, {
+          "expression" : {
+            "expression" : "DynValAEmiNom"
+          },
+          "alias" : "nombre_emisor",
+          "_row_id" : "1027038444"
+        }, {
+          "expression" : {
+            "expression" : "DynValAEmiPai"
+          },
+          "alias" : "pais_emisor",
+          "_row_id" : "1387900976"
+        }, {
+          "expression" : {
+            "expression" : "DynValAVlrSector"
+          },
+          "alias" : "sector_emisor",
+          "_row_id" : "396045728"
+        }, {
+          "expression" : {
+            "expression" : "DynValAISIN"
+          },
+          "alias" : "isin",
+          "_row_id" : "1264158220"
+        }, {
+          "expression" : {
+            "expression" : "DynValATicker"
+          },
+          "alias" : "ticker",
+          "_row_id" : "1062613441"
+        }, {
+          "expression" : {
+            "expression" : "DynValACodBlm"
+          },
+          "alias" : "codigo_bloomberg",
+          "_row_id" : "249708536"
+        }, {
+          "expression" : {
+            "expression" : "DynValACUSIP"
+          },
+          "alias" : "cusip",
+          "_row_id" : "1211424180"
+        }, {
+          "expression" : {
+            "expression" : "DynValAEmiDes"
+          },
+          "alias" : "descripcion_emision",
+          "_row_id" : "1906275280"
+        }, {
+          "expression" : {
+            "expression" : "DynValACusNom"
+          },
+          "alias" : "nombre_custodio",
+          "_row_id" : "433660069"
+        }, {
+          "expression" : {
+            "expression" : "DynValACusCalif"
+          },
+          "alias" : "calificacion_custodio",
+          "_row_id" : "1641660075"
+        }, {
+          "expression" : {
+            "expression" : "DynValAMonEmiSmb"
+          },
+          "alias" : "moneda_emision",
+          "_row_id" : "891799115"
+        }, {
+          "expression" : {
+            "expression" : "DynValAMonAjuSmb"
+          },
+          "alias" : "moneda_ajuste",
+          "_row_id" : "467353074"
+        }, {
+          "expression" : {
+            "expression" : "DynValAMonEfeSmb"
+          },
+          "alias" : "moneda_efectivo",
+          "_row_id" : "1584863698"
+        }, {
+          "expression" : {
+            "expression" : "DynValAMonCupSmb"
+          },
+          "alias" : "moneda_cupon",
+          "_row_id" : "1201788901"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(DynValAFecVto AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynValAFecVto AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(DynValAFecVto AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynValAFecVto AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(DynValAFecVto AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_vencimiento",
+          "_row_id" : "1690755027"
+        }, {
+          "expression" : {
+            "expression" : "DynValAUnidMinNeg"
+          },
+          "alias" : "unidad_minima_compra",
+          "_row_id" : "884981429"
+        }, {
+          "expression" : {
+            "expression" : "DynValAIncremento"
+          },
+          "alias" : "unidad_minima_incremento",
+          "_row_id" : "1283615184"
+        }, {
+          "expression" : {
+            "expression" : "DynValATipoPrecio"
+          },
+          "alias" : "tipo_precio",
+          "_row_id" : "1588378065"
+        }, {
+          "expression" : {
+            "expression" : "DynValATipoCupon"
+          },
+          "alias" : "tipo_cupon",
+          "_row_id" : "268258149"
+        }, {
+          "expression" : {
+            "expression" : "DynValAFrecCupon"
+          },
+          "alias" : "frecuencia_cupon",
+          "_row_id" : "1554857885"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(DynValAPrxCupon AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynValAPrxCupon AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(DynValAPrxCupon AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynValAPrxCupon AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(DynValAPrxCupon AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_proximo_cupon",
+          "_row_id" : "2009482855"
+        }, {
+          "expression" : {
+            "expression" : "DynValABase"
+          },
+          "alias" : "base_calculo_dias",
+          "_row_id" : "190439770"
+        }, {
+          "expression" : {
+            "expression" : "DynValAPrxAmort"
+          },
+          "alias" : "fecha_proxima_amortizacion",
+          "_row_id" : "2030606169"
+        }, {
+          "expression" : {
+            "expression" : "DynValACalifSP"
+          },
+          "alias" : "calificacion_sp",
+          "_row_id" : "1592055180"
+        }, {
+          "expression" : {
+            "expression" : "DynValAFecDesdeSP"
+          },
+          "alias" : "fecha_calificacion_sp",
+          "_row_id" : "1138531664"
+        }, {
+          "expression" : {
+            "expression" : "DynValAFecEmision"
+          },
+          "alias" : "fecha_emision",
+          "_row_id" : "1642174414"
+        }, {
+          "expression" : {
+            "expression" : "DynValAMontoEmitido"
+          },
+          "alias" : "monto_emision",
+          "_row_id" : "1010927255"
+        }, {
+          "expression" : {
+            "expression" : "DynValATipoColateral"
+          },
+          "alias" : "tipo_colateral",
+          "_row_id" : "2007852189"
+        }, {
+          "expression" : {
+            "expression" : "(CASE WHEN ((TRY_TO_TIMESTAMP(CAST(DynValAFecAlt AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynValAFecAlt AS string), 'yyyy-MM-dd HH:mm:ss.SSSS')) WHEN ((TRY_TO_TIMESTAMP(CAST(DynValAFecAlt AS string), 'yyyy-MM-dd HH:mm:ss')) IS NOT NULL) THEN (TRY_TO_TIMESTAMP(CAST(DynValAFecAlt AS string), 'yyyy-MM-dd HH:mm:ss')) ELSE (TRY_TO_TIMESTAMP(CAST(DynValAFecAlt AS string), 'yyyy-MM-dd')) END)"
+          },
+          "alias" : "fecha_alta",
+          "_row_id" : "1663881733"
+        }, {
+          "expression" : {
+            "expression" : "DynValAEstado"
+          },
+          "alias" : "estado_valor_en_sistema",
+          "_row_id" : "490632332"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "JW4ugjE_onfJ8ABEafGa4$$sge9VmC9H5ohzQOqlSEUJ",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "vR5tNm_FRcr8k4KaKM0O_$$oFhdMk5BATm6jRwiNHQGy" : {
+      "id" : "vR5tNm_FRcr8k4KaKM0O_$$oFhdMk5BATm6jRwiNHQGy",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "dbo_dynvaloresapp",
+        "x" : 20,
+        "y" : 200,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "dbo_dynvaloresapp",
+          "sourceType" : "Table",
+          "sourceName" : "dev_curated_uyasdbtest_dynvaldwsantander",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "9zYrM8xiuPRAmoTZ7durw$$AD2gbwxziMzKSE9C_-gPN",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "5A-ARfttREDa_dMQqTiTc$$-S1CWhSc2vGU9owuMOx6A" : {
+      "id" : "5A-ARfttREDa_dMQqTiTc$$-S1CWhSc2vGU9owuMOx6A",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Formula_97_0",
+        "x" : 780,
+        "y" : 180,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "QJdm2i7W8vYIWtb745HIV$$9UEtSPZ_mvyi2OFykvlrv##codigo_valor", "QJdm2i7W8vYIWtb745HIV$$9UEtSPZ_mvyi2OFykvlrv##isin", "QJdm2i7W8vYIWtb745HIV$$9UEtSPZ_mvyi2OFykvlrv##moneda_emision", "QJdm2i7W8vYIWtb745HIV$$9UEtSPZ_mvyi2OFykvlrv##moneda_ajuste", "QJdm2i7W8vYIWtb745HIV$$9UEtSPZ_mvyi2OFykvlrv##moneda_efectivo", "QJdm2i7W8vYIWtb745HIV$$9UEtSPZ_mvyi2OFykvlrv##moneda_cupon" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST(TRIM(codigo_valor) AS string)"
+          },
+          "alias" : "codigo_valor",
+          "_row_id" : "1636836815"
+        }, {
+          "expression" : {
+            "expression" : "CAST(TRIM(isin) AS string)"
+          },
+          "alias" : "isin",
+          "_row_id" : "1947943019"
+        }, {
+          "expression" : {
+            "expression" : "CAST((CASE WHEN CAST((moneda_emision = 'EURO') AS BOOLEAN) THEN 'EUR' ELSE moneda_emision END) AS string)"
+          },
+          "alias" : "moneda_emision",
+          "_row_id" : "1508509542"
+        }, {
+          "expression" : {
+            "expression" : "CAST((CASE WHEN CAST((moneda_ajuste = 'EURO') AS BOOLEAN) THEN 'EUR' ELSE moneda_ajuste END) AS string)"
+          },
+          "alias" : "moneda_ajuste",
+          "_row_id" : "1254090894"
+        }, {
+          "expression" : {
+            "expression" : "CAST((CASE WHEN CAST((moneda_efectivo = 'EURO') AS BOOLEAN) THEN 'EUR' ELSE moneda_efectivo END) AS string)"
+          },
+          "alias" : "moneda_efectivo",
+          "_row_id" : "1596175905"
+        }, {
+          "expression" : {
+            "expression" : "CAST((CASE WHEN CAST((moneda_cupon = 'EURO') AS BOOLEAN) THEN 'EUR' ELSE moneda_cupon END) AS string)"
+          },
+          "alias" : "moneda_cupon",
+          "_row_id" : "1762693756"
+        }, {
+          "expression" : {
+            "expression" : "* EXCEPT(`moneda_cupon`, `codigo_valor`, `isin`, `moneda_emision`, `moneda_efectivo`, `moneda_ajuste`)"
+          },
+          "_row_id" : "1729876903"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "QJdm2i7W8vYIWtb745HIV$$9UEtSPZ_mvyi2OFykvlrv",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "EAVvyTWMSLopEShVnFn-l$$EoyeoWGafcBl5c4bXX8O8",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "HvOTs-LNzgDaumNRwJYdz$$uvll24SQ4LK2lbhGFvUfw" : {
+      "id" : "HvOTs-LNzgDaumNRwJYdz$$uvll24SQ4LK2lbhGFvUfw",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "AppendFields_103",
+        "x" : 440,
+        "y" : 180,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "(1 = 1)"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.*"
+          },
+          "_row_id" : "1369548050"
+        }, {
+          "expression" : {
+            "expression" : "in1.*"
+          },
+          "_row_id" : "540155926"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "M-Yld6rwYbC7NaMl0O4ll$$MMnrD1diDmg0uOOcz9V-4",
+          "slug" : "in0"
+        }, {
+          "id" : "lWnO8unYtg4s4LG1wYcoc$$ADXLu0Vu4sZS9vndn44rA",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "ZJQzlKDj5zC5t_dnw37Ij$$ZSEkRHOVxpHPfGxm-Zroi",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "AeiSNKbhgXiH8EAQ7MAR3$$oBCc1as0A7GVVKbsFo73p" : {
+      "id" : "AeiSNKbhgXiH8EAQ7MAR3$$oBCc1as0A7GVVKbsFo73p",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_140",
+        "x" : 940,
+        "y" : 180,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##codigo_valor", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##fecha_dato", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##nombre_valor", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##estado_valor", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##codigo_especie_valor", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##descripcion_especie_valor", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##codigo_tipo_valor", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##descripcion_tipo_valor", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##nombre_emisor", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##pais_emisor", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##sector_emisor", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##isin", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##ticker", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##codigo_bloomberg", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##cusip", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##descripcion_emision", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##nombre_custodio", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##calificacion_custodio", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##moneda_emision", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##moneda_ajuste", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##moneda_efectivo", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##moneda_cupon", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##fecha_vencimiento", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##unidad_minima_compra", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##tipo_precio", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##tipo_cupon", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##base_calculo_dias", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##frecuencia_cupon", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##fecha_proximo_cupon", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##fecha_proxima_amortizacion", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##calificacion_sp", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##fecha_calificacion_sp", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##fecha_emision", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##monto_emision", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##tipo_colateral", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##fecha_alta", "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt##estado_valor_en_sistema" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "codigo_valor"
+          },
+          "alias" : "codigo_valor",
+          "_row_id" : "1536429780"
+        }, {
+          "expression" : {
+            "expression" : "CAST(fecha_dato AS DATE)"
+          },
+          "alias" : "fecha_dato",
+          "_row_id" : "1075613556"
+        }, {
+          "expression" : {
+            "expression" : "nombre_valor"
+          },
+          "alias" : "nombre_valor",
+          "_row_id" : "1585681624"
+        }, {
+          "expression" : {
+            "expression" : "estado_valor"
+          },
+          "alias" : "estado_valor",
+          "_row_id" : "496172574"
+        }, {
+          "expression" : {
+            "expression" : "codigo_especie_valor"
+          },
+          "alias" : "codigo_especie_valor",
+          "_row_id" : "1057582052"
+        }, {
+          "expression" : {
+            "expression" : "descripcion_especie_valor"
+          },
+          "alias" : "descripcion_especie_valor",
+          "_row_id" : "1776295960"
+        }, {
+          "expression" : {
+            "expression" : "codigo_tipo_valor"
+          },
+          "alias" : "codigo_tipo_valor",
+          "_row_id" : "329035039"
+        }, {
+          "expression" : {
+            "expression" : "descripcion_tipo_valor"
+          },
+          "alias" : "descripcion_tipo_valor",
+          "_row_id" : "1817268905"
+        }, {
+          "expression" : {
+            "expression" : "nombre_emisor"
+          },
+          "alias" : "nombre_emisor",
+          "_row_id" : "587124927"
+        }, {
+          "expression" : {
+            "expression" : "pais_emisor"
+          },
+          "alias" : "pais_emisor",
+          "_row_id" : "1868578657"
+        }, {
+          "expression" : {
+            "expression" : "sector_emisor"
+          },
+          "alias" : "sector_emisor",
+          "_row_id" : "235531428"
+        }, {
+          "expression" : {
+            "expression" : "isin"
+          },
+          "alias" : "isin",
+          "_row_id" : "29518217"
+        }, {
+          "expression" : {
+            "expression" : "ticker"
+          },
+          "alias" : "ticker",
+          "_row_id" : "996893535"
+        }, {
+          "expression" : {
+            "expression" : "codigo_bloomberg"
+          },
+          "alias" : "codigo_bloomberg",
+          "_row_id" : "2032217506"
+        }, {
+          "expression" : {
+            "expression" : "cusip"
+          },
+          "alias" : "cusip",
+          "_row_id" : "87580161"
+        }, {
+          "expression" : {
+            "expression" : "descripcion_emision"
+          },
+          "alias" : "descripcion_emision",
+          "_row_id" : "940910813"
+        }, {
+          "expression" : {
+            "expression" : "nombre_custodio"
+          },
+          "alias" : "nombre_custodio",
+          "_row_id" : "393632057"
+        }, {
+          "expression" : {
+            "expression" : "calificacion_custodio"
+          },
+          "alias" : "calificacion_custodio",
+          "_row_id" : "173303844"
+        }, {
+          "expression" : {
+            "expression" : "CAST(moneda_emision AS string)"
+          },
+          "alias" : "moneda_emision",
+          "_row_id" : "664706001"
+        }, {
+          "expression" : {
+            "expression" : "CAST(moneda_ajuste AS string)"
+          },
+          "alias" : "moneda_ajuste",
+          "_row_id" : "121252509"
+        }, {
+          "expression" : {
+            "expression" : "CAST(moneda_efectivo AS string)"
+          },
+          "alias" : "moneda_efectivo",
+          "_row_id" : "1277147137"
+        }, {
+          "expression" : {
+            "expression" : "CAST(moneda_cupon AS string)"
+          },
+          "alias" : "moneda_cupon",
+          "_row_id" : "415435366"
+        }, {
+          "expression" : {
+            "expression" : "CAST(fecha_vencimiento AS date)"
+          },
+          "alias" : "fecha_vencimiento",
+          "_row_id" : "2001067164"
+        }, {
+          "expression" : {
+            "expression" : "CAST(unidad_minima_compra AS DECIMAL(19,5))"
+          },
+          "alias" : "unidad_minima_compra",
+          "_row_id" : "369339168"
+        }, {
+          "expression" : {
+            "expression" : "CAST(unidad_minima_compra AS DECIMAL(19,5))"
+          },
+          "alias" : "unidad_minima_incremento",
+          "_row_id" : "579481166"
+        }, {
+          "expression" : {
+            "expression" : "tipo_precio"
+          },
+          "alias" : "tipo_precio",
+          "_row_id" : "991164036"
+        }, {
+          "expression" : {
+            "expression" : "tipo_cupon"
+          },
+          "alias" : "tipo_cupon",
+          "_row_id" : "2122980851"
+        }, {
+          "expression" : {
+            "expression" : "base_calculo_dias"
+          },
+          "alias" : "base_calculo_dias",
+          "_row_id" : "65092789"
+        }, {
+          "expression" : {
+            "expression" : "frecuencia_cupon"
+          },
+          "alias" : "frecuencia_cupon",
+          "_row_id" : "313140425"
+        }, {
+          "expression" : {
+            "expression" : "CAST(fecha_proximo_cupon AS DATE)"
+          },
+          "alias" : "fecha_proximo_cupon",
+          "_row_id" : "726033701"
+        }, {
+          "expression" : {
+            "expression" : "fecha_proxima_amortizacion"
+          },
+          "alias" : "fecha_proxima_amortizacion",
+          "_row_id" : "902440055"
+        }, {
+          "expression" : {
+            "expression" : "calificacion_sp"
+          },
+          "alias" : "calificacion_sp",
+          "_row_id" : "1784123000"
+        }, {
+          "expression" : {
+            "expression" : "fecha_calificacion_sp"
+          },
+          "alias" : "fecha_calificacion_sp",
+          "_row_id" : "431301342"
+        }, {
+          "expression" : {
+            "expression" : "fecha_emision"
+          },
+          "alias" : "fecha_emision",
+          "_row_id" : "2095174151"
+        }, {
+          "expression" : {
+            "expression" : "CAST(monto_emision AS DECIMAL(19,5))"
+          },
+          "alias" : "monto_emision",
+          "_row_id" : "800223328"
+        }, {
+          "expression" : {
+            "expression" : "tipo_colateral"
+          },
+          "alias" : "tipo_colateral",
+          "_row_id" : "1488404331"
+        }, {
+          "expression" : {
+            "expression" : "CAST(fecha_alta as date)"
+          },
+          "alias" : "fecha_alta",
+          "_row_id" : "1744731232"
+        }, {
+          "expression" : {
+            "expression" : "estado_valor_en_sistema"
+          },
+          "alias" : "estado_valor_en_sistema",
+          "_row_id" : "1582341823"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Y34mQIH8e3GhkYZW9DcLe$$1_HeBx-EMBu-pU9mfRGtP",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Og6b5ujJbRKmh_5Po2J1E$$Y0B8qqPAMd916TGFSh9Qf" : {
+      "id" : "Og6b5ujJbRKmh_5Po2J1E$$Y0B8qqPAMd916TGFSh9Qf",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cast_productos_inversiones_valores",
+        "x" : 1100,
+        "y" : 180,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##codigo_valor", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##fecha_dato", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##nombre_valor", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##estado_valor", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##codigo_especie_valor", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##descripcion_especie_valor", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##codigo_tipo_valor", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##descripcion_tipo_valor", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##nombre_emisor", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##pais_emisor", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##sector_emisor", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##isin", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##ticker", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##codigo_bloomberg", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##cusip", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##descripcion_emision", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##nombre_custodio", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##calificacion_custodio", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##moneda_emision", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##moneda_ajuste", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##moneda_efectivo", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##moneda_cupon", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##fecha_vencimiento", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##unidad_minima_compra", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##unidad_minima_incremento", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##tipo_precio", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##tipo_cupon", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##base_calculo_dias", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##frecuencia_cupon", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##fecha_proximo_cupon", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##fecha_proxima_amortizacion", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##calificacion_sp", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##fecha_calificacion_sp", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##fecha_emision", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##monto_emision", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##tipo_colateral", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##fecha_alta", "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N##estado_valor_en_sistema" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "{{ var('ref_data_date_part') }}"
+          },
+          "alias" : "ref_data_date_part",
+          "_row_id" : "v3eOhsM6He"
+        }, {
+          "expression" : {
+            "expression" : "current_timestamp()"
+          },
+          "alias" : "ref_timestamp_procesamiento",
+          "_row_id" : "ZqowwahLJx"
+        }, {
+          "expression" : {
+            "expression" : "codigo_valor"
+          },
+          "alias" : "codigo_valor",
+          "_row_id" : "1135029447"
+        }, {
+          "expression" : {
+            "expression" : "CAST(fecha_dato AS DATE)"
+          },
+          "alias" : "fecha_dato",
+          "_row_id" : "1263278452"
+        }, {
+          "expression" : {
+            "expression" : "nombre_valor"
+          },
+          "alias" : "nombre_valor",
+          "_row_id" : "1305007126"
+        }, {
+          "expression" : {
+            "expression" : "estado_valor"
+          },
+          "alias" : "estado_valor",
+          "_row_id" : "356049630"
+        }, {
+          "expression" : {
+            "expression" : "codigo_especie_valor"
+          },
+          "alias" : "codigo_especie_valor",
+          "_row_id" : "234785067"
+        }, {
+          "expression" : {
+            "expression" : "descripcion_especie_valor"
+          },
+          "alias" : "descripcion_especie_valor",
+          "_row_id" : "725204212"
+        }, {
+          "expression" : {
+            "expression" : "codigo_tipo_valor"
+          },
+          "alias" : "codigo_tipo_valor",
+          "_row_id" : "690924407"
+        }, {
+          "expression" : {
+            "expression" : "descripcion_tipo_valor"
+          },
+          "alias" : "descripcion_tipo_valor",
+          "_row_id" : "796326864"
+        }, {
+          "expression" : {
+            "expression" : "nombre_emisor"
+          },
+          "alias" : "nombre_emisor",
+          "_row_id" : "1145526125"
+        }, {
+          "expression" : {
+            "expression" : "pais_emisor"
+          },
+          "alias" : "pais_emisor",
+          "_row_id" : "331886140"
+        }, {
+          "expression" : {
+            "expression" : "sector_emisor"
+          },
+          "alias" : "sector_emisor",
+          "_row_id" : "1943331188"
+        }, {
+          "expression" : {
+            "expression" : "isin"
+          },
+          "alias" : "isin",
+          "_row_id" : "2112947311"
+        }, {
+          "expression" : {
+            "expression" : "ticker"
+          },
+          "alias" : "ticker",
+          "_row_id" : "1254733906"
+        }, {
+          "expression" : {
+            "expression" : "codigo_bloomberg"
+          },
+          "alias" : "codigo_bloomberg",
+          "_row_id" : "1294126198"
+        }, {
+          "expression" : {
+            "expression" : "cusip"
+          },
+          "alias" : "cusip",
+          "_row_id" : "1956520488"
+        }, {
+          "expression" : {
+            "expression" : "descripcion_emision"
+          },
+          "alias" : "descripcion_emision",
+          "_row_id" : "1870899324"
+        }, {
+          "expression" : {
+            "expression" : "nombre_custodio"
+          },
+          "alias" : "nombre_custodio",
+          "_row_id" : "2087716108"
+        }, {
+          "expression" : {
+            "expression" : "calificacion_custodio"
+          },
+          "alias" : "calificacion_custodio",
+          "_row_id" : "194341646"
+        }, {
+          "expression" : {
+            "expression" : "moneda_emision"
+          },
+          "alias" : "moneda_emision",
+          "_row_id" : "1267804543"
+        }, {
+          "expression" : {
+            "expression" : "moneda_ajuste"
+          },
+          "alias" : "moneda_ajuste",
+          "_row_id" : "367865826"
+        }, {
+          "expression" : {
+            "expression" : "moneda_efectivo"
+          },
+          "alias" : "moneda_efectivo",
+          "_row_id" : "506556760"
+        }, {
+          "expression" : {
+            "expression" : "moneda_cupon"
+          },
+          "alias" : "moneda_cupon",
+          "_row_id" : "313457135"
+        }, {
+          "expression" : {
+            "expression" : "CAST(fecha_vencimiento AS DATE)"
+          },
+          "alias" : "fecha_vencimiento",
+          "_row_id" : "1362475897"
+        }, {
+          "expression" : {
+            "expression" : "CAST(unidad_minima_compra AS DECIMAL(19,5))"
+          },
+          "alias" : "unidad_minima_compra",
+          "_row_id" : "286774869"
+        }, {
+          "expression" : {
+            "expression" : "CAST(unidad_minima_incremento AS DECIMAL(19,5))"
+          },
+          "alias" : "unidad_minima_incremento",
+          "_row_id" : "50004095"
+        }, {
+          "expression" : {
+            "expression" : "tipo_precio"
+          },
+          "alias" : "tipo_precio",
+          "_row_id" : "621317445"
+        }, {
+          "expression" : {
+            "expression" : "tipo_cupon"
+          },
+          "alias" : "tipo_cupon",
+          "_row_id" : "753906078"
+        }, {
+          "expression" : {
+            "expression" : "base_calculo_dias"
+          },
+          "alias" : "base_calculo_dias",
+          "_row_id" : "1404925707"
+        }, {
+          "expression" : {
+            "expression" : "frecuencia_cupon"
+          },
+          "alias" : "frecuencia_cupon",
+          "_row_id" : "324983230"
+        }, {
+          "expression" : {
+            "expression" : "CAST(fecha_proximo_cupon AS DATE)"
+          },
+          "alias" : "fecha_proximo_cupon",
+          "_row_id" : "227049071"
+        }, {
+          "expression" : {
+            "expression" : "cast(fecha_proxima_amortizacion as date)"
+          },
+          "alias" : "fecha_proxima_amortizacion",
+          "_row_id" : "744996051"
+        }, {
+          "expression" : {
+            "expression" : "calificacion_sp"
+          },
+          "alias" : "calificacion_sp",
+          "_row_id" : "339698160"
+        }, {
+          "expression" : {
+            "expression" : "cast(fecha_calificacion_sp as date)"
+          },
+          "alias" : "fecha_calificacion_sp",
+          "_row_id" : "673007009"
+        }, {
+          "expression" : {
+            "expression" : "cast(fecha_emision as date)"
+          },
+          "alias" : "fecha_emision",
+          "_row_id" : "729190030"
+        }, {
+          "expression" : {
+            "expression" : "CAST(monto_emision AS DECIMAL(19,5))"
+          },
+          "alias" : "monto_emision",
+          "_row_id" : "1454712456"
+        }, {
+          "expression" : {
+            "expression" : "tipo_colateral"
+          },
+          "alias" : "tipo_colateral",
+          "_row_id" : "1001459281"
+        }, {
+          "expression" : {
+            "expression" : "fecha_alta"
+          },
+          "alias" : "fecha_alta",
+          "_row_id" : "1973105732"
+        }, {
+          "expression" : {
+            "expression" : "estado_valor_en_sistema"
+          },
+          "alias" : "estado_valor_en_sistema",
+          "_row_id" : "1019475740"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "LwBywZcLcg9YXO_fJYsUQ$$aHc22s9PKT3q8eFUzwyl0",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ql4DrCEuewbKuIDOXtVq2$$2rOSqJHldeXgKldtN9AHl" : {
+      "id" : "ql4DrCEuewbKuIDOXtVq2$$2rOSqJHldeXgKldtN9AHl",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Summarize_101",
+        "x" : 300,
+        "y" : 100,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "T_83VdpPbH_LBxEh5e7o1$$gP4jx1zK8W2qpLk18qhKM##DynValAFec" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "MAX(DynValAFec)"
+          },
+          "alias" : "Max_DynValAFec",
+          "_row_id" : "96535279"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "T_83VdpPbH_LBxEh5e7o1$$gP4jx1zK8W2qpLk18qhKM",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "r_1je_LLzkzPw_GjRsfWd$$DVFlebeebBTF9yaNd_ojo",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "NnpJmCSnogqN2yfVHHC8S",
+    "source" : "Og6b5ujJbRKmh_5Po2J1E$$Y0B8qqPAMd916TGFSh9Qf",
+    "sourcePort" : "LwBywZcLcg9YXO_fJYsUQ$$aHc22s9PKT3q8eFUzwyl0",
+    "target" : "VUSbZBPV3iEauw6P2mK9B$$xXz4lHf9dsHpMLVAS0HSN",
+    "targetPort" : "uQ3laoVmXu-q0yinh73Oj$$QkewGIpNDPkyq0XERLTLW",
+    "isWireless" : false
+  }, {
+    "id" : "yDr6GjXDdoozIpJmlgDCi",
+    "source" : "AeiSNKbhgXiH8EAQ7MAR3$$oBCc1as0A7GVVKbsFo73p",
+    "sourcePort" : "Y34mQIH8e3GhkYZW9DcLe$$1_HeBx-EMBu-pU9mfRGtP",
+    "target" : "Og6b5ujJbRKmh_5Po2J1E$$Y0B8qqPAMd916TGFSh9Qf",
+    "targetPort" : "HcohmNannJNnhWTvGhKwP$$_C1EtdMUpZh2gGPha9n2N",
+    "isWireless" : false
+  }, {
+    "id" : "YGwszWTAwrWULKiGUIVb9",
+    "source" : "5A-ARfttREDa_dMQqTiTc$$-S1CWhSc2vGU9owuMOx6A",
+    "sourcePort" : "EAVvyTWMSLopEShVnFn-l$$EoyeoWGafcBl5c4bXX8O8",
+    "target" : "AeiSNKbhgXiH8EAQ7MAR3$$oBCc1as0A7GVVKbsFo73p",
+    "targetPort" : "BMa9BYZiGHXAO_w_SbK_N$$jLsPzeJiEI7f-s54sbydt",
+    "isWireless" : false
+  }, {
+    "id" : "h_wcxObpBd-m6DuLPeCI_",
+    "source" : "d9FEfpf4_3zNoaMsk8kyo$$ia3c5QipfZQ6onJq57Z4Q",
+    "sourcePort" : "JW4ugjE_onfJ8ABEafGa4$$sge9VmC9H5ohzQOqlSEUJ",
+    "target" : "5A-ARfttREDa_dMQqTiTc$$-S1CWhSc2vGU9owuMOx6A",
+    "targetPort" : "QJdm2i7W8vYIWtb745HIV$$9UEtSPZ_mvyi2OFykvlrv",
+    "isWireless" : false
+  }, {
+    "id" : "5MRpxjAaf4mZ5--rheDMO",
+    "source" : "HvOTs-LNzgDaumNRwJYdz$$uvll24SQ4LK2lbhGFvUfw",
+    "sourcePort" : "ZJQzlKDj5zC5t_dnw37Ij$$ZSEkRHOVxpHPfGxm-Zroi",
+    "target" : "d9FEfpf4_3zNoaMsk8kyo$$ia3c5QipfZQ6onJq57Z4Q",
+    "targetPort" : "nCmRImnylZl2CNM7wNYKh$$QdH_NkCIsPdQgdRLFRUEG",
+    "isWireless" : false
+  }, {
+    "id" : "aWBrbJZI9s5DsHJrwkl5G",
+    "source" : "ql4DrCEuewbKuIDOXtVq2$$2rOSqJHldeXgKldtN9AHl",
+    "sourcePort" : "r_1je_LLzkzPw_GjRsfWd$$DVFlebeebBTF9yaNd_ojo",
+    "target" : "HvOTs-LNzgDaumNRwJYdz$$uvll24SQ4LK2lbhGFvUfw",
+    "targetPort" : "M-Yld6rwYbC7NaMl0O4ll$$MMnrD1diDmg0uOOcz9V-4",
+    "isWireless" : false
+  }, {
+    "id" : "gqIjbX8KWyhp_9dDQYOwe",
+    "source" : "OzHByZ81TsltGW4Lg2ikP$$8QtpS2DBWNKiIu9TpXNH6",
+    "sourcePort" : "Satj63R_fGG96YICmawX_$$a_b5fHpgbHzuychRWOaif",
+    "target" : "HvOTs-LNzgDaumNRwJYdz$$uvll24SQ4LK2lbhGFvUfw",
+    "targetPort" : "lWnO8unYtg4s4LG1wYcoc$$ADXLu0Vu4sZS9vndn44rA",
+    "isWireless" : false
+  }, {
+    "id" : "GksqTGGOaA6fSYBhLiNeG",
+    "source" : "OzHByZ81TsltGW4Lg2ikP$$8QtpS2DBWNKiIu9TpXNH6",
+    "sourcePort" : "Satj63R_fGG96YICmawX_$$a_b5fHpgbHzuychRWOaif",
+    "target" : "ql4DrCEuewbKuIDOXtVq2$$2rOSqJHldeXgKldtN9AHl",
+    "targetPort" : "T_83VdpPbH_LBxEh5e7o1$$gP4jx1zK8W2qpLk18qhKM",
+    "isWireless" : false
+  }, {
+    "id" : "WkVA4doR4OT-JIJMDtqrl",
+    "source" : "vR5tNm_FRcr8k4KaKM0O_$$oFhdMk5BATm6jRwiNHQGy",
+    "sourcePort" : "9zYrM8xiuPRAmoTZ7durw$$AD2gbwxziMzKSE9C_-gPN",
+    "target" : "OzHByZ81TsltGW4Lg2ikP$$8QtpS2DBWNKiIu9TpXNH6",
+    "targetPort" : "_QPk_DhjXgYY5rzqqQA8Y$$lDybkgJbC8wSQ_NV-LNQk",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

@@ -1,0 +1,133 @@
+{
+  "id" : "C0030029_Aprovisionamiento_Dynatech__grouped_investment_contracts",
+  "metainfo" : {
+    "label" : "C0030029_Aprovisionamiento_Dynatech__grouped_investment_contracts",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"dev_ref_control\"",
+        "schema" : "\"prophecy_tmp\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "grouped_investment_contracts_kvTvTq0-3GJB7iGBSWKTw$$Xxt1scrMSbTN8PWjsy4_T" : {
+      "id" : "grouped_investment_contracts_kvTvTq0-3GJB7iGBSWKTw$$Xxt1scrMSbTN8PWjsy4_T",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "grouped_investment_contracts"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM grouped_investment_contracts\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_7",
+          "slug" : "input_port_7"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_7",
+          "slug" : "output_port_7"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "icNZLTcgosx4j9_Iwart5$$UvlRvYtedQQG6r0LMie76" : {
+      "id" : "icNZLTcgosx4j9_Iwart5$$UvlRvYtedQQG6r0LMie76",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "grouped_investment_contracts",
+        "x" : -4460,
+        "y" : -2480,
+        "phase" : 0
+      },
+      "properties" : {
+        "aggregate" : [ ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "group by(ref_data_date_part)"
+          },
+          "alias" : "",
+          "_row_id" : "XHBgcqPoaQ"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "oMQe_JSbJ9cseIpwNkun7$$hvreN7pIRh65LJ5wXFbCw",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "kvTvTq0-3GJB7iGBSWKTw$$Xxt1scrMSbTN8PWjsy4_T",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "cast_productos_inversiones_contratos_nxI8lpAGkfe9q9lgJr9A2$$gtNJSfJEOTSVGbaVw1ES7" : {
+      "id" : "cast_productos_inversiones_contratos_nxI8lpAGkfe9q9lgJr9A2$$gtNJSfJEOTSVGbaVw1ES7",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "cast_productos_inversiones_contratos"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_6",
+          "id" : "output_port_6",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ ref('C0030029_Aprovisionamiento_Dynatech__cast_productos_inversiones_contratos') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_6",
+          "slug" : "input_port_6"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_6",
+          "slug" : "output_port_6"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_icNZLTcgosx4j9_Iwart5$$UvlRvYtedQQG6r0LMie76_kvTvTq0-3GJB7iGBSWKTw$$Xxt1scrMSbTN8PWjsy4_T_grouped_investment_contracts_kvTvTq0-3GJB7iGBSWKTw$$Xxt1scrMSbTN8PWjsy4_T",
+    "source" : "icNZLTcgosx4j9_Iwart5$$UvlRvYtedQQG6r0LMie76",
+    "sourcePort" : "kvTvTq0-3GJB7iGBSWKTw$$Xxt1scrMSbTN8PWjsy4_T",
+    "target" : "grouped_investment_contracts_kvTvTq0-3GJB7iGBSWKTw$$Xxt1scrMSbTN8PWjsy4_T",
+    "targetPort" : "input_port_7",
+    "isWireless" : false
+  }, {
+    "id" : "jPwuoKx7pbUnVfob646Kb",
+    "source" : "cast_productos_inversiones_contratos_nxI8lpAGkfe9q9lgJr9A2$$gtNJSfJEOTSVGbaVw1ES7",
+    "sourcePort" : "output_port_6",
+    "target" : "icNZLTcgosx4j9_Iwart5$$UvlRvYtedQQG6r0LMie76",
+    "targetPort" : "oMQe_JSbJ9cseIpwNkun7$$hvreN7pIRh65LJ5wXFbCw",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

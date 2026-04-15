@@ -1,0 +1,249 @@
+{
+  "id" : "C0030021_Productos_Seguros_Inventario_Diario",
+  "metainfo" : {
+    "label" : "C0030021_Productos_Seguros_Inventario_Diario",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "ref_data_date_part",
+          "kind" : {
+            "type" : "int",
+            "value" : "20250101"
+          }
+        } ]
+      }
+    },
+    "schedules" : [ {
+      "name" : "Schedule 1",
+      "scheduleType" : "cron",
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false,
+      "triggers" : { }
+    } ],
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "4la_tg4GnyFVCgNwVqmRl$$mDDsti5wb1pwteKA0-aNS" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "-Bzs6STk6kZdxZqdoFARu$$ADsxVD9gi7AFs1HbJqlkF" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "n_mVNCAeB5PlozsbqTwKx$$crhdKmXdXIXmTUPPaZHO8" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83.sql",
+      "GSLSQu1uwFRKK2KfOdW2q$$28oaGn1n-GR9EpdvVoSJT" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83.sql",
+      "pqDHw4WkRJDFa9kQLFGHr$$ntRk9Qq7IscOMna89M32O" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "i4NusmnICBRaDt6HBbY8E$$kLGSvLBu8LNuW1ppyJQys" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "SxhgIX2golPLMSNlsgOys$$pO1v3152PpF8T99JTYVKu" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "VYbffbfhxJ0J1MaSbeW3b$$Iu97PACHnWPlVrE9K0Q1s" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "XyqObQ5A0Wy2jKY2EDZzs$$9z56TePZztgjzjSViEPKR" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "JVG64X21zr6picXa2P2_e$$12qppADadp6S8nfNQ7Ahh" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "i1TpdalJ8E5ujGBOzPsMU$$QD8dL3VCkA3Y8P5xS8Idb" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "BCpabZur61gJdJal-cuqK$$9DmnMv3BxDLBb4CGmpkcC" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "pddwPN5MoL73-Hvp3hEHv$$Q0PPONAYLxBEYQO6ygn-p" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests.sql",
+      "stwSv_yesPQE2bmeyE74h$$CRsmE2uoHkpPX8bK-Kyeb" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "R43W1BCeVEHOc4jY8I2Yc$$jmAB1lkG44YIxk5x-VizG" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "kf3JDqSic7bBdlLFO5PvP$$ciNTmqzcLHMeIRaZoI5VN" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "_I8f1iLcK7Ifo5IUNfEkG$$SZmbiVNJEttTVgEJWdYsz" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "eXN1gpza-nwsRzwt_Es3I$$M_6_JCOVfX9zkuEenuvs8" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "D9VO42qjpZB6WVcrHGGLm$$Udlqjk4_WhzA0fgavEOrz" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "jEGW5D4UFol9zpw0-b0Hh$$KG25_qSRIoUXQ6NWqzB9i" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "oiY48r_QvWgUd9HjJG-7l$$rWeESf3CzbGZRfzoWRHwb" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83.sql",
+      "pVeTpY4qdjdGc_JPCRusA$$-BUq1aghgX3SQrPrH41v1" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "cJGezol_Y4P2Ls3AfIDLp$$VwD6EIyhzRDkP8U8MjQB2" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "Cov01YrfKyWIq68QJomIo$$cZ08aFDUOrDAMWHvQc2MG" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "RwA0a0Cz3gWgT60aP0kqv$$_0Hw3g2-mCyvTEotWxb0U" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "DT6tJhw-jvAI2Ejxyu9Uy$$MsSnPLCYKWQvVrUyfQOoU" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "FPCz4arGsrUUrwv5-Z-2i$$32Rf1N9IyDiMfAvgkAEtT" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "Kx4IZ-Dsi0dLjcgDFthI1$$Cf2JZ_Nx4DAW3ktLSFyaU" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "Co0RQ1Vzo3x5eEpcs9Fj8$$jQdXibARxyRrIL-l_633s" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "DQOVwt9nd4oRPwcX6Teaz$$Z0QBjexarXlxI30DN2SDI" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83.sql",
+      "Vj5OpQYEdRmLuHO4defYS$$FdhO8fU00dURaPQFbfvAt" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "E-LJZys8yfZX3Lo4_iBe4$$rI_qaNl822wxpOjgDWWQA" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "VLxRQT77_27lLyULxdbSK$$6AS27UKI9KK7E4gddZa0k" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "WE4iI5ncBzgpEF0eCBk-A$$AhBFmT1NsMiT5jXfPa-j_" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests.sql",
+      "bzLvf1xZEIPEpbs-1X1-9$$uHesxaWezJCnzK1GO186H" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests.sql",
+      "bFnSOqtfWWrEoF9CvtG0s$$PIvYHYBj2KJn2XV3dwF1c" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "Y1a-YLFWQyeyqysYBSuKo$$zYQLU_71vy2iDlfF1wBkk" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "BbMmwn47oTuTf-9PnoNCB$$dALICLR0ix1XSMvj-sF8F" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "m5ZzA3UjBAenNxzjT3hU8$$kUDL31wSdJXXyYlg7n-sb" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "U8TA8x9DgBKs-fTeisC6I$$7-SVgZHp1_UVawWjzQJ6U" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "VZ9R3kG74J4AxIlcQQxU7$$apqx29w0F8rRC--C9c7Bx" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "zMrIvRHwAM5Xw6hUQnTd0$$a8GS_O5hwCcsXJ7TATiNp" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "bjfsd7cRf9pWBhzafgvG7$$Bv1hE2jE4Dukj0Tqvyczp" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "3xzRxvaW-Z_jji9DFVxzz$$V-ExTIeHH3vLYA4YyxHqH" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "P3CAwXF1nEUJNDBqAJjQ9$$AU_TLU9hwevNWLeFj02zV" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "7Di7oMhXrh4_eXDonuc8j$$kMLz9-MLLFdQO0gAG_OJ5" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "send_notification_requests_ibnv33COd8aM7lCkjZ6gf$$17gs8SU9aVJBPH95T9T8Z" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests.sql",
+      "4tpoEmypH4g8VJlfEuzS1$$eEtFBkaNPLQu9PK89qYmN" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "0OopbpgpgbFRDlC_lEyn7$$mas8ylUyV09LTJChXv78e" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83.sql",
+      "OU17OnI2D_gmmZ-ncn2FU$$Uezf2xDyrnLKTUXPlNzHc" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "A5pvtp_5w1_pp36oLFOZN$$7E7-CT-a6LpbwEKd3Wp7i" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "yi-wvOAoHPLzJ4rtJQAR9$$ejwApkB2i1TRcrdBlQ0Jp" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "mOQFfwT5LCmvEftlFQrWb$$p0J0k2E69Dsw6xORja4G1" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "toBzDdxNcTx7DrrwZc7rY$$PVFAMcMYCX8D5FioEdiMO" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "wBsP7vxwz95VFcv_WgQIp$$o27Rx-9heMggz-KLpRpdt" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests.sql",
+      "Fbzqsv4CmGHKghgskjfMV$$sUP_37aJP1HPzEgWrhUvk" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "AlteryxSelect_8_2RFeOJWLG2I8nnoVUpfEx$$X76LdeR-pGaVQRMpmj5dX" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests.sql",
+      "oBkmvsUNoX2HAB-G4KcNn$$m49Hd1Yc-uprdWP0cL7Oe" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "kpA8yoNlbw-83xvxEuBJ-$$qmdLqF1b5g9HAViO1IDjf" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "DSD0is8tIKerh7pOVS2xj$$Wwc_K4knYId3NYwoHtg-b" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests.sql",
+      "TlcgxiIIUEqlbOa22VHrD$$L5nuIcx30QV5_HxR2CtSb" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "ae2ehSDOaPFMDIA9vi7wV$$NkaoIE7RpgO21maLeP2yF" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83.sql",
+      "2cCikQZx9R49D8cx0wdMo$$Q586m6iA83Rz24ygB9oQc" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests.sql",
+      "M5ZszD5yNHThnEPEQVItc$$oxcWu0jyk3-PLtECLTDip" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "AlteryxSelect_83_TEa4OOOCSRRbU2bpPBbP7$$oNpmr99tNXmjNvhblbsGF" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83.sql",
+      "53qwnlT2S9I6ecR-VU0Ku$$pX5DGfCxv8de9BHgpApI0" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "7oAWxFTIpzks88lMNVNwa$$xYBozPlI6Myt2Pef3VRJY" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "oDbulzc2Mh_kYVAkbxnpA$$DQIsBAG5Y9vqYUlbipnsH" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "qN5xmpqdiiN9Xl15FIOgC$$AXMXFhZMDh-ISpwSmlxgs" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83.sql",
+      "ZtQm33U881fwmoON3UIcR$$V6tdvcEPWh_SloEvI2TzE" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql",
+      "tWJUKndAfxT00yJG8Wmoo$$h6OAvFTevx21EyGr3rXiv" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "mmOWB7p-E4N9OaeLgIIDr$$if7Y-fb9JfEnT5Ij0_FGC" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests.sql",
+      "T9BCsZCC2Fzw-mjpPppdB$$GGm0FHNFS25pmcntGLhoU" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql",
+      "oKRJzNi5tMwQM3G2qej9u$$77zsd4RXKs2WGP9X_ZCxm" : "models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql"
+    }
+  },
+  "processes" : {
+    "RwA0a0Cz3gWgT60aP0kqv$$_0Hw3g2-mCyvTEotWxb0U" : {
+      "id" : "RwA0a0Cz3gWgT60aP0kqv$$_0Hw3g2-mCyvTEotWxb0U",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "AlteryxSelect_8_2RFeOJWLG2I8nnoVUpfEx$$X76LdeR-pGaVQRMpmj5dX", "RwA0a0Cz3gWgT60aP0kqv$$_0Hw3g2-mCyvTEotWxb0U", "A5pvtp_5w1_pp36oLFOZN$$7E7-CT-a6LpbwEKd3Wp7i", "3xzRxvaW-Z_jji9DFVxzz$$V-ExTIeHH3vLYA4YyxHqH", "R43W1BCeVEHOc4jY8I2Yc$$jmAB1lkG44YIxk5x-VizG", "_I8f1iLcK7Ifo5IUNfEkG$$SZmbiVNJEttTVgEJWdYsz", "D9VO42qjpZB6WVcrHGGLm$$Udlqjk4_WhzA0fgavEOrz", "VZ9R3kG74J4AxIlcQQxU7$$apqx29w0F8rRC--C9c7Bx", "bFnSOqtfWWrEoF9CvtG0s$$PIvYHYBj2KJn2XV3dwF1c", "BbMmwn47oTuTf-9PnoNCB$$dALICLR0ix1XSMvj-sF8F", "yi-wvOAoHPLzJ4rtJQAR9$$ejwApkB2i1TRcrdBlQ0Jp", "jEGW5D4UFol9zpw0-b0Hh$$KG25_qSRIoUXQ6NWqzB9i", "7Di7oMhXrh4_eXDonuc8j$$kMLz9-MLLFdQO0gAG_OJ5", "7oAWxFTIpzks88lMNVNwa$$xYBozPlI6Myt2Pef3VRJY", "JVG64X21zr6picXa2P2_e$$12qppADadp6S8nfNQ7Ahh", "SxhgIX2golPLMSNlsgOys$$pO1v3152PpF8T99JTYVKu", "stwSv_yesPQE2bmeyE74h$$CRsmE2uoHkpPX8bK-Kyeb", "Fbzqsv4CmGHKghgskjfMV$$sUP_37aJP1HPzEgWrhUvk", "i1TpdalJ8E5ujGBOzPsMU$$QD8dL3VCkA3Y8P5xS8Idb", "XyqObQ5A0Wy2jKY2EDZzs$$9z56TePZztgjzjSViEPKR", "M5ZszD5yNHThnEPEQVItc$$oxcWu0jyk3-PLtECLTDip", "m5ZzA3UjBAenNxzjT3hU8$$kUDL31wSdJXXyYlg7n-sb", "4tpoEmypH4g8VJlfEuzS1$$eEtFBkaNPLQu9PK89qYmN", "oDbulzc2Mh_kYVAkbxnpA$$DQIsBAG5Y9vqYUlbipnsH", "FPCz4arGsrUUrwv5-Z-2i$$32Rf1N9IyDiMfAvgkAEtT", "oKRJzNi5tMwQM3G2qej9u$$77zsd4RXKs2WGP9X_ZCxm", "Co0RQ1Vzo3x5eEpcs9Fj8$$jQdXibARxyRrIL-l_633s", "TlcgxiIIUEqlbOa22VHrD$$L5nuIcx30QV5_HxR2CtSb", "mOQFfwT5LCmvEftlFQrWb$$p0J0k2E69Dsw6xORja4G1", "Cov01YrfKyWIq68QJomIo$$cZ08aFDUOrDAMWHvQc2MG", "zMrIvRHwAM5Xw6hUQnTd0$$a8GS_O5hwCcsXJ7TATiNp", "53qwnlT2S9I6ecR-VU0Ku$$pX5DGfCxv8de9BHgpApI0", "ZtQm33U881fwmoON3UIcR$$V6tdvcEPWh_SloEvI2TzE", "bjfsd7cRf9pWBhzafgvG7$$Bv1hE2jE4Dukj0Tqvyczp", "cJGezol_Y4P2Ls3AfIDLp$$VwD6EIyhzRDkP8U8MjQB2", "kf3JDqSic7bBdlLFO5PvP$$ciNTmqzcLHMeIRaZoI5VN", "Vj5OpQYEdRmLuHO4defYS$$FdhO8fU00dURaPQFbfvAt" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8_in_3",
+          "slug" : "in_3"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "E-LJZys8yfZX3Lo4_iBe4$$rI_qaNl822wxpOjgDWWQA" : {
+      "id" : "E-LJZys8yfZX3Lo4_iBe4$$rI_qaNl822wxpOjgDWWQA",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "E-LJZys8yfZX3Lo4_iBe4$$rI_qaNl822wxpOjgDWWQA", "VLxRQT77_27lLyULxdbSK$$6AS27UKI9KK7E4gddZa0k", "BCpabZur61gJdJal-cuqK$$9DmnMv3BxDLBb4CGmpkcC", "-Bzs6STk6kZdxZqdoFARu$$ADsxVD9gi7AFs1HbJqlkF", "kpA8yoNlbw-83xvxEuBJ-$$qmdLqF1b5g9HAViO1IDjf", "OU17OnI2D_gmmZ-ncn2FU$$Uezf2xDyrnLKTUXPlNzHc", "DT6tJhw-jvAI2Ejxyu9Uy$$MsSnPLCYKWQvVrUyfQOoU", "AlteryxSelect_8_2RFeOJWLG2I8nnoVUpfEx$$X76LdeR-pGaVQRMpmj5dX", "pVeTpY4qdjdGc_JPCRusA$$-BUq1aghgX3SQrPrH41v1", "4la_tg4GnyFVCgNwVqmRl$$mDDsti5wb1pwteKA0-aNS", "Kx4IZ-Dsi0dLjcgDFthI1$$Cf2JZ_Nx4DAW3ktLSFyaU", "oBkmvsUNoX2HAB-G4KcNn$$m49Hd1Yc-uprdWP0cL7Oe", "toBzDdxNcTx7DrrwZc7rY$$PVFAMcMYCX8D5FioEdiMO", "Y1a-YLFWQyeyqysYBSuKo$$zYQLU_71vy2iDlfF1wBkk", "pqDHw4WkRJDFa9kQLFGHr$$ntRk9Qq7IscOMna89M32O", "tWJUKndAfxT00yJG8Wmoo$$h6OAvFTevx21EyGr3rXiv", "T9BCsZCC2Fzw-mjpPppdB$$GGm0FHNFS25pmcntGLhoU", "P3CAwXF1nEUJNDBqAJjQ9$$AU_TLU9hwevNWLeFj02zV", "eXN1gpza-nwsRzwt_Es3I$$M_6_JCOVfX9zkuEenuvs8", "i4NusmnICBRaDt6HBbY8E$$kLGSvLBu8LNuW1ppyJQys", "VYbffbfhxJ0J1MaSbeW3b$$Iu97PACHnWPlVrE9K0Q1s", "U8TA8x9DgBKs-fTeisC6I$$7-SVgZHp1_UVawWjzQJ6U" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario_in_2",
+          "slug" : "in_2"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "ae2ehSDOaPFMDIA9vi7wV$$NkaoIE7RpgO21maLeP2yF" : {
+      "id" : "ae2ehSDOaPFMDIA9vi7wV$$NkaoIE7RpgO21maLeP2yF",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "AlteryxSelect_83_TEa4OOOCSRRbU2bpPBbP7$$oNpmr99tNXmjNvhblbsGF", "ae2ehSDOaPFMDIA9vi7wV$$NkaoIE7RpgO21maLeP2yF", "qN5xmpqdiiN9Xl15FIOgC$$AXMXFhZMDh-ISpwSmlxgs", "GSLSQu1uwFRKK2KfOdW2q$$28oaGn1n-GR9EpdvVoSJT", "oiY48r_QvWgUd9HjJG-7l$$rWeESf3CzbGZRfzoWRHwb", "DQOVwt9nd4oRPwcX6Teaz$$Z0QBjexarXlxI30DN2SDI", "0OopbpgpgbFRDlC_lEyn7$$mas8ylUyV09LTJChXv78e", "n_mVNCAeB5PlozsbqTwKx$$crhdKmXdXIXmTUPPaZHO8" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "mmOWB7p-E4N9OaeLgIIDr$$if7Y-fb9JfEnT5Ij0_FGC" : {
+      "id" : "mmOWB7p-E4N9OaeLgIIDr$$if7Y-fb9JfEnT5Ij0_FGC",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "send_notification_requests_ibnv33COd8aM7lCkjZ6gf$$17gs8SU9aVJBPH95T9T8Z", "mmOWB7p-E4N9OaeLgIIDr$$if7Y-fb9JfEnT5Ij0_FGC", "pddwPN5MoL73-Hvp3hEHv$$Q0PPONAYLxBEYQO6ygn-p", "DSD0is8tIKerh7pOVS2xj$$Wwc_K4knYId3NYwoHtg-b", "2cCikQZx9R49D8cx0wdMo$$Q586m6iA83Rz24ygB9oQc", "wBsP7vxwz95VFcv_WgQIp$$o27Rx-9heMggz-KLpRpdt", "bzLvf1xZEIPEpbs-1X1-9$$uHesxaWezJCnzK1GO186H", "AlteryxSelect_8_2RFeOJWLG2I8nnoVUpfEx$$X76LdeR-pGaVQRMpmj5dX", "WE4iI5ncBzgpEF0eCBk-A$$AhBFmT1NsMiT5jXfPa-j_" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_RwA0a0Cz3gWgT60aP0kqv$$_0Hw3g2-mCyvTEotWxb0U_C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario_in_2",
+    "source" : "RwA0a0Cz3gWgT60aP0kqv$$_0Hw3g2-mCyvTEotWxb0U",
+    "sourcePort" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8_out_0",
+    "target" : "E-LJZys8yfZX3Lo4_iBe4$$rI_qaNl822wxpOjgDWWQA",
+    "targetPort" : "C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario_in_2"
+  }, {
+    "id" : "conn_RwA0a0Cz3gWgT60aP0kqv$$_0Hw3g2-mCyvTEotWxb0U_C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests_in_0",
+    "source" : "RwA0a0Cz3gWgT60aP0kqv$$_0Hw3g2-mCyvTEotWxb0U",
+    "sourcePort" : "C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8_out_0",
+    "target" : "mmOWB7p-E4N9OaeLgIIDr$$if7Y-fb9JfEnT5Ij0_FGC",
+    "targetPort" : "C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests_in_0"
+  } ],
+  "component" : "Pipeline"
+}

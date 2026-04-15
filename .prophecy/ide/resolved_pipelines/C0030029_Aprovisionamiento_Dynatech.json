@@ -1,0 +1,777 @@
+{
+  "id" : "C0030029_Aprovisionamiento_Dynatech",
+  "metainfo" : {
+    "label" : "C0030029_Aprovisionamiento_Dynatech",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "ref_data_date_part",
+          "kind" : {
+            "type" : "int",
+            "value" : "20260331"
+          }
+        } ]
+      },
+      "parameterSets" : [ ]
+    },
+    "schedules" : [ {
+      "name" : "Schedule 1",
+      "scheduleType" : "cron",
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false,
+      "triggers" : { }
+    } ],
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "n4P24OlX59ft43BhZUAdu$$FH7AMRLxTE7W_1mt0heBy" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "m6yjBQDMVhmH_3GF2vWjM$$rpH_FgtvoD-vcYLjQXqeP" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "path7uvFmh_lm0ON2dMtl$$-dtaZ1ot43tKZmHse4Wph" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "zs--XhDVz0h11S7UR3QUo$$AdYUyGWi9OnlBnH_W093P" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql",
+      "L5KAV-ZEMVKgpBkv-wHSI$$KWz6jTgeJh1pCK-wivUmo" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios.sql",
+      "R2iLTUzZGnX05hREsQLBx$$nIty5rOUlj_I7KCMxVOGd" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "3UBLg6Cr_bH4VVeLYCONU$$o9tXnS8nDnI8hfeUoaJhT" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios.sql",
+      "17q29p574QSjsAUwIYAvg$$ABD7NNUhANEh1Rz-AUHnH" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__primary_holder_count.sql",
+      "Itenawil5z6NkhyKeI7eT$$tgvi0chaPsd9hpxWXK-NS" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "bdPbqFOeU0GbJ96kNkt6Y$$y7eNSGGwE6usLRf207j-o" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_5.sql",
+      "-zu2Woq268tKhT0UBPHui$$QCvdvAgSGykwY07YWW491" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "Dxj4wGDxbdpx6wSu2J-xT$$Il4DlNTHUJTWU6eDVbcpi" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "sd3eRe-PsYgXJH2SHNWqd$$Talc4r-x_qdTW7BJQRjc6" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Formula_360_0.sql",
+      "uhj1-JSDDP8STcjKJfsL1$$NeRH7i4WjghrEPAZTmkot" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "OzHByZ81TsltGW4Lg2ikP$$8QtpS2DBWNKiIu9TpXNH6" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores.sql",
+      "Qnga2hSneG3KrnbnrdMbD$$J9RPU6-gpl8zZTgUQPul_" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "6OlPbBviMIO-lBOVwYsgd$$DFegXiYXwh5fTKyBrJovo" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "38L5LKHZaEcMtgb4IkwBT$$WPpnEc99xaUfYU3K_Z9Bw" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "Wtm5oN_ftX4KdWTOAgSMN$$Up5FdoAWbEVw9ZoBJ91Ws" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "sjmRmOAMTN3lnQDJqOVRi$$aLLAk5RDuPtFwNF7cLfUs" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Formula_360_0.sql",
+      "MY1ehqjX9bBxOi-_qhfMf$$QvMBTn8EllzA2cAC5S9LP" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios.sql",
+      "m2jsj13mw0b0I-8btFGKf$$tEn3E5_O6ZWyjqGgx-TaC" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Filter_30.sql",
+      "LhJplU6VubKpRdfxzXhd5$$eu1zSgDyPAZlYNapKBEB9" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "91T47bM43sl10Hsn8EcJ-$$wAn7HVy_GlwJd1Rw88v65" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql",
+      "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "V2Mg1peXj9nLBXrhC8f1s$$xeJjqeXptnKF1tIwkpa6K" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Join_349_inner.sql",
+      "4zMz8HASKID4bT5c0ZZnD$$m5uqL3MQ2UXlC5aZobTjn" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "t0BoisVmk7QCGATVmeOh8$$DEcXpmRUuUBQij9dOngNF" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql",
+      "5Zd3BbQJeqXrKNFoDmH26$$uQDeneJlJl7G6gCMv_1n0" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "pDXHLuchxw6E-epzZJm06$$GTC1Pdv8-N1idhioxakud" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "IuL2RtTHoPYCw46SlK59F$$VIuiCKSWoz--NlDbMFayg" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "VUSbZBPV3iEauw6P2mK9B$$xXz4lHf9dsHpMLVAS0HSN" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores.sql",
+      "Qvdv-9lz8xz63ojSbkcDw$$tm2wjOZBewXZjiXOr2Kt0" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "_A_yLmmZ2V0TXci_6VLmF$$kh-8y5c4S-lVB6fkcAhvF" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql",
+      "primary_holder_count_Z2xbcxFYLS_vWbxJJs6CO$$UyrNHoYkr3LekGBb9ZKQq" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__primary_holder_count.sql",
+      "SDKmRRS5VAcq5dkERSCH1$$_0sApcdpWWJU3LeCxbd4G" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "d9FEfpf4_3zNoaMsk8kyo$$ia3c5QipfZQ6onJq57Z4Q" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores.sql",
+      "vR5tNm_FRcr8k4KaKM0O_$$oFhdMk5BATm6jRwiNHQGy" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores.sql",
+      "HlwWAn54Ww3eUVMNyKH49$$UqM8sCuGxMpx9Vnz5UUhY" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "5A-ARfttREDa_dMQqTiTc$$-S1CWhSc2vGU9owuMOx6A" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores.sql",
+      "FDwlTHBfdT6ItyB1RFA_i$$v2WYaTPZTukvvDUkaiP86" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_2.sql",
+      "CountRecords_5_ZnTRM6bjZ8OHsWGmOHqOv$$D4i1lBwQHAXxGziEwGAUE" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_5.sql",
+      "h3nVCtC8iSnuhxORGPPwM$$NVtWCa-J9CgJtHCtxPajx" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "0thXe1cqibjFjgEq43abP$$h1O_hfrQz4ViXTCBZfs7m" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "d6sIwh6N3wEujwtX7z-zW$$VmlF-Y0EL7XDJ5NW1R2n1" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Filter_30.sql",
+      "-sFZWYKPT4ZrDycbwDj7E$$kreDtFOOClmt2yBr0Px_Q" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "KNXaIEdcxsBOIomCaipEn$$M9-2_74MdXd7JyB9jj3xx" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Filter_30.sql",
+      "qQ5Q09ZB41xuy4RLzXBCA$$Uf3uUxYjPUF7x8bSyWBMo" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql",
+      "WU399LsI8uaxb3YG0mfdH$$Kzi_Kmqgw3f3gnRZuynpL" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "WOfh0GhcquplyECjCvG0w$$tNuJj4bIAyaRjrFuRatSp" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "cwzOU_8avIEEcYBCd-El8$$VJ2X2alywvwkI7B3GzrgB" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "cuSJFKnm_PEPsP97OmtbK$$auvUgeZnBmCd8Hf74MaN-" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_relacion_contratos_cuentas.sql",
+      "HvOTs-LNzgDaumNRwJYdz$$uvll24SQ4LK2lbhGFvUfw" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores.sql",
+      "p2OL18_Tl594aCj5UUJns$$KdvPYFAE38xCR1S6FpOzB" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "CountRecords_3_SmJVX5a5_zlv0nZeHrUv4$$Un87cPGAgUC-88uoeq0UJ" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_3.sql",
+      "9fDiBqQrnuDGO6nR6FQI-$$orstJ_BTidibe0nVkpSIv" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Formula_360_0.sql",
+      "TEn7XQLrR7WuDg1WH6oub$$LKDx9fLV6sMb37aEMAFoF" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "hNJbTWglqpc8byZWSGU9N$$PbqjfbowUYScVyxJcl6tK" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "kPemalyqus1LL0q93SoFb$$iEaIOmJEEFGEZcIvo2lpl" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "6mY8lbiHKg_4yKYGKyezI$$SyPlGl3wN_zjNKkxQL_XL" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "Nnk1M6Dwo32OZlB1ghDvF$$UtW90q58Q2RtKxfZhpx7w" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "ZdqRRZZxOiKM2Ei940kRA$$hAArER4VoQ8sObRfpfn5P" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "TuyLYuTSXHNthnA-nBNvi$$I_3XQ64WcH9CSGSltvLwk" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_4.sql",
+      "CountRecords_1_h0BcptlDRmD_-YFZfPqVF$$nQeTxjIZ3kjWlquIE0X3x" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_1.sql",
+      "fdUIz0-oTe2WAmE_dCNA3$$dIyYJQYgboOmE1I0gSMfm" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "PcOzWOxx3r5UrhVETwrfc$$G3DfdwmXxb_so5loOCcoX" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios.sql",
+      "UICCJCBnMOwRDt_fkW38F$$hu-o1AFP-lMsfV-s9NyHj" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "nZk7kI9L5SmmqYIOI2wQC$$cefIEVE9MCwGvIqTZil1D" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql",
+      "kfeuAWKVDT2trFL5HiJv4$$CHYa1vK_MpbQLmpbx-3Js" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql",
+      "00uWJPWhJFnH1MYdFy69R$$jc5xlqxy0bLBMo23MppJ1" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql",
+      "AVRmtB5yN_TbdifjjHepP$$XOvF8SnE-I9YttN2oYz69" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "6takI6LJUkrXhFX1UasFP$$FYdIflwZojjATsAeQNiVv" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "L_d_rma1jYh2r2GVav1Qt$$bKmgc7CUFWPD1np4ZWwgx" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "DNxUrjJ8DPIasP865iIb9$$DeW0UNWembXWijLsdZ__2" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "dJq-GzxdWq1ldfEwHlziX$$sny76RK78UOh4JugSgyTF" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_personas.sql",
+      "Formula_360_0_kXek0hEe0PK2leAJFh9nv$$O2Jzz-N36DTlgjwlF4TTV" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Formula_360_0.sql",
+      "XDjx-6YJ-ZLch_1Z8Y9uj$$AOUTModookfOjqKifmVTc" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "cyewEwTu_Z0Qqw-XiAMxG$$ovAl92jqMF35tjAA21JAe" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "ZnoT7aSxjzF4lveXRovWp$$yj-HdXBpSqVtEusfA9vw7" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "SUZM-Pz5UD7HvpyGUTMMh$$Q0SAHSrnazphfNDnvOqtr" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "7LbWAukqMGfXDjSV3rwQm$$RmLP5HBSzzVi5oV4gc90B" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "j4cr0ezMcnkXw8l3fDFZL$$r2Xkxwvuz-u0p5BdRFnFb" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios.sql",
+      "xfZNQ1i3Y3iHOlsq2KSXF$$BI2utZerx_3fxjdCd-H2n" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "YAZUIwrlh7l7-D_V-sAQ9$$QYMbHHd7IGGpbNVbBzkOY" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Formula_360_0.sql",
+      "6uzCfTLST3qXZ3j8_cJKN$$3WChidgBmmKKXHAeTqXyh" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "fpYmaXCKZUAvA4gwubM0C$$lrz28ZYJmS-sfyb8ZdYZV" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "d8ofq61tYMDdk3hqDqtjK$$oYw5ZTk-2W4tmkZi7-bPP" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "W2j7sHAUgVil-576M3Zk2$$f060SC8IwKoxay9S3C4bU" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "6K08tWaP91aF1tl5JLlHm$$DXDM5OcFyuTKkTOQyLWFi" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "IU49wTiWQCIp9yBHnnA9g$$253VNhEaX0i8WIoLxDYZt" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_relacion_contratos_cuentas.sql",
+      "JZAtrveS_hGeUyJuKkccy$$1a5qTy9NcP7Jj_RqT2u4e" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_4.sql",
+      "G5TTy-i_A0yZBn7pm3gmJ$$gTXsYH7k-ZYCS-iin8CMa" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "owtqAD0cYg-U4aYVtPYRY$$f_f0m7rIRJuhxMlVXZ01a" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "Q_zNY-ja3_0iZUyGDr-tq$$nAwXhJlxA3pQU4CBS7j8l" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "gkaIbnD-NN7MXZzBS90SZ$$vF0KtEAIJc8wzBjaY6uRb" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "MTcLqQw8ljyURiEgKd7g_$$9fHQjMhtwaDnydL3JEZZu" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "bGa-G070YwJz1aqPPi8LZ$$RTOQChTNteHCigbuqoy0a" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "Filter_30_rcfYUAgRQifv_ZMkY2uaW$$neVTP_J84k2d1sxSXcUnp" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_relacion_contratos_cuentas.sql",
+      "Vn5pqt2FiEZkX3jVe1ZXj$$800ZVNXoOgt0OLaea06A1" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "TWfWpGtlKIpfDI7jJSzZ3$$3FJ2p9tuLIa6x0xILrWMw" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "AeiSNKbhgXiH8EAQ7MAR3$$oBCc1as0A7GVVKbsFo73p" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores.sql",
+      "9Zuf3jBUE2RChTxufPCnQ$$LAmQp8CQP4LqKiFNUHR--" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "FmzbCw0Xk0kOA0zpAEFOn$$uuNKJnbWgsgt8hK7I31Xq" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "LYaMxBuMspDeiwMyXKbRS$$OAlU1HMtbKC3ZC_HOcF2p" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "tOTpVe_c4_0A40l35orYt$$xxPrDGI-RsW22-HOeY8Zb" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "PPVA-pw_4J4ewYQWws2mG$$L9ihAv4nJxlk5Ipf3t3Mt" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "yS8X_d1MQOb2P8O0mcKCo$$Ru80Lmk2WuN1wo1f6aVAQ" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Join_349_inner.sql",
+      "IJeFuLGqpZ1GJBShh7wqm$$iUgPeYKDMPLg0czrX3uQx" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "3Slq0jNFpjqW0EmDo0gUA$$aMTQHiQqcoeTbaV3hAcuH" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Join_349_inner.sql",
+      "fojlZuEphmAPOWZxJbERH$$TiPEyvmLlsC9cw42GDjEb" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "gRxBOMt1Y7_7QXPabDPnd$$KGTRcY1eRb-p7DTE9gSUQ" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "t6L71rVmOiuv8TAbxR6dG$$lrtHfHE7A0W7x4g4kkyKI" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "Og6b5ujJbRKmh_5Po2J1E$$Y0B8qqPAMd916TGFSh9Qf" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores.sql",
+      "s_JldhEwUB2bTJo9mDJ9N$$9jv0FbYVFOrXXcAWedOnd" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "UMJDqaHMpdF706AHP8SvY$$HU6_k8OiulIuIzMQ2VEvE" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "CountRecords_4__RGmezpAK3mdlXU4PX-sf$$EFP9W5KocvFDJGdGF97NT" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_4.sql",
+      "syKfSCbV-97ZTYwqITgBD$$ISnM612m9HuSLoZpW0I_q" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "SXUADZKWwBl6UCR3dp1nI$$97s2e0fxjmfsMbxhe8QBW" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_3.sql",
+      "QxI65JJKvkTb6VehAjxgI$$yiLF7W5GLZTYE9WFydMnK" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql",
+      "J5GjRrXOzC-21xdskNLvj$$fb3oFfGdou7T-LS76mxrL" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "e0AgbgjfwBnZ0bAWTv-Fl$$krZErk1mJVE2KjzvH2xfH" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Join_349_inner.sql",
+      "6kNXCzM6DrPESfjqs7Q0W$$-BdbrlHJok_5_nBI-LRJw" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "cG376xknXt6t3rZdmDR7Q$$ifM-nobj9uYoW-ipf2kJa" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "GIE6r6tRwjBYrV02RxOzG$$1wrDOBjou7JIMtXFgFDQy" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql",
+      "20p9wbJwELk4akLd1anSU$$Qg02ZFDNBlu7F-1M3HuwT" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql",
+      "Bq9o1s2vqXuq-6rCV0p_0$$2JkYuZ09T_WRlGJ9EzAq4" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "zOe00_dWENg5AjrFncdwN$$xBuWM9apgbyAsNk82VXIg" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_relacion_contratos_cuentas.sql",
+      "jF4v3JO3H8ZZDVKSaXfzF$$vFk5u-ylmLYEWCa7IYIWX" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios.sql",
+      "KPIHFjBnYxyfiP7VUnqGf$$3PYH3mGs5hpcpPKDA0MSB" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql",
+      "Join_349_inner_c09aKPOs6R2pBA-DYK3IV$$RfEUcyx1Von3uRPfQ4jqp" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_1.sql",
+      "N5ofPLwpIDB7Y7o5YP5Yw$$ho22V9ZvrGH1MNry50hi5" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_1.sql",
+      "CountRecords_2_OkZD5AwG8qvBHp701iGXp$$bhhh-5FGwsyaODeqR0L37" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_2.sql",
+      "ql4DrCEuewbKuIDOXtVq2$$2rOSqJHldeXgKldtN9AHl" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores.sql",
+      "2F0Lwv7YhYKNTN7O4VOXh$$E7_p04JzuxhK5MXlIyU4W" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_3.sql",
+      "wlKBPh9Z6efCntGVUa6QJ$$l8OSDNqKKa3Axyk09gOij" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios.sql",
+      "m_l6UzQIMiCJC07YXz4HH$$ykkSOFigC0JMT7f3v0T6Y" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "4cJ8m2B3nVJLvKNJYMBmQ$$8zPuoXIc8CMpuXrkn0JhS" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "coPxSVF6TG4d4jQptXUlT$$JKSRv4DYZwZlGVF6S-pXx" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "UaQr543aN_wpqYRCwUdBV$$06QC9LUohvI1BQgrqIyU4" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "hQDIELaS0qUYy8Kz_ivBZ$$fhEi9GbzuQ0RVskvTbPSr" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql",
+      "nJjcQ_dGBxnRGq1Yl1b9V$$OYTwi_MrY3dvF7Lk-XAV9" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__Filter_30.sql",
+      "QSuJ9SpHyxOBaeU6goUin$$gEWKcRSWMwPVbX2MUUnMc" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "ipCxzG5ia71WGFJwYKyfT$$YAoQaxTT3-Jx5ZoKL4hN_" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_personas.sql",
+      "8zn49eMUEZAYW74rT2Xm-$$JTOVKWo2j--Io4fe-C8zq" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones.sql",
+      "XR-MqVUVqxnT71XVvo2CF$$aD93PCZuztG7JLLPjDPxR" : "models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_5.sql"
+    }
+  },
+  "processes" : {
+    "zs--XhDVz0h11S7UR3QUo$$AdYUyGWi9OnlBnH_W093P" : {
+      "id" : "zs--XhDVz0h11S7UR3QUo$$AdYUyGWi9OnlBnH_W093P",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "zs--XhDVz0h11S7UR3QUo$$AdYUyGWi9OnlBnH_W093P", "91T47bM43sl10Hsn8EcJ-$$wAn7HVy_GlwJd1Rw88v65", "qQ5Q09ZB41xuy4RLzXBCA$$Uf3uUxYjPUF7x8bSyWBMo", "GIE6r6tRwjBYrV02RxOzG$$1wrDOBjou7JIMtXFgFDQy", "20p9wbJwELk4akLd1anSU$$Qg02ZFDNBlu7F-1M3HuwT", "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR", "_A_yLmmZ2V0TXci_6VLmF$$kh-8y5c4S-lVB6fkcAhvF", "00uWJPWhJFnH1MYdFy69R$$jc5xlqxy0bLBMo23MppJ1", "QxI65JJKvkTb6VehAjxgI$$yiLF7W5GLZTYE9WFydMnK", "t0BoisVmk7QCGATVmeOh8$$DEcXpmRUuUBQij9dOngNF", "nZk7kI9L5SmmqYIOI2wQC$$cefIEVE9MCwGvIqTZil1D", "kfeuAWKVDT2trFL5HiJv4$$CHYa1vK_MpbQLmpbx-3Js" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "zs--XhDVz0h11S7UR3QUo$$AdYUyGWi9OnlBnH_W093P" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "17q29p574QSjsAUwIYAvg$$ABD7NNUhANEh1Rz-AUHnH" : {
+      "id" : "17q29p574QSjsAUwIYAvg$$ABD7NNUhANEh1Rz-AUHnH",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__primary_holder_count",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__primary_holder_count"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "primary_holder_count_Z2xbcxFYLS_vWbxJJs6CO$$UyrNHoYkr3LekGBb9ZKQq", "17q29p574QSjsAUwIYAvg$$ABD7NNUhANEh1Rz-AUHnH", "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "primary_holder_count_Z2xbcxFYLS_vWbxJJs6CO$$UyrNHoYkr3LekGBb9ZKQq" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__primary_holder_count_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__primary_holder_count_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB" : {
+      "id" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR", "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB", "d8ofq61tYMDdk3hqDqtjK$$oYw5ZTk-2W4tmkZi7-bPP", "WOfh0GhcquplyECjCvG0w$$tNuJj4bIAyaRjrFuRatSp", "SDKmRRS5VAcq5dkERSCH1$$_0sApcdpWWJU3LeCxbd4G", "L_d_rma1jYh2r2GVav1Qt$$bKmgc7CUFWPD1np4ZWwgx", "Dxj4wGDxbdpx6wSu2J-xT$$Il4DlNTHUJTWU6eDVbcpi", "6OlPbBviMIO-lBOVwYsgd$$DFegXiYXwh5fTKyBrJovo", "G5TTy-i_A0yZBn7pm3gmJ$$gTXsYH7k-ZYCS-iin8CMa", "-sFZWYKPT4ZrDycbwDj7E$$kreDtFOOClmt2yBr0Px_Q", "bdPbqFOeU0GbJ96kNkt6Y$$y7eNSGGwE6usLRf207j-o", "6K08tWaP91aF1tl5JLlHm$$DXDM5OcFyuTKkTOQyLWFi", "IJeFuLGqpZ1GJBShh7wqm$$iUgPeYKDMPLg0czrX3uQx", "MTcLqQw8ljyURiEgKd7g_$$9fHQjMhtwaDnydL3JEZZu", "KPIHFjBnYxyfiP7VUnqGf$$3PYH3mGs5hpcpPKDA0MSB", "Itenawil5z6NkhyKeI7eT$$tgvi0chaPsd9hpxWXK-NS", "6uzCfTLST3qXZ3j8_cJKN$$3WChidgBmmKKXHAeTqXyh", "n4P24OlX59ft43BhZUAdu$$FH7AMRLxTE7W_1mt0heBy", "uhj1-JSDDP8STcjKJfsL1$$NeRH7i4WjghrEPAZTmkot", "HlwWAn54Ww3eUVMNyKH49$$UqM8sCuGxMpx9Vnz5UUhY", "cwzOU_8avIEEcYBCd-El8$$VJ2X2alywvwkI7B3GzrgB", "J5GjRrXOzC-21xdskNLvj$$fb3oFfGdou7T-LS76mxrL", "Qnga2hSneG3KrnbnrdMbD$$J9RPU6-gpl8zZTgUQPul_", "-zu2Woq268tKhT0UBPHui$$QCvdvAgSGykwY07YWW491", "kPemalyqus1LL0q93SoFb$$iEaIOmJEEFGEZcIvo2lpl", "pDXHLuchxw6E-epzZJm06$$GTC1Pdv8-N1idhioxakud", "XDjx-6YJ-ZLch_1Z8Y9uj$$AOUTModookfOjqKifmVTc", "5Zd3BbQJeqXrKNFoDmH26$$uQDeneJlJl7G6gCMv_1n0", "W2j7sHAUgVil-576M3Zk2$$f060SC8IwKoxay9S3C4bU", "Qvdv-9lz8xz63ojSbkcDw$$tm2wjOZBewXZjiXOr2Kt0", "bGa-G070YwJz1aqPPi8LZ$$RTOQChTNteHCigbuqoy0a", "Filter_30_rcfYUAgRQifv_ZMkY2uaW$$neVTP_J84k2d1sxSXcUnp", "h3nVCtC8iSnuhxORGPPwM$$NVtWCa-J9CgJtHCtxPajx", "hNJbTWglqpc8byZWSGU9N$$PbqjfbowUYScVyxJcl6tK", "owtqAD0cYg-U4aYVtPYRY$$f_f0m7rIRJuhxMlVXZ01a", "6kNXCzM6DrPESfjqs7Q0W$$-BdbrlHJok_5_nBI-LRJw" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_in_3",
+          "slug" : "in_3"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "V2Mg1peXj9nLBXrhC8f1s$$xeJjqeXptnKF1tIwkpa6K" : {
+      "id" : "V2Mg1peXj9nLBXrhC8f1s$$xeJjqeXptnKF1tIwkpa6K",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__Join_349_inner",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__Join_349_inner"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Join_349_inner_c09aKPOs6R2pBA-DYK3IV$$RfEUcyx1Von3uRPfQ4jqp", "V2Mg1peXj9nLBXrhC8f1s$$xeJjqeXptnKF1tIwkpa6K", "Formula_360_0_kXek0hEe0PK2leAJFh9nv$$O2Jzz-N36DTlgjwlF4TTV", "yS8X_d1MQOb2P8O0mcKCo$$Ru80Lmk2WuN1wo1f6aVAQ", "e0AgbgjfwBnZ0bAWTv-Fl$$krZErk1mJVE2KjzvH2xfH", "3Slq0jNFpjqW0EmDo0gUA$$aMTQHiQqcoeTbaV3hAcuH" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "Join_349_inner_c09aKPOs6R2pBA-DYK3IV$$RfEUcyx1Von3uRPfQ4jqp" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__Join_349_inner_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__Join_349_inner_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__Join_349_inner_in_2",
+          "slug" : "in_2"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__Join_349_inner_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "VUSbZBPV3iEauw6P2mK9B$$xXz4lHf9dsHpMLVAS0HSN" : {
+      "id" : "VUSbZBPV3iEauw6P2mK9B$$xXz4lHf9dsHpMLVAS0HSN",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "VUSbZBPV3iEauw6P2mK9B$$xXz4lHf9dsHpMLVAS0HSN", "Og6b5ujJbRKmh_5Po2J1E$$Y0B8qqPAMd916TGFSh9Qf", "AeiSNKbhgXiH8EAQ7MAR3$$oBCc1as0A7GVVKbsFo73p", "5A-ARfttREDa_dMQqTiTc$$-S1CWhSc2vGU9owuMOx6A", "d9FEfpf4_3zNoaMsk8kyo$$ia3c5QipfZQ6onJq57Z4Q", "HvOTs-LNzgDaumNRwJYdz$$uvll24SQ4LK2lbhGFvUfw", "ql4DrCEuewbKuIDOXtVq2$$2rOSqJHldeXgKldtN9AHl", "OzHByZ81TsltGW4Lg2ikP$$8QtpS2DBWNKiIu9TpXNH6", "vR5tNm_FRcr8k4KaKM0O_$$oFhdMk5BATm6jRwiNHQGy" ],
+        "type" : "table",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "VUSbZBPV3iEauw6P2mK9B$$xXz4lHf9dsHpMLVAS0HSN" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "FDwlTHBfdT6ItyB1RFA_i$$v2WYaTPZTukvvDUkaiP86" : {
+      "id" : "FDwlTHBfdT6ItyB1RFA_i$$v2WYaTPZTukvvDUkaiP86",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_2",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_2"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "CountRecords_2_OkZD5AwG8qvBHp701iGXp$$bhhh-5FGwsyaODeqR0L37", "FDwlTHBfdT6ItyB1RFA_i$$v2WYaTPZTukvvDUkaiP86", "Formula_360_0_kXek0hEe0PK2leAJFh9nv$$O2Jzz-N36DTlgjwlF4TTV" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "CountRecords_2_OkZD5AwG8qvBHp701iGXp$$bhhh-5FGwsyaODeqR0L37" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_2_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_2_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "KNXaIEdcxsBOIomCaipEn$$M9-2_74MdXd7JyB9jj3xx" : {
+      "id" : "KNXaIEdcxsBOIomCaipEn$$M9-2_74MdXd7JyB9jj3xx",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__Filter_30",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__Filter_30"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Filter_30_rcfYUAgRQifv_ZMkY2uaW$$neVTP_J84k2d1sxSXcUnp", "KNXaIEdcxsBOIomCaipEn$$M9-2_74MdXd7JyB9jj3xx", "m2jsj13mw0b0I-8btFGKf$$tEn3E5_O6ZWyjqGgx-TaC", "nJjcQ_dGBxnRGq1Yl1b9V$$OYTwi_MrY3dvF7Lk-XAV9", "d6sIwh6N3wEujwtX7z-zW$$VmlF-Y0EL7XDJ5NW1R2n1" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "Filter_30_rcfYUAgRQifv_ZMkY2uaW$$neVTP_J84k2d1sxSXcUnp" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__Filter_30_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__Filter_30_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "WU399LsI8uaxb3YG0mfdH$$Kzi_Kmqgw3f3gnRZuynpL" : {
+      "id" : "WU399LsI8uaxb3YG0mfdH$$Kzi_Kmqgw3f3gnRZuynpL",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "WU399LsI8uaxb3YG0mfdH$$Kzi_Kmqgw3f3gnRZuynpL", "UaQr543aN_wpqYRCwUdBV$$06QC9LUohvI1BQgrqIyU4", "m6yjBQDMVhmH_3GF2vWjM$$rpH_FgtvoD-vcYLjQXqeP", "tOTpVe_c4_0A40l35orYt$$xxPrDGI-RsW22-HOeY8Zb", "fojlZuEphmAPOWZxJbERH$$TiPEyvmLlsC9cw42GDjEb", "fpYmaXCKZUAvA4gwubM0C$$lrz28ZYJmS-sfyb8ZdYZV", "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR", "path7uvFmh_lm0ON2dMtl$$-dtaZ1ot43tKZmHse4Wph", "8zn49eMUEZAYW74rT2Xm-$$JTOVKWo2j--Io4fe-C8zq", "TWfWpGtlKIpfDI7jJSzZ3$$3FJ2p9tuLIa6x0xILrWMw", "FmzbCw0Xk0kOA0zpAEFOn$$uuNKJnbWgsgt8hK7I31Xq", "DNxUrjJ8DPIasP865iIb9$$DeW0UNWembXWijLsdZ__2", "9Zuf3jBUE2RChTxufPCnQ$$LAmQp8CQP4LqKiFNUHR--", "Vn5pqt2FiEZkX3jVe1ZXj$$800ZVNXoOgt0OLaea06A1", "38L5LKHZaEcMtgb4IkwBT$$WPpnEc99xaUfYU3K_Z9Bw", "Join_349_inner_c09aKPOs6R2pBA-DYK3IV$$RfEUcyx1Von3uRPfQ4jqp", "Nnk1M6Dwo32OZlB1ghDvF$$UtW90q58Q2RtKxfZhpx7w", "PPVA-pw_4J4ewYQWws2mG$$L9ihAv4nJxlk5Ipf3t3Mt", "R2iLTUzZGnX05hREsQLBx$$nIty5rOUlj_I7KCMxVOGd", "coPxSVF6TG4d4jQptXUlT$$JKSRv4DYZwZlGVF6S-pXx", "0thXe1cqibjFjgEq43abP$$h1O_hfrQz4ViXTCBZfs7m", "IuL2RtTHoPYCw46SlK59F$$VIuiCKSWoz--NlDbMFayg", "LYaMxBuMspDeiwMyXKbRS$$OAlU1HMtbKC3ZC_HOcF2p", "cG376xknXt6t3rZdmDR7Q$$ifM-nobj9uYoW-ipf2kJa", "gRxBOMt1Y7_7QXPabDPnd$$KGTRcY1eRb-p7DTE9gSUQ", "cyewEwTu_Z0Qqw-XiAMxG$$ovAl92jqMF35tjAA21JAe", "QSuJ9SpHyxOBaeU6goUin$$gEWKcRSWMwPVbX2MUUnMc", "xfZNQ1i3Y3iHOlsq2KSXF$$BI2utZerx_3fxjdCd-H2n", "m_l6UzQIMiCJC07YXz4HH$$ykkSOFigC0JMT7f3v0T6Y", "UMJDqaHMpdF706AHP8SvY$$HU6_k8OiulIuIzMQ2VEvE", "6takI6LJUkrXhFX1UasFP$$FYdIflwZojjATsAeQNiVv" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "WU399LsI8uaxb3YG0mfdH$$Kzi_Kmqgw3f3gnRZuynpL" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones_in_2",
+          "slug" : "in_2"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "9fDiBqQrnuDGO6nR6FQI-$$orstJ_BTidibe0nVkpSIv" : {
+      "id" : "9fDiBqQrnuDGO6nR6FQI-$$orstJ_BTidibe0nVkpSIv",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__Formula_360_0",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__Formula_360_0"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Formula_360_0_kXek0hEe0PK2leAJFh9nv$$O2Jzz-N36DTlgjwlF4TTV", "9fDiBqQrnuDGO6nR6FQI-$$orstJ_BTidibe0nVkpSIv", "sd3eRe-PsYgXJH2SHNWqd$$Talc4r-x_qdTW7BJQRjc6", "sjmRmOAMTN3lnQDJqOVRi$$aLLAk5RDuPtFwNF7cLfUs", "YAZUIwrlh7l7-D_V-sAQ9$$QYMbHHd7IGGpbNVbBzkOY" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "Formula_360_0_kXek0hEe0PK2leAJFh9nv$$O2Jzz-N36DTlgjwlF4TTV" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__Formula_360_0_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__Formula_360_0_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "TuyLYuTSXHNthnA-nBNvi$$I_3XQ64WcH9CSGSltvLwk" : {
+      "id" : "TuyLYuTSXHNthnA-nBNvi$$I_3XQ64WcH9CSGSltvLwk",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_4",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_4"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "CountRecords_4__RGmezpAK3mdlXU4PX-sf$$EFP9W5KocvFDJGdGF97NT", "TuyLYuTSXHNthnA-nBNvi$$I_3XQ64WcH9CSGSltvLwk", "JZAtrveS_hGeUyJuKkccy$$1a5qTy9NcP7Jj_RqT2u4e", "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "CountRecords_4__RGmezpAK3mdlXU4PX-sf$$EFP9W5KocvFDJGdGF97NT" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_4_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_4_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SXUADZKWwBl6UCR3dp1nI$$97s2e0fxjmfsMbxhe8QBW" : {
+      "id" : "SXUADZKWwBl6UCR3dp1nI$$97s2e0fxjmfsMbxhe8QBW",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_3",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_3"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "CountRecords_3_SmJVX5a5_zlv0nZeHrUv4$$Un87cPGAgUC-88uoeq0UJ", "SXUADZKWwBl6UCR3dp1nI$$97s2e0fxjmfsMbxhe8QBW", "2F0Lwv7YhYKNTN7O4VOXh$$E7_p04JzuxhK5MXlIyU4W", "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "CountRecords_3_SmJVX5a5_zlv0nZeHrUv4$$Un87cPGAgUC-88uoeq0UJ" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_3_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_3_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "zOe00_dWENg5AjrFncdwN$$xBuWM9apgbyAsNk82VXIg" : {
+      "id" : "zOe00_dWENg5AjrFncdwN$$xBuWM9apgbyAsNk82VXIg",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_relacion_contratos_cuentas",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_relacion_contratos_cuentas"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "zOe00_dWENg5AjrFncdwN$$xBuWM9apgbyAsNk82VXIg", "IU49wTiWQCIp9yBHnnA9g$$253VNhEaX0i8WIoLxDYZt", "cuSJFKnm_PEPsP97OmtbK$$auvUgeZnBmCd8Hf74MaN-", "Filter_30_rcfYUAgRQifv_ZMkY2uaW$$neVTP_J84k2d1sxSXcUnp" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "zOe00_dWENg5AjrFncdwN$$xBuWM9apgbyAsNk82VXIg" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_relacion_contratos_cuentas_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_relacion_contratos_cuentas_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "N5ofPLwpIDB7Y7o5YP5Yw$$ho22V9ZvrGH1MNry50hi5" : {
+      "id" : "N5ofPLwpIDB7Y7o5YP5Yw$$ho22V9ZvrGH1MNry50hi5",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_1"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "CountRecords_1_h0BcptlDRmD_-YFZfPqVF$$nQeTxjIZ3kjWlquIE0X3x", "N5ofPLwpIDB7Y7o5YP5Yw$$ho22V9ZvrGH1MNry50hi5", "Join_349_inner_c09aKPOs6R2pBA-DYK3IV$$RfEUcyx1Von3uRPfQ4jqp" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "CountRecords_1_h0BcptlDRmD_-YFZfPqVF$$nQeTxjIZ3kjWlquIE0X3x" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_1_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_1_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "wlKBPh9Z6efCntGVUa6QJ$$l8OSDNqKKa3Axyk09gOij" : {
+      "id" : "wlKBPh9Z6efCntGVUa6QJ$$l8OSDNqKKa3Axyk09gOij",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "wlKBPh9Z6efCntGVUa6QJ$$l8OSDNqKKa3Axyk09gOij", "jF4v3JO3H8ZZDVKSaXfzF$$vFk5u-ylmLYEWCa7IYIWX", "j4cr0ezMcnkXw8l3fDFZL$$r2Xkxwvuz-u0p5BdRFnFb", "3UBLg6Cr_bH4VVeLYCONU$$o9tXnS8nDnI8hfeUoaJhT", "L5KAV-ZEMVKgpBkv-wHSI$$KWz6jTgeJh1pCK-wivUmo", "PcOzWOxx3r5UrhVETwrfc$$G3DfdwmXxb_so5loOCcoX", "MY1ehqjX9bBxOi-_qhfMf$$QvMBTn8EllzA2cAC5S9LP" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "wlKBPh9Z6efCntGVUa6QJ$$l8OSDNqKKa3Axyk09gOij" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "hQDIELaS0qUYy8Kz_ivBZ$$fhEi9GbzuQ0RVskvTbPSr" : {
+      "id" : "hQDIELaS0qUYy8Kz_ivBZ$$fhEi9GbzuQ0RVskvTbPSr",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "hQDIELaS0qUYy8Kz_ivBZ$$fhEi9GbzuQ0RVskvTbPSr", "s_JldhEwUB2bTJo9mDJ9N$$9jv0FbYVFOrXXcAWedOnd", "UICCJCBnMOwRDt_fkW38F$$hu-o1AFP-lMsfV-s9NyHj", "gkaIbnD-NN7MXZzBS90SZ$$vF0KtEAIJc8wzBjaY6uRb", "Bq9o1s2vqXuq-6rCV0p_0$$2JkYuZ09T_WRlGJ9EzAq4", "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR", "4zMz8HASKID4bT5c0ZZnD$$m5uqL3MQ2UXlC5aZobTjn", "fdUIz0-oTe2WAmE_dCNA3$$dIyYJQYgboOmE1I0gSMfm", "AVRmtB5yN_TbdifjjHepP$$XOvF8SnE-I9YttN2oYz69", "6mY8lbiHKg_4yKYGKyezI$$SyPlGl3wN_zjNKkxQL_XL", "Q_zNY-ja3_0iZUyGDr-tq$$nAwXhJlxA3pQU4CBS7j8l", "ZnoT7aSxjzF4lveXRovWp$$yj-HdXBpSqVtEusfA9vw7", "7LbWAukqMGfXDjSV3rwQm$$RmLP5HBSzzVi5oV4gc90B", "4cJ8m2B3nVJLvKNJYMBmQ$$8zPuoXIc8CMpuXrkn0JhS", "LhJplU6VubKpRdfxzXhd5$$eu1zSgDyPAZlYNapKBEB9", "SUZM-Pz5UD7HvpyGUTMMh$$Q0SAHSrnazphfNDnvOqtr", "Wtm5oN_ftX4KdWTOAgSMN$$Up5FdoAWbEVw9ZoBJ91Ws", "TEn7XQLrR7WuDg1WH6oub$$LKDx9fLV6sMb37aEMAFoF", "syKfSCbV-97ZTYwqITgBD$$ISnM612m9HuSLoZpW0I_q", "p2OL18_Tl594aCj5UUJns$$KdvPYFAE38xCR1S6FpOzB", "ZdqRRZZxOiKM2Ei940kRA$$hAArER4VoQ8sObRfpfn5P", "t6L71rVmOiuv8TAbxR6dG$$lrtHfHE7A0W7x4g4kkyKI" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "hQDIELaS0qUYy8Kz_ivBZ$$fhEi9GbzuQ0RVskvTbPSr" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario_in_2",
+          "slug" : "in_2"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "ipCxzG5ia71WGFJwYKyfT$$YAoQaxTT3-Jx5ZoKL4hN_" : {
+      "id" : "ipCxzG5ia71WGFJwYKyfT$$YAoQaxTT3-Jx5ZoKL4hN_",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_personas",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_personas"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "ipCxzG5ia71WGFJwYKyfT$$YAoQaxTT3-Jx5ZoKL4hN_", "dJq-GzxdWq1ldfEwHlziX$$sny76RK78UOh4JugSgyTF", "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR" ],
+        "type" : "incremental",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "ipCxzG5ia71WGFJwYKyfT$$YAoQaxTT3-Jx5ZoKL4hN_" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_personas_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_personas_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "XR-MqVUVqxnT71XVvo2CF$$aD93PCZuztG7JLLPjDPxR" : {
+      "id" : "XR-MqVUVqxnT71XVvo2CF$$aD93PCZuztG7JLLPjDPxR",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_5",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_5"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "CountRecords_5_ZnTRM6bjZ8OHsWGmOHqOv$$D4i1lBwQHAXxGziEwGAUE", "XR-MqVUVqxnT71XVvo2CF$$aD93PCZuztG7JLLPjDPxR", "AlteryxSelect_65_Nvxq2JZ4c25YF1xaog2wJ$$FMP92D4qKF5mYXEQ1MHJR" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "CountRecords_5_ZnTRM6bjZ8OHsWGmOHqOv$$D4i1lBwQHAXxGziEwGAUE" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_5_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_5_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "U6shGFaEbrJ4pgWa6xRyb",
+    "source" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_out_0",
+    "target" : "zs--XhDVz0h11S7UR3QUo$$AdYUyGWi9OnlBnH_W093P",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos_in_0"
+  }, {
+    "id" : "SuvAHn0E5-rgfEN2XHJjt",
+    "source" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_out_0",
+    "target" : "WU399LsI8uaxb3YG0mfdH$$Kzi_Kmqgw3f3gnRZuynpL",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones_in_0"
+  }, {
+    "id" : "xG0br03JuyhBnB2N2Ud2h",
+    "source" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_out_0",
+    "target" : "hQDIELaS0qUYy8Kz_ivBZ$$fhEi9GbzuQ0RVskvTbPSr",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario_in_0"
+  }, {
+    "id" : "8uU7A0Dz0NwYSsDYvV0Qj",
+    "source" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_out_0",
+    "target" : "ipCxzG5ia71WGFJwYKyfT$$YAoQaxTT3-Jx5ZoKL4hN_",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_personas_in_0"
+  }, {
+    "id" : "_cnjK6jwRFDUuMdWa6Kai",
+    "source" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_out_0",
+    "target" : "17q29p574QSjsAUwIYAvg$$ABD7NNUhANEh1Rz-AUHnH",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__primary_holder_count_in_0"
+  }, {
+    "id" : "yc9QdMersyThn6kzfTOpr",
+    "source" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_out_0",
+    "target" : "SXUADZKWwBl6UCR3dp1nI$$97s2e0fxjmfsMbxhe8QBW",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_3_in_0"
+  }, {
+    "id" : "HCNJ53J_xSBmxvq1DovB1",
+    "source" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_out_0",
+    "target" : "TuyLYuTSXHNthnA-nBNvi$$I_3XQ64WcH9CSGSltvLwk",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_4_in_0"
+  }, {
+    "id" : "ZN_t5-C-WfpXG5xZYdeei",
+    "source" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_out_0",
+    "target" : "XR-MqVUVqxnT71XVvo2CF$$aD93PCZuztG7JLLPjDPxR",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_5_in_0"
+  }, {
+    "id" : "_-6G-F4HSbtOgCb_PQ0Fv",
+    "source" : "V2Mg1peXj9nLBXrhC8f1s$$xeJjqeXptnKF1tIwkpa6K",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__Join_349_inner_out_0",
+    "target" : "WU399LsI8uaxb3YG0mfdH$$Kzi_Kmqgw3f3gnRZuynpL",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones_in_1"
+  }, {
+    "id" : "8DIfC7F0sJhcR8NvTVVV9",
+    "source" : "V2Mg1peXj9nLBXrhC8f1s$$xeJjqeXptnKF1tIwkpa6K",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__Join_349_inner_out_0",
+    "target" : "N5ofPLwpIDB7Y7o5YP5Yw$$ho22V9ZvrGH1MNry50hi5",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_1_in_0"
+  }, {
+    "id" : "s1uEL0jtP0CvT3yxWnazj",
+    "source" : "9fDiBqQrnuDGO6nR6FQI-$$orstJ_BTidibe0nVkpSIv",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__Formula_360_0_out_0",
+    "target" : "V2Mg1peXj9nLBXrhC8f1s$$xeJjqeXptnKF1tIwkpa6K",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__Join_349_inner_in_1"
+  }, {
+    "id" : "ALFHNusWMLVh8kHySnlrF",
+    "source" : "9fDiBqQrnuDGO6nR6FQI-$$orstJ_BTidibe0nVkpSIv",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__Formula_360_0_out_0",
+    "target" : "FDwlTHBfdT6ItyB1RFA_i$$v2WYaTPZTukvvDUkaiP86",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__CountRecords_2_in_0"
+  }, {
+    "id" : "biMRPSuBBd9_O_C-dT_Hp",
+    "source" : "KNXaIEdcxsBOIomCaipEn$$M9-2_74MdXd7JyB9jj3xx",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__Filter_30_out_0",
+    "target" : "WbwI_X0RNKGMOglZAmFvZ$$uEqMaPff-EAH_HDlrfajB",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65_in_1"
+  }, {
+    "id" : "RPY-Z4D56XpF2UK4I4-P4",
+    "source" : "KNXaIEdcxsBOIomCaipEn$$M9-2_74MdXd7JyB9jj3xx",
+    "sourcePort" : "C0030029_Aprovisionamiento_Dynatech__Filter_30_out_0",
+    "target" : "zOe00_dWENg5AjrFncdwN$$xBuWM9apgbyAsNk82VXIg",
+    "targetPort" : "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_relacion_contratos_cuentas_in_0"
+  } ],
+  "component" : "Pipeline"
+}
