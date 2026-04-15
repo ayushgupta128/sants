@@ -1,0 +1,7 @@
+---
+packages:
+- revision: "1.0.6"
+  git: "https://github.com/prophecy-io/prophecy-basics"
+  subdirectory: ""
+- revision: "main"
+  git: "https://mloprete-banco_sangroup:token@github.com/mloprete-banco_sangroup/f1rst-data-prophecy-utils"

@@ -1,0 +1,54 @@
+---
+version: 2
+models:
+- name: "C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__CountRecords_1"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__CountRecords_2"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__CountRecords_3"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__CountRecords_4"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__CountRecords_5"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__Filter_30"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__Formula_360_0"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__Join_349_inner"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__primary_holder_count"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_personas"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_relacion_contratos_cuentas"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_transacciones"
+  tags:
+  - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_valores"
+  tags:
+  - "prophecy_temp"
