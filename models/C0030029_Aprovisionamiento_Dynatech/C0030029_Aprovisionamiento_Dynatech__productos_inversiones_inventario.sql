@@ -19,6 +19,8 @@ WITH AlteryxSelect_65 AS (
 
 dbo_dynclipos AS (
 
+  {#VisualGroup: Inventario#}
+  {#Overwrites the dataset from the dev curated database to the specified table.#}
   SELECT * 
   
   FROM {{ source('dev_curated_uyasdbtest_dynvaldwsantander', 'dbo_dynclipos') }}
@@ -27,6 +29,7 @@ dbo_dynclipos AS (
 
 fr_rf_dcl AS (
 
+  {#VisualGroup: Inventario#}
   {#Filters dynamic clip positions based on a specific date part for targeted analysis.#}
   SELECT * 
   
@@ -38,6 +41,7 @@ fr_rf_dcl AS (
 
 Formula_379_0 AS (
 
+  {#VisualGroup: Inventario#}
   SELECT 
     CAST((
       CASE
@@ -54,6 +58,7 @@ Formula_379_0 AS (
 
 AlteryxSelect_88 AS (
 
+  {#VisualGroup: Inventario#}
   SELECT 
     (
       CASE
@@ -95,6 +100,8 @@ AlteryxSelect_88 AS (
 
 he0_dt_ini_fin_habil_mes_prt AS (
 
+  {#VisualGroup: Inventario#}
+  {#Overwrites the curated dataset with updated monthly data.#}
   SELECT * 
   
   FROM {{ source('dev_curated.ods', 'he0_dt_ini_fin_habil_mes_prt') }}
@@ -103,6 +110,7 @@ he0_dt_ini_fin_habil_mes_prt AS (
 
 fr_rf_habil AS (
 
+  {#VisualGroup: Inventario#}
   {#Filters records based on a specific date part for targeted analysis.#}
   SELECT * 
   
@@ -114,6 +122,7 @@ fr_rf_habil AS (
 
 Formula_334_0 AS (
 
+  {#VisualGroup: Inventario#}
   {#Converts and includes date information for data records.#}
   SELECT 
     TO_DATE(CAST(FEC_DATA AS STRING), 'yyyyMMdd') AS fecha_dato,
@@ -125,6 +134,7 @@ Formula_334_0 AS (
 
 Unique_340 AS (
 
+  {#VisualGroup: Inventario#}
   SELECT 
     (ROW_NUMBER() OVER (PARTITION BY fecha_dato ORDER BY fecha_dato NULLS FIRST)) AS row_number,
     *
@@ -135,6 +145,7 @@ Unique_340 AS (
 
 Unique_340_filter AS (
 
+  {#VisualGroup: Inventario#}
   SELECT * 
   
   FROM Unique_340 AS in0
@@ -145,6 +156,7 @@ Unique_340_filter AS (
 
 Unique_340_drop_0 AS (
 
+  {#VisualGroup: Inventario#}
   SELECT * EXCEPT (`row_number`)
   
   FROM Unique_340_filter AS in0
@@ -153,6 +165,7 @@ Unique_340_drop_0 AS (
 
 Join_335_inner AS (
 
+  {#VisualGroup: Inventario#}
   SELECT 
     in0.*,
     in1.* EXCEPT (`FEC_DATA`, `fecha_dato`)
@@ -165,6 +178,7 @@ Join_335_inner AS (
 
 Formula_95_0 AS (
 
+  {#VisualGroup: Inventario#}
   SELECT 
     CAST(TRIM(codigo_valor) AS string) AS codigo_valor,
     CAST(((year(fecha_dato) * 100) + month(fecha_dato)) AS STRING) AS AAAAMM,
@@ -176,6 +190,7 @@ Formula_95_0 AS (
 
 AlteryxSelect_148 AS (
 
+  {#VisualGroup: Inventario#}
   SELECT 
     AAAAMM AS AAAAMM,
     fecha_dato AS fecha_dato,
@@ -236,6 +251,7 @@ AlteryxSelect_148 AS (
 
 Filter_92 AS (
 
+  {#VisualGroup: Inventario#}
   SELECT * 
   
   FROM AlteryxSelect_148 AS in0
@@ -246,6 +262,7 @@ Filter_92 AS (
 
 Summarize_155 AS (
 
+  {#VisualGroup: Inventario#}
   SELECT 
     MAX(fecha_dato) AS Max_fecha_dato,
     AAAAMM AS AAAAMM
@@ -258,6 +275,7 @@ Summarize_155 AS (
 
 Join_162_inner AS (
 
+  {#VisualGroup: Inventario#}
   SELECT 
     in0.*,
     in1.* EXCEPT (`AAAAMM`, `Max_fecha_dato`)
@@ -270,6 +288,7 @@ Join_162_inner AS (
 
 Filter_332 AS (
 
+  {#VisualGroup: Inventario#}
   {#Selects primary account holders from the dataset.#}
   SELECT * 
   
@@ -281,6 +300,7 @@ Filter_332 AS (
 
 Join_331_inner AS (
 
+  {#VisualGroup: Inventario#}
   SELECT 
     in0.*,
     in1.* EXCEPT (`numero_contrato_inversiones`, 
@@ -307,6 +327,7 @@ Join_331_inner AS (
 
 AlteryxSelect_170 AS (
 
+  {#VisualGroup: Inventario#}
   SELECT 
     AAAAMM AS AAAAMM,
     fecha_dato AS fecha_dato,
@@ -342,6 +363,7 @@ AlteryxSelect_170 AS (
 
 cast_productos_inversiones_inventario AS (
 
+  {#VisualGroup: Inventario#}
   {#Processes and formats investment contract inventory data for reporting and analysis.#}
   SELECT 
     {{ var('ref_data_date_part') }} AS ref_data_date_part,
@@ -378,6 +400,8 @@ cast_productos_inversiones_inventario AS (
 
 )
 
+{#VisualGroup: Inventario#}
+{#Merges investment product inventory data incrementally into the business product table.#}
 SELECT *
 
 FROM cast_productos_inversiones_inventario

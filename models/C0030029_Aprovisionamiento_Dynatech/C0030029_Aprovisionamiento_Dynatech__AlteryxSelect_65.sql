@@ -1,25 +1,28 @@
 {{
   config({    
-    "materialized": "ephemeral",
-    "database": "dev_ref_control",
-    "schema": "prophecy_tmp"
+    "materialized": "table",
+    "database": "akash_demos",
+    "schema": "demos"
   })
 }}
 
-WITH DynClientesTitularesAPP AS (
+WITH dbo_dynclientestitularesapp_1 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
+  {#Loads client and account holder data from the Akash Demos database for further processing.#}
   SELECT * 
   
-  FROM {{ source('dev_curated_uyasdbtest_dynvaldwsantander', 'dbo_dynclientestitularesapp') }}
+  FROM {{ source('akash_demos_demos', 'dbo_dynclientestitularesapp') }}
 
 ),
 
 fr_rf_DynClientesTitularesAPP AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   {#Filters client data based on a specific date part for targeted analysis.#}
   SELECT * 
   
-  FROM DynClientesTitularesAPP AS in0
+  FROM dbo_dynclientestitularesapp_1 AS in0
   
   WHERE {{ var('ref_data_date_part') }} == data_date_part
 
@@ -27,6 +30,7 @@ fr_rf_DynClientesTitularesAPP AS (
 
 active_clients AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT * 
   
   FROM fr_rf_DynClientesTitularesAPP AS in0
@@ -40,6 +44,7 @@ active_clients AS (
 
 Formula_43_0 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     CAST((
       CONCAT(
@@ -76,6 +81,7 @@ Formula_43_0 AS (
 
 AlteryxSelect_44 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   {#Transforms and organizes investment contract data with relevant dates and statuses for compliance tracking.#}
   SELECT 
     idf_pers_ods AS idf_pers_ods,
@@ -112,11 +118,12 @@ AlteryxSelect_44 AS (
 
 ),
 
-productos_cuentas_inventario AS (
+productos_cuentas_inventario_1 AS (
 
+  {#Loads inventory product account data from the akash_demos_demos source for further processing.#}
   SELECT * 
   
-  FROM {{ source('dev_business.productos', 'productos_cuentas_inventario') }}
+  FROM {{ source('akash_demos_demos', 'productos_cuentas_inventario') }}
 
 ),
 
@@ -125,7 +132,7 @@ fr_ref_pci AS (
   {#Extracts inventory product accounts matching a specific date part for reference.#}
   SELECT * 
   
-  FROM productos_cuentas_inventario AS in0
+  FROM productos_cuentas_inventario_1 AS in0
   
   WHERE {{ var('ref_data_date_part') }} == ref_data_date_part
 
@@ -145,6 +152,7 @@ AlteryxSelect_378 AS (
 
 Filter_33 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   {#Identifies records where the titular status is marked as true.#}
   SELECT * 
   
@@ -164,6 +172,7 @@ Filter_30 AS (
 
 Join_35_inner AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     in1.moneda_contrato AS Right_moneda_contrato,
     in0.*,
@@ -183,6 +192,7 @@ Join_35_inner AS (
 
 Summarize_37 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     COUNT((
       CASE
@@ -203,6 +213,7 @@ Summarize_37 AS (
 
 Sample_39_recordId AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     *,
     row_number() OVER (ORDER BY 1) AS `id_39`
@@ -213,6 +224,7 @@ Sample_39_recordId AS (
 
 Sample_39 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     (ROW_NUMBER() OVER (PARTITION BY numero_contrato_inversiones ORDER BY numero_contrato_inversiones NULLS FIRST)) AS row_number,
     *
@@ -223,6 +235,7 @@ Sample_39 AS (
 
 Sample_39_filter AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT * 
   
   FROM Sample_39 AS in0
@@ -233,6 +246,7 @@ Sample_39_filter AS (
 
 Sample_39_drop_row_number_0 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT * EXCEPT (`id_39`, `row_number`)
   
   FROM Sample_39_filter AS in0
@@ -241,6 +255,7 @@ Sample_39_drop_row_number_0 AS (
 
 Join_48_inner AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     in0.*,
     in1.* EXCEPT (`numero_contrato_inversiones`, `idf_pers_ods`, `Count`)
@@ -256,6 +271,7 @@ Join_48_inner AS (
 
 Formula_49_0 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     CAST(1 AS BOOLEAN) AS es_primer_titular,
     *
@@ -266,6 +282,7 @@ Formula_49_0 AS (
 
 Join_48_left AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT in0.*
   
   FROM AlteryxSelect_44 AS in0
@@ -279,6 +296,7 @@ Join_48_left AS (
 
 Formula_50_0 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     CAST(0 AS BOOLEAN) AS es_primer_titular,
     *
@@ -289,12 +307,13 @@ Formula_50_0 AS (
 
 Union_51 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   {{
     prophecy_basics.UnionByName(
       ['Formula_49_0', 'Formula_50_0'], 
       [
-        '[{"name": "es_primer_titular", "dataType": "Boolean"}, {"name": "idf_pers_ods", "dataType": "String"}, {"name": "numero_contrato_inversiones", "dataType": "String"}, {"name": "fecha_dato", "dataType": "Date"}, {"name": "fecha_alta_titular", "dataType": "Date"}, {"name": "estado_persona", "dataType": "String"}, {"name": "fecha_inicio_w8", "dataType": "Date"}, {"name": "fecha_vencimiento_w8", "dataType": "Date"}, {"name": "estado_w8", "dataType": "String"}, {"name": "fecha_inicio_3103", "dataType": "Date"}, {"name": "fecha_vencimiento_3103", "dataType": "Date"}, {"name": "estado_3103", "dataType": "String"}, {"name": "fecha_inicio_306", "dataType": "Date"}, {"name": "fecha_vencimiento_306", "dataType": "Date"}, {"name": "estado_306", "dataType": "String"}, {"name": "data_date_part", "dataType": "Integer"}, {"name": "DynCliTitARolId", "dataType": "Decimal"}, {"name": "DynCliTitAPerTDoc", "dataType": "String"}, {"name": "DynCliTitAPerPDoc", "dataType": "String"}, {"name": "DynCliTitAPerDoc", "dataType": "String"}, {"name": "DynCliTitAPerNom1", "dataType": "String"}, {"name": "DynCliTitAPerNom2", "dataType": "String"}, {"name": "DynCliTitAPerApe1", "dataType": "String"}, {"name": "DynCliTitAPerApe2", "dataType": "String"}, {"name": "DynCliTitAFecMod", "dataType": "Timestamp"}, {"name": "DynCliTitAUsrAlt", "dataType": "String"}, {"name": "DynCliTitAUsrMod", "dataType": "String"}, {"name": "DynCliTitALoteDW", "dataType": "Decimal"}, {"name": "DynCliTitAHash", "dataType": "String"}, {"name": "data_timestamp_part", "dataType": "Timestamp"}]', 
-        '[{"name": "es_primer_titular", "dataType": "Boolean"}, {"name": "idf_pers_ods", "dataType": "String"}, {"name": "numero_contrato_inversiones", "dataType": "String"}, {"name": "fecha_dato", "dataType": "Date"}, {"name": "fecha_alta_titular", "dataType": "Date"}, {"name": "estado_persona", "dataType": "String"}, {"name": "fecha_inicio_w8", "dataType": "Date"}, {"name": "fecha_vencimiento_w8", "dataType": "Date"}, {"name": "estado_w8", "dataType": "String"}, {"name": "fecha_inicio_3103", "dataType": "Date"}, {"name": "fecha_vencimiento_3103", "dataType": "Date"}, {"name": "estado_3103", "dataType": "String"}, {"name": "fecha_inicio_306", "dataType": "Date"}, {"name": "fecha_vencimiento_306", "dataType": "Date"}, {"name": "estado_306", "dataType": "String"}, {"name": "data_date_part", "dataType": "Integer"}, {"name": "DynCliTitARolId", "dataType": "Decimal"}, {"name": "DynCliTitAPerTDoc", "dataType": "String"}, {"name": "DynCliTitAPerPDoc", "dataType": "String"}, {"name": "DynCliTitAPerDoc", "dataType": "String"}, {"name": "DynCliTitAPerNom1", "dataType": "String"}, {"name": "DynCliTitAPerNom2", "dataType": "String"}, {"name": "DynCliTitAPerApe1", "dataType": "String"}, {"name": "DynCliTitAPerApe2", "dataType": "String"}, {"name": "DynCliTitAFecMod", "dataType": "Timestamp"}, {"name": "DynCliTitAUsrAlt", "dataType": "String"}, {"name": "DynCliTitAUsrMod", "dataType": "String"}, {"name": "DynCliTitALoteDW", "dataType": "Decimal"}, {"name": "DynCliTitAHash", "dataType": "String"}, {"name": "data_timestamp_part", "dataType": "Timestamp"}]'
+        '[{"name": "es_primer_titular", "dataType": "Boolean"}, {"name": "idf_pers_ods", "dataType": "String"}, {"name": "numero_contrato_inversiones", "dataType": "String"}, {"name": "fecha_dato", "dataType": "Date"}, {"name": "fecha_alta_titular", "dataType": "Date"}, {"name": "estado_persona", "dataType": "String"}, {"name": "fecha_inicio_w8", "dataType": "Date"}, {"name": "fecha_vencimiento_w8", "dataType": "Date"}, {"name": "estado_w8", "dataType": "String"}, {"name": "fecha_inicio_3103", "dataType": "Date"}, {"name": "fecha_vencimiento_3103", "dataType": "Date"}, {"name": "estado_3103", "dataType": "String"}, {"name": "fecha_inicio_306", "dataType": "Date"}, {"name": "fecha_vencimiento_306", "dataType": "Date"}, {"name": "estado_306", "dataType": "String"}, {"name": "DynCliTitARolId", "dataType": "String"}, {"name": "DynCliTitAPerTDoc", "dataType": "String"}, {"name": "DynCliTitAPerPDoc", "dataType": "String"}, {"name": "DynCliTitAPerDoc", "dataType": "String"}, {"name": "DynCliTitAPerNom1", "dataType": "String"}, {"name": "DynCliTitAPerNom2", "dataType": "String"}, {"name": "DynCliTitAPerApe1", "dataType": "String"}, {"name": "DynCliTitAPerApe2", "dataType": "String"}, {"name": "DynCliTitAFecMod", "dataType": "String"}, {"name": "DynCliTitAUsrAlt", "dataType": "String"}, {"name": "DynCliTitAUsrMod", "dataType": "String"}, {"name": "DynCliTitALoteDW", "dataType": "String"}, {"name": "DynCliTitAHash", "dataType": "String"}, {"name": "data_date_part", "dataType": "Integer"}, {"name": "data_timestamp_part", "dataType": "Timestamp"}]', 
+        '[{"name": "es_primer_titular", "dataType": "Boolean"}, {"name": "idf_pers_ods", "dataType": "String"}, {"name": "numero_contrato_inversiones", "dataType": "String"}, {"name": "fecha_dato", "dataType": "Date"}, {"name": "fecha_alta_titular", "dataType": "Date"}, {"name": "estado_persona", "dataType": "String"}, {"name": "fecha_inicio_w8", "dataType": "Date"}, {"name": "fecha_vencimiento_w8", "dataType": "Date"}, {"name": "estado_w8", "dataType": "String"}, {"name": "fecha_inicio_3103", "dataType": "Date"}, {"name": "fecha_vencimiento_3103", "dataType": "Date"}, {"name": "estado_3103", "dataType": "String"}, {"name": "fecha_inicio_306", "dataType": "Date"}, {"name": "fecha_vencimiento_306", "dataType": "Date"}, {"name": "estado_306", "dataType": "String"}, {"name": "DynCliTitARolId", "dataType": "String"}, {"name": "DynCliTitAPerTDoc", "dataType": "String"}, {"name": "DynCliTitAPerPDoc", "dataType": "String"}, {"name": "DynCliTitAPerDoc", "dataType": "String"}, {"name": "DynCliTitAPerNom1", "dataType": "String"}, {"name": "DynCliTitAPerNom2", "dataType": "String"}, {"name": "DynCliTitAPerApe1", "dataType": "String"}, {"name": "DynCliTitAPerApe2", "dataType": "String"}, {"name": "DynCliTitAFecMod", "dataType": "String"}, {"name": "DynCliTitAUsrAlt", "dataType": "String"}, {"name": "DynCliTitAUsrMod", "dataType": "String"}, {"name": "DynCliTitALoteDW", "dataType": "String"}, {"name": "DynCliTitAHash", "dataType": "String"}, {"name": "data_date_part", "dataType": "Integer"}, {"name": "data_timestamp_part", "dataType": "Timestamp"}]'
       ], 
       'allowMissingColumns'
     )
@@ -304,6 +323,7 @@ Union_51 AS (
 
 Summarize_52 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     MAX(es_primer_titular) AS Max_es_primer_titular,
     numero_contrato_inversiones AS numero_contrato_inversiones
@@ -316,6 +336,8 @@ Summarize_52 AS (
 
 Filter_53 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
+  {#Finds records where the main account holder is not the primary holder, which may help identify secondary account holders for targeted communication or compliance.#}
   SELECT * 
   
   FROM Summarize_52 AS in0
@@ -326,6 +348,7 @@ Filter_53 AS (
 
 Join_54_inner AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     in0.*,
     in1.* EXCEPT (`numero_contrato_inversiones`, `Max_es_primer_titular`)
@@ -338,6 +361,7 @@ Join_54_inner AS (
 
 AlteryxSelect_58 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT * EXCEPT (`es_primer_titular`)
   
   FROM Join_54_inner AS in0
@@ -346,6 +370,7 @@ AlteryxSelect_58 AS (
 
 MultiRowFormula_57_row_id_0 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     (monotonically_increasing_id()) AS prophecy_row_id,
     *
@@ -356,6 +381,7 @@ MultiRowFormula_57_row_id_0 AS (
 
 MultiRowFormula_57_0 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     (LAG(numero_contrato_inversiones, 1) OVER (PARTITION BY 1 ORDER BY prophecy_row_id NULLS FIRST)) AS numero_contrato_inversiones_lag1,
     *
@@ -366,6 +392,7 @@ MultiRowFormula_57_0 AS (
 
 MultiRowFormula_57_1 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     CAST((
       CASE
@@ -382,6 +409,7 @@ MultiRowFormula_57_1 AS (
 
 Join_54_left AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT in0.*
   
   FROM Union_51 AS in0
@@ -392,6 +420,7 @@ Join_54_left AS (
 
 MultiRowFormula_57_row_id_drop_0 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT * EXCEPT (`prophecy_row_id`)
   
   FROM MultiRowFormula_57_1 AS in0
@@ -400,12 +429,13 @@ MultiRowFormula_57_row_id_drop_0 AS (
 
 Union_59 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   {{
     prophecy_basics.UnionByName(
       ['Join_54_left', 'MultiRowFormula_57_row_id_drop_0'], 
       [
-        '[{"name": "es_primer_titular", "dataType": "Boolean"}, {"name": "idf_pers_ods", "dataType": "String"}, {"name": "numero_contrato_inversiones", "dataType": "String"}, {"name": "fecha_dato", "dataType": "Date"}, {"name": "fecha_alta_titular", "dataType": "Date"}, {"name": "estado_persona", "dataType": "String"}, {"name": "fecha_inicio_w8", "dataType": "Date"}, {"name": "fecha_vencimiento_w8", "dataType": "Date"}, {"name": "estado_w8", "dataType": "String"}, {"name": "fecha_inicio_3103", "dataType": "Date"}, {"name": "fecha_vencimiento_3103", "dataType": "Date"}, {"name": "estado_3103", "dataType": "String"}, {"name": "fecha_inicio_306", "dataType": "Date"}, {"name": "fecha_vencimiento_306", "dataType": "Date"}, {"name": "estado_306", "dataType": "String"}, {"name": "data_date_part", "dataType": "Integer"}, {"name": "DynCliTitARolId", "dataType": "Decimal"}, {"name": "DynCliTitAPerTDoc", "dataType": "String"}, {"name": "DynCliTitAPerPDoc", "dataType": "String"}, {"name": "DynCliTitAPerDoc", "dataType": "String"}, {"name": "DynCliTitAPerNom1", "dataType": "String"}, {"name": "DynCliTitAPerNom2", "dataType": "String"}, {"name": "DynCliTitAPerApe1", "dataType": "String"}, {"name": "DynCliTitAPerApe2", "dataType": "String"}, {"name": "DynCliTitAFecMod", "dataType": "Timestamp"}, {"name": "DynCliTitAUsrAlt", "dataType": "String"}, {"name": "DynCliTitAUsrMod", "dataType": "String"}, {"name": "DynCliTitALoteDW", "dataType": "Decimal"}, {"name": "DynCliTitAHash", "dataType": "String"}, {"name": "data_timestamp_part", "dataType": "Timestamp"}]', 
-        '[{"name": "es_primer_titular", "dataType": "Boolean"}, {"name": "idf_pers_ods", "dataType": "String"}, {"name": "numero_contrato_inversiones", "dataType": "String"}, {"name": "fecha_dato", "dataType": "Date"}, {"name": "fecha_alta_titular", "dataType": "Date"}, {"name": "estado_persona", "dataType": "String"}, {"name": "fecha_inicio_w8", "dataType": "Date"}, {"name": "fecha_vencimiento_w8", "dataType": "Date"}, {"name": "estado_w8", "dataType": "String"}, {"name": "fecha_inicio_3103", "dataType": "Date"}, {"name": "fecha_vencimiento_3103", "dataType": "Date"}, {"name": "estado_3103", "dataType": "String"}, {"name": "fecha_inicio_306", "dataType": "Date"}, {"name": "fecha_vencimiento_306", "dataType": "Date"}, {"name": "estado_306", "dataType": "String"}, {"name": "data_date_part", "dataType": "Integer"}, {"name": "DynCliTitARolId", "dataType": "Decimal"}, {"name": "DynCliTitAPerTDoc", "dataType": "String"}, {"name": "DynCliTitAPerPDoc", "dataType": "String"}, {"name": "DynCliTitAPerDoc", "dataType": "String"}, {"name": "DynCliTitAPerNom1", "dataType": "String"}, {"name": "DynCliTitAPerNom2", "dataType": "String"}, {"name": "DynCliTitAPerApe1", "dataType": "String"}, {"name": "DynCliTitAPerApe2", "dataType": "String"}, {"name": "DynCliTitAFecMod", "dataType": "Timestamp"}, {"name": "DynCliTitAUsrAlt", "dataType": "String"}, {"name": "DynCliTitAUsrMod", "dataType": "String"}, {"name": "DynCliTitALoteDW", "dataType": "Decimal"}, {"name": "DynCliTitAHash", "dataType": "String"}, {"name": "data_timestamp_part", "dataType": "Timestamp"}]'
+        '[{"name": "es_primer_titular", "dataType": "Boolean"}, {"name": "idf_pers_ods", "dataType": "String"}, {"name": "numero_contrato_inversiones", "dataType": "String"}, {"name": "fecha_dato", "dataType": "Date"}, {"name": "fecha_alta_titular", "dataType": "Date"}, {"name": "estado_persona", "dataType": "String"}, {"name": "fecha_inicio_w8", "dataType": "Date"}, {"name": "fecha_vencimiento_w8", "dataType": "Date"}, {"name": "estado_w8", "dataType": "String"}, {"name": "fecha_inicio_3103", "dataType": "Date"}, {"name": "fecha_vencimiento_3103", "dataType": "Date"}, {"name": "estado_3103", "dataType": "String"}, {"name": "fecha_inicio_306", "dataType": "Date"}, {"name": "fecha_vencimiento_306", "dataType": "Date"}, {"name": "estado_306", "dataType": "String"}, {"name": "DynCliTitARolId", "dataType": "String"}, {"name": "DynCliTitAPerTDoc", "dataType": "String"}, {"name": "DynCliTitAPerPDoc", "dataType": "String"}, {"name": "DynCliTitAPerDoc", "dataType": "String"}, {"name": "DynCliTitAPerNom1", "dataType": "String"}, {"name": "DynCliTitAPerNom2", "dataType": "String"}, {"name": "DynCliTitAPerApe1", "dataType": "String"}, {"name": "DynCliTitAPerApe2", "dataType": "String"}, {"name": "DynCliTitAFecMod", "dataType": "String"}, {"name": "DynCliTitAUsrAlt", "dataType": "String"}, {"name": "DynCliTitAUsrMod", "dataType": "String"}, {"name": "DynCliTitALoteDW", "dataType": "String"}, {"name": "DynCliTitAHash", "dataType": "String"}, {"name": "data_date_part", "dataType": "Integer"}, {"name": "data_timestamp_part", "dataType": "Timestamp"}]', 
+        '[{"name": "es_primer_titular", "dataType": "Boolean"}, {"name": "idf_pers_ods", "dataType": "String"}, {"name": "numero_contrato_inversiones", "dataType": "String"}, {"name": "fecha_dato", "dataType": "Date"}, {"name": "fecha_alta_titular", "dataType": "Date"}, {"name": "estado_persona", "dataType": "String"}, {"name": "fecha_inicio_w8", "dataType": "Date"}, {"name": "fecha_vencimiento_w8", "dataType": "Date"}, {"name": "estado_w8", "dataType": "String"}, {"name": "fecha_inicio_3103", "dataType": "Date"}, {"name": "fecha_vencimiento_3103", "dataType": "Date"}, {"name": "estado_3103", "dataType": "String"}, {"name": "fecha_inicio_306", "dataType": "Date"}, {"name": "fecha_vencimiento_306", "dataType": "Date"}, {"name": "estado_306", "dataType": "String"}, {"name": "DynCliTitARolId", "dataType": "String"}, {"name": "DynCliTitAPerTDoc", "dataType": "String"}, {"name": "DynCliTitAPerPDoc", "dataType": "String"}, {"name": "DynCliTitAPerDoc", "dataType": "String"}, {"name": "DynCliTitAPerNom1", "dataType": "String"}, {"name": "DynCliTitAPerNom2", "dataType": "String"}, {"name": "DynCliTitAPerApe1", "dataType": "String"}, {"name": "DynCliTitAPerApe2", "dataType": "String"}, {"name": "DynCliTitAFecMod", "dataType": "String"}, {"name": "DynCliTitAUsrAlt", "dataType": "String"}, {"name": "DynCliTitAUsrMod", "dataType": "String"}, {"name": "DynCliTitALoteDW", "dataType": "String"}, {"name": "DynCliTitAHash", "dataType": "String"}, {"name": "data_date_part", "dataType": "Integer"}, {"name": "data_timestamp_part", "dataType": "Timestamp"}]'
       ], 
       'allowMissingColumns'
     )
@@ -415,6 +445,7 @@ Union_59 AS (
 
 Formula_220_0 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     CAST(regexp_replace(
       regexp_replace(format_number(CAST(((year(fecha_dato) * 100) + month(fecha_dato)) AS DOUBLE), 0), ',', '__THS__'), 
@@ -428,6 +459,7 @@ Formula_220_0 AS (
 
 Summarize_341 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT MAX(AAAAMM) AS Max_AAAAMM
   
   FROM Formula_220_0 AS in0
@@ -436,6 +468,7 @@ Summarize_341 AS (
 
 Join_342_inner AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     in0.*,
     in1.* EXCEPT (`Max_AAAAMM`)
@@ -448,6 +481,7 @@ Join_342_inner AS (
 
 AlteryxSelect_65 AS (
 
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
   SELECT 
     numero_contrato_inversiones AS numero_contrato_inversiones,
     idf_pers_ods AS idf_pers_ods,

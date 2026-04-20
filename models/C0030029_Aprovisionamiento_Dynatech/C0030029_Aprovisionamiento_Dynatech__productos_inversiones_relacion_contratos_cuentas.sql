@@ -19,6 +19,7 @@ WITH Filter_30 AS (
 
 AlteryxSelect_67 AS (
 
+  {#VisualGroup: Tabla_cuentas_cash_asociadas_a_contratos_dynatech#}
   SELECT 
     numero_contrato_inversiones AS numero_contrato_inversiones,
     codigo_sucursal_cuenta AS codigo_sucursal_cuenta,
@@ -33,6 +34,7 @@ AlteryxSelect_67 AS (
 
 cast_productos_inversiones_relacion_contratos_cuentas AS (
 
+  {#VisualGroup: Tabla_cuentas_cash_asociadas_a_contratos_dynatech#}
   {#Generates a report on investment contracts linked to account details, including contract numbers, branch codes, and account status.#}
   SELECT 
     {{ var('ref_data_date_part') }} AS ref_data_date_part,
@@ -48,6 +50,8 @@ cast_productos_inversiones_relacion_contratos_cuentas AS (
 
 )
 
+{#VisualGroup: Tabla_cuentas_cash_asociadas_a_contratos_dynatech#}
+{#Merges investment product data with contracts and accounts for incremental updates.#}
 SELECT *
 
 FROM cast_productos_inversiones_relacion_contratos_cuentas

@@ -1,13 +1,15 @@
 {{
   config({    
     "materialized": "ephemeral",
-    "database": "dev_ref_control",
-    "schema": "prophecy_tmp"
+    "database": "akash_demos",
+    "schema": "demos"
   })
 }}
 
 WITH dbo_dynclimot AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
+  {#Overwrites the dataset for dynamic climate data in the development database.#}
   SELECT * 
   
   FROM {{ source('dev_curated_uyasdbtest_dynvaldwsantander', 'dbo_dynclimot') }}
@@ -16,6 +18,7 @@ WITH dbo_dynclimot AS (
 
 Filter_Data_Date_part_DynMoTFecVal AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   {#Filters records from Table_1 for entries after a dynamic date, set three months prior to a specified reference date.#}
   SELECT * 
   
@@ -27,6 +30,7 @@ Filter_Data_Date_part_DynMoTFecVal AS (
 
 Filter_351 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT * 
   
   FROM Filter_Data_Date_part_DynMoTFecVal AS in0
@@ -40,6 +44,7 @@ Filter_351 AS (
 
 Formula_360_0 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   {#Adjusts monetary values based on specific conditions for financial analysis.#}
   SELECT 
     CAST((

@@ -1587,7 +1587,6 @@ sources:
       \ plans, and currency information for financial analysis and decision-making."
     config:
       tags:
-      - "pipeline:C0030029_Aprovisionamiento_Dynatech"
       - "pipeline:C0020009_Canales_Digital_TOKE"
     columns:
     - name: "ref_data_date_part"
@@ -3769,7 +3768,6 @@ sources:
       \ status, and key dates for financial planning and analysis."
     config:
       tags:
-      - "pipeline:C0030029_Aprovisionamiento_Dynatech"
       - "pipeline:C0040011_Comercial_Clientes_Volumenes"
     columns:
     - name: "ref_data_date_part"
@@ -27494,9 +27492,6 @@ sources:
   - name: "dbo_dynclientescuentasapp"
     description: "Client account information, capturing transaction details, account\
       \ status, and modification history for financial analysis."
-    config:
-      tags:
-      - "pipeline:C0030029_Aprovisionamiento_Dynatech"
     columns:
     - name: "data_date_part"
       description: "Part of the date extracted from the timestamp for analysis."
@@ -27565,9 +27560,6 @@ sources:
         type: "Timestamp"
     type: "table"
   - name: "dbo_dynclientestitularesapp"
-    config:
-      tags:
-      - "pipeline:C0030029_Aprovisionamiento_Dynatech"
     columns:
     - name: "data_date_part"
       dataType:
@@ -27806,4 +27798,821 @@ sources:
     - name: "AAAAMM"
       dataType:
         type: "String"
+    type: "table"
+- name: "ayush_demos_demos"
+  database: "ayush_demos"
+  schema: "demos"
+  tables:
+  - name: "productos_cuentas_inventario"
+    description: "Comprehensive account and product inventory data supporting monitoring\
+      \ of account status, balances, commission plans, and product features for financial\
+      \ operations."
+    config:
+      tags:
+      - "pipeline:C0030029_Aprovisionamiento_Dynatech"
+    columns:
+    - name: "ref_data_date_part"
+      description: "Reference date for the data, used to identify the reporting period."
+      dataType:
+        type: "Integer"
+    - name: "ref_timestamp_procesamiento"
+      description: "Timestamp indicating when the data was processed."
+      dataType:
+        type: "Timestamp"
+    - name: "idf_pers_ods"
+      description: "Unique identifier for the person associated with the account."
+      dataType:
+        type: "String"
+    - name: "es_titular"
+      description: "Indicates if the person is the primary account holder."
+      dataType:
+        type: "Boolean"
+    - name: "codigo_producto"
+      description: "Code representing the specific product linked to the account."
+      dataType:
+        type: "String"
+    - name: "codigo_subproducto"
+      description: "Code that identifies the specific sub-product associated with\
+        \ the account."
+      dataType:
+        type: "String"
+    - name: "tipo_cuenta"
+      description: "Type of account, indicating the category or purpose of the account."
+      dataType:
+        type: "String"
+    - name: "codigo_sucursal_cuenta"
+      description: "Branch code where the account is held."
+      dataType:
+        type: "String"
+    - name: "numero_contrato"
+      description: "Contract number that uniquely identifies the account agreement."
+      dataType:
+        type: "String"
+    - name: "moneda_cuenta"
+      description: "Currency in which the account operates."
+      dataType:
+        type: "String"
+    - name: "plan_comisiones"
+      description: "Commission plan assigned to the account, determining how commissions\
+        \ are calculated."
+      dataType:
+        type: "String"
+    - name: "fecha_alta"
+      description: "Date when the account was opened."
+      dataType:
+        type: "Date"
+    - name: "codigo_estado_cuenta"
+      description: "Code representing the current status of the account."
+      dataType:
+        type: "String"
+    - name: "es_bloqueada"
+      description: "Indicates if the account is currently blocked."
+      dataType:
+        type: "Boolean"
+    - name: "bloquea_abono"
+      description: "Indicates if deposits to the account are blocked."
+      dataType:
+        type: "Boolean"
+    - name: "bloquea_cargo"
+      description: "Indicates if withdrawals or charges are blocked on the account."
+      dataType:
+        type: "Boolean"
+    - name: "codigo_motivo_bloqueo"
+      description: "Code representing the reason for blocking the account."
+      dataType:
+        type: "String"
+    - name: "fecha_bloqueo"
+      description: "Date when the account was blocked."
+      dataType:
+        type: "Date"
+    - name: "es_inmovilizada"
+      description: "Indicates if the account is immobilized and cannot be operated."
+      dataType:
+        type: "Boolean"
+    - name: "fecha_inmovilizada"
+      description: "Date when the account was immobilized."
+      dataType:
+        type: "Date"
+    - name: "codigo_motivo_cancelacion"
+      description: "Code indicating the reason for account cancellation."
+      dataType:
+        type: "String"
+    - name: "fecha_cancelacion"
+      description: "Date when the account was cancelled."
+      dataType:
+        type: "Date"
+    - name: "fecha_cierre"
+      description: "Date when the account was officially closed."
+      dataType:
+        type: "Date"
+    - name: "cobra_sueldo"
+      description: "Indicates if the account is used to receive salary payments."
+      dataType:
+        type: "Boolean"
+    - name: "saldo_moneda_origen"
+      description: "Current balance in the account's original currency."
+      dataType:
+        type: "Decimal"
+    - name: "saldo_arbitrado_dolares"
+      description: "Total account balance converted to US dollars for the period."
+      dataType:
+        type: "Decimal"
+    - name: "tipo_tasa"
+      description: "Type of interest or exchange rate applied to the account."
+      dataType:
+        type: "String"
+    - name: "tasa_contable"
+      description: "Accounting rate applied to the account for the period."
+      dataType:
+        type: "Decimal"
+    - name: "tasa_contable_minima"
+      description: "Minimum accounting rate recorded for the account during the period."
+      dataType:
+        type: "Decimal"
+    - name: "tasa_contable_maxima"
+      description: "Maximum accounting rate recorded for the account during the period."
+      dataType:
+        type: "Decimal"
+    - name: "AAAAMM"
+      description: "Year and month representing the accounting period, formatted as\
+        \ YYYYMM."
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "dbo_dynclientescuentasapp"
+    config:
+      tags:
+      - "pipeline:C0030029_Aprovisionamiento_Dynatech"
+    columns:
+    - name: "data_date_part"
+      dataType:
+        type: "Integer"
+    - name: "DynCliCueACtdId"
+      dataType:
+        type: "Decimal"
+    - name: "DynCliCueAProId"
+      dataType:
+        type: "Integer"
+    - name: "DynCliCueASucId"
+      dataType:
+        type: "Integer"
+    - name: "DynCliCueAMonId"
+      dataType:
+        type: "Integer"
+    - name: "DynCliCueACuentaId"
+      dataType:
+        type: "String"
+    - name: "DynCliCueAFec"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliCueAMonSmb"
+      dataType:
+        type: "String"
+    - name: "DynCliCueAFecAlt"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliCueAFecMod"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliCueAUsrAlt"
+      dataType:
+        type: "String"
+    - name: "DynCliCueAUsrMod"
+      dataType:
+        type: "String"
+    - name: "DynCliCueAEstado"
+      dataType:
+        type: "String"
+    - name: "DynCliCueALoteDW"
+      dataType:
+        type: "Decimal"
+    - name: "DynCliCueAHash"
+      dataType:
+        type: "String"
+    - name: "data_timestamp_part"
+      dataType:
+        type: "Timestamp"
+    type: "table"
+  - name: "dbo_dynclientestitularesapp"
+    config:
+      tags:
+      - "pipeline:C0030029_Aprovisionamiento_Dynatech"
+    columns:
+    - name: "data_date_part"
+      dataType:
+        type: "Integer"
+    - name: "DynCliTitACtdId"
+      dataType:
+        type: "Decimal"
+    - name: "DynCliTitARolId"
+      dataType:
+        type: "Decimal"
+    - name: "DynCliTitAPerTDoc"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerPDoc"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerDoc"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAFec"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliTitAPNumPer"
+      dataType:
+        type: "Decimal"
+    - name: "DynCliTitAPerNom1"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerNom2"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerApe1"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerApe2"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAFecAlt"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliTitAFecMod"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliTitAUsrAlt"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAUsrMod"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAEstado"
+      dataType:
+        type: "String"
+    - name: "DynCliTitALoteDW"
+      dataType:
+        type: "Decimal"
+    - name: "DynCliTitAHash"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAW8FchIni"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliTitAW8FchVto"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliTitAW8EstSis"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAF3103FchIni"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliTitAF3103FchVto"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliTitAF3103EstSis"
+      dataType:
+        type: "String"
+    - name: "DynCliTitAF306FchIni"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliTitAF306FchVto"
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliTitAF306EstSis"
+      dataType:
+        type: "String"
+    - name: "data_timestamp_part"
+      dataType:
+        type: "Timestamp"
+    type: "table"
+  - name: "dummy_santander"
+    columns:
+    - name: "numero_contrato_inversiones"
+      dataType:
+        type: "String"
+    - name: "idf_pers_ods"
+      dataType:
+        type: "String"
+    - name: "es_primer_titular"
+      dataType:
+        type: "Boolean"
+    - name: "fecha_dato"
+      dataType:
+        type: "Date"
+    - name: "fecha_alta_titular"
+      dataType:
+        type: "Date"
+    - name: "estado_persona"
+      dataType:
+        type: "String"
+    - name: "fecha_inicio_w8"
+      dataType:
+        type: "Timestamp"
+    - name: "fecha_vencimiento_w8"
+      dataType:
+        type: "Timestamp"
+    - name: "estado_w8"
+      dataType:
+        type: "String"
+    - name: "fecha_inicio_3103"
+      dataType:
+        type: "Timestamp"
+    - name: "fecha_vencimiento_3103"
+      dataType:
+        type: "Timestamp"
+    - name: "estado_3103"
+      dataType:
+        type: "String"
+    - name: "fecha_inicio_306"
+      dataType:
+        type: "Timestamp"
+    - name: "fecha_vencimiento_306"
+      dataType:
+        type: "Timestamp"
+    - name: "estado_306"
+      dataType:
+        type: "String"
+    - name: "AAAAMM"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "initial_table"
+    config:
+      tags:
+      - "pipeline:p1"
+    columns:
+    - name: "customer_id"
+      dataType:
+        type: "Bigint"
+    - name: "customer_name"
+      dataType:
+        type: "String"
+    - name: "address"
+      dataType:
+        type: "String"
+    - name: "status"
+      dataType:
+        type: "String"
+    - name: "effective_date"
+      dataType:
+        type: "Date"
+    - name: "end_date"
+      dataType:
+        type: "Date"
+    - name: "extra_col"
+      dataType:
+        type: "String"
+    - name: "dbt_scd_id"
+      dataType:
+        type: "String"
+    - name: "dbt_valid_from"
+      dataType:
+        type: "String"
+    - name: "dbt_valid_to"
+      dataType:
+        type: "String"
+    - name: "dbt_updated_at"
+      dataType:
+        type: "Timestamp"
+    type: "table"
+  - name: "bfceiwkdbckew"
+    description: "Customer records with status and address details, supporting historical\
+      \ tracking of customer information changes."
+    columns:
+    - name: "customer_id"
+      description: "Unique identifier assigned to each customer."
+      dataType:
+        type: "Bigint"
+    - name: "customer_name"
+      description: "Full name of the customer."
+      dataType:
+        type: "String"
+    - name: "address"
+      description: "Mailing address of the customer."
+      dataType:
+        type: "String"
+    - name: "status"
+      description: "Current status of the customer, such as active or inactive."
+      dataType:
+        type: "String"
+    - name: "effective_date"
+      description: "Date when the customer's record or status became effective."
+      dataType:
+        type: "Date"
+    - name: "end_date"
+      description: "Date when the record or status is no longer active."
+      dataType:
+        type: "Date"
+    - name: "extra_col"
+      description: "Additional information related to the record for business reference."
+      dataType:
+        type: "String"
+    - name: "dbt_scd_id"
+      description: "Unique identifier for tracking changes to the record over time."
+      dataType:
+        type: "String"
+    - name: "dbt_valid_from"
+      description: "Start date from which the record is considered valid."
+      dataType:
+        type: "String"
+    - name: "dbt_valid_to"
+      description: "End date until which the record is considered valid."
+      dataType:
+        type: "String"
+    - name: "dbt_updated_at"
+      description: "Timestamp indicating when the record was last updated."
+      dataType:
+        type: "Timestamp"
+    type: "table"
+  - name: "empty1"
+    description: ""
+    config:
+      tags:
+      - "pipeline:p1"
+    columns:
+    - name: "customer_id"
+      dataType:
+        type: "Bigint"
+    - name: "customer_name"
+      dataType:
+        type: "String"
+    - name: "address"
+      dataType:
+        type: "String"
+    - name: "status"
+      dataType:
+        type: "String"
+    - name: "effective_date"
+      dataType:
+        type: "Date"
+    - name: "end_date"
+      dataType:
+        type: "Date"
+    - name: "extra_col"
+      dataType:
+        type: "String"
+    - name: "dbt_scd_id"
+      dataType:
+        type: "String"
+    - name: "dbt_valid_from"
+      dataType:
+        type: "String"
+    - name: "dbt_valid_to"
+      dataType:
+        type: "String"
+    - name: "dbt_updated_at"
+      dataType:
+        type: "Timestamp"
+    type: "table"
+  - name: "debug_panic_table"
+    columns:
+    - name: "id"
+      dataType:
+        type: "String"
+    - name: "event_time"
+      dataType:
+        type: "Timestamp"
+    type: "table"
+- name: "akash_demos_demos"
+  database: "akash_demos"
+  schema: "demos"
+  tables:
+  - name: "productos_cuentas_inventario"
+    description: "Inventory of customer account products, supporting analysis of account\
+      \ types, ownership, and branch distribution."
+    config:
+      tags:
+      - "pipeline:C0030029_Aprovisionamiento_Dynatech"
+    columns:
+    - name: "ref_data_date_part"
+      description: "Date of the data record in YYYYMMDD format, used for tracking\
+        \ when the inventory information was recorded."
+      dataType:
+        type: "Integer"
+    - name: "ref_timestamp_procesamiento"
+      description: "Timestamp indicating when the inventory data was processed."
+      dataType:
+        type: "Timestamp"
+    - name: "idf_pers_ods"
+      description: "Unique identifier for the person associated with the account."
+      dataType:
+        type: "String"
+    - name: "es_titular"
+      description: "Indicates if the person is the primary account holder."
+      dataType:
+        type: "Boolean"
+    - name: "codigo_producto"
+      description: "Code representing the specific product linked to the account."
+      dataType:
+        type: "String"
+    - name: "codigo_subproducto"
+      description: "Code identifying the specific sub-product associated with the\
+        \ account."
+      dataType:
+        type: "String"
+    - name: "tipo_cuenta"
+      description: "Type of account, such as investment or savings."
+      dataType:
+        type: "String"
+    - name: "codigo_sucursal_cuenta"
+      description: "Branch code where the account is held."
+      dataType:
+        type: "String"
+    - name: "numero_contrato"
+      description: "Unique contract number assigned to the account."
+      dataType:
+        type: "String"
+    - name: "moneda_cuenta"
+      description: "Currency in which the account operates."
+      dataType:
+        type: "String"
+    - name: "plan_comisiones"
+      description: "Commission plan associated with the account, determining how commissions\
+        \ are calculated or applied."
+      dataType:
+        type: "String"
+    - name: "fecha_alta"
+      description: "Date when the account was opened."
+      dataType:
+        type: "Date"
+    - name: "codigo_estado_cuenta"
+      description: "Code representing the current status of the account."
+      dataType:
+        type: "String"
+    - name: "es_bloqueada"
+      description: "Indicates if the account is currently blocked."
+      dataType:
+        type: "Boolean"
+    - name: "bloquea_abono"
+      description: "Indicates if deposits to the account are blocked."
+      dataType:
+        type: "Boolean"
+    - name: "bloquea_cargo"
+      description: "Indicates if charges to the account are blocked."
+      dataType:
+        type: "Boolean"
+    - name: "codigo_motivo_bloqueo"
+      description: "Code representing the reason for blocking the account."
+      dataType:
+        type: "String"
+    - name: "fecha_bloqueo"
+      description: "Date when the account was blocked."
+      dataType:
+        type: "Date"
+    - name: "es_inmovilizada"
+      description: "Indicates if the account is immobilized."
+      dataType:
+        type: "Boolean"
+    - name: "fecha_inmovilizada"
+      description: "Date when the account became immobilized."
+      dataType:
+        type: "Date"
+    - name: "codigo_motivo_cancelacion"
+      description: "Reason code for account cancellation, indicating why the account\
+        \ was closed."
+      dataType:
+        type: "String"
+    - name: "fecha_cancelacion"
+      description: "Date when the account was cancelled."
+      dataType:
+        type: "Date"
+    - name: "fecha_cierre"
+      description: "Date when the account was officially closed."
+      dataType:
+        type: "Date"
+    - name: "cobra_sueldo"
+      description: "Indicates if the account is used to receive salary payments."
+      dataType:
+        type: "Boolean"
+    - name: "saldo_moneda_origen"
+      description: "Account balance in the original currency."
+      dataType:
+        type: "Decimal"
+    - name: "saldo_arbitrado_dolares"
+      description: "Arbitrated account balance expressed in US dollars."
+      dataType:
+        type: "Decimal"
+    - name: "tipo_tasa"
+      description: "Type of interest or exchange rate applied to the account."
+      dataType:
+        type: "String"
+    - name: "tasa_contable"
+      description: "Accounting rate currently applied to the account."
+      dataType:
+        type: "Decimal"
+    - name: "tasa_contable_minima"
+      description: "Minimum accounting rate recorded for the account."
+      dataType:
+        type: "Decimal"
+    - name: "tasa_contable_maxima"
+      description: "Maximum accounting rate recorded for the account."
+      dataType:
+        type: "Decimal"
+    - name: "AAAAMM"
+      description: "Represents the year and month for the inventory record, formatted\
+        \ as YYYYMM."
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "dbo_dynclientescuentasapp"
+    description: "Customer account information supporting tracking of account status,\
+      \ branch association, and product details."
+    config:
+      tags:
+      - "pipeline:C0030029_Aprovisionamiento_Dynatech"
+    columns:
+    - name: "data_date_part"
+      description: "Numeric value representing a specific part of the date for reporting\
+        \ or grouping purposes."
+      dataType:
+        type: "Integer"
+    - name: "DynCliCueACtdId"
+      description: "Unique identifier for the client account transaction."
+      dataType:
+        type: "Decimal"
+    - name: "DynCliCueAProId"
+      description: "Identifier for the product associated with the client account\
+        \ transaction."
+      dataType:
+        type: "Integer"
+    - name: "DynCliCueASucId"
+      description: "Identifier for the branch where the client account transaction\
+        \ occurred."
+      dataType:
+        type: "Integer"
+    - name: "DynCliCueAMonId"
+      description: "Identifier for the currency used in the client account transaction."
+      dataType:
+        type: "Integer"
+    - name: "DynCliCueACuentaId"
+      description: "Unique identifier for the client's account."
+      dataType:
+        type: "String"
+    - name: "DynCliCueAFec"
+      description: "Date and time when the account record was created."
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliCueAMonSmb"
+      description: "Currency symbol associated with the account."
+      dataType:
+        type: "String"
+    - name: "DynCliCueAFecAlt"
+      description: "Date and time when the account was first added."
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliCueAFecMod"
+      description: "Date and time when the account record was last modified."
+      dataType:
+        type: "Timestamp"
+    - name: "DynCliCueAUsrAlt"
+      description: "Username of the person who created the account record."
+      dataType:
+        type: "String"
+    - name: "DynCliCueAUsrMod"
+      description: "Username of the person who last modified the account record."
+      dataType:
+        type: "String"
+    - name: "DynCliCueAEstado"
+      description: "Current status of the account."
+      dataType:
+        type: "String"
+    - name: "DynCliCueALoteDW"
+      description: "Batch number associated with the account for data warehouse processing."
+      dataType:
+        type: "Decimal"
+    - name: "DynCliCueAHash"
+      description: "Unique hash value for identifying the account record."
+      dataType:
+        type: "String"
+    - name: "data_timestamp_part"
+      description: "Timestamp indicating when the account data was recorded or updated."
+      dataType:
+        type: "Timestamp"
+    type: "table"
+  - name: "dbo_dynclientestitularesapp"
+    description: "Client and policyholder records supporting customer management and\
+      \ policy administration."
+    config:
+      tags:
+      - "pipeline:C0030029_Aprovisionamiento_Dynatech"
+    columns:
+    - name: "DynCliTitAPNumPer"
+      description: "Number of periods associated with the client’s account."
+      dataType:
+        type: "Double"
+    - name: "DynCliTitACtdId"
+      description: "Unique identifier for the client’s account."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAFec"
+      description: "Date of the main event or transaction for the client."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAFecAlt"
+      description: "Alternate date related to the client’s account or transaction."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAEstado"
+      description: "Current status of the client’s account."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAW8FchIni"
+      description: "Start date of the AW8 system status for the client."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAW8FchVto"
+      description: "End date of the AW8 system status for the client."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAW8EstSis"
+      description: "Current system status code for AW8 for the client."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAF3103FchIni"
+      description: "Start date of the AF3103 system status for the client."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAF3103FchVto"
+      description: "End date of the AF3103 system status for the client."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAF3103EstSis"
+      description: "Current status of the AF3103 contract for the client."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAF306FchIni"
+      description: "Start date of the AF306 contract for the client."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAF306FchVto"
+      description: "Expiration date of the AF306 contract for the client."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAF306EstSis"
+      description: "Current status of the AF306 contract for the client."
+      dataType:
+        type: "String"
+    - name: "DynCliTitARolId"
+      description: "Role identifier assigned to the client within the system."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerTDoc"
+      description: "Type of identification document for the client holder."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerPDoc"
+      description: "Country or place where the identification document was issued\
+        \ for the client holder."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerDoc"
+      description: "Identification document number for the client holder."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerNom1"
+      description: "First given name of the client holder."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerNom2"
+      description: "Second given name of the client holder."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerApe1"
+      description: "First surname of the client holder."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAPerApe2"
+      description: "Second surname of the client holder."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAFecMod"
+      description: "Date and time when the record was last modified."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAUsrAlt"
+      description: "Username of the person who created the record."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAUsrMod"
+      description: "Username of the person who last modified the record."
+      dataType:
+        type: "String"
+    - name: "DynCliTitALoteDW"
+      description: "Batch identifier for data processing or integration."
+      dataType:
+        type: "String"
+    - name: "DynCliTitAHash"
+      description: "Unique hash value used to identify or verify the record."
+      dataType:
+        type: "String"
+    - name: "data_date_part"
+      description: "Date component representing when the record was processed or updated,\
+        \ stored as an integer."
+      dataType:
+        type: "Integer"
+    - name: "data_timestamp_part"
+      description: "Exact timestamp indicating when the record was processed or updated."
+      dataType:
+        type: "Timestamp"
     type: "table"

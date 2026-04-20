@@ -1,21 +1,24 @@
 {{
   config({    
     "materialized": "ephemeral",
-    "database": "dev_ref_control",
-    "schema": "prophecy_tmp"
+    "database": "akash_demos",
+    "schema": "demos"
   })
 }}
 
-WITH DynClientesCuentasAPP AS (
+WITH dbo_dynclientescuentasapp_1 AS (
 
+  {#VisualGroup: Tabla_cuentas_cash_asociadas_a_contratos_dynatech#}
+  {#Loads client account data from the akash_demos_demos source for further processing.#}
   SELECT * 
   
-  FROM {{ source('dev_curated_uyasdbtest_dynvaldwsantander', 'dbo_dynclientescuentasapp') }}
+  FROM {{ source('akash_demos_demos', 'dbo_dynclientescuentasapp') }}
 
 ),
 
 Formula_34_0 AS (
 
+  {#VisualGroup: Tabla_cuentas_cash_asociadas_a_contratos_dynatech#}
   SELECT 
     CAST((SUBSTRING(DynCliCueACuentaId, (((LENGTH(DynCliCueACuentaId)) - 12) + 1), 12)) AS string) AS numero_contrato,
     CAST((SUBSTRING((SUBSTRING(DynCliCueACuentaId, (((LENGTH(DynCliCueACuentaId)) - 16) + 1), 16)), 1, 4)) AS string) AS codigo_sucursal_cuenta,
@@ -28,12 +31,13 @@ Formula_34_0 AS (
     ) AS string) AS DynCliCueAMonSmb,
     * EXCEPT (`dynclicueamonsmb`)
   
-  FROM DynClientesCuentasAPP AS in0
+  FROM dbo_dynclientescuentasapp_1 AS in0
 
 ),
 
 AlteryxSelect_31 AS (
 
+  {#VisualGroup: Tabla_cuentas_cash_asociadas_a_contratos_dynatech#}
   SELECT 
     CAST(DynCliCueACtdId AS string) AS numero_contrato_inversiones,
     DynCliCueAProId AS tipo_producto,
@@ -67,6 +71,7 @@ AlteryxSelect_31 AS (
 
 Filter_30 AS (
 
+  {#VisualGroup: Tabla_cuentas_cash_asociadas_a_contratos_dynatech#}
   SELECT * 
   
   FROM AlteryxSelect_31 AS in0

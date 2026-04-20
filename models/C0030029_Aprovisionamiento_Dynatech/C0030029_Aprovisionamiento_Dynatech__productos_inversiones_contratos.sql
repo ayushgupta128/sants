@@ -11,6 +11,8 @@
 
 WITH dbo_dynclientesapp AS (
 
+  {#VisualGroup: TablaContratos#}
+  {#Overwrites the dataset for dynamic client applications in the development database.#}
   SELECT * 
   
   FROM {{ source('dev_curated_uyasdbtest_dynvaldwsantander', 'dbo_dynclientesapp') }}
@@ -19,6 +21,7 @@ WITH dbo_dynclientesapp AS (
 
 fr_rf_dcp AS (
 
+  {#VisualGroup: TablaContratos#}
   {#Filters client data based on a specific reference date part.#}
   SELECT * 
   
@@ -30,6 +33,7 @@ fr_rf_dcp AS (
 
 AlteryxSelect_202 AS (
 
+  {#VisualGroup: TablaContratos#}
   SELECT *
   
   FROM fr_rf_dcp AS in0
@@ -38,6 +42,7 @@ AlteryxSelect_202 AS (
 
 Filter_72 AS (
 
+  {#VisualGroup: TablaContratos#}
   SELECT * 
   
   FROM AlteryxSelect_202 AS in0
@@ -51,6 +56,7 @@ Filter_72 AS (
 
 Formula_71_0 AS (
 
+  {#VisualGroup: TablaContratos#}
   SELECT 
     CAST((
       REGEXP_REPLACE(
@@ -71,6 +77,7 @@ Formula_71_0 AS (
 
 AlteryxSelect_78 AS (
 
+  {#VisualGroup: TablaContratos#}
   SELECT 
     CAST(DynCliACtdId AS string) AS DynCliACtdId,
     * EXCEPT (`DynCliACtdId`)
@@ -89,6 +96,7 @@ AlteryxSelect_65 AS (
 
 Filter_74 AS (
 
+  {#VisualGroup: TablaContratos#}
   {#Selects records where the primary holder is identified.#}
   SELECT * 
   
@@ -100,6 +108,7 @@ Filter_74 AS (
 
 Join_76_inner AS (
 
+  {#VisualGroup: TablaContratos#}
   SELECT 
     in0.*,
     in1.* EXCEPT (`es_primer_titular`, 
@@ -126,6 +135,7 @@ Join_76_inner AS (
 
 AlteryxSelect_70 AS (
 
+  {#VisualGroup: TablaContratos#}
   SELECT 
     (
       CASE
@@ -182,6 +192,7 @@ AlteryxSelect_70 AS (
 
 cast_productos_inversiones_contratos AS (
 
+  {#VisualGroup: TablaContratos#}
   {#Standardizes investment contract data for performance analysis over various timeframes.#}
   SELECT 
     {{ var('ref_data_date_part') }} AS ref_data_date_part,
@@ -215,6 +226,8 @@ cast_productos_inversiones_contratos AS (
 
 )
 
+{#VisualGroup: TablaContratos#}
+{#Merges investment product contracts data incrementally into the business table.#}
 SELECT *
 
 FROM cast_productos_inversiones_contratos

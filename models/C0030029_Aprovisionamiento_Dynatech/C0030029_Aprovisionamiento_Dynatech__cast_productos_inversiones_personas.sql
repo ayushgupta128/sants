@@ -1,11 +1,8 @@
 {{
   config({    
-    "materialized": "incremental",
-    "alias": "productos_inversiones_personas",
-    "database": "dev_business",
-    "incremental_strategy": "delete+insert",
-    "schema": "productos",
-    "unique_key": ["ref_data_date_part"]
+    "materialized": "ephemeral",
+    "database": "akash_demos",
+    "schema": "demos"
   })
 }}
 
@@ -19,7 +16,8 @@ WITH AlteryxSelect_65 AS (
 
 cast_productos_inversiones_personas AS (
 
-  {#Processes investment contract data with key dates and statuses for individuals.#}
+  {#VisualGroup: Tablapersonasparticipantesdeloscontratos#}
+  {#Generates a detailed report of investment contract holders, including personal status and key contract dates, to support compliance and customer management.#}
   SELECT 
     {{ var('ref_data_date_part') }} AS ref_data_date_part,
     current_timestamp() AS ref_timestamp_procesamiento,

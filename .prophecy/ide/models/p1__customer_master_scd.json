@@ -1,0 +1,91 @@
+{
+  "id" : "p1__customer_master_scd",
+  "metainfo" : {
+    "label" : "p1__customer_master_scd",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"empty1\"",
+        "materialized" : "table",
+        "database" : "\"ayush_demos\"",
+        "schema" : "\"demos\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "Reformat_1_kVVXmjRpT5qiKTe6ELYny$$eFi9UAzstndER-U1mcylN" : {
+      "id" : "Reformat_1_kVVXmjRpT5qiKTe6ELYny$$eFi9UAzstndER-U1mcylN",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "Reformat_1"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_0",
+          "id" : "output_port_0",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ ref('p1__Reformat_1') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "SeZC5rB7LCM8TTdshGs3x$$XblAZ_6Tuygfs-SOxjkhE" : {
+      "id" : "SeZC5rB7LCM8TTdshGs3x$$XblAZ_6Tuygfs-SOxjkhE",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "customer_master_scd",
+        "phase" : 0,
+        "comment" : "Loads data from the 'empty1' table in the 'ayush_demos_demos' source, overwriting previous data only if new data exists."
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM Reformat_1\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DKf6MnqEARv_1qnr9mrSh$$5usvJt8z_BzBMxceUU2pR",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "L7UUgnpjAqhlel2cX5D4F$$8s3UMMiSeVDjBiO-Mzqot",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "tBxl1q_sF5kExz2Kl6tCh",
+    "source" : "Reformat_1_kVVXmjRpT5qiKTe6ELYny$$eFi9UAzstndER-U1mcylN",
+    "sourcePort" : "output_port_0",
+    "target" : "SeZC5rB7LCM8TTdshGs3x$$XblAZ_6Tuygfs-SOxjkhE",
+    "targetPort" : "DKf6MnqEARv_1qnr9mrSh$$5usvJt8z_BzBMxceUU2pR",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

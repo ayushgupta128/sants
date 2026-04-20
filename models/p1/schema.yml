@@ -1,0 +1,9 @@
+---
+version: 2
+models:
+- name: "p1__Reformat_1"
+  tags:
+  - "prophecy_temp"
+- name: "p1__customer_master_scd"
+  tags:
+  - "prophecy_temp"

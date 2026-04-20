@@ -16,9 +16,7 @@
   },
   "dependenciesContainer" : {
     "dependencies" : { },
-    "prophecyProjectDependencies" : {
-      "https://github.com/prophecy-io/prophecy-basics" : "57"
-    }
+    "prophecyProjectDependencies" : { }
   },
   "entitiesToSync" : [ ],
   "frontEndLanguage" : "sql",

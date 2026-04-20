@@ -9,6 +9,8 @@
 
 WITH dbo_dynvaloresapp AS (
 
+  {#VisualGroup: TablaValores#}
+  {#Overwrites the dataset with new data from the specified table source.#}
   SELECT * 
   
   FROM {{ source('dev_curated_uyasdbtest_dynvaldwsantander', 'dbo_dynvaloresapp') }}
@@ -17,6 +19,7 @@ WITH dbo_dynvaloresapp AS (
 
 Filter_Data_Date_Part AS (
 
+  {#VisualGroup: TablaValores#}
   {#Filters records based on a specific date part for targeted analysis.#}
   SELECT * 
   
@@ -28,6 +31,7 @@ Filter_Data_Date_Part AS (
 
 Summarize_101 AS (
 
+  {#VisualGroup: TablaValores#}
   SELECT MAX(DynValAFec) AS Max_DynValAFec
   
   FROM Filter_Data_Date_Part AS in0
@@ -36,6 +40,7 @@ Summarize_101 AS (
 
 AppendFields_103 AS (
 
+  {#VisualGroup: TablaValores#}
   SELECT 
     in0.*,
     in1.*
@@ -48,6 +53,7 @@ AppendFields_103 AS (
 
 AlteryxSelect_99 AS (
 
+  {#VisualGroup: TablaValores#}
   SELECT 
     DynValAVlrId AS codigo_valor,
     (
@@ -126,6 +132,7 @@ AlteryxSelect_99 AS (
 
 Formula_97_0 AS (
 
+  {#VisualGroup: TablaValores#}
   SELECT 
     CAST(TRIM(codigo_valor) AS string) AS codigo_valor,
     CAST(TRIM(isin) AS string) AS isin,
@@ -165,6 +172,7 @@ Formula_97_0 AS (
 
 AlteryxSelect_140 AS (
 
+  {#VisualGroup: TablaValores#}
   {#Provides detailed financial instrument data including issuer, currency, and ratings for comprehensive analysis.#}
   SELECT 
     codigo_valor AS codigo_valor,
@@ -212,6 +220,7 @@ AlteryxSelect_140 AS (
 
 cast_productos_inversiones_valores AS (
 
+  {#VisualGroup: TablaValores#}
   {#Transforms and standardizes investment product data for comprehensive reporting.#}
   SELECT 
     {{ var('ref_data_date_part') }} AS ref_data_date_part,
@@ -259,6 +268,8 @@ cast_productos_inversiones_valores AS (
 
 )
 
+{#VisualGroup: TablaValores#}
+{#Overwrites the investment products table with updated data from the development business source.#}
 SELECT *
 
 FROM cast_productos_inversiones_valores

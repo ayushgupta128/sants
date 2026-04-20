@@ -28,6 +28,9 @@ models:
 - name: "C0030029_Aprovisionamiento_Dynatech__Join_349_inner"
   tags:
   - "prophecy_temp"
+- name: "C0030029_Aprovisionamiento_Dynatech__cast_productos_inversiones_personas"
+  tags:
+  - "prophecy_temp"
 - name: "C0030029_Aprovisionamiento_Dynatech__primary_holder_count"
   tags:
   - "prophecy_temp"
@@ -35,9 +38,6 @@ models:
   tags:
   - "prophecy_temp"
 - name: "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario"
-  tags:
-  - "prophecy_temp"
-- name: "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_personas"
   tags:
   - "prophecy_temp"
 - name: "C0030029_Aprovisionamiento_Dynatech__productos_inversiones_precios"

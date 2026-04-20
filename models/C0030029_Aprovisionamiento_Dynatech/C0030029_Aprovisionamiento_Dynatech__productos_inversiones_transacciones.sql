@@ -19,6 +19,7 @@ WITH AlteryxSelect_65 AS (
 
 Filter_327 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   {#Selects records where the primary holder is true.#}
   SELECT * 
   
@@ -38,6 +39,7 @@ Join_349_inner AS (
 
 Formula_353_0 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     CAST((
       CASE
@@ -72,6 +74,7 @@ Formula_353_0 AS (
 
 Filter_352 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT * 
   
   FROM Formula_353_0 AS in0
@@ -82,6 +85,7 @@ Filter_352 AS (
 
 Filter_352_reject AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT * 
   
   FROM Formula_353_0 AS in0
@@ -96,6 +100,8 @@ Filter_352_reject AS (
 
 externos_bcu_tipo_de_cambio AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
+  {#Overwrites the external exchange rate data in the business development table.#}
   SELECT * 
   
   FROM {{ source('dev_business.externos', 'externos_bcu_tipo_de_cambio') }}
@@ -104,6 +110,7 @@ externos_bcu_tipo_de_cambio AS (
 
 f_data_date_part_cambio AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   {#Filters exchange rate data based on a specific date part.#}
   SELECT * 
   
@@ -115,6 +122,7 @@ f_data_date_part_cambio AS (
 
 AlteryxSelect_365 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     fecha_dato AS fecha_cotizacion,
     * EXCEPT (`fecha_dato`)
@@ -125,6 +133,7 @@ AlteryxSelect_365 AS (
 
 Filter_355 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT * 
   
   FROM AlteryxSelect_365 AS in0
@@ -135,6 +144,7 @@ Filter_355 AS (
 
 Join_356_inner AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   {#Integrates local exchange rate data with financial records for comprehensive currency analysis.#}
   SELECT 
     in1.tipo_de_cambio_local AS tipo_de_cambio_local_usd,
@@ -148,6 +158,7 @@ Join_356_inner AS (
 
 Formula_357_0 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     CAST((tipo_de_cambio_local / tipo_de_cambio_local_usd) AS DOUBLE) AS cotizacion_usd,
     *
@@ -158,6 +169,7 @@ Formula_357_0 AS (
 
 Join_354_left AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT in0.*
   
   FROM Filter_352_reject AS in0
@@ -168,6 +180,7 @@ Join_354_left AS (
 
 Summarize_361 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     AVG(cotizacion_usd) AS cotizacion_usd,
     AAAAMM AS AAAAMM,
@@ -182,6 +195,7 @@ Summarize_361 AS (
 
 Join_362_inner AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     in0.*,
     in1.* EXCEPT (`AAAAMM`, `codigo_moneda`)
@@ -194,6 +208,7 @@ Join_362_inner AS (
 
 Union_363_reformat_2 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     AAAAMM AS AAAAMM,
     DynMoTBroNom AS DynMoTBroNom,
@@ -235,6 +250,7 @@ Union_363_reformat_2 AS (
 
 Join_354_inner AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     in0.*,
     in1.* EXCEPT (`fecha_cotizacion`, `codigo_moneda`, `tipo_de_cambio_local`, `AAAAMM`, `tipo_de_cambio_local_usd`)
@@ -247,6 +263,7 @@ Join_354_inner AS (
 
 Union_363_reformat_0 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     AAAAMM AS AAAAMM,
     DynMoTBroNom AS DynMoTBroNom,
@@ -288,6 +305,7 @@ Union_363_reformat_0 AS (
 
 Join_362_left AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT in0.*
   
   FROM Join_354_left AS in0
@@ -298,6 +316,7 @@ Join_362_left AS (
 
 Union_363_reformat_1 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     AAAAMM AS AAAAMM,
     DynMoTBroNom AS DynMoTBroNom,
@@ -338,6 +357,7 @@ Union_363_reformat_1 AS (
 
 Union_363 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   {{
     prophecy_basics.UnionByName(
       ['Union_363_reformat_0', 'Union_363_reformat_1', 'Union_363_reformat_2'], 
@@ -354,6 +374,7 @@ Union_363 AS (
 
 Formula_348_0 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     CAST((
       CASE
@@ -372,6 +393,7 @@ Formula_348_0 AS (
 
 Formula_348_1 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     CAST((
       CASE
@@ -393,6 +415,7 @@ Formula_348_1 AS (
 
 Formula_358_0 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     CAST(0 AS DOUBLE) AS ganancia_moneda_origen,
     CAST(0 AS DOUBLE) AS ganancia_porcentual,
@@ -405,6 +428,7 @@ Formula_358_0 AS (
 
 Union_359 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   {{
     prophecy_basics.UnionByName(
       ['Formula_348_1', 'Formula_358_0'], 
@@ -420,6 +444,7 @@ Union_359 AS (
 
 Formula_364_0 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     CAST((DynMoTImpoMEfe * cotizacion_usd) AS DOUBLE) AS efectivo_arbitrado_dolares,
     *
@@ -430,6 +455,7 @@ Formula_364_0 AS (
 
 AlteryxSelect_347 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     AAAAMM AS AAAAMM,
     DynMoTFecOpe AS fecha_operacion,
@@ -470,6 +496,7 @@ AlteryxSelect_347 AS (
 
 Join_328_inner AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     in0.*,
     in1.* EXCEPT (`numero_contrato_inversiones`, 
@@ -496,6 +523,7 @@ Join_328_inner AS (
 
 AlteryxSelect_369 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     AAAAMM AS AAAAMM,
     idf_pers_ods AS idf_pers_ods,
@@ -537,6 +565,7 @@ AlteryxSelect_369 AS (
 
 cast_productos_inversiones_transacciones AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   {#Processes and formats investment transaction data for detailed financial analysis.#}
   SELECT 
     {{ var('ref_data_date_part') }} AS ref_data_date_part,
@@ -579,6 +608,8 @@ cast_productos_inversiones_transacciones AS (
 
 )
 
+{#VisualGroup: HistoricoMovimientos#}
+{#Merges investment product transactions into the business product table incrementally.#}
 SELECT *
 
 FROM cast_productos_inversiones_transacciones

@@ -11,6 +11,8 @@
 
 WITH dbo_dynprecios AS (
 
+  {#VisualGroup: HistoricodePrecios#}
+  {#Overwrites the dataset for dynamic pricing in the curated database.#}
   SELECT * 
   
   FROM {{ source('dev_curated_uyasdbtest_dynvaldwsantander', 'dbo_dynprecios') }}
@@ -19,6 +21,7 @@ WITH dbo_dynprecios AS (
 
 Filter_DynPreFrePrecio AS (
 
+  {#VisualGroup: HistoricodePrecios#}
   {#Filters dynamic pricing data based on a specific date part.#}
   SELECT * 
   
@@ -30,6 +33,7 @@ Filter_DynPreFrePrecio AS (
 
 AlteryxSelect_105 AS (
 
+  {#VisualGroup: HistoricodePrecios#}
   {#Transforms and standardizes pricing data for analysis.#}
   SELECT 
     CAST(DynPreFec AS TIMESTAMP) AS fecha_dato,
@@ -44,6 +48,7 @@ AlteryxSelect_105 AS (
 
 Formula_106_0 AS (
 
+  {#VisualGroup: HistoricodePrecios#}
   SELECT 
     CAST((
       CASE
@@ -60,6 +65,7 @@ Formula_106_0 AS (
 
 AlteryxSelect_368 AS (
 
+  {#VisualGroup: HistoricodePrecios#}
   {#Standardizes financial data for analysis by converting dates and currency formats.#}
   SELECT 
     CAST(fecha_dato AS DATE) AS fecha_dato,
@@ -74,6 +80,7 @@ AlteryxSelect_368 AS (
 
 cast_productos_inversiones_precios AS (
 
+  {#VisualGroup: HistoricodePrecios#}
   {#Transforms and standardizes investment product prices for financial analysis.#}
   SELECT 
     {{ var('ref_data_date_part') }} AS ref_data_date_part,
@@ -88,6 +95,8 @@ cast_productos_inversiones_precios AS (
 
 )
 
+{#VisualGroup: HistoricodePrecios#}
+{#Merges investment product prices into the business dataset with an incremental update strategy.#}
 SELECT *
 
 FROM cast_productos_inversiones_precios

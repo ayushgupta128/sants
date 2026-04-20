@@ -1,8 +1,8 @@
 {{
   config({    
     "materialized": "ephemeral",
-    "database": "dev_ref_control",
-    "schema": "prophecy_tmp"
+    "database": "akash_demos",
+    "schema": "demos"
   })
 }}
 
@@ -16,6 +16,7 @@ WITH Formula_360_0 AS (
 
 CountRecords_2 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   {{ prophecy_basics.CountRecords(['Formula_360_0'], [], 'count_all_records') }}
 
 )

@@ -1,0 +1,129 @@
+{
+  "id" : "p1",
+  "metainfo" : {
+    "label" : "p1",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "2Cytq3Jn08ygAnJAF_wVi$$ka5yX7A-O6jtUoJdcueqF" : "models/p1/p1__Reformat_1.sql",
+      "Reformat_1_kVVXmjRpT5qiKTe6ELYny$$eFi9UAzstndER-U1mcylN" : "models/p1/p1__customer_master_scd.sql",
+      "FgMtsOXJBy_MSacWO4PHt$$Pf8ich0-DjtuWEF327QeS" : "models/p1/p1__Reformat_1.sql",
+      "SeZC5rB7LCM8TTdshGs3x$$XblAZ_6Tuygfs-SOxjkhE" : "models/p1/p1__customer_master_scd.sql"
+    }
+  },
+  "processes" : {
+    "2Cytq3Jn08ygAnJAF_wVi$$ka5yX7A-O6jtUoJdcueqF" : {
+      "id" : "2Cytq3Jn08ygAnJAF_wVi$$ka5yX7A-O6jtUoJdcueqF",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "x" : -80,
+        "y" : -460,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "q8PLFswjKVugZSrhu6tun$$1qgDXKG4m6Dsb-jJTNNy-",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "kVVXmjRpT5qiKTe6ELYny$$eFi9UAzstndER-U1mcylN",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "FgMtsOXJBy_MSacWO4PHt$$Pf8ich0-DjtuWEF327QeS" : {
+      "id" : "FgMtsOXJBy_MSacWO4PHt$$Pf8ich0-DjtuWEF327QeS",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "initial_table",
+        "x" : -300,
+        "y" : -340,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "initial_table",
+          "sourceName" : "ayush_demos_demos",
+          "sourceType" : "Table"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "lSL-eNmwq-hxBG3V46YTI$$oDDQkOvaEEdI0mQOdafRH",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "y-VIFBC2sdnVO3uRtl5Oj$$J5EuEgtIqMvCZyNiO5JUz",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SeZC5rB7LCM8TTdshGs3x$$XblAZ_6Tuygfs-SOxjkhE" : {
+      "id" : "SeZC5rB7LCM8TTdshGs3x$$XblAZ_6Tuygfs-SOxjkhE",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "customer_master_scd",
+        "x" : 120,
+        "y" : -340,
+        "phase" : 0,
+        "comment" : "Loads data from the 'empty1' table in the 'ayush_demos_demos' source, overwriting previous data only if new data exists.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "table" : {
+          "name" : "empty1",
+          "sourceType" : "Table",
+          "sourceName" : "ayush_demos_demos",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "skipIfZeroRows" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DKf6MnqEARv_1qnr9mrSh$$5usvJt8z_BzBMxceUU2pR",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "L7UUgnpjAqhlel2cX5D4F$$8s3UMMiSeVDjBiO-Mzqot",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "X4HKLr1OQSfq6MCgu2Ddo",
+    "source" : "FgMtsOXJBy_MSacWO4PHt$$Pf8ich0-DjtuWEF327QeS",
+    "sourcePort" : "y-VIFBC2sdnVO3uRtl5Oj$$J5EuEgtIqMvCZyNiO5JUz",
+    "target" : "2Cytq3Jn08ygAnJAF_wVi$$ka5yX7A-O6jtUoJdcueqF",
+    "targetPort" : "q8PLFswjKVugZSrhu6tun$$1qgDXKG4m6Dsb-jJTNNy-"
+  }, {
+    "id" : "tBxl1q_sF5kExz2Kl6tCh",
+    "source" : "2Cytq3Jn08ygAnJAF_wVi$$ka5yX7A-O6jtUoJdcueqF",
+    "sourcePort" : "kVVXmjRpT5qiKTe6ELYny$$eFi9UAzstndER-U1mcylN",
+    "target" : "SeZC5rB7LCM8TTdshGs3x$$XblAZ_6Tuygfs-SOxjkhE",
+    "targetPort" : "DKf6MnqEARv_1qnr9mrSh$$5usvJt8z_BzBMxceUU2pR"
+  } ],
+  "component" : "Pipeline"
+}

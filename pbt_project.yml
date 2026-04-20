@@ -29423,6 +29423,874 @@ sqlSources:
       author: imaran@f1rst.uy
       createdAt: '2026-04-13 13:24:54'
       tableType: table
+  .prophecy/metadata/sqlsources/ayush_demos_demos:
+    name: ayush_demos_demos
+    description: null
+    author: g.ayush@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2026-04-15 17:30:04'
+    tables:
+    - name: productos_cuentas_inventario
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: ref_data_date_part
+          dataType:
+            type: Integer
+          description: Reference date for the data, used to identify the reporting
+            period.
+        - name: ref_timestamp_procesamiento
+          dataType:
+            type: Timestamp
+          description: Timestamp indicating when the data was processed.
+        - name: idf_pers_ods
+          dataType:
+            type: String
+          description: Unique identifier for the person associated with the account.
+        - name: es_titular
+          dataType:
+            type: Boolean
+          description: Indicates if the person is the primary account holder.
+        - name: codigo_producto
+          dataType:
+            type: String
+          description: Code representing the specific product linked to the account.
+        - name: codigo_subproducto
+          dataType:
+            type: String
+          description: Code that identifies the specific sub-product associated with
+            the account.
+        - name: tipo_cuenta
+          dataType:
+            type: String
+          description: Type of account, indicating the category or purpose of the
+            account.
+        - name: codigo_sucursal_cuenta
+          dataType:
+            type: String
+          description: Branch code where the account is held.
+        - name: numero_contrato
+          dataType:
+            type: String
+          description: Contract number that uniquely identifies the account agreement.
+        - name: moneda_cuenta
+          dataType:
+            type: String
+          description: Currency in which the account operates.
+        - name: plan_comisiones
+          dataType:
+            type: String
+          description: Commission plan assigned to the account, determining how commissions
+            are calculated.
+        - name: fecha_alta
+          dataType:
+            type: Date
+          description: Date when the account was opened.
+        - name: codigo_estado_cuenta
+          dataType:
+            type: String
+          description: Code representing the current status of the account.
+        - name: es_bloqueada
+          dataType:
+            type: Boolean
+          description: Indicates if the account is currently blocked.
+        - name: bloquea_abono
+          dataType:
+            type: Boolean
+          description: Indicates if deposits to the account are blocked.
+        - name: bloquea_cargo
+          dataType:
+            type: Boolean
+          description: Indicates if withdrawals or charges are blocked on the account.
+        - name: codigo_motivo_bloqueo
+          dataType:
+            type: String
+          description: Code representing the reason for blocking the account.
+        - name: fecha_bloqueo
+          dataType:
+            type: Date
+          description: Date when the account was blocked.
+        - name: es_inmovilizada
+          dataType:
+            type: Boolean
+          description: Indicates if the account is immobilized and cannot be operated.
+        - name: fecha_inmovilizada
+          dataType:
+            type: Date
+          description: Date when the account was immobilized.
+        - name: codigo_motivo_cancelacion
+          dataType:
+            type: String
+          description: Code indicating the reason for account cancellation.
+        - name: fecha_cancelacion
+          dataType:
+            type: Date
+          description: Date when the account was cancelled.
+        - name: fecha_cierre
+          dataType:
+            type: Date
+          description: Date when the account was officially closed.
+        - name: cobra_sueldo
+          dataType:
+            type: Boolean
+          description: Indicates if the account is used to receive salary payments.
+        - name: saldo_moneda_origen
+          dataType:
+            type: Decimal
+          description: Current balance in the account's original currency.
+        - name: saldo_arbitrado_dolares
+          dataType:
+            type: Decimal
+          description: Total account balance converted to US dollars for the period.
+        - name: tipo_tasa
+          dataType:
+            type: String
+          description: Type of interest or exchange rate applied to the account.
+        - name: tasa_contable
+          dataType:
+            type: Decimal
+          description: Accounting rate applied to the account for the period.
+        - name: tasa_contable_minima
+          dataType:
+            type: Decimal
+          description: Minimum accounting rate recorded for the account during the
+            period.
+        - name: tasa_contable_maxima
+          dataType:
+            type: Decimal
+          description: Maximum accounting rate recorded for the account during the
+            period.
+        - name: AAAAMM
+          dataType:
+            type: String
+          description: Year and month representing the accounting period, formatted
+            as YYYYMM.
+      description: Comprehensive account and product inventory data supporting monitoring
+        of account status, balances, commission plans, and product features for financial
+        operations.
+      author: g.ayush@prophecy.io
+      createdAt: '2026-04-15 17:30:04'
+      tableType: table
+    - name: dbo_dynclientescuentasapp
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: data_date_part
+          dataType:
+            type: Integer
+        - name: DynCliCueACtdId
+          dataType:
+            type: Decimal
+        - name: DynCliCueAProId
+          dataType:
+            type: Integer
+        - name: DynCliCueASucId
+          dataType:
+            type: Integer
+        - name: DynCliCueAMonId
+          dataType:
+            type: Integer
+        - name: DynCliCueACuentaId
+          dataType:
+            type: String
+        - name: DynCliCueAFec
+          dataType:
+            type: Timestamp
+        - name: DynCliCueAMonSmb
+          dataType:
+            type: String
+        - name: DynCliCueAFecAlt
+          dataType:
+            type: Timestamp
+        - name: DynCliCueAFecMod
+          dataType:
+            type: Timestamp
+        - name: DynCliCueAUsrAlt
+          dataType:
+            type: String
+        - name: DynCliCueAUsrMod
+          dataType:
+            type: String
+        - name: DynCliCueAEstado
+          dataType:
+            type: String
+        - name: DynCliCueALoteDW
+          dataType:
+            type: Decimal
+        - name: DynCliCueAHash
+          dataType:
+            type: String
+        - name: data_timestamp_part
+          dataType:
+            type: Timestamp
+      description: null
+      author: g.ayush@prophecy.io
+      createdAt: '2026-04-15 17:31:05'
+      tableType: table
+    - name: dbo_dynclientestitularesapp
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: data_date_part
+          dataType:
+            type: Integer
+        - name: DynCliTitACtdId
+          dataType:
+            type: Decimal
+        - name: DynCliTitARolId
+          dataType:
+            type: Decimal
+        - name: DynCliTitAPerTDoc
+          dataType:
+            type: String
+        - name: DynCliTitAPerPDoc
+          dataType:
+            type: String
+        - name: DynCliTitAPerDoc
+          dataType:
+            type: String
+        - name: DynCliTitAFec
+          dataType:
+            type: Timestamp
+        - name: DynCliTitAPNumPer
+          dataType:
+            type: Decimal
+        - name: DynCliTitAPerNom1
+          dataType:
+            type: String
+        - name: DynCliTitAPerNom2
+          dataType:
+            type: String
+        - name: DynCliTitAPerApe1
+          dataType:
+            type: String
+        - name: DynCliTitAPerApe2
+          dataType:
+            type: String
+        - name: DynCliTitAFecAlt
+          dataType:
+            type: Timestamp
+        - name: DynCliTitAFecMod
+          dataType:
+            type: Timestamp
+        - name: DynCliTitAUsrAlt
+          dataType:
+            type: String
+        - name: DynCliTitAUsrMod
+          dataType:
+            type: String
+        - name: DynCliTitAEstado
+          dataType:
+            type: String
+        - name: DynCliTitALoteDW
+          dataType:
+            type: Decimal
+        - name: DynCliTitAHash
+          dataType:
+            type: String
+        - name: DynCliTitAW8FchIni
+          dataType:
+            type: Timestamp
+        - name: DynCliTitAW8FchVto
+          dataType:
+            type: Timestamp
+        - name: DynCliTitAW8EstSis
+          dataType:
+            type: String
+        - name: DynCliTitAF3103FchIni
+          dataType:
+            type: Timestamp
+        - name: DynCliTitAF3103FchVto
+          dataType:
+            type: Timestamp
+        - name: DynCliTitAF3103EstSis
+          dataType:
+            type: String
+        - name: DynCliTitAF306FchIni
+          dataType:
+            type: Timestamp
+        - name: DynCliTitAF306FchVto
+          dataType:
+            type: Timestamp
+        - name: DynCliTitAF306EstSis
+          dataType:
+            type: String
+        - name: data_timestamp_part
+          dataType:
+            type: Timestamp
+      description: null
+      author: g.ayush@prophecy.io
+      createdAt: '2026-04-15 17:31:50'
+      tableType: table
+    - name: dummy_santander
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: numero_contrato_inversiones
+          dataType:
+            type: String
+        - name: idf_pers_ods
+          dataType:
+            type: String
+        - name: es_primer_titular
+          dataType:
+            type: Boolean
+        - name: fecha_dato
+          dataType:
+            type: Date
+        - name: fecha_alta_titular
+          dataType:
+            type: Date
+        - name: estado_persona
+          dataType:
+            type: String
+        - name: fecha_inicio_w8
+          dataType:
+            type: Timestamp
+        - name: fecha_vencimiento_w8
+          dataType:
+            type: Timestamp
+        - name: estado_w8
+          dataType:
+            type: String
+        - name: fecha_inicio_3103
+          dataType:
+            type: Timestamp
+        - name: fecha_vencimiento_3103
+          dataType:
+            type: Timestamp
+        - name: estado_3103
+          dataType:
+            type: String
+        - name: fecha_inicio_306
+          dataType:
+            type: Timestamp
+        - name: fecha_vencimiento_306
+          dataType:
+            type: Timestamp
+        - name: estado_306
+          dataType:
+            type: String
+        - name: AAAAMM
+          dataType:
+            type: String
+      description: null
+      author: g.ayush@prophecy.io
+      createdAt: '2026-04-16 04:36:56'
+      tableType: table
+    - name: initial_table
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: customer_id
+          dataType:
+            type: Bigint
+        - name: customer_name
+          dataType:
+            type: String
+        - name: address
+          dataType:
+            type: String
+        - name: status
+          dataType:
+            type: String
+        - name: effective_date
+          dataType:
+            type: Date
+        - name: end_date
+          dataType:
+            type: Date
+        - name: extra_col
+          dataType:
+            type: String
+        - name: dbt_scd_id
+          dataType:
+            type: String
+        - name: dbt_valid_from
+          dataType:
+            type: String
+        - name: dbt_valid_to
+          dataType:
+            type: String
+        - name: dbt_updated_at
+          dataType:
+            type: Timestamp
+      description: null
+      author: g.ayush@prophecy.io
+      createdAt: '2026-04-20 05:14:46'
+      tableType: table
+    - name: bfceiwkdbckew
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: customer_id
+          dataType:
+            type: Bigint
+          description: Unique identifier assigned to each customer.
+        - name: customer_name
+          dataType:
+            type: String
+          description: Full name of the customer.
+        - name: address
+          dataType:
+            type: String
+          description: Mailing address of the customer.
+        - name: status
+          dataType:
+            type: String
+          description: Current status of the customer, such as active or inactive.
+        - name: effective_date
+          dataType:
+            type: Date
+          description: Date when the customer's record or status became effective.
+        - name: end_date
+          dataType:
+            type: Date
+          description: Date when the record or status is no longer active.
+        - name: extra_col
+          dataType:
+            type: String
+          description: Additional information related to the record for business reference.
+        - name: dbt_scd_id
+          dataType:
+            type: String
+          description: Unique identifier for tracking changes to the record over time.
+        - name: dbt_valid_from
+          dataType:
+            type: String
+          description: Start date from which the record is considered valid.
+        - name: dbt_valid_to
+          dataType:
+            type: String
+          description: End date until which the record is considered valid.
+        - name: dbt_updated_at
+          dataType:
+            type: Timestamp
+          description: Timestamp indicating when the record was last updated.
+      description: Customer records with status and address details, supporting historical
+        tracking of customer information changes.
+      author: g.ayush@prophecy.io
+      createdAt: '2026-04-20 05:15:32'
+      tableType: table
+    - name: empty1
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: customer_id
+          dataType:
+            type: Bigint
+        - name: customer_name
+          dataType:
+            type: String
+        - name: address
+          dataType:
+            type: String
+        - name: status
+          dataType:
+            type: String
+        - name: effective_date
+          dataType:
+            type: Date
+        - name: end_date
+          dataType:
+            type: Date
+        - name: extra_col
+          dataType:
+            type: String
+        - name: dbt_scd_id
+          dataType:
+            type: String
+        - name: dbt_valid_from
+          dataType:
+            type: String
+        - name: dbt_valid_to
+          dataType:
+            type: String
+        - name: dbt_updated_at
+          dataType:
+            type: Timestamp
+      description: ''
+      author: g.ayush@prophecy.io
+      createdAt: '2026-04-20 05:27:26'
+      tableType: table
+    - name: debug_panic_table
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: id
+          dataType:
+            type: String
+        - name: event_time
+          dataType:
+            type: Timestamp
+      description: null
+      author: g.ayush@prophecy.io
+      createdAt: '2026-04-20 05:29:52'
+      tableType: table
+  .prophecy/metadata/sqlsources/akash_demos_demos:
+    name: akash_demos_demos
+    description: null
+    author: g.ayush@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2026-04-16 16:24:26'
+    tables:
+    - name: productos_cuentas_inventario
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: ref_data_date_part
+          dataType:
+            type: Integer
+          description: Date of the data record in YYYYMMDD format, used for tracking
+            when the inventory information was recorded.
+        - name: ref_timestamp_procesamiento
+          dataType:
+            type: Timestamp
+          description: Timestamp indicating when the inventory data was processed.
+        - name: idf_pers_ods
+          dataType:
+            type: String
+          description: Unique identifier for the person associated with the account.
+        - name: es_titular
+          dataType:
+            type: Boolean
+          description: Indicates if the person is the primary account holder.
+        - name: codigo_producto
+          dataType:
+            type: String
+          description: Code representing the specific product linked to the account.
+        - name: codigo_subproducto
+          dataType:
+            type: String
+          description: Code identifying the specific sub-product associated with the
+            account.
+        - name: tipo_cuenta
+          dataType:
+            type: String
+          description: Type of account, such as investment or savings.
+        - name: codigo_sucursal_cuenta
+          dataType:
+            type: String
+          description: Branch code where the account is held.
+        - name: numero_contrato
+          dataType:
+            type: String
+          description: Unique contract number assigned to the account.
+        - name: moneda_cuenta
+          dataType:
+            type: String
+          description: Currency in which the account operates.
+        - name: plan_comisiones
+          dataType:
+            type: String
+          description: Commission plan associated with the account, determining how
+            commissions are calculated or applied.
+        - name: fecha_alta
+          dataType:
+            type: Date
+          description: Date when the account was opened.
+        - name: codigo_estado_cuenta
+          dataType:
+            type: String
+          description: Code representing the current status of the account.
+        - name: es_bloqueada
+          dataType:
+            type: Boolean
+          description: Indicates if the account is currently blocked.
+        - name: bloquea_abono
+          dataType:
+            type: Boolean
+          description: Indicates if deposits to the account are blocked.
+        - name: bloquea_cargo
+          dataType:
+            type: Boolean
+          description: Indicates if charges to the account are blocked.
+        - name: codigo_motivo_bloqueo
+          dataType:
+            type: String
+          description: Code representing the reason for blocking the account.
+        - name: fecha_bloqueo
+          dataType:
+            type: Date
+          description: Date when the account was blocked.
+        - name: es_inmovilizada
+          dataType:
+            type: Boolean
+          description: Indicates if the account is immobilized.
+        - name: fecha_inmovilizada
+          dataType:
+            type: Date
+          description: Date when the account became immobilized.
+        - name: codigo_motivo_cancelacion
+          dataType:
+            type: String
+          description: Reason code for account cancellation, indicating why the account
+            was closed.
+        - name: fecha_cancelacion
+          dataType:
+            type: Date
+          description: Date when the account was cancelled.
+        - name: fecha_cierre
+          dataType:
+            type: Date
+          description: Date when the account was officially closed.
+        - name: cobra_sueldo
+          dataType:
+            type: Boolean
+          description: Indicates if the account is used to receive salary payments.
+        - name: saldo_moneda_origen
+          dataType:
+            type: Decimal
+          description: Account balance in the original currency.
+        - name: saldo_arbitrado_dolares
+          dataType:
+            type: Decimal
+          description: Arbitrated account balance expressed in US dollars.
+        - name: tipo_tasa
+          dataType:
+            type: String
+          description: Type of interest or exchange rate applied to the account.
+        - name: tasa_contable
+          dataType:
+            type: Decimal
+          description: Accounting rate currently applied to the account.
+        - name: tasa_contable_minima
+          dataType:
+            type: Decimal
+          description: Minimum accounting rate recorded for the account.
+        - name: tasa_contable_maxima
+          dataType:
+            type: Decimal
+          description: Maximum accounting rate recorded for the account.
+        - name: AAAAMM
+          dataType:
+            type: String
+          description: Represents the year and month for the inventory record, formatted
+            as YYYYMM.
+      description: Inventory of customer account products, supporting analysis of
+        account types, ownership, and branch distribution.
+      author: g.ayush@prophecy.io
+      createdAt: '2026-04-16 16:24:26'
+      tableType: table
+    - name: dbo_dynclientescuentasapp
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: data_date_part
+          dataType:
+            type: Integer
+          description: Numeric value representing a specific part of the date for
+            reporting or grouping purposes.
+        - name: DynCliCueACtdId
+          dataType:
+            type: Decimal
+          description: Unique identifier for the client account transaction.
+        - name: DynCliCueAProId
+          dataType:
+            type: Integer
+          description: Identifier for the product associated with the client account
+            transaction.
+        - name: DynCliCueASucId
+          dataType:
+            type: Integer
+          description: Identifier for the branch where the client account transaction
+            occurred.
+        - name: DynCliCueAMonId
+          dataType:
+            type: Integer
+          description: Identifier for the currency used in the client account transaction.
+        - name: DynCliCueACuentaId
+          dataType:
+            type: String
+          description: Unique identifier for the client's account.
+        - name: DynCliCueAFec
+          dataType:
+            type: Timestamp
+          description: Date and time when the account record was created.
+        - name: DynCliCueAMonSmb
+          dataType:
+            type: String
+          description: Currency symbol associated with the account.
+        - name: DynCliCueAFecAlt
+          dataType:
+            type: Timestamp
+          description: Date and time when the account was first added.
+        - name: DynCliCueAFecMod
+          dataType:
+            type: Timestamp
+          description: Date and time when the account record was last modified.
+        - name: DynCliCueAUsrAlt
+          dataType:
+            type: String
+          description: Username of the person who created the account record.
+        - name: DynCliCueAUsrMod
+          dataType:
+            type: String
+          description: Username of the person who last modified the account record.
+        - name: DynCliCueAEstado
+          dataType:
+            type: String
+          description: Current status of the account.
+        - name: DynCliCueALoteDW
+          dataType:
+            type: Decimal
+          description: Batch number associated with the account for data warehouse
+            processing.
+        - name: DynCliCueAHash
+          dataType:
+            type: String
+          description: Unique hash value for identifying the account record.
+        - name: data_timestamp_part
+          dataType:
+            type: Timestamp
+          description: Timestamp indicating when the account data was recorded or
+            updated.
+      description: Customer account information supporting tracking of account status,
+        branch association, and product details.
+      author: g.ayush@prophecy.io
+      createdAt: '2026-04-16 16:28:01'
+      tableType: table
+    - name: dbo_dynclientestitularesapp
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: DynCliTitAPNumPer
+          dataType:
+            type: Double
+          description: Number of periods associated with the client’s account.
+        - name: DynCliTitACtdId
+          dataType:
+            type: String
+          description: Unique identifier for the client’s account.
+        - name: DynCliTitAFec
+          dataType:
+            type: String
+          description: Date of the main event or transaction for the client.
+        - name: DynCliTitAFecAlt
+          dataType:
+            type: String
+          description: Alternate date related to the client’s account or transaction.
+        - name: DynCliTitAEstado
+          dataType:
+            type: String
+          description: Current status of the client’s account.
+        - name: DynCliTitAW8FchIni
+          dataType:
+            type: String
+          description: Start date of the AW8 system status for the client.
+        - name: DynCliTitAW8FchVto
+          dataType:
+            type: String
+          description: End date of the AW8 system status for the client.
+        - name: DynCliTitAW8EstSis
+          dataType:
+            type: String
+          description: Current system status code for AW8 for the client.
+        - name: DynCliTitAF3103FchIni
+          dataType:
+            type: String
+          description: Start date of the AF3103 system status for the client.
+        - name: DynCliTitAF3103FchVto
+          dataType:
+            type: String
+          description: End date of the AF3103 system status for the client.
+        - name: DynCliTitAF3103EstSis
+          dataType:
+            type: String
+          description: Current status of the AF3103 contract for the client.
+        - name: DynCliTitAF306FchIni
+          dataType:
+            type: String
+          description: Start date of the AF306 contract for the client.
+        - name: DynCliTitAF306FchVto
+          dataType:
+            type: String
+          description: Expiration date of the AF306 contract for the client.
+        - name: DynCliTitAF306EstSis
+          dataType:
+            type: String
+          description: Current status of the AF306 contract for the client.
+        - name: DynCliTitARolId
+          dataType:
+            type: String
+          description: Role identifier assigned to the client within the system.
+        - name: DynCliTitAPerTDoc
+          dataType:
+            type: String
+          description: Type of identification document for the client holder.
+        - name: DynCliTitAPerPDoc
+          dataType:
+            type: String
+          description: Country or place where the identification document was issued
+            for the client holder.
+        - name: DynCliTitAPerDoc
+          dataType:
+            type: String
+          description: Identification document number for the client holder.
+        - name: DynCliTitAPerNom1
+          dataType:
+            type: String
+          description: First given name of the client holder.
+        - name: DynCliTitAPerNom2
+          dataType:
+            type: String
+          description: Second given name of the client holder.
+        - name: DynCliTitAPerApe1
+          dataType:
+            type: String
+          description: First surname of the client holder.
+        - name: DynCliTitAPerApe2
+          dataType:
+            type: String
+          description: Second surname of the client holder.
+        - name: DynCliTitAFecMod
+          dataType:
+            type: String
+          description: Date and time when the record was last modified.
+        - name: DynCliTitAUsrAlt
+          dataType:
+            type: String
+          description: Username of the person who created the record.
+        - name: DynCliTitAUsrMod
+          dataType:
+            type: String
+          description: Username of the person who last modified the record.
+        - name: DynCliTitALoteDW
+          dataType:
+            type: String
+          description: Batch identifier for data processing or integration.
+        - name: DynCliTitAHash
+          dataType:
+            type: String
+          description: Unique hash value used to identify or verify the record.
+        - name: data_date_part
+          dataType:
+            type: Integer
+          description: Date component representing when the record was processed or
+            updated, stored as an integer.
+        - name: data_timestamp_part
+          dataType:
+            type: Timestamp
+          description: Exact timestamp indicating when the record was processed or
+            updated.
+      description: Client and policyholder records supporting customer management
+        and policy administration.
+      author: g.ayush@prophecy.io
+      createdAt: '2026-04-16 16:30:35'
+      tableType: table
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
@@ -29436,157 +30304,6 @@ flags:
 pipelineConfigurations: {}
 projectConfigurations: {}
 sqlOrchestratorPipelines:
-  .prophecy/metadata/sqlorchestratorpipeline/C0030017_Productos_MDP_Estados_de_Cuenta:
-    name: C0030017_Productos_MDP_Estados_de_Cuenta
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030017_Productos_MDP_Estados_de_Cuenta/schema.yml
-    - .prophecy/ide/pipelines/C0030017_Productos_MDP_Estados_de_Cuenta.json
-    - pipelines/C0030017_Productos_MDP_Estados_de_Cuenta.py
-    - models/C0030017_Productos_MDP_Estados_de_Cuenta/C0030017_Productos_MDP_Estados_de_Cuenta__productos_mdp_estados_de_cuenta.sql
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030030_Productos_MDP_Puntos_movimientos:
-    name: C0030030_Productos_MDP_Puntos_movimientos
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_reference_info.sql
-    - models/C0030030_Productos_MDP_Puntos_movimientos/schema.yml
-    - models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__customer_loyalty_points.sql
-    - models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__AlteryxSelect_233.sql
-    - models/C0030030_Productos_MDP_Puntos_movimientos/C0030030_Productos_MDP_Puntos_movimientos__Union_199.sql
-    - .prophecy/ide/pipelines/C0030030_Productos_MDP_Puntos_movimientos.json
-    - pipelines/C0030030_Productos_MDP_Puntos_movimientos.py
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030024_BOCM_Aprovisionamiento:
-    name: C0030024_BOCM_Aprovisionamiento
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_records.sql
-    - models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_421_inner.sql
-    - models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__transaction_details.sql
-    - models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Formula_427_0.sql
-    - models/C0030024_BOCM_Aprovisionamiento/schema.yml
-    - models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Reformat_5.sql
-    - models/C0030024_BOCM_Aprovisionamiento/C0030024_BOCM_Aprovisionamiento__Join_528_inner.sql
-    - .prophecy/ide/pipelines/C0030024_BOCM_Aprovisionamiento.json
-    - pipelines/C0030024_BOCM_Aprovisionamiento.py
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030020_Productos_MDP_Cancelaciones:
-    name: C0030020_Productos_MDP_Cancelaciones
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030020_Productos_MDP_Cancelaciones/C0030020_Productos_MDP_Cancelaciones__productos_mdp_bloqueos_codiguera.sql
-    - models/C0030020_Productos_MDP_Cancelaciones/schema.yml
-    - models/C0030020_Productos_MDP_Cancelaciones/C0030020_Productos_MDP_Cancelaciones__AlteryxSelect_381.sql
-    - models/C0030020_Productos_MDP_Cancelaciones/C0030020_Productos_MDP_Cancelaciones__productos_mdp_cuentas_cancelaciones.sql
-    - .prophecy/ide/pipelines/C0030020_Productos_MDP_Cancelaciones.json
-    - pipelines/C0030020_Productos_MDP_Cancelaciones.py
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030027_Productos_Pago_a_Proveedores_Disco:
-    name: C0030027_Productos_Pago_a_Proveedores_Disco
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030027_Productos_Pago_a_Proveedores_Disco/C0030027_Productos_Pago_a_Proveedores_Disco__transaction_details.sql
-    - models/C0030027_Productos_Pago_a_Proveedores_Disco/schema.yml
-    - .prophecy/ide/pipelines/C0030027_Productos_Pago_a_Proveedores_Disco.json
-    - pipelines/C0030027_Productos_Pago_a_Proveedores_Disco.py
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030023_Productos_Seguros_Productividades:
-    name: C0030023_Productos_Seguros_Productividades
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_292.sql
-    - models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__productos_seguros_ventas.sql
-    - models/C0030023_Productos_Seguros_Productividades/schema.yml
-    - models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_342.sql
-    - models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__productos_seguros_ventas_pendientes_revision.sql
-    - models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__Filter_312.sql
-    - .prophecy/ide/pipelines/C0030023_Productos_Seguros_Productividades.json
-    - pipelines/C0030023_Productos_Seguros_Productividades.py
-    - models/C0030023_Productos_Seguros_Productividades/C0030023_Productos_Seguros_Productividades__send_notification_requests.sql
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030019_Productos_Sobregiros_Inventario:
-    name: C0030019_Productos_Sobregiros_Inventario
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030019_Productos_Sobregiros_Inventario/schema.yml
-    - models/C0030019_Productos_Sobregiros_Inventario/C0030019_Productos_Sobregiros_Inventario__productos_sobregiros_inventario.sql
-    - .prophecy/ide/pipelines/C0030019_Productos_Sobregiros_Inventario.json
-    - pipelines/C0030019_Productos_Sobregiros_Inventario.py
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030016_Productos_MDP_Conceptos_Economicos:
-    name: C0030016_Productos_MDP_Conceptos_Economicos
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030016_Productos_MDP_Conceptos_Economicos/schema.yml
-    - models/C0030016_Productos_MDP_Conceptos_Economicos/C0030016_Productos_MDP_Conceptos_Economicos__productos_mdp_transacciones_conceptos_economicos.sql
-    - models/C0030016_Productos_MDP_Conceptos_Economicos/C0030016_Productos_MDP_Conceptos_Economicos__AlteryxSelect_59.sql
-    - models/C0030016_Productos_MDP_Conceptos_Economicos/C0030016_Productos_MDP_Conceptos_Economicos__productos_mdp_codiguera_conceptos_economicos.sql
-    - .prophecy/ide/pipelines/C0030016_Productos_MDP_Conceptos_Economicos.json
-    - pipelines/C0030016_Productos_MDP_Conceptos_Economicos.py
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030021_Productos_Seguros_Inventario_Diario:
-    name: C0030021_Productos_Seguros_Inventario_Diario
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030021_Productos_Seguros_Inventario_Diario/schema.yml
-    - models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_8.sql
-    - models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__productos_seguros_inventario.sql
-    - .prophecy/ide/pipelines/C0030021_Productos_Seguros_Inventario_Diario.json
-    - pipelines/C0030021_Productos_Seguros_Inventario_Diario.py
-    - models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__AlteryxSelect_83.sql
-    - models/C0030021_Productos_Seguros_Inventario_Diario/C0030021_Productos_Seguros_Inventario_Diario__send_notification_requests.sql
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030025_Productos_Debitos_Automaticos_Ventas:
-    name: C0030025_Productos_Debitos_Automaticos_Ventas
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/C0030025_Productos_Debitos_Automaticos_Ventas__productos_debitos_automaticos_ventas.sql
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/C0030025_Productos_Debitos_Automaticos_Ventas__financial_transactions.sql
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/C0030025_Productos_Debitos_Automaticos_Ventas__Filter_54.sql
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/C0030025_Productos_Debitos_Automaticos_Ventas__AlteryxSelect_153.sql
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/C0030025_Productos_Debitos_Automaticos_Ventas__Formula_20_1.sql
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/C0030025_Productos_Debitos_Automaticos_Ventas__Filter_76.sql
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/C0030025_Productos_Debitos_Automaticos_Ventas__AlteryxSelect_44.sql
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/schema.yml
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/C0030025_Productos_Debitos_Automaticos_Ventas__specific_case_data.sql
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/C0030025_Productos_Debitos_Automaticos_Ventas__Summarize_27.sql
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/C0030025_Productos_Debitos_Automaticos_Ventas__Filter_77.sql
-    - .prophecy/ide/pipelines/C0030025_Productos_Debitos_Automaticos_Ventas.json
-    - pipelines/C0030025_Productos_Debitos_Automaticos_Ventas.py
-    - models/C0030025_Productos_Debitos_Automaticos_Ventas/C0030025_Productos_Debitos_Automaticos_Ventas__send_notification_requests.sql
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030026_Aprovisionamiento_Grupos_Intercambio_MDP_Productos_Puntos_Codiguera:
-    name: C0030026_Aprovisionamiento_Grupos_Intercambio_MDP_Productos_Puntos_Codiguera
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030026_Aprovisionamiento_Grupos_Intercambio_MDP_Productos_Puntos_Codiguera/C0030026_Aprovisionamiento_Grupos_Intercambio_MDP_Productos_Puntos_Codiguera__output.sql
-    - models/C0030026_Aprovisionamiento_Grupos_Intercambio_MDP_Productos_Puntos_Codiguera/schema.yml
-    - .prophecy/ide/pipelines/C0030026_Aprovisionamiento_Grupos_Intercambio_MDP_Productos_Puntos_Codiguera.json
-    - pipelines/C0030026_Aprovisionamiento_Grupos_Intercambio_MDP_Productos_Puntos_Codiguera.py
-    createdAt: '2026-01-20 12:14:19'
   .prophecy/metadata/sqlorchestratorpipeline/C0030029_Aprovisionamiento_Dynatech:
     name: C0030029_Aprovisionamiento_Dynatech
     schema: null
@@ -29598,7 +30315,6 @@ sqlOrchestratorPipelines:
     - models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__AlteryxSelect_65.sql
     - .prophecy/ide/pipelines/C0030029_Aprovisionamiento_Dynatech.json
     - pipelines/C0030029_Aprovisionamiento_Dynatech.py
-    - models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_personas.sql
     - models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_relacion_contratos_cuentas.sql
     - models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_contratos.sql
     - models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__productos_inversiones_inventario.sql
@@ -29613,42 +30329,18 @@ sqlOrchestratorPipelines:
     - models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_3.sql
     - models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_4.sql
     - models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__CountRecords_5.sql
+    - models/C0030029_Aprovisionamiento_Dynatech/C0030029_Aprovisionamiento_Dynatech__cast_productos_inversiones_personas.sql
     createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030028_Productos_Creditos_Tasas_y_tit_especiales:
-    name: C0030028_Productos_Creditos_Tasas_y_tit_especiales
+  .prophecy/metadata/sqlorchestratorpipeline/p1:
+    name: p1
     schema: null
     description: null
-    author: vmoras@santander.com.uy
+    author: g.ayush@prophecy.io
     files:
-    - models/C0030028_Productos_Creditos_Tasas_y_tit_especiales/C0030028_Productos_Creditos_Tasas_y_tit_especiales__productos_creditos_tit_especiales.sql
-    - models/C0030028_Productos_Creditos_Tasas_y_tit_especiales/schema.yml
-    - models/C0030028_Productos_Creditos_Tasas_y_tit_especiales/C0030028_Productos_Creditos_Tasas_y_tit_especiales__productos_creditos_comision_coche.sql
-    - models/C0030028_Productos_Creditos_Tasas_y_tit_especiales/C0030028_Productos_Creditos_Tasas_y_tit_especiales__productos_creditos_tasas_grupo_disco.sql
-    - .prophecy/ide/pipelines/C0030028_Productos_Creditos_Tasas_y_tit_especiales.json
-    - pipelines/C0030028_Productos_Creditos_Tasas_y_tit_especiales.py
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030018_Productos_MDP_Movimientos_del_Extracto:
-    name: C0030018_Productos_MDP_Movimientos_del_Extracto
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030018_Productos_MDP_Movimientos_del_Extracto/schema.yml
-    - models/C0030018_Productos_MDP_Movimientos_del_Extracto/C0030018_Productos_MDP_Movimientos_del_Extracto__productos_mdp_transacciones_estado_de_cuenta.sql
-    - pipelines/C0030018_Productos_MDP_Movimientos_del_Extracto.py
-    - .prophecy/ide/pipelines/C0030018_Productos_MDP_Movimientos_del_Extracto.json
-    createdAt: '2026-01-20 12:14:19'
-  .prophecy/metadata/sqlorchestratorpipeline/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos:
-    name: C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos
-    schema: null
-    description: null
-    author: vmoras@santander.com.uy
-    files:
-    - models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/schema.yml
-    - models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__productos_mdp_cuentas_cambios_estados_paquetes_1.sql
-    - models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__AlteryxSelect_143.sql
-    - models/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos__financial_transactions.sql
-    - .prophecy/ide/pipelines/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos.json
-    - pipelines/C0030022_Aprovisionamiento_SSP_Situacion_Actual_Productos.py
-    createdAt: '2026-01-20 12:14:19'
+    - pipelines/p1.py
+    - .prophecy/ide/pipelines/p1.json
+    - models/p1/schema.yml
+    - models/p1/p1__Reformat_1.sql
+    - models/p1/p1__customer_master_scd.sql
+    createdAt: '2026-04-20 04:58:43'
 sqlBusinessApps: {}

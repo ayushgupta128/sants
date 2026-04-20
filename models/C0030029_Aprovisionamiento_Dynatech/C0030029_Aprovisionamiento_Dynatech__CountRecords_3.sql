@@ -1,8 +1,8 @@
 {{
   config({    
     "materialized": "ephemeral",
-    "database": "dev_ref_control",
-    "schema": "prophecy_tmp"
+    "database": "akash_demos",
+    "schema": "demos"
   })
 }}
 

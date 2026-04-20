@@ -1,8 +1,8 @@
 {{
   config({    
     "materialized": "ephemeral",
-    "database": "dev_ref_control",
-    "schema": "prophecy_tmp"
+    "database": "akash_demos",
+    "schema": "demos"
   })
 }}
 
@@ -16,6 +16,7 @@ WITH Join_349_inner AS (
 
 CountRecords_1 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   {{ prophecy_basics.CountRecords(['Join_349_inner'], [], 'count_all_records') }}
 
 )

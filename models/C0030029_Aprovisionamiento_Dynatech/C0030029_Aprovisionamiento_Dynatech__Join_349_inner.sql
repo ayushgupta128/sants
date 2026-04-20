@@ -1,8 +1,8 @@
 {{
   config({    
     "materialized": "ephemeral",
-    "database": "dev_ref_control",
-    "schema": "prophecy_tmp"
+    "database": "akash_demos",
+    "schema": "demos"
   })
 }}
 
@@ -16,6 +16,8 @@ WITH Formula_360_0 AS (
 
 dbo_dyncodigene AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
+  {#Overwrites the dataset for curated gene data in the development database.#}
   SELECT * 
   
   FROM {{ source('dev_curated_uyasdbtest_dynvaldwsantander', 'dbo_dyncodigene') }}
@@ -24,6 +26,7 @@ dbo_dyncodigene AS (
 
 FilterDataDatePartCodiGene AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   {#Filters records based on a specific date part for targeted analysis.#}
   SELECT * 
   
@@ -35,6 +38,7 @@ FilterDataDatePartCodiGene AS (
 
 AlteryxSelect_350 AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     CAST(DynCoGCodi AS INTEGER) AS DynCoGCodi,
     DynCoGSmb AS moneda_movimiento
@@ -45,6 +49,7 @@ AlteryxSelect_350 AS (
 
 Join_349_inner AS (
 
+  {#VisualGroup: HistoricoMovimientos#}
   SELECT 
     in0.DynMoTFecVal AS DynMoTFecVal,
     in0.DynMoTFecOpe AS DynMoTFecOpe,
